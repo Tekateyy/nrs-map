@@ -1,0 +1,12 @@
+{
+  "name": "nrs-map",
+  "version": "1.0.0",
+  "description": "Carte interactive des data centers au Québec et au Canada",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}

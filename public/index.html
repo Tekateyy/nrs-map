@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carte des data centers — Québec &amp; Canada</title>
+
+  <!-- Leaflet -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+  <!-- MarkerCluster -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
+  <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div id="map"></div>
+
+  <!-- Panneau de filtres (overlay) -->
+  <div id="filters">
+    <h2>Filtres</h2>
+
+    <section id="filters-type">
+      <h3>Type</h3>
+      <!-- Cases générées dynamiquement par app.js -->
+    </section>
+
+    <section id="filters-hebergeur">
+      <h3>Hébergeur</h3>
+      <!-- Cases générées dynamiquement par app.js -->
+    </section>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
