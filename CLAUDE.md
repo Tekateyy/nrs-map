@@ -25,6 +25,10 @@ inclus dans le dépôt. Pas de base de données, pas d'authentification.
 ```bash
 npm install   # installe Express
 npm start     # démarre le serveur sur http://localhost:3000
+
+# Docker / Zimablade
+docker compose up -d --build  # Construit et lance le conteneur en arrière-plan
+docker compose down           # Arrête le conteneur
 ```
 
 ## Structure du projet
