@@ -9,8 +9,9 @@ const PORT = process.env.PORT || 3000;
 // Servir les fichiers statiques du dossier public/
 app.use(express.static(join(__dirname, 'public')));
 
-// Exposer points.geojson à la racine du domaine
+// Exposer les fichiers de données à la racine du domaine
 app.use('/points.geojson', express.static(join(__dirname, 'points.geojson')));
+app.use('/density.json', express.static(join(__dirname, 'density.json')));
 
 app.listen(PORT, () => {
   console.log(`✅  nrs-map — http://localhost:${PORT}`);

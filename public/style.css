@@ -80,6 +80,57 @@ body {
   cursor: pointer;
 }
 
+/* ---- Marqueurs par type (L.divIcon) ---- */
+.marker-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+  border: 2px solid rgba(255, 255, 255, 0.85);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.45);
+  line-height: 1;
+}
+
+/* ---- Point coloré dans le filtre Type ---- */
+.filter-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+/* ---- Bouton bascule fond de carte ---- */
+#btn-theme {
+  display: block;
+  width: 100%;
+  margin-bottom: 0.75rem;
+  padding: 0.4rem 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: transparent;
+  font-size: 0.8rem;
+  cursor: pointer;
+  text-align: left;
+}
+#btn-theme:hover { background: rgba(0, 0, 0, 0.06); }
+
+/* ---- Thème sombre ---- */
+body.theme-sombre #filters {
+  background: rgba(18, 20, 28, 0.93);
+  color: #e0e0e0;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+}
+body.theme-sombre #filters h2 { color: #ccc; border-color: #333; }
+body.theme-sombre #filters h3 { color: #888; }
+body.theme-sombre .filter-item { color: #ddd; }
+body.theme-sombre #btn-theme { border-color: #444; color: #ccc; }
+body.theme-sombre #btn-theme:hover { background: rgba(255, 255, 255, 0.08); }
+
 /* ---- Popups Leaflet ---- */
 .leaflet-popup-content {
   font-size: 0.82rem;
