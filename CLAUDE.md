@@ -41,11 +41,19 @@ nrs-map/
 ├─ server.js            ← serveur Express (fichiers statiques)
 ├─ package.json
 ├─ points.geojson       ← données brutes (49 features)
+├─ density.json         ← densité de puissance (W/pi²) par Type de site
 └─ public/
    ├─ index.html        ← page unique
    ├─ style.css         ← mise en page
    └─ app.js            ← logique Leaflet
 ```
+
+## Données — density.json
+Table de correspondance `Type → power_density_w_pi2` utilisée par `app.js` pour
+calculer la puissance estimée à la volée. Servi à `/density.json` par Express.
+
+Types couverts : `Retail`, `Wholesale`, `Hyperscale`, `Carrier Hotel`, `Crypto`,
+`Quantique`, `Unknown`. La correspondance est insensible à la casse (toLowerCase).
 
 ## Données — points.geojson
 Fichier GeoJSON `FeatureCollection` de 49 `Point` features.
@@ -62,9 +70,13 @@ Champs `properties` utiles (certains peuvent être `null`) :
 | `PuissanceAnnMW` | number\|null | Puissance annoncée en MW |
 | `Siteweb` | string\|null | URL du site (peut être null) |
 | `NombreBatiments` | number\|null | Nombre de bâtiments |
-| `SurfBatimentPI2` | string\|null | Surface en pieds² |
+| `SurfBatimentPI2` | string\|null | Surface en pieds² (ex. `"310 000"` avec espace) |
 
 > Les coordonnées GeoJSON sont `[longitude, latitude]`.
+> 5 features ont `coordinates: []` (non géocodées) — ignorées au chargement dans `app.js`.
+
+**Champ calculé (non stocké)** : `PuissanceEstiméeMW = SurfBatimentPI2 × 50 % × PowerDensity / 1 000 000`.
+Affiché dans le popup si `SurfBatimentPI2` et le Type sont connus, sinon `"—"`.
 
 ## Conventions de code
 - **ES modules** partout (`import`/`export`), jamais `require`.

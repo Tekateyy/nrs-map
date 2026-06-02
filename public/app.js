@@ -1,15 +1,57 @@
 // ---- Initialisation de la carte ----
 const map = L.map('map');
 
-L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  maxZoom: 19,
-  attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-}).addTo(map);
+const tiles = {
+  clair: L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+  }),
+  sombre: L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+    maxZoom: 19,
+    attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors © <a href="https://carto.com/attributions">CARTO</a>',
+  }),
+};
+
+let modeActuel = 'clair';
+tiles.clair.addTo(map);
+
+function basculerFond() {
+  const ancien = modeActuel;
+  modeActuel = ancien === 'sombre' ? 'clair' : 'sombre';
+  map.removeLayer(tiles[ancien]);
+  tiles[modeActuel].addTo(map);
+  document.body.classList.toggle('theme-sombre', modeActuel === 'sombre');
+  document.getElementById('btn-theme').textContent =
+    modeActuel === 'sombre' ? '☀️ Carte claire' : '🌙 Carte sombre';
+}
 
 // ---- État : marqueurs et filtres actifs ----
 let allMarkers = [];   // [{ marker, type, hebergeur }]
 const activeTypes = new Set();
 const activeHebergeurs = new Set();
+
+// ---- Config icônes par type ----
+const ICON_CONFIG = {
+  'Hyperscale':    { couleur: '#FF6B35', lettre: 'H', texte: '#fff' },
+  'Wholesale':     { couleur: '#4ECDC4', lettre: 'W', texte: '#fff' },
+  'Retail':        { couleur: '#45B7D1', lettre: 'R', texte: '#fff' },
+  'Carrier Hotel': { couleur: '#96CEB4', lettre: 'C', texte: '#fff' },
+  'Crypto':        { couleur: '#FFD93D', lettre: '₿', texte: '#333' },
+  'Quantique':     { couleur: '#C39BD3', lettre: 'Q', texte: '#fff' },
+  'Unknown':       { couleur: '#888888', lettre: '?', texte: '#fff' },
+  'Inconnu':       { couleur: '#888888', lettre: '?', texte: '#fff' },
+};
+
+function creerIcone(type) {
+  const cfg = ICON_CONFIG[type] || ICON_CONFIG['Inconnu'];
+  return L.divIcon({
+    className: '',
+    html: `<div class="marker-icon" style="background:${cfg.couleur};color:${cfg.texte}">${cfg.lettre}</div>`,
+    iconSize: [28, 28],
+    iconAnchor: [14, 14],
+    popupAnchor: [0, -16],
+  });
+}
 
 // ---- Groupe de clustering ----
 const clusterGroup = L.markerClusterGroup();
@@ -20,18 +62,33 @@ function val(v) {
   return (v !== null && v !== undefined && v !== '') ? v : '—';
 }
 
+// ---- Puissance estimée selon SurfBatimentPI2 × 50% × PowerDensity / 1 000 000 ----
+function estimerPuissance(p, densityMap) {
+  if (!p.SurfBatimentPI2) return null;
+  const surf = parseInt(String(p.SurfBatimentPI2).replace(/\s/g, ''), 10);
+  if (isNaN(surf)) return null;
+  const type = (p.Type || '').toLowerCase().trim();
+  const entry = Object.entries(densityMap).find(([k]) => k.toLowerCase().trim() === type);
+  if (!entry) return null;
+  return (surf * 0.5 * entry[1].power_density_w_pi2) / 1_000_000;
+}
+
 // ---- Construction du contenu popup ----
-function buildPopup(p) {
+function buildPopup(p, densityMap) {
   const lien = p.Siteweb
     ? `<a class="popup-link" href="${p.Siteweb}" target="_blank" rel="noopener">Voir le site</a>`
     : '—';
+
+  const puissEst = estimerPuissance(p, densityMap);
+  const puissEstStr = puissEst !== null ? puissEst.toFixed(2) + ' MW' : '—';
 
   return `
     <div class="popup-title">${val(p.NomSite)}</div>
     <div class="popup-row"><span class="popup-label">Type</span><span class="popup-value">${val(p.Type)}</span></div>
     <div class="popup-row"><span class="popup-label">Hébergeur</span><span class="popup-value">${val(p.Hebergeur)}</span></div>
     <div class="popup-row"><span class="popup-label">Adresse</span><span class="popup-value">${val(p.Adresse)}</span></div>
-    <div class="popup-row"><span class="popup-label">Puissance</span><span class="popup-value">${p.PuissanceAnnMW !== null ? p.PuissanceAnnMW + ' MW' : '—'}</span></div>
+    <div class="popup-row"><span class="popup-label">Puissance annoncée</span><span class="popup-value">${p.PuissanceAnnMW !== null ? p.PuissanceAnnMW + ' MW' : '—'}</span></div>
+    <div class="popup-row"><span class="popup-label">Puissance estimée</span><span class="popup-value">${puissEstStr}</span></div>
     <div class="popup-row"><span class="popup-label">Bâtiments</span><span class="popup-value">${val(p.NombreBatiments)}</span></div>
     <div class="popup-row"><span class="popup-label">Site web</span><span class="popup-value">${lien}</span></div>
   `;
@@ -71,13 +128,14 @@ function applyFilters() {
   }
 }
 
-// ---- Chargement du GeoJSON ----
-fetch('/points.geojson')
-  .then(r => {
-    if (!r.ok) throw new Error(`Erreur HTTP ${r.status}`);
-    return r.json();
-  })
-  .then(geojson => {
+// ---- Chargement des données ----
+const fetchJSON = url => fetch(url).then(r => {
+  if (!r.ok) throw new Error(`Erreur HTTP ${r.status} (${url})`);
+  return r.json();
+});
+
+Promise.all([fetchJSON('/points.geojson'), fetchJSON('/density.json')])
+  .then(([geojson, densityMap]) => {
     const types = new Set();
     const hebergeurs = new Set();
     const bounds = [];
@@ -97,8 +155,8 @@ fetch('/points.geojson')
       hebergeurs.add(hebergeur);
       bounds.push([lat, lng]);
 
-      const marker = L.marker([lat, lng]);
-      marker.bindPopup(buildPopup(p), { maxWidth: 280 });
+      const marker = L.marker([lat, lng], { icon: creerIcone(type) });
+      marker.bindPopup(buildPopup(p, densityMap), { maxWidth: 280 });
 
       allMarkers.push({ marker, type, hebergeur });
     }
@@ -109,6 +167,17 @@ fetch('/points.geojson')
     buildCheckboxes('filters-type', types, activeTypes);
     buildCheckboxes('filters-hebergeur', hebergeurs, activeHebergeurs);
 
+    // Ajouter les points colorés devant chaque type
+    document.querySelectorAll('#filters-type .filter-item').forEach(label => {
+      const cb = label.querySelector('input');
+      const cfg = ICON_CONFIG[cb.value];
+      if (!cfg) return;
+      const dot = document.createElement('span');
+      dot.className = 'filter-dot';
+      dot.style.background = cfg.couleur;
+      label.insertBefore(dot, label.firstChild);
+    });
+
     // Afficher tous les marqueurs
     applyFilters();
 
@@ -118,5 +187,5 @@ fetch('/points.geojson')
     }
   })
   .catch(err => {
-    console.error('Impossible de charger points.geojson :', err);
+    console.error('Erreur de chargement :', err);
   });

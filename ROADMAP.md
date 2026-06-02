@@ -18,28 +18,25 @@ de session.
 
 ---
 
-## Phase 2 — Améliorations UX (à venir)
+## Phase 2 — Améliorations données & UX (en cours)
 
-- [ ] Panneau liste latérale des sites (synchronisé avec la carte)
-- [ ] Barre de recherche par nom de site
+- [x] Robustesse au chargement : sites sans coordonnées ignorés gracieusement
+- [x] Puissance estimée (MW) calculée à la volée via `density.json`
 - [ ] Couleurs distinctes par Type (Hyperscale, Retail, Carrier Hotel…)
-- [ ] Compteur de sites affichés / total après filtrage
 - [ ] Légende des couleurs/types
+- [ ] Compteur de sites affichés / total après filtrage
+- [ ] Barre de recherche par nom de site
 
 ---
 
-## Phase 3 — Données & robustesse (à venir)
+## Phase 3 — Qualité des données (à venir)
 
-- [ ] Endpoint API Express (`/api/points`) avec filtrage côté serveur
-- [ ] Validation et nettoyage du GeoJSON (champs manquants, encodage)
-- [ ] Gestion des champs `null` dans l'UI (affichage conditionnel)
-- [ ] Tests (unitaires serveur + intégration)
+- [ ] Géocodage des 5 sites sans coordonnées (Enovum MTL01, Hive QC-1, Hyper Bit, Exaion/PINQ2, HIVE Canada 1.0)
+- [ ] Nettoyage des champs manquants ou incohérents dans `points.geojson`
 
 ---
 
 ## Phase 4 — Déploiement (à venir)
 
 - [ ] Choisir une plateforme d'hébergement (Railway, Fly.io, VPS…)
-- [ ] Variables d'environnement pour le port et l'URL de prod
-- [ ] CI/CD (GitHub Actions)
 - [ ] Domaine custom
