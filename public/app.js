@@ -134,11 +134,28 @@ const fetchJSON = url => fetch(url).then(r => {
   return r.json();
 });
 
-Promise.all([fetchJSON('/points.geojson'), fetchJSON('/density.json')])
-  .then(([geojson, densityMap]) => {
+Promise.all([fetchJSON('/points.geojson'), fetchJSON('/density.json'), fetchJSON('/DCbati_poly.geojson')])
+  .then(([geojson, densityMap, polysGeojson]) => {
     const types = new Set();
     const hebergeurs = new Set();
     const bounds = [];
+
+    // Table UNIQID → Type pour coloriser les polygones
+    const uniqidToType = {};
+    for (const f of geojson.features) {
+      if (f.properties.UNIQID) uniqidToType[f.properties.UNIQID] = f.properties.Type || 'Inconnu';
+    }
+
+    // Couche polygones (overlayPane z-400, sous les marqueurs markerPane z-600)
+    let polysVisible = true;
+    const polyLayer = L.geoJSON(polysGeojson, {
+      style: feature => {
+        const type = uniqidToType[feature.properties.UNIQID] || 'Inconnu';
+        const cfg = ICON_CONFIG[type] || ICON_CONFIG['Inconnu'];
+        return { color: cfg.couleur, fillColor: cfg.couleur, fillOpacity: 0.25, weight: 1.5, opacity: 0.7 };
+      },
+      interactive: false,
+    }).addTo(map);
 
     let ignorés = 0;
     for (const feature of geojson.features) {
@@ -166,6 +183,19 @@ Promise.all([fetchJSON('/points.geojson'), fetchJSON('/density.json')])
     // Générer les filtres dynamiquement
     buildCheckboxes('filters-type', types, activeTypes);
     buildCheckboxes('filters-hebergeur', hebergeurs, activeHebergeurs);
+
+    // Checkbox "Empreinte bâtiments"
+    const cbPoly = document.createElement('input');
+    cbPoly.type = 'checkbox';
+    cbPoly.checked = true;
+    cbPoly.addEventListener('change', () => {
+      polysVisible = cbPoly.checked;
+      polysVisible ? polyLayer.addTo(map) : map.removeLayer(polyLayer);
+    });
+    const labelPoly = document.createElement('label');
+    labelPoly.className = 'filter-item';
+    labelPoly.append(cbPoly, document.createTextNode('Empreinte bâtiments'));
+    document.getElementById('filters-polygones').appendChild(labelPoly);
 
     // Ajouter les points colorés devant chaque type
     document.querySelectorAll('#filters-type .filter-item').forEach(label => {

@@ -42,11 +42,27 @@ nrs-map/
 ├─ package.json
 ├─ points.geojson       ← données brutes (49 features)
 ├─ density.json         ← densité de puissance (W/pi²) par Type de site
+├─ DCbati_poly.geojson  ← empreintes polygonales des bâtiments (18 features)
 └─ public/
    ├─ index.html        ← page unique
    ├─ style.css         ← mise en page
    └─ app.js            ← logique Leaflet
 ```
+
+## Données — DCbati_poly.geojson
+Fichier GeoJSON `FeatureCollection` de 18 `Polygon` features représentant les
+empreintes réelles des bâtiments de data centers.
+
+| Champ | Type | Description |
+|-------|------|-------------|
+| `FID` | number | Identifiant interne du polygone |
+| `UNIQID` | string | Clé de jointure avec `points.geojson` (`properties.UNIQID`) |
+
+> Servi à `/DCbati_poly.geojson` par Express.
+> Affiché dans `app.js` via `L.geoJSON` dans l'`overlayPane` (z-index 400),
+> naturellement en dessous des marqueurs (`markerPane`, z-index 600).
+> Les polygones sont colorés par type via la table `UNIQID → Type` construite
+> au chargement depuis `points.geojson`.
 
 ## Données — density.json
 Table de correspondance `Type → power_density_w_pi2` utilisée par `app.js` pour

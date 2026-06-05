@@ -22,6 +22,7 @@ de session.
 
 - [x] Robustesse au chargement : sites sans coordonnées ignorés gracieusement
 - [x] Puissance estimée (MW) calculée à la volée via `density.json`
+- [x] Polygones bâtiments (`DCbati_poly.geojson`) avec filtre on/off
 - [ ] Couleurs distinctes par Type (Hyperscale, Retail, Carrier Hotel…)
 - [ ] Légende des couleurs/types
 - [ ] Compteur de sites affichés / total après filtrage
