@@ -67,7 +67,7 @@ function creerIcone(type) {
   const cfg = ICON_CONFIG[type] || ICON_CONFIG['Inconnu'];
   return L.divIcon({
     className: '',
-    html: `<div class="marker-icon" style="background:${cfg.couleur};color:${cfg.texte}">${cfg.lettre}</div>`,
+    html: `<div class="marker-icon" style="background:${cfg.couleur};color:${cfg.texte};--marker-color:${cfg.couleur};--marker-color-glow:${cfg.couleur}40">${cfg.lettre}</div>`,
     iconSize: [28, 28],
     iconAnchor: [14, 14],
     popupAnchor: [0, -16],

@@ -519,10 +519,211 @@ body:not(.theme-sombre) .leaflet-bar a:hover {
   align-items: center;
   justify-content: center;
   font-size: 11px;
-  font-weight: 700;
-  border: 2px solid rgba(255, 255, 255, 0.85);
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.45);
+  font-weight: 800;
+  border: 1.5px solid #ffffff;
+  box-shadow: 
+    0 0 0 3px var(--marker-color-glow, rgba(255, 255, 255, 0.15)),
+    0 3px 8px rgba(0, 0, 0, 0.4);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
   line-height: 1;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* Anneau pulsant subtil en arrière-plan */
+.marker-icon::before {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  background: var(--marker-color);
+  opacity: 0.15;
+  z-index: -1;
+  transition: all 0.25s ease;
+}
+
+/* Deuxième halo animant pour un effet vivant */
+.marker-icon::after {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  border: 1px solid var(--marker-color);
+  opacity: 0;
+  pointer-events: none;
+  animation: marker-pulse 2s infinite cubic-bezier(0.25, 0, 0, 1);
+}
+
+@keyframes marker-pulse {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+}
+
+.marker-icon:hover {
+  transform: scale(1.2);
+  border-color: #ffffff;
+  box-shadow: 
+    0 0 0 5px var(--marker-color-glow, rgba(255, 255, 255, 0.2)),
+    0 0 12px var(--marker-color),
+    0 6px 14px rgba(0, 0, 0, 0.5);
+  z-index: 1000 !important;
+}
+
+.marker-icon:hover::before {
+  inset: -6px;
+  opacity: 0.25;
+}
+
+/* Adaptation Thème Clair */
+body:not(.theme-sombre) .marker-icon {
+  border-color: #ffffff;
+  box-shadow: 
+    0 0 0 3px var(--marker-color-glow, rgba(0, 0, 0, 0.05)),
+    0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+body:not(.theme-sombre) .marker-icon:hover {
+  box-shadow: 
+    0 0 0 5px var(--marker-color-glow, rgba(0, 0, 0, 0.08)),
+    0 0 10px var(--marker-color),
+    0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+/* ---- Customisation Leaflet Marker Cluster ---- */
+.marker-cluster {
+  background: transparent !important;
+}
+
+.marker-cluster div {
+  margin-left: 4px;
+  margin-top: 4px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  font-family: 'Outfit', 'Inter', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.marker-cluster span {
+  line-height: 1;
+}
+
+/* Thème Sombre */
+.theme-sombre .marker-cluster-small div {
+  background: rgba(15, 23, 42, 0.8) !important;
+  color: #38bdf8 !important;
+  border: 1.5px solid #38bdf8 !important;
+  box-shadow: 
+    0 0 0 4px rgba(56, 189, 248, 0.15),
+    0 4px 12px rgba(0, 0, 0, 0.5) !important;
+}
+
+.theme-sombre .marker-cluster-medium div {
+  background: rgba(15, 23, 42, 0.8) !important;
+  color: #a855f7 !important;
+  border: 1.5px solid #a855f7 !important;
+  box-shadow: 
+    0 0 0 4px rgba(168, 85, 247, 0.15),
+    0 4px 12px rgba(0, 0, 0, 0.5) !important;
+}
+
+.theme-sombre .marker-cluster-large div {
+  background: rgba(15, 23, 42, 0.8) !important;
+  color: #ec4899 !important;
+  border: 1.5px solid #ec4899 !important;
+  box-shadow: 
+    0 0 0 4px rgba(236, 72, 153, 0.15),
+    0 4px 12px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Effets de survol pour les Clusters */
+.theme-sombre .marker-cluster:hover div {
+  transform: scale(1.1);
+  background: rgba(30, 41, 59, 0.9) !important;
+  box-shadow: 
+    0 0 0 6px var(--hover-cluster-glow),
+    0 0 12px var(--hover-cluster-color),
+    0 6px 16px rgba(0, 0, 0, 0.6) !important;
+}
+
+.theme-sombre .marker-cluster-small:hover div {
+  --hover-cluster-color: #38bdf8;
+  --hover-cluster-glow: rgba(56, 189, 248, 0.25);
+  border-color: #38bdf8 !important;
+}
+.theme-sombre .marker-cluster-medium:hover div {
+  --hover-cluster-color: #a855f7;
+  --hover-cluster-glow: rgba(168, 85, 247, 0.25);
+  border-color: #a855f7 !important;
+}
+.theme-sombre .marker-cluster-large:hover div {
+  --hover-cluster-color: #ec4899;
+  --hover-cluster-glow: rgba(236, 72, 153, 0.25);
+  border-color: #ec4899 !important;
+}
+
+/* Thème Clair */
+body:not(.theme-sombre) .marker-cluster-small div {
+  background: rgba(255, 255, 255, 0.9) !important;
+  color: #0284c7 !important;
+  border: 1.5px solid #0284c7 !important;
+  box-shadow: 
+    0 0 0 4px rgba(2, 132, 199, 0.1),
+    0 2px 8px rgba(0, 0, 0, 0.15) !important;
+}
+
+body:not(.theme-sombre) .marker-cluster-medium div {
+  background: rgba(255, 255, 255, 0.9) !important;
+  color: #7e22ce !important;
+  border: 1.5px solid #7e22ce !important;
+  box-shadow: 
+    0 0 0 4px rgba(126, 34, 206, 0.1),
+    0 2px 8px rgba(0, 0, 0, 0.15) !important;
+}
+
+body:not(.theme-sombre) .marker-cluster-large div {
+  background: rgba(255, 255, 255, 0.9) !important;
+  color: #be1872 !important;
+  border: 1.5px solid #be1872 !important;
+  box-shadow: 
+    0 0 0 4px rgba(190, 18, 114, 0.1),
+    0 2px 8px rgba(0, 0, 0, 0.15) !important;
+}
+
+body:not(.theme-sombre) .marker-cluster:hover div {
+  transform: scale(1.1);
+  background: #ffffff !important;
+  box-shadow: 
+    0 0 0 6px var(--hover-cluster-glow-light),
+    0 0 10px var(--hover-cluster-color-light),
+    0 4px 10px rgba(0, 0, 0, 0.2) !important;
+}
+
+body:not(.theme-sombre) .marker-cluster-small:hover div {
+  --hover-cluster-color-light: #0284c7;
+  --hover-cluster-glow-light: rgba(2, 132, 199, 0.15);
+  border-color: #0284c7 !important;
+}
+body:not(.theme-sombre) .marker-cluster-medium:hover div {
+  --hover-cluster-color-light: #7e22ce;
+  --hover-cluster-glow-light: rgba(126, 34, 206, 0.15);
+  border-color: #7e22ce !important;
+}
+body:not(.theme-sombre) .marker-cluster-large:hover div {
+  --hover-cluster-color-light: #be1872;
+  --hover-cluster-glow-light: rgba(190, 18, 114, 0.15);
+  border-color: #be1872 !important;
 }
 
 /* ---- Barres de défilement ---- */
