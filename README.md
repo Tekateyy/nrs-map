@@ -34,5 +34,5 @@ Ouvrir [http://localhost:3000](http://localhost:3000) dans le navigateur.
 
 ## Source des données
 
-Les données proviennent du fichier `points.geojson` (49 data centers, champs :
+Les données proviennent du fichier `data/datacenters.geojson` (49 data centers, champs :
 nom, type, hébergeur, adresse, puissance MW, surface bâtiment…).

@@ -7,7 +7,7 @@ Mettre ce fichier à jour si la stack, les conventions ou le périmètre évolue
 
 ## But du projet
 Application web **single-page** affichant une carte interactive des **data centers
-au Québec/Canada**. Les données proviennent du fichier `points.geojson` (49 points)
+au Québec/Canada**. Les données proviennent du fichier `data/datacenters.geojson` (49 points)
 inclus dans le dépôt. Pas de base de données, pas d'authentification.
 
 ## Stack technique (figée)
@@ -37,12 +37,17 @@ nrs-map/
 ├─ CLAUDE.md            ← ce fichier
 ├─ README.md            ← doc humaine
 ├─ ROADMAP.md           ← avancement par phases
+├─ DEPLOY_ACCESS_PROCEDURE.md ← configuration d'accès restreint pour ami
+├─ Dockerfile           ← définition de l'image Docker
+├─ docker-compose.yml   ← orchestration du conteneur
+├─ .dockerignore        ← exclusion de fichiers pour Docker
 ├─ .gitignore
 ├─ server.js            ← serveur Express (fichiers statiques)
 ├─ package.json
-├─ points.geojson       ← données brutes (49 features)
-├─ density.json         ← densité de puissance (W/pi²) par Type de site
-├─ DCbati_poly.geojson  ← empreintes polygonales des bâtiments (18 features)
+├─ data/
+│  ├─ datacenter_types.json ← densité de puissance (W/pi²) par Type de site
+│  ├─ datacenters.geojson  ← données brutes (49 features)
+│  └─ DCbati_poly.geojson  ← empreintes polygonales des bâtiments (18 features)
 └─ public/
    ├─ index.html        ← page unique
    ├─ style.css         ← mise en page
@@ -51,28 +56,28 @@ nrs-map/
 
 ## Données — DCbati_poly.geojson
 Fichier GeoJSON `FeatureCollection` de 18 `Polygon` features représentant les
-empreintes réelles des bâtiments de data centers.
+empreintes réelles des bâtiments de data centers. Situé dans `data/DCbati_poly.geojson`.
 
 | Champ | Type | Description |
 |-------|------|-------------|
 | `FID` | number | Identifiant interne du polygone |
-| `UNIQID` | string | Clé de jointure avec `points.geojson` (`properties.UNIQID`) |
+| `UNIQID` | string | Clé de jointure avec `datacenters.geojson` (`properties.UNIQID`) |
 
 > Servi à `/DCbati_poly.geojson` par Express.
 > Affiché dans `app.js` via `L.geoJSON` dans l'`overlayPane` (z-index 400),
 > naturellement en dessous des marqueurs (`markerPane`, z-index 600).
 > Les polygones sont colorés par type via la table `UNIQID → Type` construite
-> au chargement depuis `points.geojson`.
+> au chargement depuis `datacenters.geojson`.
 
-## Données — density.json
+## Données — datacenter_types.json
 Table de correspondance `Type → power_density_w_pi2` utilisée par `app.js` pour
-calculer la puissance estimée à la volée. Servi à `/density.json` par Express.
+calculer la puissance estimée à la volée. Situé dans `data/datacenter_types.json`. Servi à `/datacenter_types.json` par Express.
 
 Types couverts : `Retail`, `Wholesale`, `Hyperscale`, `Carrier Hotel`, `Crypto`,
 `Quantique`, `Unknown`. La correspondance est insensible à la casse (toLowerCase).
 
-## Données — points.geojson
-Fichier GeoJSON `FeatureCollection` de 49 `Point` features.
+## Données — datacenters.geojson
+Fichier GeoJSON `FeatureCollection` de 49 `Point` features. Situé dans `data/datacenters.geojson`.
 Champs `properties` utiles (certains peuvent être `null`) :
 
 | Champ | Type | Description |
@@ -93,6 +98,15 @@ Champs `properties` utiles (certains peuvent être `null`) :
 
 **Champ calculé (non stocké)** : `PuissanceEstiméeMW = SurfBatimentPI2 × 50 % × PowerDensity / 1 000 000`.
 Affiché dans le popup si `SurfBatimentPI2` et le Type sont connus, sinon `"—"`.
+
+## Règles de Développement Impératives
+Respecter impérativement les règles suivantes :
+- Ne jamais écrire de code JavaScript ou css directement dans les attributs HTML, toujours dans les fichiers .js et .css
+- Lorsque les fonctions javascript deviennent trop volumineuses, proceder à un découpage par logique de fonctions unitaires.
+- Lorsque les fichiers javascript deviennent trop volumineux, proceder à un découpage par logique de modules.
+- Privilegier les solutions, framework, libraries les plus légères possibles et les moins énergivores.
+- Privilegier le code simple, lisible et maintenable, dans une logique d'artisanat du code (software craftmanship).
+- Documenter rigoureusement toute modification du code, des données, des scripts et de l'architecture.
 
 ## Conventions de code
 - **ES modules** partout (`import`/`export`), jamais `require`.

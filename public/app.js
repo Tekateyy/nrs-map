@@ -134,7 +134,7 @@ const fetchJSON = url => fetch(url).then(r => {
   return r.json();
 });
 
-Promise.all([fetchJSON('/points.geojson'), fetchJSON('/density.json'), fetchJSON('/DCbati_poly.geojson')])
+Promise.all([fetchJSON('/datacenters.geojson'), fetchJSON('/datacenter_types.json'), fetchJSON('/DCbati_poly.geojson')])
   .then(([geojson, densityMap, polysGeojson]) => {
     const types = new Set();
     const hebergeurs = new Set();
