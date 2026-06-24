@@ -16,13 +16,13 @@
 
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
+<body class="theme-sombre">
 
   <div id="map"></div>
 
   <!-- Panneau de filtres (overlay) -->
   <div id="filters">
-    <button id="btn-theme" onclick="basculerFond()">🌙 Carte sombre</button>
+    <button id="btn-theme" onclick="basculerFond()">☀️ Carte claire</button>
     <h2>Filtres</h2>
 
     <section id="filters-type">
@@ -38,6 +38,31 @@
     <section id="filters-polygones">
       <h3>Bâtiments</h3>
       <!-- Case générée dynamiquement par app.js -->
+    </section>
+
+    <section id="filters-electricite">
+      <h3>Réseau Électrique</h3>
+      <div id="btn-hq-lines" class="filter-item active">Lignes de transport</div>
+      <div id="btn-hq-nodes" class="filter-item active">Postes électriques</div>
+      <div class="hq-legend">
+        <div class="hq-legend-title">Tension (kV)</div>
+        <div class="hq-legend-item" data-voltage="735">
+          <span class="hq-legend-color color-735"></span>
+          <span>735 kV</span>
+        </div>
+        <div class="hq-legend-item" data-voltage="315">
+          <span class="hq-legend-color color-315"></span>
+          <span>315 - 450 kV</span>
+        </div>
+        <div class="hq-legend-item" data-voltage="230">
+          <span class="hq-legend-color color-230"></span>
+          <span>230 kV</span>
+        </div>
+        <div class="hq-legend-item" data-voltage="120">
+          <span class="hq-legend-color color-120"></span>
+          <span>120 - 161 kV</span>
+        </div>
+      </div>
     </section>
   </div>
 

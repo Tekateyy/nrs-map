@@ -12,8 +12,8 @@ const tiles = {
   }),
 };
 
-let modeActuel = 'clair';
-tiles.clair.addTo(map);
+let modeActuel = 'sombre';
+tiles.sombre.addTo(map);
 
 function basculerFond() {
   const ancien = modeActuel;
@@ -27,8 +27,8 @@ function basculerFond() {
 
 // ---- État : marqueurs et filtres actifs ----
 let allMarkers = [];   // [{ marker, type, hebergeur }]
-const activeTypes = new Set();
-const activeHebergeurs = new Set();
+let selectedType = null;
+let selectedHebergeur = null;
 
 // ---- Config icônes par type ----
 const ICON_CONFIG = {
@@ -73,6 +73,36 @@ function estimerPuissance(p, densityMap) {
   return (surf * 0.5 * entry[1].power_density_w_pi2) / 1_000_000;
 }
 
+// ---- Config couleurs réseau électrique par niveau de tension (kV) ----
+function getHqStyleParams(pole) {
+  const match = (pole || '').match(/(\d+)\s*kV/);
+  const kv = match ? parseInt(match[1], 10) : 0;
+
+  let color = '#00bcd4'; // 120 - 161 kV
+  let weight = 0.8;
+  let opacity = 0.2;
+  let dashArray = '3, 4';
+
+  if (kv >= 735) {
+    color = '#e91e63'; // 735 kV
+    weight = 1.8;
+    opacity = 0.4;
+    dashArray = '6, 5';
+  } else if (kv >= 315) {
+    color = '#9c27b0'; // 315 - 450 kV
+    weight = 1.3;
+    opacity = 0.3;
+    dashArray = '5, 4';
+  } else if (kv >= 230) {
+    color = '#3f51b5'; // 230 kV
+    weight = 1.0;
+    opacity = 0.25;
+    dashArray = '4, 4';
+  }
+
+  return { color, weight, opacity, dashArray };
+}
+
 // ---- Construction du contenu popup ----
 function buildPopup(p, densityMap) {
   const lien = p.Siteweb
@@ -94,27 +124,46 @@ function buildPopup(p, densityMap) {
   `;
 }
 
-// ---- Génération des cases à cocher ----
-function buildCheckboxes(containerId, values, activeSet) {
+// ---- Génération des boutons de filtrage à clic unique (Chips) ----
+function buildClickFilters(containerId, values, isTypeCategory) {
   const container = document.getElementById(containerId);
   [...values].sort().forEach(v => {
-    activeSet.add(v);
+    const el = document.createElement('div');
+    el.className = 'filter-item';
+    el.textContent = v;
+    el.dataset.value = v;
 
-    const label = document.createElement('label');
-    label.className = 'filter-item';
-
-    const cb = document.createElement('input');
-    cb.type = 'checkbox';
-    cb.checked = true;
-    cb.value = v;
-    cb.addEventListener('change', () => {
-      if (cb.checked) activeSet.add(v);
-      else activeSet.delete(v);
+    el.addEventListener('click', () => {
+      if (isTypeCategory) {
+        selectedType = selectedType === v ? null : v;
+        updateFilterUI('filters-type', selectedType);
+      } else {
+        selectedHebergeur = selectedHebergeur === v ? null : v;
+        updateFilterUI('filters-hebergeur', selectedHebergeur);
+      }
       applyFilters();
     });
 
-    label.append(cb, document.createTextNode(v));
-    container.appendChild(label);
+    container.appendChild(el);
+  });
+}
+
+function updateFilterUI(containerId, selectedValue) {
+  const container = document.getElementById(containerId);
+  const items = container.querySelectorAll('.filter-item');
+  items.forEach(el => {
+    if (selectedValue === null) {
+      el.classList.remove('active');
+      el.classList.remove('inactive');
+    } else {
+      if (el.dataset.value === selectedValue) {
+        el.classList.add('active');
+        el.classList.remove('inactive');
+      } else {
+        el.classList.remove('active');
+        el.classList.add('inactive');
+      }
+    }
   });
 }
 
@@ -122,7 +171,9 @@ function buildCheckboxes(containerId, values, activeSet) {
 function applyFilters() {
   clusterGroup.clearLayers();
   for (const { marker, type, hebergeur } of allMarkers) {
-    if (activeTypes.has(type) && activeHebergeurs.has(hebergeur)) {
+    const matchType = !selectedType || type === selectedType;
+    const matchHebergeur = !selectedHebergeur || hebergeur === selectedHebergeur;
+    if (matchType && matchHebergeur) {
       clusterGroup.addLayer(marker);
     }
   }
@@ -134,8 +185,13 @@ const fetchJSON = url => fetch(url).then(r => {
   return r.json();
 });
 
-Promise.all([fetchJSON('/datacenters.geojson'), fetchJSON('/datacenter_types.json'), fetchJSON('/DCbati_poly.geojson')])
-  .then(([geojson, densityMap, polysGeojson]) => {
+Promise.all([
+  fetchJSON('/datacenters.geojson'),
+  fetchJSON('/datacenter_types.json'),
+  fetchJSON('/DCbati_poly.geojson'),
+  fetchJSON('/Hydro-Quebec.geojson')
+])
+  .then(([geojson, densityMap, polysGeojson, hqGeojson]) => {
     const types = new Set();
     const hebergeurs = new Set();
     const bounds = [];
@@ -156,6 +212,173 @@ Promise.all([fetchJSON('/datacenters.geojson'), fetchJSON('/datacenter_types.jso
       },
       interactive: false,
     }).addTo(map);
+
+    // Couche des lignes Hydro-Québec (overlayPane, sous les postes et marqueurs)
+    const hqLinesLayer = L.geoJSON(hqGeojson, {
+      filter: feature => feature.properties.isLine === true,
+      style: feature => {
+        const { color, weight, opacity, dashArray } = getHqStyleParams(feature.properties.pole);
+        return { color, weight, opacity, dashArray };
+      },
+      onEachFeature: (feature, layer) => {
+        const p = feature.properties;
+        layer.bindPopup(`
+          <div class="popup-title">Ligne haute tension</div>
+          <div class="popup-row"><span class="popup-label">Numéro/ID</span><span class="popup-value">${val(p.id)}</span></div>
+          <div class="popup-row"><span class="popup-label">Tension</span><span class="popup-value">${val(p.pole)}</span></div>
+        `, { maxWidth: 280 });
+      }
+    }).addTo(map);
+
+    // Couche des postes électriques Hydro-Québec (postes discrets, sans bordure blanche intense, rayon réduit)
+    const hqNodesLayer = L.geoJSON(hqGeojson, {
+      filter: feature => feature.properties.isPoint === true,
+      pointToLayer: (feature, latlng) => {
+        const { color, opacity } = getHqStyleParams(feature.properties.pole);
+        return L.circleMarker(latlng, {
+          radius: 2.5,
+          fillColor: color,
+          stroke: false,
+          fillOpacity: opacity * 1.5
+        });
+      },
+      onEachFeature: (feature, layer) => {
+        const p = feature.properties;
+        layer.bindPopup(`
+          <div class="popup-title">Poste électrique</div>
+          <div class="popup-row"><span class="popup-label">Nom</span><span class="popup-value">${val(p.id)}</span></div>
+          <div class="popup-row"><span class="popup-label">Tension max</span><span class="popup-value">${val(p.pole)}</span></div>
+        `, { maxWidth: 280 });
+      }
+    }).addTo(map);
+
+    // Mise à jour de la taille et de la visibilité des postes électriques selon le zoom
+    function updateNodesRadius() {
+      const zoom = map.getZoom();
+      let radius = 2.0;
+      let hasStroke = false;
+      let fillOpacityCoeff = 1.5;
+
+      if (zoom >= 15) {
+        radius = 6.0;
+        hasStroke = true;
+        fillOpacityCoeff = 2.2;
+      } else if (zoom >= 13) {
+        radius = 4.0;
+        hasStroke = true;
+        fillOpacityCoeff = 1.8;
+      } else if (zoom >= 11) {
+        radius = 2.8;
+      } else {
+        radius = 2.0;
+      }
+
+      hqNodesLayer.eachLayer(layer => {
+        if (layer.setRadius) {
+          layer.setRadius(radius);
+          const p = layer.feature.properties;
+          const { opacity } = getHqStyleParams(p.pole);
+
+          if (hasStroke) {
+            // Affichage contrasté en très gros plan (zoom important)
+            layer.setStyle({
+              fillOpacity: Math.min(opacity * fillOpacityCoeff, 0.9),
+              stroke: true,
+              color: '#ffffff',
+              weight: 0.8,
+              opacity: 0.7
+            });
+          } else {
+            // Rendu fondu et sans contour en plan moyen/large
+            layer.setStyle({
+              fillOpacity: opacity * fillOpacityCoeff,
+              stroke: false
+            });
+          }
+        }
+      });
+    }
+    map.on('zoomend', updateNodesRadius);
+
+    // Gestion du filtrage par niveau de tension
+    let selectedVoltage = null;
+
+    function getHqVoltageCategory(pole) {
+      const match = (pole || '').match(/(\d+)\s*kV/);
+      const kv = match ? parseInt(match[1], 10) : 0;
+      if (kv >= 735) return '735';
+      if (kv >= 315) return '315';
+      if (kv >= 230) return '230';
+      return '120';
+    }
+
+    function applyHqFilters() {
+      hqLinesLayer.clearLayers();
+      hqNodesLayer.clearLayers();
+
+      const filteredFeatures = hqGeojson.features.filter(f => {
+        if (!selectedVoltage) return true;
+        return getHqVoltageCategory(f.properties.pole) === selectedVoltage;
+      });
+
+      const lineFeatures = filteredFeatures.filter(f => f.properties.isLine === true);
+      const pointFeatures = filteredFeatures.filter(f => f.properties.isPoint === true);
+
+      hqLinesLayer.addData(lineFeatures);
+      hqNodesLayer.addData(pointFeatures);
+
+      // Ré-appliquer la taille dynamique des postes
+      updateNodesRadius();
+    }
+
+    // Cabler le clic sur la légende pour filtrer les tensions
+    document.querySelectorAll('.hq-legend-item').forEach(el => {
+      el.addEventListener('click', () => {
+        const val = el.dataset.voltage;
+        selectedVoltage = selectedVoltage === val ? null : val;
+
+        // Mettre à jour l'UI de la légende
+        document.querySelectorAll('.hq-legend-item').forEach(item => {
+          if (selectedVoltage === null) {
+            item.classList.remove('active');
+            item.classList.remove('inactive');
+          } else {
+            if (item.dataset.voltage === selectedVoltage) {
+              item.classList.add('active');
+              item.classList.remove('inactive');
+            } else {
+              item.classList.remove('active');
+              item.classList.add('inactive');
+            }
+          }
+        });
+
+        applyHqFilters();
+      });
+    });
+
+    // Gestion des boutons Hydro-Québec
+    let hqLinesVisible = true;
+    const btnLines = document.getElementById('btn-hq-lines');
+    if (btnLines) {
+      btnLines.addEventListener('click', () => {
+        hqLinesVisible = !hqLinesVisible;
+        btnLines.classList.toggle('active', hqLinesVisible);
+        btnLines.classList.toggle('inactive', !hqLinesVisible);
+        hqLinesVisible ? hqLinesLayer.addTo(map) : map.removeLayer(hqLinesLayer);
+      });
+    }
+
+    let hqNodesVisible = true;
+    const btnNodes = document.getElementById('btn-hq-nodes');
+    if (btnNodes) {
+      btnNodes.addEventListener('click', () => {
+        hqNodesVisible = !hqNodesVisible;
+        btnNodes.classList.toggle('active', hqNodesVisible);
+        btnNodes.classList.toggle('inactive', !hqNodesVisible);
+        hqNodesVisible ? hqNodesLayer.addTo(map) : map.removeLayer(hqNodesLayer);
+      });
+    }
 
     let ignorés = 0;
     for (const feature of geojson.features) {
@@ -181,31 +404,30 @@ Promise.all([fetchJSON('/datacenters.geojson'), fetchJSON('/datacenter_types.jso
     if (ignorés > 0) console.info(`ℹ️ ${ignorés} site(s) sans coordonnées ignoré(s)`);
 
     // Générer les filtres dynamiquement
-    buildCheckboxes('filters-type', types, activeTypes);
-    buildCheckboxes('filters-hebergeur', hebergeurs, activeHebergeurs);
+    buildClickFilters('filters-type', types, true);
+    buildClickFilters('filters-hebergeur', hebergeurs, false);
 
-    // Checkbox "Empreinte bâtiments"
-    const cbPoly = document.createElement('input');
-    cbPoly.type = 'checkbox';
-    cbPoly.checked = true;
-    cbPoly.addEventListener('change', () => {
-      polysVisible = cbPoly.checked;
+    // Bouton "Empreinte bâtiments"
+    const btnPoly = document.createElement('div');
+    btnPoly.className = 'filter-item active';
+    btnPoly.textContent = 'Empreinte bâtiments';
+    btnPoly.addEventListener('click', () => {
+      polysVisible = !polysVisible;
+      btnPoly.classList.toggle('active', polysVisible);
+      btnPoly.classList.toggle('inactive', !polysVisible);
       polysVisible ? polyLayer.addTo(map) : map.removeLayer(polyLayer);
     });
-    const labelPoly = document.createElement('label');
-    labelPoly.className = 'filter-item';
-    labelPoly.append(cbPoly, document.createTextNode('Empreinte bâtiments'));
-    document.getElementById('filters-polygones').appendChild(labelPoly);
+    document.getElementById('filters-polygones').appendChild(btnPoly);
 
     // Ajouter les points colorés devant chaque type
-    document.querySelectorAll('#filters-type .filter-item').forEach(label => {
-      const cb = label.querySelector('input');
-      const cfg = ICON_CONFIG[cb.value];
+    document.querySelectorAll('#filters-type .filter-item').forEach(el => {
+      const val = el.dataset.value;
+      const cfg = ICON_CONFIG[val];
       if (!cfg) return;
       const dot = document.createElement('span');
       dot.className = 'filter-dot';
       dot.style.background = cfg.couleur;
-      label.insertBefore(dot, label.firstChild);
+      el.insertBefore(dot, el.firstChild);
     });
 
     // Afficher tous les marqueurs

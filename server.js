@@ -13,6 +13,7 @@ app.use(express.static(join(__dirname, 'public')));
 app.use('/datacenters.geojson', express.static(join(__dirname, 'data', 'datacenters.geojson')));
 app.use('/datacenter_types.json', express.static(join(__dirname, 'data', 'datacenter_types.json')));
 app.use('/DCbati_poly.geojson', express.static(join(__dirname, 'data', 'DCbati_poly.geojson')));
+app.use('/Hydro-Quebec.geojson', express.static(join(__dirname, 'data', 'Hydro-Quebec.geojson')));
 
 app.listen(PORT, () => {
   console.log(`✅  nrs-map — http://localhost:${PORT}`);
