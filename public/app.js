@@ -1,5 +1,26 @@
 // ---- Initialisation de la carte ----
-const map = L.map('map');
+const map = L.map('map', { zoomControl: false });
+// ---- Contrôle Leaflet pour le bouton d'infos ----
+const InfoControl = L.Control.extend({
+  options: {
+    position: 'bottomright'
+  },
+  onAdd: function (map) {
+    const container = L.DomUtil.create('div', 'leaflet-bar leaflet-control leaflet-control-info');
+    container.innerHTML = `
+      <a href="#" id="btn-about" title="À propos du projet" role="button" aria-label="À propos du projet">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" style="vertical-align: middle;">
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+        </svg>
+      </a>
+    `;
+    L.DomEvent.disableClickPropagation(container);
+    return container;
+  }
+});
+map.addControl(new InfoControl());
+
+L.control.zoom({ position: 'bottomright' }).addTo(map);
 
 const tiles = {
   clair: L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -167,16 +188,85 @@ function updateFilterUI(containerId, selectedValue) {
   });
 }
 
+// ---- Mise à jour des statistiques ----
+function updateStatsUI(countVisible, totalPower, countWithPower) {
+  const countEl = document.getElementById('stats-count');
+  const powerEl = document.getElementById('stats-power');
+  const detailsEl = document.getElementById('stats-power-details');
+
+  if (countEl) countEl.textContent = countVisible;
+  if (powerEl) powerEl.textContent = totalPower > 0 ? totalPower.toFixed(1) + ' MW' : '0.0 MW';
+  if (detailsEl) {
+    detailsEl.textContent = `Calculée sur ${countWithPower} / ${countVisible} site${countVisible > 1 ? 's' : ''}`;
+  }
+}
+
+// ---- Mise à jour de la répartition par hébergeur ----
+function updateHostBreakdownUI(hostCounts) {
+  const container = document.getElementById('host-breakdown');
+  if (!container) return;
+  container.innerHTML = '';
+
+  // Trier par nombre décroissant de sites
+  const sortedHosts = Object.entries(hostCounts).sort((a, b) => b[1] - a[1]);
+
+  sortedHosts.forEach(([hostName, count]) => {
+    const row = document.createElement('div');
+    row.className = 'host-row';
+    
+    // Appliquer les classes active/inactive
+    if (selectedHebergeur !== null) {
+      if (hostName === selectedHebergeur) {
+        row.classList.add('active');
+      } else {
+        row.classList.add('inactive');
+      }
+    }
+
+    row.innerHTML = `
+      <span class="host-name" title="${hostName}">${hostName}</span>
+      <span class="host-count">${count}</span>
+    `;
+
+    row.addEventListener('click', () => {
+      selectedHebergeur = selectedHebergeur === hostName ? null : hostName;
+      applyFilters();
+    });
+
+    container.appendChild(row);
+  });
+}
+
 // ---- Application des filtres ----
 function applyFilters() {
   clusterGroup.clearLayers();
-  for (const { marker, type, hebergeur } of allMarkers) {
+  let countVisible = 0;
+  let totalPower = 0;
+  let countWithPower = 0;
+  const hostCounts = {};
+
+  for (const { marker, type, hebergeur, estimatedPower } of allMarkers) {
     const matchType = !selectedType || type === selectedType;
     const matchHebergeur = !selectedHebergeur || hebergeur === selectedHebergeur;
+    
+    // Affichage sur la carte (tient compte de tous les filtres)
     if (matchType && matchHebergeur) {
       clusterGroup.addLayer(marker);
+      countVisible++;
+      if (estimatedPower !== null && estimatedPower !== undefined) {
+        totalPower += estimatedPower;
+        countWithPower++;
+      }
+    }
+
+    // Répartition par hébergeur (indépendante du filtre hébergeur actif pour éviter de vider la liste)
+    if (matchType) {
+      hostCounts[hebergeur] = (hostCounts[hebergeur] || 0) + 1;
     }
   }
+
+  updateStatsUI(countVisible, totalPower, countWithPower);
+  updateHostBreakdownUI(hostCounts);
 }
 
 // ---- Chargement des données ----
@@ -398,14 +488,15 @@ Promise.all([
       const marker = L.marker([lat, lng], { icon: creerIcone(type) });
       marker.bindPopup(buildPopup(p, densityMap), { maxWidth: 280 });
 
-      allMarkers.push({ marker, type, hebergeur });
+      const puissEst = estimerPuissance(p, densityMap);
+
+      allMarkers.push({ marker, type, hebergeur, estimatedPower: puissEst });
     }
 
     if (ignorés > 0) console.info(`ℹ️ ${ignorés} site(s) sans coordonnées ignoré(s)`);
 
     // Générer les filtres dynamiquement
     buildClickFilters('filters-type', types, true);
-    buildClickFilters('filters-hebergeur', hebergeurs, false);
 
     // Bouton "Empreinte bâtiments"
     const btnPoly = document.createElement('div');
@@ -441,3 +532,30 @@ Promise.all([
   .catch(err => {
     console.error('Erreur de chargement :', err);
   });
+
+// ---- Gestion de la Modal À Propos ----
+const aboutModal = document.getElementById('about-modal');
+const btnAbout = document.getElementById('btn-about');
+const btnCloseAbout = document.getElementById('btn-close-about');
+
+if (btnAbout && aboutModal) {
+  btnAbout.addEventListener('click', (e) => {
+    e.preventDefault();
+    aboutModal.classList.add('visible');
+  });
+}
+
+if (btnCloseAbout && aboutModal) {
+  btnCloseAbout.addEventListener('click', () => {
+    aboutModal.classList.remove('visible');
+  });
+}
+
+if (aboutModal) {
+  aboutModal.addEventListener('click', (e) => {
+    if (e.target === aboutModal) {
+      aboutModal.classList.remove('visible');
+    }
+  });
+}
+

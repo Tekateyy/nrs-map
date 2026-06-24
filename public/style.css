@@ -6,9 +6,10 @@
 }
 
 body {
-  font-family: system-ui, sans-serif;
+  font-family: 'Outfit', 'Inter', system-ui, sans-serif;
   height: 100dvh;
   overflow: hidden;
+  background-color: #0b0f19;
 }
 
 /* ---- Carte plein écran ---- */
@@ -20,219 +21,278 @@ body {
   z-index: 0;
 }
 
-/* ---- Panneau de filtres (overlay) ---- */
-#filters {
+/* ---- Panneaux (Style Général) ---- */
+.panel {
   position: fixed;
   top: 1rem;
-  right: 1rem;
   z-index: 1000;
-  width: 260px;
-  max-height: calc(100dvh - 2rem);
+  width: 320px;
+  max-height: calc(100dvh - 3rem);
   overflow-y: auto;
-  background: rgba(255, 255, 255, 0.93);
-  backdrop-filter: blur(4px);
-  border-radius: 8px;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
-  padding: 1rem;
+  background: rgba(15, 23, 42, 0.85); /* Navy très sombre */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  padding: 1.25rem;
+  transition: all 0.2s ease-in-out;
+  color: #f8fafc;
 }
 
-#filters h2 {
-  font-size: 0.9rem;
+/* Positionnement des panneaux */
+#info-panel {
+  left: 1rem;
+}
+
+#filters {
+  right: 1rem;
+}
+
+/* Titres et descriptions */
+.panel h1 {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 0.35rem;
+  letter-spacing: -0.01em;
+}
+
+.panel-desc {
+  font-size: 0.74rem;
+  color: #94a3b8;
+  line-height: 1.45;
+  margin-bottom: 1.25rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding-bottom: 0.75rem;
+}
+
+.panel h2 {
+  font-size: 1.05rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: #333;
-  margin-bottom: 0.75rem;
-  border-bottom: 1px solid #e0e0e0;
-  padding-bottom: 0.4rem;
+  letter-spacing: 0.06em;
+  color: #fff;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 0.5rem;
 }
 
-#filters section {
-  margin-bottom: 0.75rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.25rem;
+.panel section, .info-section {
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
 }
 
-#filters h3 {
-  width: 100%;
+.panel h3, .info-section h3 {
+  width: 100%; /* Force la ligne suivante pour éviter le glitch de placement horizontal */
   font-size: 0.75rem;
-  font-weight: 600;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.04em;
-  color: #666;
-  margin-bottom: 0.3rem;
+  letter-spacing: 0.06em;
+  color: #94a3b8;
+  margin-bottom: 0.6rem;
 }
 
-/* ---- Filtres sous forme de boutons cliquables (Chips) ---- */
-.filter-item {
-  display: inline-flex;
+/* ---- Cartes d'infos (Panneau Gauche) ---- */
+.info-card {
+  background: rgba(30, 41, 59, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  padding: 0.9rem 1.1rem;
+  margin-bottom: 0.75rem;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.info-card-label {
+  display: block;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #94a3b8;
+  margin-bottom: 0.35rem;
+}
+
+.info-card-value {
+  display: block;
+  font-size: 1.8rem;
+  font-weight: 800;
+  line-height: 1.1;
+  font-family: monospace;
+}
+
+.info-card-dc .info-card-value {
+  color: #00e676; /* Vert néon */
+  text-shadow: 0 0 10px rgba(0, 230, 118, 0.2);
+}
+
+.info-card-power .info-card-value {
+  color: #ffd600; /* Or/jaune vif */
+  text-shadow: 0 0 10px rgba(255, 214, 0, 0.2);
+}
+
+.info-card-subtext {
+  display: block;
+  font-size: 0.7rem;
+  color: #64748b;
+  margin-top: 0.4rem;
+  font-style: italic;
+}
+
+/* ---- Répartition des hébergeurs ---- */
+#host-breakdown {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  max-height: 250px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.host-row {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  gap: 0.3rem;
-  padding: 0.25rem 0.45rem;
-  border-radius: 4px;
-  cursor: pointer;
   font-size: 0.78rem;
-  color: #333;
-  background: rgba(0, 0, 0, 0.04);
-  border: 1px solid transparent;
-  transition: all 0.15s ease;
+  color: #cbd5e1;
+  padding: 0.25rem 0.45rem;
+  margin-bottom: 0.15rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  cursor: pointer;
+  border-radius: 6px;
+  transition: all 0.12s ease;
   user-select: none;
 }
 
-.filter-item:hover {
-  background: rgba(0, 0, 0, 0.08);
+.host-row:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
 }
 
-.filter-item.active {
-  background: rgba(0, 120, 212, 0.1);
-  color: #0078d4;
-  border-color: rgba(0, 120, 212, 0.25);
+.host-row.active {
+  background: rgba(14, 165, 233, 0.18);
+  color: #38bdf8;
   font-weight: 600;
+  border-color: rgba(14, 165, 233, 0.2);
 }
 
-.filter-item.inactive {
-  opacity: 0.4;
-  background: transparent;
-  color: #888;
-  border-color: transparent;
-  font-weight: normal;
+.host-row.inactive {
+  opacity: 0.35;
 }
 
-/* ---- Marqueurs par type (L.divIcon) ---- */
-.marker-icon {
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 11px;
+.host-name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 0.5rem;
+}
+
+.host-count {
   font-weight: 700;
-  border: 2px solid rgba(255, 255, 255, 0.85);
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.45);
-  line-height: 1;
-}
-
-/* ---- Point coloré dans le filtre Type ---- */
-.filter-dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  flex-shrink: 0;
-  border: 1px solid rgba(0, 0, 0, 0.15);
+  color: #38bdf8; /* Cyan/bleu clair */
+  font-family: monospace;
+  font-size: 0.85rem;
 }
 
 /* ---- Bouton bascule fond de carte ---- */
 #btn-theme {
   display: block;
   width: 100%;
-  margin-bottom: 0.75rem;
-  padding: 0.4rem 0.6rem;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  background: transparent;
-  font-size: 0.8rem;
-  cursor: pointer;
-  text-align: left;
-}
-#btn-theme:hover { background: rgba(0, 0, 0, 0.06); }
-
-/* ---- Thème sombre ---- */
-body.theme-sombre #filters {
-  background: rgba(18, 20, 28, 0.93);
-  color: #e0e0e0;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
-}
-body.theme-sombre #filters h2 { color: #ccc; border-color: #333; }
-body.theme-sombre #filters h3 { color: #888; }
-body.theme-sombre .filter-item {
-  color: #ccc;
+  margin-bottom: 1rem;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
   background: rgba(255, 255, 255, 0.05);
-}
-body.theme-sombre .filter-item:hover {
-  background: rgba(255, 255, 255, 0.1);
-}
-body.theme-sombre .filter-item.active {
-  background: rgba(0, 120, 212, 0.2);
-  color: #00bcd4;
-  border-color: rgba(0, 188, 212, 0.3);
+  color: #f8fafc;
+  font-size: 0.8rem;
   font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.15s ease;
 }
-body.theme-sombre .filter-item.inactive {
-  opacity: 0.3;
-  background: transparent;
-  color: #777;
-}
-body.theme-sombre #btn-theme { border-color: #444; color: #ccc; }
-body.theme-sombre #btn-theme:hover { background: rgba(255, 255, 255, 0.08); }
-
-/* ---- Popups Leaflet ---- */
-.leaflet-popup-content {
-  font-size: 0.82rem;
-  line-height: 1.5;
-  min-width: 200px;
+#btn-theme:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.25);
 }
 
-.popup-title {
-  font-size: 0.95rem;
-  font-weight: 700;
-  margin-bottom: 0.4rem;
-  color: #111;
-}
-
-.popup-row {
+/* ---- Filtres (Chips) ---- */
+#filters section {
   display: flex;
-  gap: 0.3rem;
-  margin-bottom: 0.15rem;
+  flex-wrap: wrap;
+  gap: 0.35rem;
 }
 
-.popup-label {
-  color: #666;
-  flex-shrink: 0;
-  min-width: 80px;
-}
-
-.popup-value {
-  color: #111;
+.filter-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.3rem 0.55rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.75rem;
   font-weight: 500;
-  word-break: break-word;
+  color: #cbd5e1;
+  background: rgba(30, 41, 59, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.15s ease;
+  user-select: none;
 }
 
-.popup-link {
-  color: #0078d4;
-  text-decoration: none;
+.filter-item:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.12);
+  color: #fff;
 }
 
-.popup-link:hover {
-  text-decoration: underline;
+.filter-item.active {
+  background: rgba(14, 165, 233, 0.15);
+  color: #38bdf8;
+  border-color: rgba(14, 165, 233, 0.4);
+  font-weight: 600;
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.1);
+}
+
+.filter-item.inactive {
+  opacity: 0.35;
+  background: transparent;
+  color: #64748b;
+  border-color: transparent;
+}
+
+/* Point coloré dans les chips de types */
+.filter-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 /* ---- Légende Hydro-Québec ---- */
 .hq-legend {
   width: 100%;
   margin-top: 0.6rem;
-  padding-top: 0.5rem;
-  border-top: 1px dashed #e0e0e0;
+  padding-top: 0.6rem;
+  border-top: 1px dashed rgba(255, 255, 255, 0.1);
 }
 
 .hq-legend-title {
-  font-size: 0.7rem;
+  font-size: 0.68rem;
   font-weight: 700;
   text-transform: uppercase;
-  color: #777;
-  margin-bottom: 0.35rem;
+  color: #64748b;
+  margin-bottom: 0.4rem;
 }
 
 .hq-legend-item {
   display: flex;
   align-items: center;
-  gap: 0.4rem;
-  font-size: 0.78rem;
-  color: #444;
-  margin-bottom: 0.25rem;
-  padding: 0.2rem 0.4rem;
-  border-radius: 4px;
+  gap: 0.45rem;
+  font-size: 0.75rem;
+  color: #cbd5e1;
+  margin-bottom: 0.3rem;
+  padding: 0.25rem 0.45rem;
+  border-radius: 6px;
   cursor: pointer;
   border: 1px solid transparent;
   transition: all 0.15s ease;
@@ -240,17 +300,17 @@ body.theme-sombre #btn-theme:hover { background: rgba(255, 255, 255, 0.08); }
 }
 
 .hq-legend-item:hover {
-  background: rgba(0, 0, 0, 0.04);
+  background: rgba(255, 255, 255, 0.05);
 }
 
 .hq-legend-item.active {
-  background: rgba(0, 120, 212, 0.08);
-  border-color: rgba(0, 120, 212, 0.2);
+  background: rgba(14, 165, 233, 0.15);
+  border-color: rgba(14, 165, 233, 0.3);
   font-weight: 600;
 }
 
 .hq-legend-item.inactive {
-  opacity: 0.35;
+  opacity: 0.3;
 }
 
 .hq-legend-color {
@@ -265,59 +325,507 @@ body.theme-sombre #btn-theme:hover { background: rgba(255, 255, 255, 0.08); }
 .hq-legend-color.color-230 { border-color: #3f51b5; }
 .hq-legend-color.color-120 { border-color: #00bcd4; }
 
-/* Thème sombre pour la légende */
-body.theme-sombre .hq-legend {
-  border-color: #333;
-}
-body.theme-sombre .hq-legend-title {
-  color: #888;
-}
-body.theme-sombre .hq-legend-item {
-  color: #ccc;
-}
-body.theme-sombre .hq-legend-item:hover {
-  background: rgba(255, 255, 255, 0.05);
-}
-body.theme-sombre .hq-legend-item.active {
-  background: rgba(0, 120, 212, 0.15);
-  border-color: rgba(0, 188, 212, 0.25);
-  font-weight: 600;
-}
-body.theme-sombre .hq-legend-item.inactive {
-  opacity: 0.25;
+/* ---- Pied de page (Footer) ---- */
+#map-footer {
+  position: fixed;
+  bottom: 0.75rem;
+  left: 1rem;
+  z-index: 1000;
+  font-size: 0.68rem;
+  color: rgba(148, 163, 184, 0.65);
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(4px);
+  padding: 0.35rem 0.65rem;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  pointer-events: auto; /* Permet de cliquer sur les liens */
 }
 
-/* ---- Barre de défilement personnalisée (Scrollbar) ---- */
-#filters {
+#map-footer a {
+  color: #38bdf8;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.15s ease;
+}
+
+#map-footer a:hover {
+  color: #7dd3fc;
+  text-decoration: underline;
+}
+
+/* ---- Version Claire (Adaptabilité) ---- */
+body:not(.theme-sombre) {
+  background-color: #f1f5f9;
+}
+
+body:not(.theme-sombre) .panel {
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  color: #1e293b;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+body:not(.theme-sombre) .panel h1 {
+  color: #0f172a;
+}
+
+body:not(.theme-sombre) .panel-desc {
+  color: #475569;
+  border-bottom-color: rgba(0, 0, 0, 0.08);
+}
+
+body:not(.theme-sombre) .panel h2 {
+  color: #0f172a;
+  border-bottom-color: rgba(0, 0, 0, 0.08);
+}
+
+body:not(.theme-sombre) .panel h3,
+body:not(.theme-sombre) .info-section h3,
+body:not(.theme-sombre) .hq-legend-title {
+  color: #64748b;
+}
+
+body:not(.theme-sombre) .info-card {
+  background: rgba(241, 245, 249, 0.8);
+  border-color: rgba(0, 0, 0, 0.06);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+body:not(.theme-sombre) .info-card-label {
+  color: #64748b;
+}
+
+body:not(.theme-sombre) .info-card-dc .info-card-value {
+  color: #059669; /* Vert plus sombre pour le contraste */
+  text-shadow: none;
+}
+
+body:not(.theme-sombre) .info-card-power .info-card-value {
+  color: #b45309; /* Jaune/orange pour le contraste */
+  text-shadow: none;
+}
+
+body:not(.theme-sombre) .info-card-subtext {
+  color: #64748b;
+}
+
+body:not(.theme-sombre) .host-row {
+  color: #334155;
+  border-bottom-color: rgba(0, 0, 0, 0.06);
+}
+body:not(.theme-sombre) .host-row:hover {
+  background: rgba(0, 0, 0, 0.04);
+  color: #0f172a;
+}
+body:not(.theme-sombre) .host-row.active {
+  background: rgba(14, 165, 233, 0.1);
+  color: #0284c7;
+  border-color: rgba(14, 165, 233, 0.15);
+}
+
+body:not(.theme-sombre) .host-count {
+  color: #0284c7;
+}
+
+body:not(.theme-sombre) #btn-theme {
+  border-color: rgba(0, 0, 0, 0.15);
+  background: rgba(0, 0, 0, 0.03);
+  color: #1e293b;
+}
+body:not(.theme-sombre) #btn-theme:hover {
+  background: rgba(0, 0, 0, 0.06);
+}
+
+body:not(.theme-sombre) .filter-item {
+  color: #334155;
+  background: rgba(241, 245, 249, 0.8);
+  border-color: rgba(0, 0, 0, 0.06);
+}
+body:not(.theme-sombre) .filter-item:hover {
+  background: rgba(0, 0, 0, 0.05);
+  color: #0f172a;
+}
+body:not(.theme-sombre) .filter-item.active {
+  background: rgba(14, 165, 233, 0.1);
+  color: #0284c7;
+  border-color: rgba(14, 165, 233, 0.3);
+}
+
+body:not(.theme-sombre) .hq-legend {
+  border-top-color: rgba(0, 0, 0, 0.08);
+}
+body:not(.theme-sombre) .hq-legend-item {
+  color: #334155;
+}
+body:not(.theme-sombre) .hq-legend-item:hover {
+  background: rgba(0, 0, 0, 0.03);
+}
+body:not(.theme-sombre) .hq-legend-item.active {
+  background: rgba(14, 165, 233, 0.1);
+  border-color: rgba(14, 165, 233, 0.25);
+}
+
+body:not(.theme-sombre) #map-footer {
+  color: rgba(71, 85, 105, 0.8);
+  background: rgba(255, 255, 255, 0.8);
+  border-color: rgba(0, 0, 0, 0.06);
+}
+
+body:not(.theme-sombre) #map-footer a {
+  color: #0284c7;
+}
+
+body:not(.theme-sombre) #map-footer a:hover {
+  color: #0369a1;
+}
+
+/* ---- Personnalisation Zoom Leaflet ---- */
+.leaflet-bar {
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4) !important;
+  border-radius: 8px !important;
+  overflow: hidden;
+}
+.leaflet-bar a {
+  background-color: rgba(15, 23, 42, 0.9) !important;
+  color: #f8fafc !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+  transition: all 0.15s ease;
+}
+.leaflet-bar a:hover {
+  background-color: rgba(30, 41, 59, 0.9) !important;
+  color: #fff !important;
+}
+
+body:not(.theme-sombre) .leaflet-bar {
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) !important;
+}
+body:not(.theme-sombre) .leaflet-bar a {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  color: #1e293b !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06) !important;
+}
+body:not(.theme-sombre) .leaflet-bar a:hover {
+  background-color: #f1f5f9 !important;
+}
+
+/* ---- Marqueurs divIcon ---- */
+.marker-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+  border: 2px solid rgba(255, 255, 255, 0.85);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.45);
+  line-height: 1;
+}
+
+/* ---- Barres de défilement ---- */
+.panel, .modal-content {
   scrollbar-width: thin;
-  scrollbar-color: rgba(0, 0, 0, 0.15) transparent;
-}
-
-body.theme-sombre #filters {
   scrollbar-color: rgba(255, 255, 255, 0.15) transparent;
 }
-
-#filters::-webkit-scrollbar {
-  width: 6px;
+body:not(.theme-sombre) .panel, body:not(.theme-sombre) .modal-content {
+  scrollbar-color: rgba(0, 0, 0, 0.15) transparent;
 }
-
-#filters::-webkit-scrollbar-track {
+.panel::-webkit-scrollbar, #host-breakdown::-webkit-scrollbar, .modal-content::-webkit-scrollbar {
+  width: 4px;
+}
+.panel::-webkit-scrollbar-track, #host-breakdown::-webkit-scrollbar-track, .modal-content::-webkit-scrollbar-track {
   background: transparent;
 }
-
-#filters::-webkit-scrollbar-thumb {
-  background: rgba(0, 0, 0, 0.15);
-  border-radius: 3px;
-}
-
-#filters::-webkit-scrollbar-thumb:hover {
-  background: rgba(0, 0, 0, 0.3);
-}
-
-body.theme-sombre #filters::-webkit-scrollbar-thumb {
+.panel::-webkit-scrollbar-thumb, #host-breakdown::-webkit-scrollbar-thumb, .modal-content::-webkit-scrollbar-thumb {
   background: rgba(255, 255, 255, 0.15);
+  border-radius: 2px;
+}
+body:not(.theme-sombre) .panel::-webkit-scrollbar-thumb,
+body:not(.theme-sombre) #host-breakdown::-webkit-scrollbar-thumb,
+body:not(.theme-sombre) .modal-content::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.15);
 }
 
-body.theme-sombre #filters::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.3);
+/* ---- Modal Overlay ---- */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10000; /* Plus haut que tout le reste */
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
 }
+
+.modal-overlay.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ---- Modal Content ---- */
+.modal-content {
+  background: rgba(15, 23, 42, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  width: 720px;
+  max-width: 92%;
+  max-height: 85dvh;
+  overflow-y: auto;
+  padding: 2.2rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8), 0 0 25px rgba(56, 189, 248, 0.05);
+  position: relative;
+  color: #f8fafc;
+  transform: scale(0.95);
+  transition: transform 0.25s ease;
+}
+
+.modal-overlay.visible .modal-content {
+  transform: scale(1);
+}
+
+/* Bouton de fermeture */
+.modal-close {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #94a3b8;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  font-size: 1.4rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.modal-close:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Éléments internes de la Modal */
+.modal-content h2 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #f8fafc;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+}
+
+.modal-desc {
+  font-size: 0.88rem;
+  color: #cbd5e1;
+  line-height: 1.6;
+  margin-bottom: 1.8rem;
+}
+
+.modal-content h3 {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #c084fc; /* Couleur violette pour l'entête de section */
+  margin-bottom: 0.75rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding-bottom: 0.4rem;
+}
+
+/* Tableau des Sources de Données */
+.table-container {
+  background: rgba(30, 41, 59, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 1.8rem;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.82rem;
+  text-align: left;
+}
+
+.data-table th, .data-table td {
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.data-table th {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  color: #64748b;
+  background: rgba(15, 23, 42, 0.3);
+  letter-spacing: 0.05em;
+}
+
+.data-table tr:last-child td {
+  border-bottom: none;
+}
+
+.source-cell {
+  font-weight: 600;
+  color: #38bdf8;
+  white-space: nowrap;
+  width: 30%;
+}
+
+.source-cell a {
+  color: #38bdf8;
+  text-decoration: none;
+}
+
+.source-cell a:hover {
+  text-decoration: underline;
+}
+
+/* Liens dans la Modal */
+.modal-content a:not(.btn-github):not(.modal-close) {
+  color: #38bdf8;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.15s ease;
+}
+
+.modal-content a:not(.btn-github):not(.modal-close):hover {
+  color: #7dd3fc;
+  text-decoration: underline;
+}
+
+/* Crédits & Licence */
+.modal-credits {
+  font-size: 0.85rem;
+  color: #cbd5e1;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+}
+
+
+/* Bouton GitHub */
+.modal-actions {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-github {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: #2563eb;
+  color: #ffffff;
+  padding: 0.7rem 1.4rem;
+  border-radius: 8px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+}
+
+.btn-github:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.35);
+}
+
+.github-icon {
+  flex-shrink: 0;
+}
+
+/* ---- Adaptation Thème Clair ---- */
+body:not(.theme-sombre) .modal-overlay {
+  background: rgba(15, 23, 42, 0.4);
+}
+
+body:not(.theme-sombre) .modal-content {
+  background: #ffffff;
+  border-color: rgba(0, 0, 0, 0.08);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.2);
+  color: #1e293b;
+}
+
+body:not(.theme-sombre) .modal-close {
+  background: rgba(0, 0, 0, 0.03);
+  border-color: rgba(0, 0, 0, 0.06);
+  color: #64748b;
+}
+
+body:not(.theme-sombre) .modal-close:hover {
+  background: rgba(0, 0, 0, 0.08);
+  color: #0f172a;
+}
+
+body:not(.theme-sombre) .modal-content h2 {
+  color: #1e293b;
+}
+
+body:not(.theme-sombre) .modal-desc,
+body:not(.theme-sombre) .modal-credits {
+  color: #475569;
+}
+
+body:not(.theme-sombre) .modal-content h3 {
+  color: #7c3aed; /* Violet un peu plus soutenu pour le thème clair */
+  border-bottom-color: rgba(0, 0, 0, 0.06);
+}
+
+body:not(.theme-sombre) .table-container {
+  background: rgba(241, 245, 249, 0.6);
+  border-color: rgba(0, 0, 0, 0.06);
+}
+
+body:not(.theme-sombre) .data-table th {
+  background: rgba(0, 0, 0, 0.02);
+  color: #64748b;
+}
+
+body:not(.theme-sombre) .data-table td {
+  border-bottom-color: rgba(0, 0, 0, 0.05);
+}
+
+body:not(.theme-sombre) .source-cell,
+body:not(.theme-sombre) .modal-content a:not(.btn-github):not(.modal-close) {
+  color: #0284c7;
+}
+
+body:not(.theme-sombre) .modal-content a:not(.btn-github):not(.modal-close):hover {
+  color: #0369a1;
+}
+
+/* ---- Bouton d'infos (Leaflet Control) ---- */
+.leaflet-control-info {
+  margin-bottom: 6px !important;
+}
+
+.leaflet-control-info a {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 8px !important;
+}
+
+.leaflet-control-info svg {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+}
+
+

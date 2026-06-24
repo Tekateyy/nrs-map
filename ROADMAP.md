@@ -25,15 +25,19 @@ de session.
 - [x] Polygones bâtiments (`DCbati_poly.geojson`) avec filtre on/off
 - [x] Couleurs distinctes par Type (Hyperscale, Retail, Carrier Hotel…)
 - [x] Légende des couleurs/types
-- [ ] Compteur de sites affichés / total après filtrage
-- [ ] Barre de recherche par nom de site
-
+- [x] Compteur de sites affichés / total après filtrage
+- [ ] Barre de recherche par nom de site et ville 
+- [x] Crédits et licence
+- [x] Titre 
+- [x] Favicon
+- [x] A propos
+- [ ] Permettre le téléchagement des geojson
 ---
 
 ## Phase 3 — Qualité des données (à venir)
 
 - [ ] Géocodage des 5 sites sans coordonnées (Enovum MTL01, Hive QC-1, Hyper Bit, Exaion/PINQ2, HIVE Canada 1.0)
-- [ ] Nettoyage des champs manquants ou incohérents dans `points.geojson`
+- [ ] Nettoyage des champs manquants ou incohérents dans `datacenter_types.geojson`
 
 ---
 
