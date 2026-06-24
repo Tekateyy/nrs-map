@@ -4,9 +4,11 @@
   "description": "Carte interactive des data centers au Québec et au Canada",
   "type": "module",
   "scripts": {
+    "build": "node scripts/process-working-data.js",
     "start": "node server.js"
   },
   "dependencies": {
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "papaparse": "^5.5.4"
   }
 }

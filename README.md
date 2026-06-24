@@ -3,7 +3,7 @@
 Carte interactive des **data centers au Québec et au Canada**.
 
 Application web single-page construite avec Node.js, Leaflet et OpenStreetMap.
-Aucune clé API, aucun build requis.
+Aucune clé API requise.
 
 ## Fonctionnalités
 
@@ -16,12 +16,13 @@ Aucune clé API, aucun build requis.
 
 - [Node.js](https://nodejs.org/) ≥ 18
 
-## Installation
+## Installation et préparation des données
 
 ```bash
 git clone <repo-url>
 cd nrs-map
 npm install
+npm run build   # Génère, compile et copie les fichiers de données les plus récents dans le dossier data/
 ```
 
 ## Lancement

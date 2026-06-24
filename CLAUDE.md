@@ -23,11 +23,12 @@ inclus dans le dépôt. Pas de base de données, pas d'authentification.
 
 ## Commandes
 ```bash
-npm install   # installe Express
+npm install   # installe Express et papaparse
+npm run build # traite et copie les données les plus récentes (datacenters et Hydro-Québec)
 npm start     # démarre le serveur sur http://localhost:3000
 
 # Docker / Zimablade
-docker compose up -d --build  # Construit et lance le conteneur en arrière-plan
+docker compose up -d --build  # Construit et lance le conteneur en arrière-plan (exécute npm run build)
 docker compose down           # Arrête le conteneur
 ```
 
@@ -48,6 +49,8 @@ nrs-map/
 │  ├─ datacenter_types.json ← densité de puissance (W/pi²) par Type de site
 │  ├─ datacenters.geojson  ← données brutes (49 features)
 │  └─ DCbati_poly.geojson  ← empreintes polygonales des bâtiments (18 features)
+├─ scripts/
+│  └─ process-working-data.js ← script pour copier les GeoJSON les plus récents de working-data vers data
 └─ public/
    ├─ index.html        ← page unique
    ├─ style.css         ← mise en page
