@@ -124,32 +124,62 @@
           <thead>
             <tr>
               <th>Source</th>
+              <th>Date de collecte</th>
               <th>Description</th>
+              <th>Téléchargement</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td class="source-cell">Centres de données du Québec</td>
+              <td id="date-datacenters" class="date-cell">—</td>
               <td>Données géographiques et caractéristiques des centres de données identifiés et catégorisés
                 (Hyperscale, Retail, Crypto, etc.).
                 <br />
                 Collecté par l'équipe projet du Collectif Numérique Responsable et Soutenable
               </td>
+              <td>
+                <a href="/datacenters.geojson" download="datacenters.geojson" class="btn-download">
+                  <svg viewBox="0 0 24 24" width="12" height="12" fill="currentColor">
+                    <path d="M5 20h14v-2H5v2zM19 9h-4V3H9v6H5l7 7 7-7z" />
+                  </svg>
+                  GeoJSON
+                </a>
+              </td>
             </tr>
             <tr>
               <td class="source-cell">Empreinte bâtiments</td>
+              <td id="date-bati" class="date-cell">—</td>
               <td>Polygones d'emprise au sol des bâtiments abritant les infrastructures de calcul.
                 <br />
                 Dessinés manuellement dans QGIS par l'équipe projet du Collectif Numérique Responsable et Soutenable
               </td>
+              <td>
+                <a href="/DCbati_poly.geojson" download="DCbati_poly.geojson" class="btn-download">
+                  <svg viewBox="0 0 24 24" width="12" height="12" fill="currentColor">
+                    <path d="M5 20h14v-2H5v2zM19 9h-4V3H9v6H5l7 7 7-7z" />
+                  </svg>
+                  GeoJSON
+                </a>
+              </td>
             </tr>
             <tr>
               <td class="source-cell">Réseau Hydro-Québec</td>
+              <td id="date-hq" class="date-cell">—</td>
               <td>Tracés des lignes de transport haute tension (120 kV à 735 kV) et localisation des postes électriques
                 du réseau électrique québécois.
                 <br />
-                Source principale : <a href="https://coders.cme-emh.ca/dashboard/transmission_lines">Carefour de la
-                  Modélisation Energétique - Transmission Lines Dashboard</a>
+                Source principale : <a href="https://coders.cme-emh.ca/dashboard/transmission_lines" target="_blank"
+                  rel="noopener">Carrefour de la
+                  Modélisation Énergétique - Transmission Lines Dashboard</a>
+              </td>
+              <td>
+                <a href="/Hydro-Quebec.geojson" download="Hydro-Quebec.geojson" class="btn-download">
+                  <svg viewBox="0 0 24 24" width="12" height="12" fill="currentColor">
+                    <path d="M5 20h14v-2H5v2zM19 9h-4V3H9v6H5l7 7 7-7z" />
+                  </svg>
+                  GeoJSON
+                </a>
               </td>
             </tr>
           </tbody>
@@ -158,8 +188,8 @@
 
       <h3>Crédits &amp; Licence</h3>
       <p class="modal-credits">
-        Projet créé par <strong>Alexandre Theve</strong> pour le <a href="https://www.numerique-responsable.ca/"
-          target="_blank" rel="noopener">Collectif Numérique Responsable et Soutenable</a> sous licence <a
+        Projet créé par le <a href="https://www.numerique-responsable.ca/" target="_blank" rel="noopener">Collectif
+          Numérique Responsable et Soutenable</a> sous licence <a
           href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr" target="_blank" rel="noopener">CC BY-NC-SA
           4.0</a>.
       </p>

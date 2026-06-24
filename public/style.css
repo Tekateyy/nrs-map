@@ -575,7 +575,7 @@ body:not(.theme-sombre) .modal-content::-webkit-scrollbar-thumb {
   background: rgba(15, 23, 42, 0.95);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 20px;
-  width: 720px;
+  width: 860px;
   max-width: 92%;
   max-height: 85dvh;
   overflow-y: auto;
@@ -650,7 +650,7 @@ body:not(.theme-sombre) .modal-content::-webkit-scrollbar-thumb {
   background: rgba(30, 41, 59, 0.4);
   border: 1px solid rgba(255, 255, 255, 0.05);
   border-radius: 12px;
-  overflow: hidden;
+  overflow-x: auto;
   margin-bottom: 1.8rem;
 }
 
@@ -664,6 +664,7 @@ body:not(.theme-sombre) .modal-content::-webkit-scrollbar-thumb {
 .data-table th, .data-table td {
   padding: 0.85rem 1rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  vertical-align: middle;
 }
 
 .data-table th {
@@ -675,6 +676,23 @@ body:not(.theme-sombre) .modal-content::-webkit-scrollbar-thumb {
   letter-spacing: 0.05em;
 }
 
+.data-table th:nth-child(2),
+.data-table td:nth-child(2) {
+  width: 15%;
+  text-align: center;
+}
+
+.data-table th:nth-child(3),
+.data-table td:nth-child(3) {
+  width: 45%;
+}
+
+.data-table th:nth-child(4),
+.data-table td:nth-child(4) {
+  width: 15%;
+  text-align: center;
+}
+
 .data-table tr:last-child td {
   border-bottom: none;
 }
@@ -683,7 +701,7 @@ body:not(.theme-sombre) .modal-content::-webkit-scrollbar-thumb {
   font-weight: 600;
   color: #38bdf8;
   white-space: nowrap;
-  width: 30%;
+  width: 25%;
 }
 
 .source-cell a {
@@ -826,6 +844,64 @@ body:not(.theme-sombre) .modal-content a:not(.btn-github):not(.modal-close):hove
   width: 16px;
   height: 16px;
   fill: currentColor;
+}
+
+/* ---- Téléchargement & Dates (Modal A Propos) ---- */
+.date-cell {
+  font-family: monospace;
+  font-size: 0.85rem;
+  color: #cbd5e1;
+  white-space: nowrap;
+}
+
+body:not(.theme-sombre) .date-cell {
+  color: #475569;
+}
+
+.btn-download {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.35rem 0.7rem;
+  background: rgba(14, 165, 233, 0.15);
+  color: #38bdf8 !important;
+  border: 1px solid rgba(14, 165, 233, 0.3);
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.15s ease;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.btn-download:hover {
+  background: #2563eb;
+  color: #ffffff !important;
+  border-color: #2563eb;
+  box-shadow: 0 0 10px rgba(37, 99, 235, 0.3);
+}
+
+.btn-download svg {
+  flex-shrink: 0;
+  transition: transform 0.15s ease;
+}
+
+.btn-download:hover svg {
+  transform: translateY(1px);
+}
+
+body:not(.theme-sombre) .btn-download {
+  background: rgba(2, 132, 199, 0.1);
+  color: #0284c7 !important;
+  border-color: rgba(2, 132, 199, 0.25);
+}
+
+body:not(.theme-sombre) .btn-download:hover {
+  background: #0284c7;
+  color: #ffffff !important;
+  border-color: #0284c7;
+  box-shadow: none;
 }
 
 

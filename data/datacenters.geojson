@@ -1,4 +1,1709 @@
 {
-  "type" : "FeatureCollection",
-  "features" : [{"type":"Feature","id":1,"geometry":{"type":"Point","coordinates":[-73.41830319972901,45.653454399768343]},"properties":{"OBJECTID":1,"UNIQID":"AWSDVAR1","NomSite":"AWS YUL","Type":"Hyperscale","Adresse":"1804 Bd Lionel-Boulet Varennes  J3X 1S1","Pays":"Canada","PuissanceAnnMW":null,"ville":"Varennes","state":"Québec","country":"Canada","postcode":"J3X 1Z4","Hebergeur":"Amazon","ÉquipIA":null,"NombreBatiments":2,"SurfBatimentPI2":"310 000","NbServeursAnnoncé":null,"PUE":null,"Siteweb":null,"FicheTechDocumentation":null,"Source":null,"display_na":"Boulevard Lionel-Boulet, Varennes, Marguerite-D'Youville, Montérégie, Québec, J3X 1Z4, Canada"}},{"type":"Feature","id":2,"geometry":{"type":"Point","coordinates":[-73.571494399926536,45.508921100409829]},"properties":{"OBJECTID":2,"UNIQID":"BNFDMTL1","NomSite":"Beanfield  - 3445 Park Ave","Type":"Retail","Adresse":"3445 Av. du Parc  Montréal H2X 2H6","Pays":"Canada","PuissanceAnnMW":5,"ville":"Montréal","state":"Québec","country":"Canada","postcode":"H2X 2H5","Hebergeur":"Beanfield ","ÉquipIA":null,"NombreBatiments":1,"SurfBatimentPI2":"26 600","NbServeursAnnoncé":null,"PUE":null,"Siteweb":"https://www.beanfield.com/business/colocation-data-centre/3445-park-avenue/","FicheTechDocumentation":null,"Source":null,"display_na":"3445, Avenue du Parc, Le Plateau-Mont-Royal, Montréal, Agglomération de Montréal, Montréal (région administrative), Québec, H2X 2H5, Canada"}},{"type":"Feature","id":3,"geometry":{"type":"Point","coordinates":[-73.567142899604832,45.502583700377926]},"properties":{"OBJECTID":3,"UNIQID":"CLGXMTL1","NomSite":"Cologix MTL1","Type":"Carrier Hotel","Adresse":"625 Boul. René-Lévesque Ouest Montréal  H3B 1R2","Pays":"Canada","PuissanceAnnMW":0.10000000000000001,"ville":"Montréal","state":"Québec","country":"Canada","postcode":"H3B 1R2","Hebergeur":"Cologix","ÉquipIA":null,"NombreBatiments":1,"SurfBatimentPI2":"5 000","NbServeursAnnoncé":null,"PUE":2,"Siteweb":"https://cologix.com/data-centers/montreal/mtl1/","FicheTechDocumentation":"https://cologix.com/wp-content/uploads/2026/01/SS_MTL1-Montreal-Data-Centre_12-2025_EN.pdf","Source":null,"display_na":"625, Boulevard René-Lévesque Ouest, Ville-Marie, Montréal, Agglomération de Montréal, Montréal (région administrative), Québec, H3B 1R2, Canada"}},{"type":"Feature","id":4,"geometry":{"type":"Point","coordinates":[-73.475800500106402,45.566361599483493]},"properties":{"OBJECTID":4,"UNIQID":"CLGXLGL10","NomSite":"Cologix MTL10","Type":"Wholesale","Adresse":"530 Rue Bériault  Longueuil J4G 1S8","Pays":"Canada","PuissanceAnnMW":35,"ville":"Longueuil","state":"Québec","country":"Canada","postcode":"J4G 1R8","Hebergeur":"Cologix","ÉquipIA":"IA","NombreBatiments":1,"SurfBatimentPI2":"240 000","NbServeursAnnoncé":null,"PUE":null,"Siteweb":"https://cologix.com/data-centers/montreal/mtl10","FicheTechDocumentation":"https://cologix.com/wp-content/uploads/2026/01/SS_MTL10-Montreal-Data-Centre_12-2025_EN.pdf","Source":null,"display_na":"530, Rue Bériault, Le Vieux-Longueuil, Longueuil, Agglomération de Longueuil, Montérégie, Québec, J4G 1R8, Canada"}},{"type":"Feature","id":5,"geometry":{"type":"Point","coordinates":[-73.565030199498807,45.499524799839968]},"properties":{"OBJECTID":5,"UNIQID":"CLGXMTL11","NomSite":"Cologix MTL11","Type":"Carrier Hotel","Adresse":"875 Rue Saint-Antoine Ouest Montréal H3C 1A6","Pays":"Canada","PuissanceAnnMW":1,"ville":"Montréal","state":"Québec","country":"Canada","postcode":"H5A 1E4","Hebergeur":"Cologix","ÉquipIA":null,"NombreBatiments":1,"SurfBatimentPI2":"25 000","NbServeursAnnoncé":null,"PUE":1.8,"Siteweb":"https://cologix.com/data-centers/montreal/mtl11","FicheTechDocumentation":"https://cologix.com/wp-content/uploads/2026/01/SS_MTL11-Montreal-Data-Centre_12-2025_EN.pdf","Source":null,"display_na":"875, Rue Saint-Antoine Ouest, Ville-Marie, Montréal, Agglomération de Montréal, Montréal (région administrative), Québec, H5A 1E4, Canada"}},{"type":"Feature","id":6,"geometry":{"type":"Point","coordinates":[-73.54132189935126,45.466972800059366]},"properties":{"OBJECTID":6,"UNIQID":"CLGXMTL12","NomSite":"Cologix MTL12","Type":"Carrier Hotel","Adresse":"3000 Boul. Rene Levesque Verdun H3E 1T9","Pays":"Canada","PuissanceAnnMW":0.20000000000000001,"ville":"Montréal","state":"Québec","country":"Canada","postcode":"H3E 1T9","Hebergeur":"Cologix","ÉquipIA":null,"NombreBatiments":1,"SurfBatimentPI2":"8 500","NbServeursAnnoncé":null,"PUE":1.7,"Siteweb":"https://cologix.com/data-centers/montreal/mtl12","FicheTechDocumentation":"https://cologix.com/wp-content/uploads/2026/01/SS_MTL12-Montreal-Data-Centre_12-2025_EN.pdf","Source":null,"display_na":"3000 René-Lévesque, 3000, Boulevard René-Lévesque, Verdun, Montréal, Agglomération de Montréal, Montréal (région administrative), Québec, H3E 1T9, Canada"}},{"type":"Feature","id":7,"geometry":{"type":"Point","coordinates":[-73.54132189935126,45.466972800059366]},"properties":{"OBJECTID":7,"UNIQID":"CLGXMTL02","NomSite":"Cologix MTL2","Type":"Retail","Adresse":"3000 Boul. Rene Levesque Verdun H3E 1T9","Pays":"Canada","PuissanceAnnMW":1.1000000000000001,"ville":"Montréal","state":"Québec","country":"Canada","postcode":"H3E 1T9","Hebergeur":"Cologix","ÉquipIA":null,"NombreBatiments":1,"SurfBatimentPI2":"10 000","NbServeursAnnoncé":null,"PUE":1.3,"Siteweb":"https://cologix.com/data-centers/montreal/mtl2","FicheTechDocumentation":"https://cologix.com/wp-content/uploads/2026/01/SS_MTL2-Montreal-Data-Centre_12-2025_EN.pdf","Source":null,"display_na":"3000 René-Lévesque, 3000, Boulevard René-Lévesque, Verdun, Montréal, Agglomération de Montréal, Montréal (région administrative), Québec, H3E 1T9, Canada"}},{"type":"Feature","id":8,"geometry":{"type":"Point","coordinates":[-73.57097299976931,45.497519099882489]},"properties":{"OBJECTID":8,"UNIQID":"CLGXMTL03","NomSite":"Cologix MTL3","Type":"Carrier Hotel","Adresse":"1250 Boul. Rene-Levesque Ouest Montréal H3B 4X4","Pays":"Canada","PuissanceAnnMW":1.5,"ville":"Montréal","state":"Québec","country":"Canada","postcode":"H3B 4W8","Hebergeur":"Cologix","ÉquipIA":null,"NombreBatiments":1,"SurfBatimentPI2":"33 000","NbServeursAnnoncé":null,"PUE":1.3999999999999999,"Siteweb":"https://cologix.com/data-centers/montreal/mtl3/","FicheTechDocumentation":"https://cologix.com/wp-content/uploads/2026/01/SS_MTL3-Montreal-Data-Centre_12-2025_EN.pdf","Source":null,"display_na":"LASIK MD, 1250, Boulevard René-Lévesque Ouest, Ville-Marie, Montréal, Agglomération de Montréal, Montréal (région administrative), Québec, H3B 4W8, Canada"}},{"type":"Feature","id":9,"geometry":{"type":"Point","coordinates":[-73.569575900313581,45.598991399952119]},"properties":{"OBJECTID":9,"UNIQID":"CLGXMTL04","NomSite":"Cologix MTL4","Type":"Retail","Adresse":"7171 Rue Jean-Talon Est Anjou H1M 3N2","Pays":"Canada","PuissanceAnnMW":0.80000000000000004,"ville":"Montréal","state":"Québec","country":"Canada","postcode":"H1M 3S3","Hebergeur":"Cologix","ÉquipIA":null,"NombreBatiments":1,"SurfBatimentPI2":"12 000","NbServeursAnnoncé":null,"PUE":1.7,"Siteweb":"https://cologix.com/data-centers/montreal/mtl4","FicheTechDocumentation":"https://cologix.com/wp-content/uploads/2026/01/SS_MTL4-Montreal-Data-Centre_12-2025_EN.pdf","Source":null,"display_na":"7171, Rue Jean-Talon Est, Anjou, Montréal, Agglomération de Montréal, Montréal (région administrative), Québec, H1M 3S3, Canada"}},{"type":"Feature","id":10,"geometry":{"type":"Point","coordinates":[-73.759891799614138,45.482310699540449]},"properties":{"OBJECTID":10,"UNIQID":"CLGXMTL05","NomSite":"Cologix MTL5","Type":"Carrier Hotel","Adresse":"2341 Boul. Alfred Nobel Saint-Laurent H4S 0B2","Pays":"Canada","PuissanceAnnMW":0.20000000000000001,"ville":"Montréal","state":"Québec","country":"Canada","postcode":"H4S 2B8","Hebergeur":"Cologix","ÉquipIA":null,"NombreBatiments":1,"SurfBatimentPI2":"5 000","NbServeursAnnoncé":null,"PUE":1.3999999999999999,"Siteweb":"https://cologix.com/data-centers/montreal/mtl5","FicheTechDocumentation":"https://cologix.com/wp-content/uploads/2026/01/SS_MTL5-Montreal-Data-Centre_12-2025_EN.pdf","Source":null,"display_na":"BAN 2, 2341, Boulevard Alfred-Nobel, Saint-Laurent, Montréal, Agglomération de Montréal, Montréal (région administrative), Québec, H4S 2B8, Canada"}},{"type":"Feature","id":11,"geometry":{"type":"Point","coordinates":[-73.759891799614138,45.482310699540449]},"properties":{"OBJECTID":11,"UNIQID":"CLGXMTL06","NomSite":"Cologix MTL6","Type":"Carrier Hotel","Adresse":"2341 Boul. Alfred Nobel Saint-Laurent H4S 0B2","Pays":"Canada","PuissanceAnnMW":0.20000000000000001,"ville":"Montréal","state":"Québec","country":"Canada","postcode":"H4S 2B8","Hebergeur":"Cologix","ÉquipIA":null,"NombreBatiments":1,"SurfBatimentPI2":"10 000","NbServeursAnnoncé":null,"PUE":1.5,"Siteweb":"https://cologix.com/data-centers/montreal/mtl6","FicheTechDocumentation":"https://cologix.com/wp-content/uploads/2026/01/SS_MTL6-Montreal-Data-Centre_12-2025_EN.pdf","Source":null,"display_na":"BAN 2, 2341, Boulevard Alfred-Nobel, Saint-Laurent, Montréal, Agglomération de Montréal, Montréal (région administrative), Québec, H4S 2B8, Canada"}},{"type":"Feature","id":12,"geometry":{"type":"Point","coordinates":[-73.567623900727071,45.502414599843107]},"properties":{"OBJECTID":12,"UNIQID":"CLGXMTL07","NomSite":"Cologix MTL7","Type":"Retail","Adresse":"1155 Blvd Robert-Bourassa Montréal H3B 3A7","Pays":"Canada","PuissanceAnnMW":3.1000000000000001,"ville":"Montréal","state":"Québec","country":"Canada","postcode":"H3B 3C4","Hebergeur":"Cologix","ÉquipIA":null,"NombreBatiments":1,"SurfBatimentPI2":"26 000","NbServeursAnnoncé":null,"PUE":1.3,"Siteweb":"https://www.cologix.com/data-centers/montreal/mtl7/","FicheTechDocumentation":"https://cologix.com/wp-content/uploads/2026/01/SS_MTL7-Montreal-Data-Centre_12-2025_EN.pdf","Source":null,"display_na":"1155, Boulevard Robert-Bourassa, Ville-Marie, Montréal, Agglomération de Montréal, Montréal (région administrative), Québec, H3B 3C4, Canada"}},{"type":"Feature","id":13,"geometry":{"type":"Point","coordinates":[-73.769988099839637,45.480730899954317]},"properties":{"OBJECTID":13,"UNIQID":"CLGXMTL08","NomSite":"Cologix MTL8","Type":"Wholesale","Adresse":"7350 Rue Frederick Banting Montréal H4S 2A1","Pays":"Canada","PuissanceAnnMW":21,"ville":"Montréal","state":"Québec","country":"Canada","postcode":"H4S 2A1","Hebergeur":"Cologix","ÉquipIA":null,"NombreBatiments":1,"SurfBatimentPI2":"206 000","NbServeursAnnoncé":null,"PUE":1.3,"Siteweb":"https://cologix.com/data-centers/montreal/mtl8","FicheTechDocumentation":"https://cologix.com/wp-content/uploads/2026/01/SS_MTL8-Montreal-Data-Centre_12-2025_EN.pdf","Source":null,"display_na":"Cologix, 7350, Rue Frédérick-Banting, Saint-Laurent, Montréal, Agglomération de Montréal, Montréal (région administrative), Québec, H4S 2A1, Canada"}},{"type":"Feature","id":14,"geometry":{"type":"Point","coordinates":[-72.545942799874666,45.879484100034773]},"properties":{"OBJECTID":14,"UNIQID":"CLGXDMD01","NomSite":"Cologix MTL9","Type":"Wholesale","Adresse":"2525 Rue Canadien Drummondville J2C 7W2","Pays":"Canada","PuissanceAnnMW":25,"ville":"Drummondville","state":"Québec","country":"Canada","postcode":"J2C 7W2","Hebergeur":"Cologix","ÉquipIA":null,"NombreBatiments":1,"SurfBatimentPI2":"120 000","NbServeursAnnoncé":null,"PUE":null,"Siteweb":"https://cologix.com/data-centers/montreal/mtl9","FicheTechDocumentation":"https://cologix.com/wp-content/uploads/2026/01/SS_MTL9-Montreal-Data-Centre_12-2025_EN.pdf","Source":null,"display_na":"2525, Rue Canadien, Drummondville, Drummond, Centre-du-Québec, Québec, J2C 7W2, Canada"}},{"type":"Feature","id":15,"geometry":{"type":"Point","coordinates":[-73.914133099836079,45.424144600344441]},"properties":{"OBJECTID":15,"UNIQID":"CMPSMTL01","NomSite":"Compass Montreal II","Type":"Hyperscale","Adresse":"19701 Av. Clark Graham Baie-d'Urfé H9X 3T1","Pays":"Canada","PuissanceAnnMW":50,"ville":"Baie-D'Urfé","state":"Québec","country":"Canada","postcode":"H9X 2E7","Hebergeur":"Compass Datacenters","ÉquipIA":null,"NombreBatiments":1,"SurfBatimentPI2":"175 000","NbServeursAnnoncé":null,"PUE":null,"Siteweb":"https://www.compassdatacenters.com/fr/marches/amerique-du-nord/montreal/","FicheTechDocumentation":"https://french.compassdatacenters.com/fr/centres-de-donnees-de-montreal/","Source":null,"display_na":"19701, Avenue Clark-Graham, Baie-D'Urfé, Agglomération de Montréal, Montréal (région administrative), Québec, H9X 2E7, Canada"}},{"type":"Feature","id":16,"geometry":{"type":"Point","coordinates":[-73.642674700371089,45.439471200113935]},"properties":{"OBJECTID":16,"UNIQID":"CMPSMTL02","NomSite":"Compass Montreal I","Type":"Wholesale","Adresse":"2711 Av Dollard LaSalle H8N 2J8","Pays":"Canada","PuissanceAnnMW":15,"ville":"Montréal","state":"Québec","country":"Canada","postcode":"H8N 3H9","Hebergeur":"Compass Datacenters","ÉquipIA":null,"NombreBatiments":1,"SurfBatimentPI2":"46 000","NbServeursAnnoncé":null,"PUE":null,"Siteweb":"https://www.compassdatacenters.com/fr/marches/amerique-du-nord/montreal/","FicheTechDocumentation":"https://french.compassdatacenters.com/fr/centres-de-donnees-de-montreal/","Source":"https://www.datacenterknowledge.com/sustainability/ovh-goes-big-and-green-with-new-quebec-data-center","display_na":"2711, Avenue Dollard, LaSalle, Montréal, Agglomération de Montréal, Montréal (région administrative), Québec, H8N 3H9, Canada"}},{"type":"Feature","id":17,"geometry":{"type":"Point","coordinates":[]},"properties":{"OBJECTID":17,"UNIQID":"EVNMMTL01","NomSite":"Enovum Data Centers - MTL01","Type":"Retail","Adresse":"3195 Chem. Bedford Suite D Montréal H3S 1G3","Pays":"Canada","PuissanceAnnMW":4,"ville":" ","state":"Québec","country":"Canada","postcode":"H3S 1G3","Hebergeur":"Enovum","ÉquipIA":null,"NombreBatiments":1,"SurfBatimentPI2":"70 000","NbServeursAnnoncé":null,"PUE":null,"Siteweb":"https://www.enovumdc.com/keyfeatures-high-density-computing-high-performance/","FicheTechDocumentation":"https://www.enovumdc.com/keyfeatures-high-density-computing-high-performance/","Source":null,"display_na":" "}},{"type":"Feature","id":18,"geometry":{"type":"Point","coordinates":[-73.837676699978786,45.458314500124409]},"properties":{"OBJECTID":18,"UNIQID":"EVNMPCL01","NomSite":"Enovum Data Centers - MTL02","Type":"Retail","Adresse":"7300 Route Transcanadienne Pointe-Claire H9R 1C7","Pays":"Canada","PuissanceAnnMW":null,"ville":"Pointe-Claire","state":"Québec","country":"Canada","postcode":"H9R 0A1","Hebergeur":"Enovum","ÉquipIA":null,"NombreBatiments":1,"SurfBatimentPI2":"85 000","NbServeursAnnoncé":null,"PUE":null,"Siteweb":null,"FicheTechDocumentation":null,"Source":null,"display_na":"Trans-Canada Highway, Pointe-Claire, Agglomération de Montréal, Montréal (région administrative), Québec, H9R 0A1, Canada"}},{"type":"Feature","id":19,"geometry":{"type":"Point","coordinates":[-74.018410999575636,45.784104000126582]},"properties":{"OBJECTID":19,"UNIQID":"EVNMSJM01","NomSite":"Enovum Data Centers - MTL03","Type":"Retail","Adresse":"500 Bd Monseigneur-Dubois  Saint-Jérôme J7Y 3L8","Pays":"Canada","PuissanceAnnMW":null,"ville":"Saint-Jérôme","state":"Québec","country":"Canada","postcode":"J7Y 1V8","Hebergeur":"Enovum","ÉquipIA":"IA","NombreBatiments":1,"SurfBatimentPI2":"202 000","NbServeursAnnoncé":null,"PUE":null,"Siteweb":null,"FicheTechDocumentation":null,"Source":"https://bit-digital.com/press-releases/bit-digital-inc-secures-site-for-new-tier-3-data-center-to-support-cerebras-colocation-contract/","display_na":"500, Boulevard Monseigneur-Dubois, District 1, Saint-Jérôme, La Rivière-du-Nord, Laurentides, Québec, J7Y 1V8, Canada"}},{"type":"Feature","id":20,"geometry":{"type":"Point","coordinates":[-73.745124300335377,45.487959700003714]},"properties":{"OBJECTID":20,"UNIQID":"EQNXMTL01","NomSite":"Equinix MTL 1 ","Type":"Retail","Adresse":"6205 Rue Vanden Abeele Saint-Laurent H4S 1R9","Pays":"Canada","PuissanceAnnMW":null,"ville":"Montréal","state":"Québec","country":"Canada","postcode":"H4S 1A9","Hebergeur":"Equinix","ÉquipIA":null,"NombreBatiments":1,"SurfBatimentPI2":"125 842","NbServeursAnnoncé":null,"PUE":null,"Siteweb":"https://www.equinix.com/data-centers/americas-colocation/canada-colocation/montreal-data-centers/mt1","FicheTechDocumentation":"https://www.equinix.com/content/dam/eqxcorp/en_us/documents/resources/ibx-tech-specs/ibx_mt1_en.pdf","Source":null,"display_na":"Rue Vanden-Abeele, Saint-Laurent, Montréal, Agglomération de Montréal, Montréal (région administrative), Québec, H4S 1A9, Canada"}},{"type":"Feature","id":21,"geometry":{"type":"Point","coordinates":[-74.050532999726002,45.412654599670326]},"properties":{"OBJECTID":21,"UNIQID":"EQNXMTL02","NomSite":"Equinix MTL 2","Type":"Retail","Adresse":"3500 Rue F.-X.-Tessier Vaudreuil-Dorion J7V 5V5","Pays":"Canada","PuissanceAnnMW":null,"ville":" Vaudreuil-Dorion","state":"Québec","country":"Canada","postcode":"J7V 5V5","Hebergeur":"Equinix","ÉquipIA":null,"NombreBatiments":1,"SurfBatimentPI2":"75 664","NbServeursAnnoncé":null,"PUE":null,"Siteweb":"https://www.equinix.com/data-centers/americas-colocation/canada-colocation/montreal-data-centers/mt2","FicheTechDocumentation":"https://www.equinix.com/content/dam/eqxcorp/en_us/documents/resources/ibx-tech-specs/ibx_mt2_en.pdf","Source":null,"display_na":"3500, Rue F.-X.-Tessier, Vaudreuil, Vaudreuil-Dorion, Vaudreuil-Soulanges, Montérégie, Québec, J7V 5V5, Canada"}},{"type":"Feature","id":22,"geometry":{"type":"Point","coordinates":[-75.398396100165797,45.574544399948635]},"properties":{"OBJECTID":22,"UNIQID":"EQNXGAT01","NomSite":"Equinix OT1","Type":"Retail","Adresse":"200 Av. Lepine Gatineau J8L 0B3","Pays":"Canada","PuissanceAnnMW":null,"ville":"Gatineau","state":"Québec","country":"Canada","postcode":"J8L 4M4","Hebergeur":"Equinix","ÉquipIA":null,"NombreBatiments":1,"SurfBatimentPI2":"42 800","NbServeursAnnoncé":null,"PUE":null,"Siteweb":"https://www.equinix.com/data-centers/americas-colocation/canada-colocation/ottawa-data-centers/ot1","FicheTechDocumentation":"https://www.equinix.com/content/dam/eqxcorp/en_us/documents/resources/ibx-tech-specs/ibx_ot1_en.pdf","Source":null,"display_na":"Equinix OT1, 200, Avenue Lépine, Buckingham, Gatineau, Outaouais, Québec, J8L 4M4, Canada"}},{"type":"Feature","id":23,"geometry":{"type":"Point","coordinates":[-73.561586899522609,45.500773700150134]},"properties":{"OBJECTID":23,"UNIQID":"ESTRMTL01","NomSite":"Estruxture MTL1","Type":"Retail","Adresse":"800 Rue du Square-Victoria Montréal H4Z 1B7","Pays":"Canada","PuissanceAnnMW":4.5,"ville":"Montréal","state":"Québec","country":"Canada","postcode":"H4Z 1A1","Hebergeur":"Estruxture","ÉquipIA":null,"NombreBatiments":1,"SurfBatimentPI2":"34 000","NbServeursAnnoncé":null,"PUE":null,"Siteweb":"https://www.estruxture.com/fr/centres-de-donnees/montreal/mtl-1","FicheTechDocumentation":"https://info.estruxture.com/hubfs/Data%20Sheets/eStruxture_Datasheet_MTL1_FR%201%202023.pdf","Source":null,"display_na":"McDonald's, 800, Rue du Square Victoria, Quartier international, Ville-Marie, Montréal, Agglomération de Montréal, Montréal (région administrative), Québec, H4Z 1A1, Canada"}},{"type":"Feature","id":24,"geometry":{"type":"Point","coordinates":[-73.631889700444788,45.457422400098643]},"properties":{"OBJECTID":24,"UNIQID":"ESTRMTL01","NomSite":"Estruxture MTL1","Type":"Retail","Adresse":"7001 Rue Saint-Jacques Montréal H4B 3A2","Pays":"Canada","PuissanceAnnMW":4.5,"ville":"Montréal","state":"Québec","country":"Canada","postcode":"H4B 1V3","Hebergeur":"Estruxture","ÉquipIA":null,"NombreBatiments":1,"SurfBatimentPI2":"34 000","NbServeursAnnoncé":null,"PUE":null,"Siteweb":"https://www.estruxture.com/fr/centres-de-donnees/montreal/mtl-1","FicheTechDocumentation":"https://info.estruxture.com/hubfs/Data%20Sheets/eStruxture_Datasheet_MTL1_FR%201%202023.pdf","Source":null,"display_na":"7001, Rue Saint-Jacques, Côte-des-Neiges–Notre-Dame-de-Grâce, Montréal, Agglomération de Montréal, Montréal (région administrative), Québec, H4B 1V3, Canada"}},{"type":"Feature","id":25,"geometry":{"type":"Point","coordinates":[-73.430638599309205,45.568362600122811]},"properties":{"OBJECTID":25,"UNIQID":"ESTRMTL02","NomSite":"Estruxture MTL3","Type":"Retail","Adresse":"1350 Rue Nobel Boucherville J4B 5H3","Pays":"Canada","PuissanceAnnMW":1.2,"ville":"Boucherville","state":"Québec","country":"Canada","postcode":"J4B 8C2","Hebergeur":"Estruxture","ÉquipIA":null,"NombreBatiments":1,"SurfBatimentPI2":"20 000","NbServeursAnnoncé":null,"PUE":null,"Siteweb":"https://www.estruxture.com/fr/centres-de-donnees/montreal/mtl-3","FicheTechDocumentation":"https://info.estruxture.com/hubfs/Data%20Sheets/eStruxture_Datasheet_MTL3_FR%202023.pdf","Source":null,"display_na":"1350, Rue Nobel, Boucherville, Agglomération de Longueuil, Montérégie, Québec, J4B 8C2, Canada"}},{"type":"Feature","id":26,"geometry":{"type":"Point","coordinates":[-73.869481599325454,45.445968600321748]},"properties":{"OBJECTID":26,"UNIQID":"ESTRMTL04","NomSite":"Estruxture MTL4","Type":"Wholesale","Adresse":"17500 Route Transcanadienne Kirkland H9J 2X8","Pays":"Canada","PuissanceAnnMW":16,"ville":"Kirkland","state":"Québec","country":"Canada","postcode":"H9W 1H9","Hebergeur":"Estruxture","ÉquipIA":null,"NombreBatiments":1,"SurfBatimentPI2":"103 000","NbServeursAnnoncé":null,"PUE":null,"Siteweb":"https://www.estruxture.com/fr/centres-de-donnees/montreal/mtl-4/","FicheTechDocumentation":"https://info.estruxture.com/hubfs/Data%20Sheets/eStruxture_Datasheet_MTL4_FR%202023.pdf","Source":null,"display_na":"17500, Trans-Canada Highway, Kirkland, Agglomération de Montréal, Montréal (région administrative), Québec, H9W 1H9, Canada"}},{"type":"Feature","id":27,"geometry":{"type":"Point","coordinates":[-73.565481699947128,45.502473399766856]},"properties":{"OBJECTID":27,"UNIQID":"ESTRMTL05","NomSite":"Estruxture MTL5","Type":"Retail","Adresse":"1080 Côte du Beaver Hall Montréal H2Z 1S8","Pays":"Canada","PuissanceAnnMW":0.5,"ville":"Montréal","state":"Québec","country":"Canada","postcode":"H3B 5B4","Hebergeur":"Estruxture","ÉquipIA":null,"NombreBatiments":1,"SurfBatimentPI2":"7 500","NbServeursAnnoncé":null,"PUE":null,"Siteweb":"https://www.estruxture.com/fr/centres-de-donnees/montreal/mtl-5","FicheTechDocumentation":"https://info.estruxture.com/hubfs/Data%20Sheets/eStruxture_Datasheet_MTL5_FR%202023.pdf","Source":null,"display_na":"1080, Côte du Beaver Hall, Ville-Marie, Montréal, Agglomération de Montréal, Montréal (région administrative), Québec, H3B 5B4, Canada"}},{"type":"Feature","id":28,"geometry":{"type":"Point","coordinates":[-73.565481699947128,45.502473399766856]},"properties":{"OBJECTID":28,"UNIQID":"HIVDMTL01","NomSite":"Hive MTL-1 - opéré par Ventage","Type":"Unknown","Adresse":"1080 Côte du Beaver Hall Montréal H2Z 1S8","Pays":"Canada","PuissanceAnnMW":0,"ville":"Montréal","state":"Québec","country":"Canada","postcode":"H3B 5B4","Hebergeur":"Hive","ÉquipIA":null,"NombreBatiments":1,"SurfBatimentPI2":null,"NbServeursAnnoncé":null,"PUE":null,"Siteweb":null,"FicheTechDocumentation":null,"Source":null,"display_na":"1080, Côte du Beaver Hall, Ville-Marie, Montréal, Agglomération de Montréal, Montréal (région administrative), Québec, H3B 5B4, Canada"}},{"type":"Feature","id":29,"geometry":{"type":"Point","coordinates":[-73.756207799650809,45.486762900443708]},"properties":{"OBJECTID":29,"UNIQID":"HIVDMTL02","NomSite":"Hive MTL-2","Type":"Wholesale","Adresse":"2900 Av. Marie Curie Saint-Laurent H4S 2C2","Pays":"Canada","PuissanceAnnMW":null,"ville":"Montréal","state":"Québec","country":"Canada","postcode":"H4S 2B6","Hebergeur":"Hive","ÉquipIA":null,"NombreBatiments":1,"SurfBatimentPI2":null,"NbServeursAnnoncé":null,"PUE":null,"Siteweb":null,"FicheTechDocumentation":null,"Source":null,"display_na":"Vantage Data Centers Montreal I, 2900, Avenue Marie-Curie, Saint-Laurent, Montréal, Agglomération de Montréal, Montréal (région administrative), Québec, H4S 2B6, Canada"}},{"type":"Feature","id":30,"geometry":{"type":"Point","coordinates":[]},"properties":{"OBJECTID":30,"UNIQID":"HIVDQBC01","NomSite":"Hive QC-1 - opéré par Ventage","Type":"Unknown","Adresse":" ","Pays":"Canada","PuissanceAnnMW":0,"ville":" ","state":"Québec","country":" ","postcode":" ","Hebergeur":"Hive","ÉquipIA":null,"NombreBatiments":1,"SurfBatimentPI2":null,"NbServeursAnnoncé":null,"PUE":null,"Siteweb":null,"FicheTechDocumentation":null,"Source":null,"display_na":" "}},{"type":"Feature","id":31,"geometry":{"type":"Point","coordinates":[-73.538101800180428,45.467928500204238]},"properties":{"OBJECTID":31,"UNIQID":"LSWBMTL01","NomSite":"LeaseWeb MTL-01","Type":"Retail","Adresse":"20 Pl. du Commerce Verdun H3E 0G3","Pays":"Canada","PuissanceAnnMW":null,"ville":"Montréal","state":"Québec","country":"Canada","postcode":"H3E 1Z6","Hebergeur":"Leaseweb","ÉquipIA":null,"NombreBatiments":1,"SurfBatimentPI2":"13 200","NbServeursAnnoncé":null,"PUE":null,"Siteweb":"https://www.leaseweb.com/en/why-leaseweb/platform/data-centers/mtl-01","FicheTechDocumentation":null,"Source":null,"display_na":"20, Place du Commerce, Verdun, Montréal, Agglomération de Montréal, Montréal (région administrative), Québec, H3E 1Z6, Canada"}},{"type":"Feature","id":32,"geometry":{"type":"Point","coordinates":[-73.618037000535637,45.443428900172762]},"properties":{"OBJECTID":32,"UNIQID":"LSWBMTL02","NomSite":"LeaseWeb MTL-02","Type":"Retail","Adresse":"7207 Boul. Newman LaSalle H8N 0H7","Pays":"Canada","PuissanceAnnMW":1.8,"ville":"Montréal","state":"Québec","country":"Canada","postcode":"H8N 2K3","Hebergeur":"Leaseweb","ÉquipIA":null,"NombreBatiments":1,"SurfBatimentPI2":"12 000","NbServeursAnnoncé":null,"PUE":null,"Siteweb":"https://www.leaseweb.com/en/why-leaseweb/platform/data-centers/mtl-02","FicheTechDocumentation":null,"Source":null,"display_na":"Leaseweb, 7207, Boulevard Newman, LaSalle, Montréal, Agglomération de Montréal, Montréal (région administrative), Québec, H8N 2K3, Canada"}},{"type":"Feature","id":33,"geometry":{"type":"Point","coordinates":[-73.607779300003031,45.599252799763413]},"properties":{"OBJECTID":33,"UNIQID":"LSWBMTL03","NomSite":"LeaseWeb MTL-03","Type":"Retail","Adresse":"5945 Boul. Couture Saint-Leonard H1P 1A8","Pays":"Canada","PuissanceAnnMW":2.1000000000000001,"ville":"Montréal","state":"Québec","country":"Canada","postcode":"H1P 1A8","Hebergeur":"Leaseweb","ÉquipIA":null,"NombreBatiments":1,"SurfBatimentPI2":"8 749","NbServeursAnnoncé":null,"PUE":null,"Siteweb":"https://www.leaseweb.com/en/why-leaseweb/platform/data-centers/mtl-03","FicheTechDocumentation":null,"Source":null,"display_na":"Leaseweb, 5945, Boulevard Couture, Saint-Léonard, Montréal, Agglomération de Montréal, Montréal (région administrative), Québec, H1P 1A8, Canada"}},{"type":"Feature","id":34,"geometry":{"type":"Point","coordinates":[-72.776313499715755,46.563492499552765]},"properties":{"OBJECTID":34,"UNIQID":"NRDKSHW01","NomSite":"Nordik NDC1","Type":"Retail","Adresse":"4155 Rue Burrill Shawinigan G9N 0C4","Pays":"Canada","PuissanceAnnMW":5,"ville":"Shawinigan","state":"Québec","country":"Canada","postcode":"G9N 6Z5","Hebergeur":"Nordik","ÉquipIA":null,"NombreBatiments":1,"SurfBatimentPI2":"46 000","NbServeursAnnoncé":null,"PUE":null,"Siteweb":"https://nordikdatacenters.com/","FicheTechDocumentation":"https://nordikdatacenters.com/nos-installations-centres-de-donnees/","Source":null,"display_na":"4155, Rue Burrill, Shawinigan-Nord, Shawinigan, Mauricie, Québec, G9N 6Z5, Canada"}},{"type":"Feature","id":35,"geometry":{"type":"Point","coordinates":[-73.897888299513028,45.309742599743885]},"properties":{"OBJECTID":35,"UNIQID":"OVHCBHS01","NomSite":"OVHcloud BHS Campus","Type":"Hyperscale","Adresse":"50 Rue de l'Aluminerie Beauharnois J6N 0C2","Pays":"Canada","PuissanceAnnMW":100,"ville":"Beauharnois","state":"Québec","country":"Canada","postcode":"J6N 2H8","Hebergeur":"OVHCloud","ÉquipIA":"IA","NombreBatiments":4,"SurfBatimentPI2":"200 000","NbServeursAnnoncé":90000,"PUE":null,"Siteweb":"https://www.datacentermap.com/canada/montreal/ovhcloud-beauharnois/","FicheTechDocumentation":null,"Source":"https://corporate.ovhcloud.com/fr-ca/newsroom/news/ovhcloud-10-year-anniversary-canada/#:~:text=Pour%20c%C3%A9l%C3%A9brer%20cette%20%C3%A9tape%20marquante,en%20h%C3%A9berger%203%20fois%20plus.","display_na":"Rue de l'Aluminerie, Parc Industriel de Beauharnois, Beauharnois, Beauharnois-Salaberry, Montérégie, Québec, J6N 2H8, Canada"}},{"type":"Feature","id":36,"geometry":{"type":"Point","coordinates":[-71.325108699471002,46.676137700336184]},"properties":{"OBJECTID":36,"UNIQID":"QSCLLVS01","NomSite":"QScale Campus 1","Type":"Hyperscale","Adresse":"2280 Rue Albert-Dion Lévis G7A 5M9","Pays":"Canada","PuissanceAnnMW":114,"ville":"Lévis","state":"Québec","country":"Canada","postcode":"G7A 5M9","Hebergeur":"QScale","ÉquipIA":"IA","NombreBatiments":1,"SurfBatimentPI2":"313 000","NbServeursAnnoncé":null,"PUE":1.2,"Siteweb":"https://fr.qscale.com/q01-campus","FicheTechDocumentation":"https://cdn.prod.website-files.com/6026d734508bf45880176198/68e922ffe4c53f52eeb48867_fdd8650e0c57c0a100408d9acd441008_QScale%20-%20Q01%20Campus%20-%20Data%20Sheet.pdf","Source":null,"display_na":"QScale, 2280, Rue Albert-Dion, Saint-Nicolas, Les Chutes-de-la-Chaudière-Ouest, Lévis, Chaudière-Appalaches, Québec, G7A 5M9, Canada"}},{"type":"Feature","id":37,"geometry":{"type":"Point","coordinates":[-73.56493739993671,45.541709499595363]},"properties":{"OBJECTID":37,"UNIQID":"SMRTMTL01","NomSite":"SmartDC MTL-1","Type":"Unknown","Adresse":"4101 Rue Molson Montréal H1Y 3L1","Pays":"Canada","PuissanceAnnMW":null,"ville":"Montréal","state":"Québec","country":"Canada","postcode":"H1Y 3L1","Hebergeur":"SmartDC","ÉquipIA":null,"NombreBatiments":1,"SurfBatimentPI2":null,"NbServeursAnnoncé":null,"PUE":null,"Siteweb":"https://www.smartdc.net/data-centers/locations/montreal/","FicheTechDocumentation":null,"Source":null,"display_na":"Clinique médicale Angus, 4101, Rue Molson, Rosemont, Rosemont–La Petite-Patrie, Montréal, Agglomération de Montréal, Montréal (région administrative), Québec, H1Y 3L1, Canada"}},{"type":"Feature","id":38,"geometry":{"type":"Point","coordinates":[-68.502345300530038,48.464295200224043]},"properties":{"OBJECTID":38,"UNIQID":"TLUSRKI01","NomSite":"Telus - Super Internet Data Center (SIDC)","Type":"Wholesale","Adresse":"190 Rue des Negociants Rimouski G5M 1B7","Pays":"Canada","PuissanceAnnMW":16,"ville":"Rimouski","state":"Québec","country":"Canada","postcode":"G5M 1A7","Hebergeur":"Telus","ÉquipIA":"IA","NombreBatiments":1,"SurfBatimentPI2":"12 500","NbServeursAnnoncé":null,"PUE":null,"Siteweb":null,"FicheTechDocumentation":null,"Source":"https://group.skanska.com/projects/57626/TELUS-Super-Internet-Data-Center","display_na":"190, Rue des Négociants, Village-Brisson, Rimouski-Est, Rimouski, Rimouski-Neigette, Bas-Saint-Laurent, Québec, G5M 1A7, Canada"}},{"type":"Feature","id":39,"geometry":{"type":"Point","coordinates":[-73.562912700592562,45.497314700097462]},"properties":{"OBJECTID":39,"UNIQID":"UBCNMTL01","NomSite":"Urbacon DC Montreal","Type":"Wholesale","Adresse":"544 Rue de l'Inspecteur Montréal H3C 2K9","Pays":"Canada","PuissanceAnnMW":21,"ville":"Montréal","state":"Québec","country":"Canada","postcode":"H3C 0K3","Hebergeur":"Ubarcon","ÉquipIA":null,"NombreBatiments":1,"SurfBatimentPI2":"266 671","NbServeursAnnoncé":null,"PUE":1.2,"Siteweb":"https://udcsdatacentres.com/portfolio/item/montreal-quebec/","FicheTechDocumentation":null,"Source":null,"display_na":"544, Rue de l'Inspecteur, Ville-Marie, Montréal, Agglomération de Montréal, Montréal (région administrative), Québec, H3C 0K3, Canada"}},{"type":"Feature","id":40,"geometry":{"type":"Point","coordinates":[-73.756207799650809,45.486762900443708]},"properties":{"OBJECTID":40,"UNIQID":"VNTGMTL01","NomSite":"Vantage Data Centers Canada Montreal I QC1","Type":"Wholesale","Adresse":"2900 Av. Marie Curie Saint-Laurent H4S 2C2","Pays":"Canada","PuissanceAnnMW":11,"ville":"Montréal","state":"Québec","country":"Canada","postcode":"H4S 2B6","Hebergeur":"Vantage Datacenters","ÉquipIA":null,"NombreBatiments":1,"SurfBatimentPI2":"60 000","NbServeursAnnoncé":null,"PUE":null,"Siteweb":"https://vantage-dc.com/fr/data-center-locations/north-america/montreal-i-canada/","FicheTechDocumentation":"https://vantage-dc.com/wp-content/uploads/2022/06/VDC_DataSheet_Montreal_FRENCH..pdf","Source":null,"display_na":"Vantage Data Centers Montreal I, 2900, Avenue Marie-Curie, Saint-Laurent, Montréal, Agglomération de Montréal, Montréal (région administrative), Québec, H4S 2B6, Canada"}},{"type":"Feature","id":41,"geometry":{"type":"Point","coordinates":[-73.80006909981671,45.474636500591288]},"properties":{"OBJECTID":41,"UNIQID":"VNTGMTL02","NomSite":"Vantage Data Centers Canada Montreal II QC4","Type":"Wholesale","Adresse":"2800 Route Transcanadienne Pointe-Claire H9R 1B1","Pays":"Canada","PuissanceAnnMW":50,"ville":" Pointe-Claire","state":"Québec","country":"Canada","postcode":"H9R 5Z5","Hebergeur":"Vantage Datacenters","ÉquipIA":null,"NombreBatiments":3,"SurfBatimentPI2":"320 000","NbServeursAnnoncé":null,"PUE":null,"Siteweb":"https://vantage-dc.com/fr/data-center-locations/north-america/montreal-ii-canada/","FicheTechDocumentation":"https://vantage-dc.com/wp-content/uploads/2020/09/VDC_DataSheet_Montreal-II_EN.pdf","Source":"https://www.quebec.ca/agriculture-environnement-et-ressources-naturelles/energie/production-approvisionnement-distribution/autorisation-projet-electrique","display_na":"2800, Route Transcanadienne, Pointe-Claire, Agglomération de Montréal, Montréal (région administrative), Québec, H9R 5Z5, Canada"}},{"type":"Feature","id":42,"geometry":{"type":"Point","coordinates":[-73.821625700398528,45.471945300110065]},"properties":{"OBJECTID":42,"UNIQID":"VNTGMTL03","NomSite":"Vantage Data Centers Canada Montreal III QC6","Type":"Wholesale","Adresse":"205 Boul. Brunswick Pointe-Claire H9R 4R7","Pays":"Canada","PuissanceAnnMW":45,"ville":"Pointe-Claire","state":"Québec","country":"Canada","postcode":"H2B 2L2","Hebergeur":"Vantage Datacenters","ÉquipIA":null,"NombreBatiments":1,"SurfBatimentPI2":"348 480","NbServeursAnnoncé":null,"PUE":null,"Siteweb":"https://vantage-dc.com/fr/data-center-locations/north-america/montreal-iii-canada/","FicheTechDocumentation":"https://vantage-dc.com/wp-content/uploads/2022/03/VDC_DataSheet_Montreal-III_FR-3.pdf","Source":null,"display_na":"205, Boulevard Brunswick, Pointe-Claire, Agglomération de Montréal, Montréal (région administrative), Québec, H2B 2L2, Canada"}},{"type":"Feature","id":43,"geometry":{"type":"Point","coordinates":[-71.307211699711104,46.795504799825871]},"properties":{"OBJECTID":43,"UNIQID":"VNTGQC01","NomSite":"Vantage Data Centers Canada Québec QC2","Type":"Wholesale","Adresse":"2675 Boul. du Parc Technologique Quebec G1P 4S5","Pays":"Canada","PuissanceAnnMW":86,"ville":"Québec","state":"Québec","country":"Canada","postcode":"G1P 4S5","Hebergeur":"Vantage Datacenters","ÉquipIA":null,"NombreBatiments":4,"SurfBatimentPI2":"925 000","NbServeursAnnoncé":null,"PUE":null,"Siteweb":"https://vantage-dc.com/fr/data-center-locations/north-america/quebec-city-canada/","FicheTechDocumentation":"https://vantage-dc.com/wp-content/uploads/2020/09/VDC_DataSheet_Quebec_French_2024-1.pdf","Source":null,"display_na":"2675, Boulevard du Parc-Technologique, Parc technologique du Québec métropolitain, Duberger, Duberger–Les Saules, Les Rivières, Québec, Agglomération de Québec, Capitale-Nationale, Québec, G1P 4S5, Canada"}},{"type":"Feature","id":44,"geometry":{"type":"Point","coordinates":[]},"properties":{"OBJECTID":44,"UNIQID":"HPBTQBC01","NomSite":"Hyper Bit Dogecoin Mining","Type":"Wholesale","Adresse":" ","Pays":"Canada","PuissanceAnnMW":null,"ville":" ","state":"Québec","country":"Canada","postcode":" ","Hebergeur":"Hyper Bit","ÉquipIA":null,"NombreBatiments":null,"SurfBatimentPI2":null,"NbServeursAnnoncé":null,"PUE":null,"Siteweb":null,"FicheTechDocumentation":"https://hyperbit.ca/","Source":null,"display_na":" "}},{"type":"Feature","id":45,"geometry":{"type":"Point","coordinates":[-71.971174399983042,45.398189600465507]},"properties":{"OBJECTID":45,"UNIQID":"BITFSHB01","NomSite":"Bitfarm Leger","Type":"Crypto","Adresse":"290 Rue Leger Sherbrooke J1L 1Y5","Pays":"Canada","PuissanceAnnMW":null,"ville":"Sherbrooke","state":"Québec","country":"Canada","postcode":"J1L 2G7","Hebergeur":"Bitfarms / Keel Infrastructure","ÉquipIA":null,"NombreBatiments":1,"SurfBatimentPI2":"74 116","NbServeursAnnoncé":null,"PUE":null,"Siteweb":null,"FicheTechDocumentation":null,"Source":null,"display_na":"290, Rue Léger, Parc industriel régional de Sherbrooke, Jacques-Cartier, Sherbrooke, Estrie, Québec, J1L 2G7, Canada"}},{"type":"Feature","id":46,"geometry":{"type":"Point","coordinates":[-68.190139499440434,49.222381500641504]},"properties":{"OBJECTID":46,"UNIQID":"KEELBCO01","NomSite":"Keel Infrastructure","Type":"Crypto","Adresse":"25 Av. Babin Baie-Comeau G4Z 3A6","Pays":"Canada","PuissanceAnnMW":null,"ville":"Baie-Comeau","state":"Québec","country":"Canada","postcode":"G4Z 3A8","Hebergeur":"Bitfarms / Keel Infrastructure","ÉquipIA":"IA","NombreBatiments":1,"SurfBatimentPI2":null,"NbServeursAnnoncé":null,"PUE":null,"Siteweb":null,"FicheTechDocumentation":null,"Source":null,"display_na":"25, Avenue Babin, Baie-Comeau, Manicouagan, Côte-Nord, Québec, G4Z 3A8, Canada"}},{"type":"Feature","id":47,"geometry":{"type":"Point","coordinates":[]},"properties":{"OBJECTID":47,"UNIQID":"EXINSHB01","NomSite":"Exaion / PINQ2 Bellevue","Type":"Wholesale","Adresse":"1820 Rue Galt O Sherbrooke J1K 1H8","Pays":"Canada","PuissanceAnnMW":0.80000000000000004,"ville":" Sherbrooke","state":"Québec","country":"Canada","postcode":" ","Hebergeur":"Exaion ","ÉquipIA":"IA","NombreBatiments":1,"SurfBatimentPI2":"4 000","NbServeursAnnoncé":null,"PUE":null,"Siteweb":"https://www.pinq2.com/actu/centre-de-donnees-ecoresponsable-hybride-quantique-bellevue/","FicheTechDocumentation":"https://www.usherbrooke.ca/partenariats/typo3temp/cp_exaion_inaugure_a_sherbrooke_le_premier_centre_de_donnees..._fr.pdf","Source":null,"display_na":" "}},{"type":"Feature","id":48,"geometry":{"type":"Point","coordinates":[-72.719859899764685,45.296178700094217]},"properties":{"OBJECTID":48,"UNIQID":"IBMDMTL01","NomSite":"IBM Quantum System One","Type":"Quantique","Adresse":"23 Bd de l'Aéroport  Bromont J2L 1A3","Pays":"Canada","PuissanceAnnMW":null,"ville":"Bromont","state":"Québec","country":"Canada","postcode":"J2L 1S9","Hebergeur":"IBM","ÉquipIA":null,"NombreBatiments":1,"SurfBatimentPI2":"54","NbServeursAnnoncé":null,"PUE":null,"Siteweb":null,"FicheTechDocumentation":null,"Source":"https://www.pinq2.com/en/presse/inauguration-du-ibm-quantum-system-one-du-quebec/","display_na":"IBM Bromont, 23, Boulevard de l'Aéroport, Bromont, Brome-Missisquoi, Estrie, Québec, J2L 1S9, Canada"}},{"type":"Feature","id":49,"geometry":{"type":"Point","coordinates":[]},"properties":{"OBJECTID":49,"UNIQID":"HIVDLCH01","NomSite":"HIVE Canada 1.0 ","Type":"Wholesale","Adresse":"963 Chem. Béthany Lachute J8H 2C5","Pays":"Canada","PuissanceAnnMW":null,"ville":" Lachute","state":"Québec","country":"Canada","postcode":" ","Hebergeur":"Hive","ÉquipIA":null,"NombreBatiments":null,"SurfBatimentPI2":null,"NbServeursAnnoncé":null,"PUE":null,"Siteweb":null,"FicheTechDocumentation":"HIVE Digital Technologies Ltd: HIVE Canada 1.0 Data Center","Source":"https://www.regie-energie.qc.ca/fr/participants/dossiers/R-4333-2026/doc/R-4333-2026-C-HIVE-0003-DemInterv-Sujets-2026_03_16.pdf","display_na":" "}}]
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": 1,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.41830319972901,
+          45.65345439976834
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1,
+        "UNIQID": "AWSDVAR1",
+        "NomSite": "AWS YUL",
+        "Type": "Hyperscale",
+        "Adresse": "1804 Bd Lionel-Boulet Varennes  J3X 1S1",
+        "Pays": "Canada",
+        "PuissanceAnnMW": null,
+        "ville": "Varennes",
+        "state": "Québec",
+        "country": "Canada",
+        "postcode": "J3X 1Z4",
+        "Hebergeur": "Amazon",
+        "ÉquipIA": null,
+        "NombreBatiments": 2,
+        "SurfBatimentPI2": "310 000",
+        "NbServeursAnnoncé": null,
+        "PUE": null,
+        "Siteweb": null,
+        "FicheTechDocumentation": null,
+        "Source": null,
+        "display_na": "Boulevard Lionel-Boulet, Varennes, Marguerite-D'Youville, Montérégie, Québec, J3X 1Z4, Canada",
+        "date_collecte": "2026-06-05"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 2,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.57149439992654,
+          45.50892110040983
+        ]
+      },
+      "properties": {
+        "OBJECTID": 2,
+        "UNIQID": "BNFDMTL1",
+        "NomSite": "Beanfield  - 3445 Park Ave",
+        "Type": "Retail",
+        "Adresse": "3445 Av. du Parc  Montréal H2X 2H6",
+        "Pays": "Canada",
+        "PuissanceAnnMW": 5,
+        "ville": "Montréal",
+        "state": "Québec",
+        "country": "Canada",
+        "postcode": "H2X 2H5",
+        "Hebergeur": "Beanfield ",
+        "ÉquipIA": null,
+        "NombreBatiments": 1,
+        "SurfBatimentPI2": "26 600",
+        "NbServeursAnnoncé": null,
+        "PUE": null,
+        "Siteweb": "https://www.beanfield.com/business/colocation-data-centre/3445-park-avenue/",
+        "FicheTechDocumentation": null,
+        "Source": null,
+        "display_na": "3445, Avenue du Parc, Le Plateau-Mont-Royal, Montréal, Agglomération de Montréal, Montréal (région administrative), Québec, H2X 2H5, Canada",
+        "date_collecte": "2026-06-05"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 3,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.56714289960483,
+          45.502583700377926
+        ]
+      },
+      "properties": {
+        "OBJECTID": 3,
+        "UNIQID": "CLGXMTL1",
+        "NomSite": "Cologix MTL1",
+        "Type": "Carrier Hotel",
+        "Adresse": "625 Boul. René-Lévesque Ouest Montréal  H3B 1R2",
+        "Pays": "Canada",
+        "PuissanceAnnMW": 0.1,
+        "ville": "Montréal",
+        "state": "Québec",
+        "country": "Canada",
+        "postcode": "H3B 1R2",
+        "Hebergeur": "Cologix",
+        "ÉquipIA": null,
+        "NombreBatiments": 1,
+        "SurfBatimentPI2": "5 000",
+        "NbServeursAnnoncé": null,
+        "PUE": 2,
+        "Siteweb": "https://cologix.com/data-centers/montreal/mtl1/",
+        "FicheTechDocumentation": "https://cologix.com/wp-content/uploads/2026/01/SS_MTL1-Montreal-Data-Centre_12-2025_EN.pdf",
+        "Source": null,
+        "display_na": "625, Boulevard René-Lévesque Ouest, Ville-Marie, Montréal, Agglomération de Montréal, Montréal (région administrative), Québec, H3B 1R2, Canada",
+        "date_collecte": "2026-06-05"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 4,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.4758005001064,
+          45.56636159948349
+        ]
+      },
+      "properties": {
+        "OBJECTID": 4,
+        "UNIQID": "CLGXLGL10",
+        "NomSite": "Cologix MTL10",
+        "Type": "Wholesale",
+        "Adresse": "530 Rue Bériault  Longueuil J4G 1S8",
+        "Pays": "Canada",
+        "PuissanceAnnMW": 35,
+        "ville": "Longueuil",
+        "state": "Québec",
+        "country": "Canada",
+        "postcode": "J4G 1R8",
+        "Hebergeur": "Cologix",
+        "ÉquipIA": "IA",
+        "NombreBatiments": 1,
+        "SurfBatimentPI2": "240 000",
+        "NbServeursAnnoncé": null,
+        "PUE": null,
+        "Siteweb": "https://cologix.com/data-centers/montreal/mtl10",
+        "FicheTechDocumentation": "https://cologix.com/wp-content/uploads/2026/01/SS_MTL10-Montreal-Data-Centre_12-2025_EN.pdf",
+        "Source": null,
+        "display_na": "530, Rue Bériault, Le Vieux-Longueuil, Longueuil, Agglomération de Longueuil, Montérégie, Québec, J4G 1R8, Canada",
+        "date_collecte": "2026-06-05"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 5,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.5650301994988,
+          45.49952479983997
+        ]
+      },
+      "properties": {
+        "OBJECTID": 5,
+        "UNIQID": "CLGXMTL11",
+        "NomSite": "Cologix MTL11",
+        "Type": "Carrier Hotel",
+        "Adresse": "875 Rue Saint-Antoine Ouest Montréal H3C 1A6",
+        "Pays": "Canada",
+        "PuissanceAnnMW": 1,
+        "ville": "Montréal",
+        "state": "Québec",
+        "country": "Canada",
+        "postcode": "H5A 1E4",
+        "Hebergeur": "Cologix",
+        "ÉquipIA": null,
+        "NombreBatiments": 1,
+        "SurfBatimentPI2": "25 000",
+        "NbServeursAnnoncé": null,
+        "PUE": 1.8,
+        "Siteweb": "https://cologix.com/data-centers/montreal/mtl11",
+        "FicheTechDocumentation": "https://cologix.com/wp-content/uploads/2026/01/SS_MTL11-Montreal-Data-Centre_12-2025_EN.pdf",
+        "Source": null,
+        "display_na": "875, Rue Saint-Antoine Ouest, Ville-Marie, Montréal, Agglomération de Montréal, Montréal (région administrative), Québec, H5A 1E4, Canada",
+        "date_collecte": "2026-06-05"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 6,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.54132189935126,
+          45.46697280005937
+        ]
+      },
+      "properties": {
+        "OBJECTID": 6,
+        "UNIQID": "CLGXMTL12",
+        "NomSite": "Cologix MTL12",
+        "Type": "Carrier Hotel",
+        "Adresse": "3000 Boul. Rene Levesque Verdun H3E 1T9",
+        "Pays": "Canada",
+        "PuissanceAnnMW": 0.2,
+        "ville": "Montréal",
+        "state": "Québec",
+        "country": "Canada",
+        "postcode": "H3E 1T9",
+        "Hebergeur": "Cologix",
+        "ÉquipIA": null,
+        "NombreBatiments": 1,
+        "SurfBatimentPI2": "8 500",
+        "NbServeursAnnoncé": null,
+        "PUE": 1.7,
+        "Siteweb": "https://cologix.com/data-centers/montreal/mtl12",
+        "FicheTechDocumentation": "https://cologix.com/wp-content/uploads/2026/01/SS_MTL12-Montreal-Data-Centre_12-2025_EN.pdf",
+        "Source": null,
+        "display_na": "3000 René-Lévesque, 3000, Boulevard René-Lévesque, Verdun, Montréal, Agglomération de Montréal, Montréal (région administrative), Québec, H3E 1T9, Canada",
+        "date_collecte": "2026-06-05"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 7,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.54132189935126,
+          45.46697280005937
+        ]
+      },
+      "properties": {
+        "OBJECTID": 7,
+        "UNIQID": "CLGXMTL02",
+        "NomSite": "Cologix MTL2",
+        "Type": "Retail",
+        "Adresse": "3000 Boul. Rene Levesque Verdun H3E 1T9",
+        "Pays": "Canada",
+        "PuissanceAnnMW": 1.1,
+        "ville": "Montréal",
+        "state": "Québec",
+        "country": "Canada",
+        "postcode": "H3E 1T9",
+        "Hebergeur": "Cologix",
+        "ÉquipIA": null,
+        "NombreBatiments": 1,
+        "SurfBatimentPI2": "10 000",
+        "NbServeursAnnoncé": null,
+        "PUE": 1.3,
+        "Siteweb": "https://cologix.com/data-centers/montreal/mtl2",
+        "FicheTechDocumentation": "https://cologix.com/wp-content/uploads/2026/01/SS_MTL2-Montreal-Data-Centre_12-2025_EN.pdf",
+        "Source": null,
+        "display_na": "3000 René-Lévesque, 3000, Boulevard René-Lévesque, Verdun, Montréal, Agglomération de Montréal, Montréal (région administrative), Québec, H3E 1T9, Canada",
+        "date_collecte": "2026-06-05"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.57097299976931,
+          45.49751909988249
+        ]
+      },
+      "properties": {
+        "OBJECTID": 8,
+        "UNIQID": "CLGXMTL03",
+        "NomSite": "Cologix MTL3",
+        "Type": "Carrier Hotel",
+        "Adresse": "1250 Boul. Rene-Levesque Ouest Montréal H3B 4X4",
+        "Pays": "Canada",
+        "PuissanceAnnMW": 1.5,
+        "ville": "Montréal",
+        "state": "Québec",
+        "country": "Canada",
+        "postcode": "H3B 4W8",
+        "Hebergeur": "Cologix",
+        "ÉquipIA": null,
+        "NombreBatiments": 1,
+        "SurfBatimentPI2": "33 000",
+        "NbServeursAnnoncé": null,
+        "PUE": 1.4,
+        "Siteweb": "https://cologix.com/data-centers/montreal/mtl3/",
+        "FicheTechDocumentation": "https://cologix.com/wp-content/uploads/2026/01/SS_MTL3-Montreal-Data-Centre_12-2025_EN.pdf",
+        "Source": null,
+        "display_na": "LASIK MD, 1250, Boulevard René-Lévesque Ouest, Ville-Marie, Montréal, Agglomération de Montréal, Montréal (région administrative), Québec, H3B 4W8, Canada",
+        "date_collecte": "2026-06-05"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 9,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.56957590031358,
+          45.59899139995212
+        ]
+      },
+      "properties": {
+        "OBJECTID": 9,
+        "UNIQID": "CLGXMTL04",
+        "NomSite": "Cologix MTL4",
+        "Type": "Retail",
+        "Adresse": "7171 Rue Jean-Talon Est Anjou H1M 3N2",
+        "Pays": "Canada",
+        "PuissanceAnnMW": 0.8,
+        "ville": "Montréal",
+        "state": "Québec",
+        "country": "Canada",
+        "postcode": "H1M 3S3",
+        "Hebergeur": "Cologix",
+        "ÉquipIA": null,
+        "NombreBatiments": 1,
+        "SurfBatimentPI2": "12 000",
+        "NbServeursAnnoncé": null,
+        "PUE": 1.7,
+        "Siteweb": "https://cologix.com/data-centers/montreal/mtl4",
+        "FicheTechDocumentation": "https://cologix.com/wp-content/uploads/2026/01/SS_MTL4-Montreal-Data-Centre_12-2025_EN.pdf",
+        "Source": null,
+        "display_na": "7171, Rue Jean-Talon Est, Anjou, Montréal, Agglomération de Montréal, Montréal (région administrative), Québec, H1M 3S3, Canada",
+        "date_collecte": "2026-06-05"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 10,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.75989179961414,
+          45.48231069954045
+        ]
+      },
+      "properties": {
+        "OBJECTID": 10,
+        "UNIQID": "CLGXMTL05",
+        "NomSite": "Cologix MTL5",
+        "Type": "Carrier Hotel",
+        "Adresse": "2341 Boul. Alfred Nobel Saint-Laurent H4S 0B2",
+        "Pays": "Canada",
+        "PuissanceAnnMW": 0.2,
+        "ville": "Montréal",
+        "state": "Québec",
+        "country": "Canada",
+        "postcode": "H4S 2B8",
+        "Hebergeur": "Cologix",
+        "ÉquipIA": null,
+        "NombreBatiments": 1,
+        "SurfBatimentPI2": "5 000",
+        "NbServeursAnnoncé": null,
+        "PUE": 1.4,
+        "Siteweb": "https://cologix.com/data-centers/montreal/mtl5",
+        "FicheTechDocumentation": "https://cologix.com/wp-content/uploads/2026/01/SS_MTL5-Montreal-Data-Centre_12-2025_EN.pdf",
+        "Source": null,
+        "display_na": "BAN 2, 2341, Boulevard Alfred-Nobel, Saint-Laurent, Montréal, Agglomération de Montréal, Montréal (région administrative), Québec, H4S 2B8, Canada",
+        "date_collecte": "2026-06-05"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 11,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.75989179961414,
+          45.48231069954045
+        ]
+      },
+      "properties": {
+        "OBJECTID": 11,
+        "UNIQID": "CLGXMTL06",
+        "NomSite": "Cologix MTL6",
+        "Type": "Carrier Hotel",
+        "Adresse": "2341 Boul. Alfred Nobel Saint-Laurent H4S 0B2",
+        "Pays": "Canada",
+        "PuissanceAnnMW": 0.2,
+        "ville": "Montréal",
+        "state": "Québec",
+        "country": "Canada",
+        "postcode": "H4S 2B8",
+        "Hebergeur": "Cologix",
+        "ÉquipIA": null,
+        "NombreBatiments": 1,
+        "SurfBatimentPI2": "10 000",
+        "NbServeursAnnoncé": null,
+        "PUE": 1.5,
+        "Siteweb": "https://cologix.com/data-centers/montreal/mtl6",
+        "FicheTechDocumentation": "https://cologix.com/wp-content/uploads/2026/01/SS_MTL6-Montreal-Data-Centre_12-2025_EN.pdf",
+        "Source": null,
+        "display_na": "BAN 2, 2341, Boulevard Alfred-Nobel, Saint-Laurent, Montréal, Agglomération de Montréal, Montréal (région administrative), Québec, H4S 2B8, Canada",
+        "date_collecte": "2026-06-05"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 12,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.56762390072707,
+          45.50241459984311
+        ]
+      },
+      "properties": {
+        "OBJECTID": 12,
+        "UNIQID": "CLGXMTL07",
+        "NomSite": "Cologix MTL7",
+        "Type": "Retail",
+        "Adresse": "1155 Blvd Robert-Bourassa Montréal H3B 3A7",
+        "Pays": "Canada",
+        "PuissanceAnnMW": 3.1,
+        "ville": "Montréal",
+        "state": "Québec",
+        "country": "Canada",
+        "postcode": "H3B 3C4",
+        "Hebergeur": "Cologix",
+        "ÉquipIA": null,
+        "NombreBatiments": 1,
+        "SurfBatimentPI2": "26 000",
+        "NbServeursAnnoncé": null,
+        "PUE": 1.3,
+        "Siteweb": "https://www.cologix.com/data-centers/montreal/mtl7/",
+        "FicheTechDocumentation": "https://cologix.com/wp-content/uploads/2026/01/SS_MTL7-Montreal-Data-Centre_12-2025_EN.pdf",
+        "Source": null,
+        "display_na": "1155, Boulevard Robert-Bourassa, Ville-Marie, Montréal, Agglomération de Montréal, Montréal (région administrative), Québec, H3B 3C4, Canada",
+        "date_collecte": "2026-06-05"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 13,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.76998809983964,
+          45.48073089995432
+        ]
+      },
+      "properties": {
+        "OBJECTID": 13,
+        "UNIQID": "CLGXMTL08",
+        "NomSite": "Cologix MTL8",
+        "Type": "Wholesale",
+        "Adresse": "7350 Rue Frederick Banting Montréal H4S 2A1",
+        "Pays": "Canada",
+        "PuissanceAnnMW": 21,
+        "ville": "Montréal",
+        "state": "Québec",
+        "country": "Canada",
+        "postcode": "H4S 2A1",
+        "Hebergeur": "Cologix",
+        "ÉquipIA": null,
+        "NombreBatiments": 1,
+        "SurfBatimentPI2": "206 000",
+        "NbServeursAnnoncé": null,
+        "PUE": 1.3,
+        "Siteweb": "https://cologix.com/data-centers/montreal/mtl8",
+        "FicheTechDocumentation": "https://cologix.com/wp-content/uploads/2026/01/SS_MTL8-Montreal-Data-Centre_12-2025_EN.pdf",
+        "Source": null,
+        "display_na": "Cologix, 7350, Rue Frédérick-Banting, Saint-Laurent, Montréal, Agglomération de Montréal, Montréal (région administrative), Québec, H4S 2A1, Canada",
+        "date_collecte": "2026-06-05"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 14,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -72.54594279987467,
+          45.87948410003477
+        ]
+      },
+      "properties": {
+        "OBJECTID": 14,
+        "UNIQID": "CLGXDMD01",
+        "NomSite": "Cologix MTL9",
+        "Type": "Wholesale",
+        "Adresse": "2525 Rue Canadien Drummondville J2C 7W2",
+        "Pays": "Canada",
+        "PuissanceAnnMW": 25,
+        "ville": "Drummondville",
+        "state": "Québec",
+        "country": "Canada",
+        "postcode": "J2C 7W2",
+        "Hebergeur": "Cologix",
+        "ÉquipIA": null,
+        "NombreBatiments": 1,
+        "SurfBatimentPI2": "120 000",
+        "NbServeursAnnoncé": null,
+        "PUE": null,
+        "Siteweb": "https://cologix.com/data-centers/montreal/mtl9",
+        "FicheTechDocumentation": "https://cologix.com/wp-content/uploads/2026/01/SS_MTL9-Montreal-Data-Centre_12-2025_EN.pdf",
+        "Source": null,
+        "display_na": "2525, Rue Canadien, Drummondville, Drummond, Centre-du-Québec, Québec, J2C 7W2, Canada",
+        "date_collecte": "2026-06-05"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 15,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.91413309983608,
+          45.42414460034444
+        ]
+      },
+      "properties": {
+        "OBJECTID": 15,
+        "UNIQID": "CMPSMTL01",
+        "NomSite": "Compass Montreal II",
+        "Type": "Hyperscale",
+        "Adresse": "19701 Av. Clark Graham Baie-d'Urfé H9X 3T1",
+        "Pays": "Canada",
+        "PuissanceAnnMW": 50,
+        "ville": "Baie-D'Urfé",
+        "state": "Québec",
+        "country": "Canada",
+        "postcode": "H9X 2E7",
+        "Hebergeur": "Compass Datacenters",
+        "ÉquipIA": null,
+        "NombreBatiments": 1,
+        "SurfBatimentPI2": "175 000",
+        "NbServeursAnnoncé": null,
+        "PUE": null,
+        "Siteweb": "https://www.compassdatacenters.com/fr/marches/amerique-du-nord/montreal/",
+        "FicheTechDocumentation": "https://french.compassdatacenters.com/fr/centres-de-donnees-de-montreal/",
+        "Source": null,
+        "display_na": "19701, Avenue Clark-Graham, Baie-D'Urfé, Agglomération de Montréal, Montréal (région administrative), Québec, H9X 2E7, Canada",
+        "date_collecte": "2026-06-05"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 16,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.64267470037109,
+          45.439471200113935
+        ]
+      },
+      "properties": {
+        "OBJECTID": 16,
+        "UNIQID": "CMPSMTL02",
+        "NomSite": "Compass Montreal I",
+        "Type": "Wholesale",
+        "Adresse": "2711 Av Dollard LaSalle H8N 2J8",
+        "Pays": "Canada",
+        "PuissanceAnnMW": 15,
+        "ville": "Montréal",
+        "state": "Québec",
+        "country": "Canada",
+        "postcode": "H8N 3H9",
+        "Hebergeur": "Compass Datacenters",
+        "ÉquipIA": null,
+        "NombreBatiments": 1,
+        "SurfBatimentPI2": "46 000",
+        "NbServeursAnnoncé": null,
+        "PUE": null,
+        "Siteweb": "https://www.compassdatacenters.com/fr/marches/amerique-du-nord/montreal/",
+        "FicheTechDocumentation": "https://french.compassdatacenters.com/fr/centres-de-donnees-de-montreal/",
+        "Source": "https://www.datacenterknowledge.com/sustainability/ovh-goes-big-and-green-with-new-quebec-data-center",
+        "display_na": "2711, Avenue Dollard, LaSalle, Montréal, Agglomération de Montréal, Montréal (région administrative), Québec, H8N 3H9, Canada",
+        "date_collecte": "2026-06-05"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 17,
+      "geometry": {
+        "type": "Point",
+        "coordinates": []
+      },
+      "properties": {
+        "OBJECTID": 17,
+        "UNIQID": "EVNMMTL01",
+        "NomSite": "Enovum Data Centers - MTL01",
+        "Type": "Retail",
+        "Adresse": "3195 Chem. Bedford Suite D Montréal H3S 1G3",
+        "Pays": "Canada",
+        "PuissanceAnnMW": 4,
+        "ville": " ",
+        "state": "Québec",
+        "country": "Canada",
+        "postcode": "H3S 1G3",
+        "Hebergeur": "Enovum",
+        "ÉquipIA": null,
+        "NombreBatiments": 1,
+        "SurfBatimentPI2": "70 000",
+        "NbServeursAnnoncé": null,
+        "PUE": null,
+        "Siteweb": "https://www.enovumdc.com/keyfeatures-high-density-computing-high-performance/",
+        "FicheTechDocumentation": "https://www.enovumdc.com/keyfeatures-high-density-computing-high-performance/",
+        "Source": null,
+        "display_na": " ",
+        "date_collecte": "2026-06-05"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 18,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.83767669997879,
+          45.45831450012441
+        ]
+      },
+      "properties": {
+        "OBJECTID": 18,
+        "UNIQID": "EVNMPCL01",
+        "NomSite": "Enovum Data Centers - MTL02",
+        "Type": "Retail",
+        "Adresse": "7300 Route Transcanadienne Pointe-Claire H9R 1C7",
+        "Pays": "Canada",
+        "PuissanceAnnMW": null,
+        "ville": "Pointe-Claire",
+        "state": "Québec",
+        "country": "Canada",
+        "postcode": "H9R 0A1",
+        "Hebergeur": "Enovum",
+        "ÉquipIA": null,
+        "NombreBatiments": 1,
+        "SurfBatimentPI2": "85 000",
+        "NbServeursAnnoncé": null,
+        "PUE": null,
+        "Siteweb": null,
+        "FicheTechDocumentation": null,
+        "Source": null,
+        "display_na": "Trans-Canada Highway, Pointe-Claire, Agglomération de Montréal, Montréal (région administrative), Québec, H9R 0A1, Canada",
+        "date_collecte": "2026-06-05"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 19,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.01841099957564,
+          45.78410400012658
+        ]
+      },
+      "properties": {
+        "OBJECTID": 19,
+        "UNIQID": "EVNMSJM01",
+        "NomSite": "Enovum Data Centers - MTL03",
+        "Type": "Retail",
+        "Adresse": "500 Bd Monseigneur-Dubois  Saint-Jérôme J7Y 3L8",
+        "Pays": "Canada",
+        "PuissanceAnnMW": null,
+        "ville": "Saint-Jérôme",
+        "state": "Québec",
+        "country": "Canada",
+        "postcode": "J7Y 1V8",
+        "Hebergeur": "Enovum",
+        "ÉquipIA": "IA",
+        "NombreBatiments": 1,
+        "SurfBatimentPI2": "202 000",
+        "NbServeursAnnoncé": null,
+        "PUE": null,
+        "Siteweb": null,
+        "FicheTechDocumentation": null,
+        "Source": "https://bit-digital.com/press-releases/bit-digital-inc-secures-site-for-new-tier-3-data-center-to-support-cerebras-colocation-contract/",
+        "display_na": "500, Boulevard Monseigneur-Dubois, District 1, Saint-Jérôme, La Rivière-du-Nord, Laurentides, Québec, J7Y 1V8, Canada",
+        "date_collecte": "2026-06-05"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 20,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.74512430033538,
+          45.487959700003714
+        ]
+      },
+      "properties": {
+        "OBJECTID": 20,
+        "UNIQID": "EQNXMTL01",
+        "NomSite": "Equinix MTL 1 ",
+        "Type": "Retail",
+        "Adresse": "6205 Rue Vanden Abeele Saint-Laurent H4S 1R9",
+        "Pays": "Canada",
+        "PuissanceAnnMW": null,
+        "ville": "Montréal",
+        "state": "Québec",
+        "country": "Canada",
+        "postcode": "H4S 1A9",
+        "Hebergeur": "Equinix",
+        "ÉquipIA": null,
+        "NombreBatiments": 1,
+        "SurfBatimentPI2": "125 842",
+        "NbServeursAnnoncé": null,
+        "PUE": null,
+        "Siteweb": "https://www.equinix.com/data-centers/americas-colocation/canada-colocation/montreal-data-centers/mt1",
+        "FicheTechDocumentation": "https://www.equinix.com/content/dam/eqxcorp/en_us/documents/resources/ibx-tech-specs/ibx_mt1_en.pdf",
+        "Source": null,
+        "display_na": "Rue Vanden-Abeele, Saint-Laurent, Montréal, Agglomération de Montréal, Montréal (région administrative), Québec, H4S 1A9, Canada",
+        "date_collecte": "2026-06-05"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 21,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.050532999726,
+          45.412654599670326
+        ]
+      },
+      "properties": {
+        "OBJECTID": 21,
+        "UNIQID": "EQNXMTL02",
+        "NomSite": "Equinix MTL 2",
+        "Type": "Retail",
+        "Adresse": "3500 Rue F.-X.-Tessier Vaudreuil-Dorion J7V 5V5",
+        "Pays": "Canada",
+        "PuissanceAnnMW": null,
+        "ville": " Vaudreuil-Dorion",
+        "state": "Québec",
+        "country": "Canada",
+        "postcode": "J7V 5V5",
+        "Hebergeur": "Equinix",
+        "ÉquipIA": null,
+        "NombreBatiments": 1,
+        "SurfBatimentPI2": "75 664",
+        "NbServeursAnnoncé": null,
+        "PUE": null,
+        "Siteweb": "https://www.equinix.com/data-centers/americas-colocation/canada-colocation/montreal-data-centers/mt2",
+        "FicheTechDocumentation": "https://www.equinix.com/content/dam/eqxcorp/en_us/documents/resources/ibx-tech-specs/ibx_mt2_en.pdf",
+        "Source": null,
+        "display_na": "3500, Rue F.-X.-Tessier, Vaudreuil, Vaudreuil-Dorion, Vaudreuil-Soulanges, Montérégie, Québec, J7V 5V5, Canada",
+        "date_collecte": "2026-06-05"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 22,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.3983961001658,
+          45.574544399948635
+        ]
+      },
+      "properties": {
+        "OBJECTID": 22,
+        "UNIQID": "EQNXGAT01",
+        "NomSite": "Equinix OT1",
+        "Type": "Retail",
+        "Adresse": "200 Av. Lepine Gatineau J8L 0B3",
+        "Pays": "Canada",
+        "PuissanceAnnMW": null,
+        "ville": "Gatineau",
+        "state": "Québec",
+        "country": "Canada",
+        "postcode": "J8L 4M4",
+        "Hebergeur": "Equinix",
+        "ÉquipIA": null,
+        "NombreBatiments": 1,
+        "SurfBatimentPI2": "42 800",
+        "NbServeursAnnoncé": null,
+        "PUE": null,
+        "Siteweb": "https://www.equinix.com/data-centers/americas-colocation/canada-colocation/ottawa-data-centers/ot1",
+        "FicheTechDocumentation": "https://www.equinix.com/content/dam/eqxcorp/en_us/documents/resources/ibx-tech-specs/ibx_ot1_en.pdf",
+        "Source": null,
+        "display_na": "Equinix OT1, 200, Avenue Lépine, Buckingham, Gatineau, Outaouais, Québec, J8L 4M4, Canada",
+        "date_collecte": "2026-06-05"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 23,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.56158689952261,
+          45.500773700150134
+        ]
+      },
+      "properties": {
+        "OBJECTID": 23,
+        "UNIQID": "ESTRMTL01",
+        "NomSite": "Estruxture MTL1",
+        "Type": "Retail",
+        "Adresse": "800 Rue du Square-Victoria Montréal H4Z 1B7",
+        "Pays": "Canada",
+        "PuissanceAnnMW": 4.5,
+        "ville": "Montréal",
+        "state": "Québec",
+        "country": "Canada",
+        "postcode": "H4Z 1A1",
+        "Hebergeur": "Estruxture",
+        "ÉquipIA": null,
+        "NombreBatiments": 1,
+        "SurfBatimentPI2": "34 000",
+        "NbServeursAnnoncé": null,
+        "PUE": null,
+        "Siteweb": "https://www.estruxture.com/fr/centres-de-donnees/montreal/mtl-1",
+        "FicheTechDocumentation": "https://info.estruxture.com/hubfs/Data%20Sheets/eStruxture_Datasheet_MTL1_FR%201%202023.pdf",
+        "Source": null,
+        "display_na": "McDonald's, 800, Rue du Square Victoria, Quartier international, Ville-Marie, Montréal, Agglomération de Montréal, Montréal (région administrative), Québec, H4Z 1A1, Canada",
+        "date_collecte": "2026-06-05"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 24,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.63188970044479,
+          45.45742240009864
+        ]
+      },
+      "properties": {
+        "OBJECTID": 24,
+        "UNIQID": "ESTRMTL01",
+        "NomSite": "Estruxture MTL1",
+        "Type": "Retail",
+        "Adresse": "7001 Rue Saint-Jacques Montréal H4B 3A2",
+        "Pays": "Canada",
+        "PuissanceAnnMW": 4.5,
+        "ville": "Montréal",
+        "state": "Québec",
+        "country": "Canada",
+        "postcode": "H4B 1V3",
+        "Hebergeur": "Estruxture",
+        "ÉquipIA": null,
+        "NombreBatiments": 1,
+        "SurfBatimentPI2": "34 000",
+        "NbServeursAnnoncé": null,
+        "PUE": null,
+        "Siteweb": "https://www.estruxture.com/fr/centres-de-donnees/montreal/mtl-1",
+        "FicheTechDocumentation": "https://info.estruxture.com/hubfs/Data%20Sheets/eStruxture_Datasheet_MTL1_FR%201%202023.pdf",
+        "Source": null,
+        "display_na": "7001, Rue Saint-Jacques, Côte-des-Neiges–Notre-Dame-de-Grâce, Montréal, Agglomération de Montréal, Montréal (région administrative), Québec, H4B 1V3, Canada",
+        "date_collecte": "2026-06-05"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 25,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.4306385993092,
+          45.56836260012281
+        ]
+      },
+      "properties": {
+        "OBJECTID": 25,
+        "UNIQID": "ESTRMTL02",
+        "NomSite": "Estruxture MTL3",
+        "Type": "Retail",
+        "Adresse": "1350 Rue Nobel Boucherville J4B 5H3",
+        "Pays": "Canada",
+        "PuissanceAnnMW": 1.2,
+        "ville": "Boucherville",
+        "state": "Québec",
+        "country": "Canada",
+        "postcode": "J4B 8C2",
+        "Hebergeur": "Estruxture",
+        "ÉquipIA": null,
+        "NombreBatiments": 1,
+        "SurfBatimentPI2": "20 000",
+        "NbServeursAnnoncé": null,
+        "PUE": null,
+        "Siteweb": "https://www.estruxture.com/fr/centres-de-donnees/montreal/mtl-3",
+        "FicheTechDocumentation": "https://info.estruxture.com/hubfs/Data%20Sheets/eStruxture_Datasheet_MTL3_FR%202023.pdf",
+        "Source": null,
+        "display_na": "1350, Rue Nobel, Boucherville, Agglomération de Longueuil, Montérégie, Québec, J4B 8C2, Canada",
+        "date_collecte": "2026-06-05"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 26,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.86948159932545,
+          45.44596860032175
+        ]
+      },
+      "properties": {
+        "OBJECTID": 26,
+        "UNIQID": "ESTRMTL04",
+        "NomSite": "Estruxture MTL4",
+        "Type": "Wholesale",
+        "Adresse": "17500 Route Transcanadienne Kirkland H9J 2X8",
+        "Pays": "Canada",
+        "PuissanceAnnMW": 16,
+        "ville": "Kirkland",
+        "state": "Québec",
+        "country": "Canada",
+        "postcode": "H9W 1H9",
+        "Hebergeur": "Estruxture",
+        "ÉquipIA": null,
+        "NombreBatiments": 1,
+        "SurfBatimentPI2": "103 000",
+        "NbServeursAnnoncé": null,
+        "PUE": null,
+        "Siteweb": "https://www.estruxture.com/fr/centres-de-donnees/montreal/mtl-4/",
+        "FicheTechDocumentation": "https://info.estruxture.com/hubfs/Data%20Sheets/eStruxture_Datasheet_MTL4_FR%202023.pdf",
+        "Source": null,
+        "display_na": "17500, Trans-Canada Highway, Kirkland, Agglomération de Montréal, Montréal (région administrative), Québec, H9W 1H9, Canada",
+        "date_collecte": "2026-06-05"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 27,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.56548169994713,
+          45.502473399766856
+        ]
+      },
+      "properties": {
+        "OBJECTID": 27,
+        "UNIQID": "ESTRMTL05",
+        "NomSite": "Estruxture MTL5",
+        "Type": "Retail",
+        "Adresse": "1080 Côte du Beaver Hall Montréal H2Z 1S8",
+        "Pays": "Canada",
+        "PuissanceAnnMW": 0.5,
+        "ville": "Montréal",
+        "state": "Québec",
+        "country": "Canada",
+        "postcode": "H3B 5B4",
+        "Hebergeur": "Estruxture",
+        "ÉquipIA": null,
+        "NombreBatiments": 1,
+        "SurfBatimentPI2": "7 500",
+        "NbServeursAnnoncé": null,
+        "PUE": null,
+        "Siteweb": "https://www.estruxture.com/fr/centres-de-donnees/montreal/mtl-5",
+        "FicheTechDocumentation": "https://info.estruxture.com/hubfs/Data%20Sheets/eStruxture_Datasheet_MTL5_FR%202023.pdf",
+        "Source": null,
+        "display_na": "1080, Côte du Beaver Hall, Ville-Marie, Montréal, Agglomération de Montréal, Montréal (région administrative), Québec, H3B 5B4, Canada",
+        "date_collecte": "2026-06-05"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 28,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.56548169994713,
+          45.502473399766856
+        ]
+      },
+      "properties": {
+        "OBJECTID": 28,
+        "UNIQID": "HIVDMTL01",
+        "NomSite": "Hive MTL-1 - opéré par Ventage",
+        "Type": "Unknown",
+        "Adresse": "1080 Côte du Beaver Hall Montréal H2Z 1S8",
+        "Pays": "Canada",
+        "PuissanceAnnMW": 0,
+        "ville": "Montréal",
+        "state": "Québec",
+        "country": "Canada",
+        "postcode": "H3B 5B4",
+        "Hebergeur": "Hive",
+        "ÉquipIA": null,
+        "NombreBatiments": 1,
+        "SurfBatimentPI2": null,
+        "NbServeursAnnoncé": null,
+        "PUE": null,
+        "Siteweb": null,
+        "FicheTechDocumentation": null,
+        "Source": null,
+        "display_na": "1080, Côte du Beaver Hall, Ville-Marie, Montréal, Agglomération de Montréal, Montréal (région administrative), Québec, H3B 5B4, Canada",
+        "date_collecte": "2026-06-05"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 29,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.75620779965081,
+          45.48676290044371
+        ]
+      },
+      "properties": {
+        "OBJECTID": 29,
+        "UNIQID": "HIVDMTL02",
+        "NomSite": "Hive MTL-2",
+        "Type": "Wholesale",
+        "Adresse": "2900 Av. Marie Curie Saint-Laurent H4S 2C2",
+        "Pays": "Canada",
+        "PuissanceAnnMW": null,
+        "ville": "Montréal",
+        "state": "Québec",
+        "country": "Canada",
+        "postcode": "H4S 2B6",
+        "Hebergeur": "Hive",
+        "ÉquipIA": null,
+        "NombreBatiments": 1,
+        "SurfBatimentPI2": null,
+        "NbServeursAnnoncé": null,
+        "PUE": null,
+        "Siteweb": null,
+        "FicheTechDocumentation": null,
+        "Source": null,
+        "display_na": "Vantage Data Centers Montreal I, 2900, Avenue Marie-Curie, Saint-Laurent, Montréal, Agglomération de Montréal, Montréal (région administrative), Québec, H4S 2B6, Canada",
+        "date_collecte": "2026-06-05"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 30,
+      "geometry": {
+        "type": "Point",
+        "coordinates": []
+      },
+      "properties": {
+        "OBJECTID": 30,
+        "UNIQID": "HIVDQBC01",
+        "NomSite": "Hive QC-1 - opéré par Ventage",
+        "Type": "Unknown",
+        "Adresse": " ",
+        "Pays": "Canada",
+        "PuissanceAnnMW": 0,
+        "ville": " ",
+        "state": "Québec",
+        "country": " ",
+        "postcode": " ",
+        "Hebergeur": "Hive",
+        "ÉquipIA": null,
+        "NombreBatiments": 1,
+        "SurfBatimentPI2": null,
+        "NbServeursAnnoncé": null,
+        "PUE": null,
+        "Siteweb": null,
+        "FicheTechDocumentation": null,
+        "Source": null,
+        "display_na": " ",
+        "date_collecte": "2026-06-05"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 31,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.53810180018043,
+          45.46792850020424
+        ]
+      },
+      "properties": {
+        "OBJECTID": 31,
+        "UNIQID": "LSWBMTL01",
+        "NomSite": "LeaseWeb MTL-01",
+        "Type": "Retail",
+        "Adresse": "20 Pl. du Commerce Verdun H3E 0G3",
+        "Pays": "Canada",
+        "PuissanceAnnMW": null,
+        "ville": "Montréal",
+        "state": "Québec",
+        "country": "Canada",
+        "postcode": "H3E 1Z6",
+        "Hebergeur": "Leaseweb",
+        "ÉquipIA": null,
+        "NombreBatiments": 1,
+        "SurfBatimentPI2": "13 200",
+        "NbServeursAnnoncé": null,
+        "PUE": null,
+        "Siteweb": "https://www.leaseweb.com/en/why-leaseweb/platform/data-centers/mtl-01",
+        "FicheTechDocumentation": null,
+        "Source": null,
+        "display_na": "20, Place du Commerce, Verdun, Montréal, Agglomération de Montréal, Montréal (région administrative), Québec, H3E 1Z6, Canada",
+        "date_collecte": "2026-06-05"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 32,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.61803700053564,
+          45.44342890017276
+        ]
+      },
+      "properties": {
+        "OBJECTID": 32,
+        "UNIQID": "LSWBMTL02",
+        "NomSite": "LeaseWeb MTL-02",
+        "Type": "Retail",
+        "Adresse": "7207 Boul. Newman LaSalle H8N 0H7",
+        "Pays": "Canada",
+        "PuissanceAnnMW": 1.8,
+        "ville": "Montréal",
+        "state": "Québec",
+        "country": "Canada",
+        "postcode": "H8N 2K3",
+        "Hebergeur": "Leaseweb",
+        "ÉquipIA": null,
+        "NombreBatiments": 1,
+        "SurfBatimentPI2": "12 000",
+        "NbServeursAnnoncé": null,
+        "PUE": null,
+        "Siteweb": "https://www.leaseweb.com/en/why-leaseweb/platform/data-centers/mtl-02",
+        "FicheTechDocumentation": null,
+        "Source": null,
+        "display_na": "Leaseweb, 7207, Boulevard Newman, LaSalle, Montréal, Agglomération de Montréal, Montréal (région administrative), Québec, H8N 2K3, Canada",
+        "date_collecte": "2026-06-05"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 33,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.60777930000303,
+          45.59925279976341
+        ]
+      },
+      "properties": {
+        "OBJECTID": 33,
+        "UNIQID": "LSWBMTL03",
+        "NomSite": "LeaseWeb MTL-03",
+        "Type": "Retail",
+        "Adresse": "5945 Boul. Couture Saint-Leonard H1P 1A8",
+        "Pays": "Canada",
+        "PuissanceAnnMW": 2.1,
+        "ville": "Montréal",
+        "state": "Québec",
+        "country": "Canada",
+        "postcode": "H1P 1A8",
+        "Hebergeur": "Leaseweb",
+        "ÉquipIA": null,
+        "NombreBatiments": 1,
+        "SurfBatimentPI2": "8 749",
+        "NbServeursAnnoncé": null,
+        "PUE": null,
+        "Siteweb": "https://www.leaseweb.com/en/why-leaseweb/platform/data-centers/mtl-03",
+        "FicheTechDocumentation": null,
+        "Source": null,
+        "display_na": "Leaseweb, 5945, Boulevard Couture, Saint-Léonard, Montréal, Agglomération de Montréal, Montréal (région administrative), Québec, H1P 1A8, Canada",
+        "date_collecte": "2026-06-05"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 34,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -72.77631349971576,
+          46.563492499552765
+        ]
+      },
+      "properties": {
+        "OBJECTID": 34,
+        "UNIQID": "NRDKSHW01",
+        "NomSite": "Nordik NDC1",
+        "Type": "Retail",
+        "Adresse": "4155 Rue Burrill Shawinigan G9N 0C4",
+        "Pays": "Canada",
+        "PuissanceAnnMW": 5,
+        "ville": "Shawinigan",
+        "state": "Québec",
+        "country": "Canada",
+        "postcode": "G9N 6Z5",
+        "Hebergeur": "Nordik",
+        "ÉquipIA": null,
+        "NombreBatiments": 1,
+        "SurfBatimentPI2": "46 000",
+        "NbServeursAnnoncé": null,
+        "PUE": null,
+        "Siteweb": "https://nordikdatacenters.com/",
+        "FicheTechDocumentation": "https://nordikdatacenters.com/nos-installations-centres-de-donnees/",
+        "Source": null,
+        "display_na": "4155, Rue Burrill, Shawinigan-Nord, Shawinigan, Mauricie, Québec, G9N 6Z5, Canada",
+        "date_collecte": "2026-06-05"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 35,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.89788829951303,
+          45.309742599743885
+        ]
+      },
+      "properties": {
+        "OBJECTID": 35,
+        "UNIQID": "OVHCBHS01",
+        "NomSite": "OVHcloud BHS Campus",
+        "Type": "Hyperscale",
+        "Adresse": "50 Rue de l'Aluminerie Beauharnois J6N 0C2",
+        "Pays": "Canada",
+        "PuissanceAnnMW": 100,
+        "ville": "Beauharnois",
+        "state": "Québec",
+        "country": "Canada",
+        "postcode": "J6N 2H8",
+        "Hebergeur": "OVHCloud",
+        "ÉquipIA": "IA",
+        "NombreBatiments": 4,
+        "SurfBatimentPI2": "200 000",
+        "NbServeursAnnoncé": 90000,
+        "PUE": null,
+        "Siteweb": "https://www.datacentermap.com/canada/montreal/ovhcloud-beauharnois/",
+        "FicheTechDocumentation": null,
+        "Source": "https://corporate.ovhcloud.com/fr-ca/newsroom/news/ovhcloud-10-year-anniversary-canada/#:~:text=Pour%20c%C3%A9l%C3%A9brer%20cette%20%C3%A9tape%20marquante,en%20h%C3%A9berger%203%20fois%20plus.",
+        "display_na": "Rue de l'Aluminerie, Parc Industriel de Beauharnois, Beauharnois, Beauharnois-Salaberry, Montérégie, Québec, J6N 2H8, Canada",
+        "date_collecte": "2026-06-05"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.325108699471,
+          46.676137700336184
+        ]
+      },
+      "properties": {
+        "OBJECTID": 36,
+        "UNIQID": "QSCLLVS01",
+        "NomSite": "QScale Campus 1",
+        "Type": "Hyperscale",
+        "Adresse": "2280 Rue Albert-Dion Lévis G7A 5M9",
+        "Pays": "Canada",
+        "PuissanceAnnMW": 114,
+        "ville": "Lévis",
+        "state": "Québec",
+        "country": "Canada",
+        "postcode": "G7A 5M9",
+        "Hebergeur": "QScale",
+        "ÉquipIA": "IA",
+        "NombreBatiments": 1,
+        "SurfBatimentPI2": "313 000",
+        "NbServeursAnnoncé": null,
+        "PUE": 1.2,
+        "Siteweb": "https://fr.qscale.com/q01-campus",
+        "FicheTechDocumentation": "https://cdn.prod.website-files.com/6026d734508bf45880176198/68e922ffe4c53f52eeb48867_fdd8650e0c57c0a100408d9acd441008_QScale%20-%20Q01%20Campus%20-%20Data%20Sheet.pdf",
+        "Source": null,
+        "display_na": "QScale, 2280, Rue Albert-Dion, Saint-Nicolas, Les Chutes-de-la-Chaudière-Ouest, Lévis, Chaudière-Appalaches, Québec, G7A 5M9, Canada",
+        "date_collecte": "2026-06-05"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 37,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.56493739993671,
+          45.54170949959536
+        ]
+      },
+      "properties": {
+        "OBJECTID": 37,
+        "UNIQID": "SMRTMTL01",
+        "NomSite": "SmartDC MTL-1",
+        "Type": "Unknown",
+        "Adresse": "4101 Rue Molson Montréal H1Y 3L1",
+        "Pays": "Canada",
+        "PuissanceAnnMW": null,
+        "ville": "Montréal",
+        "state": "Québec",
+        "country": "Canada",
+        "postcode": "H1Y 3L1",
+        "Hebergeur": "SmartDC",
+        "ÉquipIA": null,
+        "NombreBatiments": 1,
+        "SurfBatimentPI2": null,
+        "NbServeursAnnoncé": null,
+        "PUE": null,
+        "Siteweb": "https://www.smartdc.net/data-centers/locations/montreal/",
+        "FicheTechDocumentation": null,
+        "Source": null,
+        "display_na": "Clinique médicale Angus, 4101, Rue Molson, Rosemont, Rosemont–La Petite-Patrie, Montréal, Agglomération de Montréal, Montréal (région administrative), Québec, H1Y 3L1, Canada",
+        "date_collecte": "2026-06-05"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 38,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.50234530053004,
+          48.46429520022404
+        ]
+      },
+      "properties": {
+        "OBJECTID": 38,
+        "UNIQID": "TLUSRKI01",
+        "NomSite": "Telus - Super Internet Data Center (SIDC)",
+        "Type": "Wholesale",
+        "Adresse": "190 Rue des Negociants Rimouski G5M 1B7",
+        "Pays": "Canada",
+        "PuissanceAnnMW": 16,
+        "ville": "Rimouski",
+        "state": "Québec",
+        "country": "Canada",
+        "postcode": "G5M 1A7",
+        "Hebergeur": "Telus",
+        "ÉquipIA": "IA",
+        "NombreBatiments": 1,
+        "SurfBatimentPI2": "12 500",
+        "NbServeursAnnoncé": null,
+        "PUE": null,
+        "Siteweb": null,
+        "FicheTechDocumentation": null,
+        "Source": "https://group.skanska.com/projects/57626/TELUS-Super-Internet-Data-Center",
+        "display_na": "190, Rue des Négociants, Village-Brisson, Rimouski-Est, Rimouski, Rimouski-Neigette, Bas-Saint-Laurent, Québec, G5M 1A7, Canada",
+        "date_collecte": "2026-06-05"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 39,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.56291270059256,
+          45.49731470009746
+        ]
+      },
+      "properties": {
+        "OBJECTID": 39,
+        "UNIQID": "UBCNMTL01",
+        "NomSite": "Urbacon DC Montreal",
+        "Type": "Wholesale",
+        "Adresse": "544 Rue de l'Inspecteur Montréal H3C 2K9",
+        "Pays": "Canada",
+        "PuissanceAnnMW": 21,
+        "ville": "Montréal",
+        "state": "Québec",
+        "country": "Canada",
+        "postcode": "H3C 0K3",
+        "Hebergeur": "Ubarcon",
+        "ÉquipIA": null,
+        "NombreBatiments": 1,
+        "SurfBatimentPI2": "266 671",
+        "NbServeursAnnoncé": null,
+        "PUE": 1.2,
+        "Siteweb": "https://udcsdatacentres.com/portfolio/item/montreal-quebec/",
+        "FicheTechDocumentation": null,
+        "Source": null,
+        "display_na": "544, Rue de l'Inspecteur, Ville-Marie, Montréal, Agglomération de Montréal, Montréal (région administrative), Québec, H3C 0K3, Canada",
+        "date_collecte": "2026-06-05"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 40,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.75620779965081,
+          45.48676290044371
+        ]
+      },
+      "properties": {
+        "OBJECTID": 40,
+        "UNIQID": "VNTGMTL01",
+        "NomSite": "Vantage Data Centers Canada Montreal I QC1",
+        "Type": "Wholesale",
+        "Adresse": "2900 Av. Marie Curie Saint-Laurent H4S 2C2",
+        "Pays": "Canada",
+        "PuissanceAnnMW": 11,
+        "ville": "Montréal",
+        "state": "Québec",
+        "country": "Canada",
+        "postcode": "H4S 2B6",
+        "Hebergeur": "Vantage Datacenters",
+        "ÉquipIA": null,
+        "NombreBatiments": 1,
+        "SurfBatimentPI2": "60 000",
+        "NbServeursAnnoncé": null,
+        "PUE": null,
+        "Siteweb": "https://vantage-dc.com/fr/data-center-locations/north-america/montreal-i-canada/",
+        "FicheTechDocumentation": "https://vantage-dc.com/wp-content/uploads/2022/06/VDC_DataSheet_Montreal_FRENCH..pdf",
+        "Source": null,
+        "display_na": "Vantage Data Centers Montreal I, 2900, Avenue Marie-Curie, Saint-Laurent, Montréal, Agglomération de Montréal, Montréal (région administrative), Québec, H4S 2B6, Canada",
+        "date_collecte": "2026-06-05"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 41,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.80006909981671,
+          45.47463650059129
+        ]
+      },
+      "properties": {
+        "OBJECTID": 41,
+        "UNIQID": "VNTGMTL02",
+        "NomSite": "Vantage Data Centers Canada Montreal II QC4",
+        "Type": "Wholesale",
+        "Adresse": "2800 Route Transcanadienne Pointe-Claire H9R 1B1",
+        "Pays": "Canada",
+        "PuissanceAnnMW": 50,
+        "ville": " Pointe-Claire",
+        "state": "Québec",
+        "country": "Canada",
+        "postcode": "H9R 5Z5",
+        "Hebergeur": "Vantage Datacenters",
+        "ÉquipIA": null,
+        "NombreBatiments": 3,
+        "SurfBatimentPI2": "320 000",
+        "NbServeursAnnoncé": null,
+        "PUE": null,
+        "Siteweb": "https://vantage-dc.com/fr/data-center-locations/north-america/montreal-ii-canada/",
+        "FicheTechDocumentation": "https://vantage-dc.com/wp-content/uploads/2020/09/VDC_DataSheet_Montreal-II_EN.pdf",
+        "Source": "https://www.quebec.ca/agriculture-environnement-et-ressources-naturelles/energie/production-approvisionnement-distribution/autorisation-projet-electrique",
+        "display_na": "2800, Route Transcanadienne, Pointe-Claire, Agglomération de Montréal, Montréal (région administrative), Québec, H9R 5Z5, Canada",
+        "date_collecte": "2026-06-05"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 42,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.82162570039853,
+          45.471945300110065
+        ]
+      },
+      "properties": {
+        "OBJECTID": 42,
+        "UNIQID": "VNTGMTL03",
+        "NomSite": "Vantage Data Centers Canada Montreal III QC6",
+        "Type": "Wholesale",
+        "Adresse": "205 Boul. Brunswick Pointe-Claire H9R 4R7",
+        "Pays": "Canada",
+        "PuissanceAnnMW": 45,
+        "ville": "Pointe-Claire",
+        "state": "Québec",
+        "country": "Canada",
+        "postcode": "H2B 2L2",
+        "Hebergeur": "Vantage Datacenters",
+        "ÉquipIA": null,
+        "NombreBatiments": 1,
+        "SurfBatimentPI2": "348 480",
+        "NbServeursAnnoncé": null,
+        "PUE": null,
+        "Siteweb": "https://vantage-dc.com/fr/data-center-locations/north-america/montreal-iii-canada/",
+        "FicheTechDocumentation": "https://vantage-dc.com/wp-content/uploads/2022/03/VDC_DataSheet_Montreal-III_FR-3.pdf",
+        "Source": null,
+        "display_na": "205, Boulevard Brunswick, Pointe-Claire, Agglomération de Montréal, Montréal (région administrative), Québec, H2B 2L2, Canada",
+        "date_collecte": "2026-06-05"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 43,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.3072116997111,
+          46.79550479982587
+        ]
+      },
+      "properties": {
+        "OBJECTID": 43,
+        "UNIQID": "VNTGQC01",
+        "NomSite": "Vantage Data Centers Canada Québec QC2",
+        "Type": "Wholesale",
+        "Adresse": "2675 Boul. du Parc Technologique Quebec G1P 4S5",
+        "Pays": "Canada",
+        "PuissanceAnnMW": 86,
+        "ville": "Québec",
+        "state": "Québec",
+        "country": "Canada",
+        "postcode": "G1P 4S5",
+        "Hebergeur": "Vantage Datacenters",
+        "ÉquipIA": null,
+        "NombreBatiments": 4,
+        "SurfBatimentPI2": "925 000",
+        "NbServeursAnnoncé": null,
+        "PUE": null,
+        "Siteweb": "https://vantage-dc.com/fr/data-center-locations/north-america/quebec-city-canada/",
+        "FicheTechDocumentation": "https://vantage-dc.com/wp-content/uploads/2020/09/VDC_DataSheet_Quebec_French_2024-1.pdf",
+        "Source": null,
+        "display_na": "2675, Boulevard du Parc-Technologique, Parc technologique du Québec métropolitain, Duberger, Duberger–Les Saules, Les Rivières, Québec, Agglomération de Québec, Capitale-Nationale, Québec, G1P 4S5, Canada",
+        "date_collecte": "2026-06-05"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 44,
+      "geometry": {
+        "type": "Point",
+        "coordinates": []
+      },
+      "properties": {
+        "OBJECTID": 44,
+        "UNIQID": "HPBTQBC01",
+        "NomSite": "Hyper Bit Dogecoin Mining",
+        "Type": "Wholesale",
+        "Adresse": " ",
+        "Pays": "Canada",
+        "PuissanceAnnMW": null,
+        "ville": " ",
+        "state": "Québec",
+        "country": "Canada",
+        "postcode": " ",
+        "Hebergeur": "Hyper Bit",
+        "ÉquipIA": null,
+        "NombreBatiments": null,
+        "SurfBatimentPI2": null,
+        "NbServeursAnnoncé": null,
+        "PUE": null,
+        "Siteweb": null,
+        "FicheTechDocumentation": "https://hyperbit.ca/",
+        "Source": null,
+        "display_na": " ",
+        "date_collecte": "2026-06-05"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 45,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.97117439998304,
+          45.39818960046551
+        ]
+      },
+      "properties": {
+        "OBJECTID": 45,
+        "UNIQID": "BITFSHB01",
+        "NomSite": "Bitfarm Leger",
+        "Type": "Crypto",
+        "Adresse": "290 Rue Leger Sherbrooke J1L 1Y5",
+        "Pays": "Canada",
+        "PuissanceAnnMW": null,
+        "ville": "Sherbrooke",
+        "state": "Québec",
+        "country": "Canada",
+        "postcode": "J1L 2G7",
+        "Hebergeur": "Bitfarms / Keel Infrastructure",
+        "ÉquipIA": null,
+        "NombreBatiments": 1,
+        "SurfBatimentPI2": "74 116",
+        "NbServeursAnnoncé": null,
+        "PUE": null,
+        "Siteweb": null,
+        "FicheTechDocumentation": null,
+        "Source": null,
+        "display_na": "290, Rue Léger, Parc industriel régional de Sherbrooke, Jacques-Cartier, Sherbrooke, Estrie, Québec, J1L 2G7, Canada",
+        "date_collecte": "2026-06-05"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 46,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.19013949944043,
+          49.222381500641504
+        ]
+      },
+      "properties": {
+        "OBJECTID": 46,
+        "UNIQID": "KEELBCO01",
+        "NomSite": "Keel Infrastructure",
+        "Type": "Crypto",
+        "Adresse": "25 Av. Babin Baie-Comeau G4Z 3A6",
+        "Pays": "Canada",
+        "PuissanceAnnMW": null,
+        "ville": "Baie-Comeau",
+        "state": "Québec",
+        "country": "Canada",
+        "postcode": "G4Z 3A8",
+        "Hebergeur": "Bitfarms / Keel Infrastructure",
+        "ÉquipIA": "IA",
+        "NombreBatiments": 1,
+        "SurfBatimentPI2": null,
+        "NbServeursAnnoncé": null,
+        "PUE": null,
+        "Siteweb": null,
+        "FicheTechDocumentation": null,
+        "Source": null,
+        "display_na": "25, Avenue Babin, Baie-Comeau, Manicouagan, Côte-Nord, Québec, G4Z 3A8, Canada",
+        "date_collecte": "2026-06-05"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 47,
+      "geometry": {
+        "type": "Point",
+        "coordinates": []
+      },
+      "properties": {
+        "OBJECTID": 47,
+        "UNIQID": "EXINSHB01",
+        "NomSite": "Exaion / PINQ2 Bellevue",
+        "Type": "Wholesale",
+        "Adresse": "1820 Rue Galt O Sherbrooke J1K 1H8",
+        "Pays": "Canada",
+        "PuissanceAnnMW": 0.8,
+        "ville": " Sherbrooke",
+        "state": "Québec",
+        "country": "Canada",
+        "postcode": " ",
+        "Hebergeur": "Exaion ",
+        "ÉquipIA": "IA",
+        "NombreBatiments": 1,
+        "SurfBatimentPI2": "4 000",
+        "NbServeursAnnoncé": null,
+        "PUE": null,
+        "Siteweb": "https://www.pinq2.com/actu/centre-de-donnees-ecoresponsable-hybride-quantique-bellevue/",
+        "FicheTechDocumentation": "https://www.usherbrooke.ca/partenariats/typo3temp/cp_exaion_inaugure_a_sherbrooke_le_premier_centre_de_donnees..._fr.pdf",
+        "Source": null,
+        "display_na": " ",
+        "date_collecte": "2026-06-05"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 48,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -72.71985989976469,
+          45.29617870009422
+        ]
+      },
+      "properties": {
+        "OBJECTID": 48,
+        "UNIQID": "IBMDMTL01",
+        "NomSite": "IBM Quantum System One",
+        "Type": "Quantique",
+        "Adresse": "23 Bd de l'Aéroport  Bromont J2L 1A3",
+        "Pays": "Canada",
+        "PuissanceAnnMW": null,
+        "ville": "Bromont",
+        "state": "Québec",
+        "country": "Canada",
+        "postcode": "J2L 1S9",
+        "Hebergeur": "IBM",
+        "ÉquipIA": null,
+        "NombreBatiments": 1,
+        "SurfBatimentPI2": "54",
+        "NbServeursAnnoncé": null,
+        "PUE": null,
+        "Siteweb": null,
+        "FicheTechDocumentation": null,
+        "Source": "https://www.pinq2.com/en/presse/inauguration-du-ibm-quantum-system-one-du-quebec/",
+        "display_na": "IBM Bromont, 23, Boulevard de l'Aéroport, Bromont, Brome-Missisquoi, Estrie, Québec, J2L 1S9, Canada",
+        "date_collecte": "2026-06-05"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 49,
+      "geometry": {
+        "type": "Point",
+        "coordinates": []
+      },
+      "properties": {
+        "OBJECTID": 49,
+        "UNIQID": "HIVDLCH01",
+        "NomSite": "HIVE Canada 1.0 ",
+        "Type": "Wholesale",
+        "Adresse": "963 Chem. Béthany Lachute J8H 2C5",
+        "Pays": "Canada",
+        "PuissanceAnnMW": null,
+        "ville": " Lachute",
+        "state": "Québec",
+        "country": "Canada",
+        "postcode": " ",
+        "Hebergeur": "Hive",
+        "ÉquipIA": null,
+        "NombreBatiments": null,
+        "SurfBatimentPI2": null,
+        "NbServeursAnnoncé": null,
+        "PUE": null,
+        "Siteweb": null,
+        "FicheTechDocumentation": "HIVE Digital Technologies Ltd: HIVE Canada 1.0 Data Center",
+        "Source": "https://www.regie-energie.qc.ca/fr/participants/dossiers/R-4333-2026/doc/R-4333-2026-C-HIVE-0003-DemInterv-Sujets-2026_03_16.pdf",
+        "display_na": " ",
+        "date_collecte": "2026-06-05"
+      }
+    }
+  ],
+  "metadata": {
+    "date": "2026-06-05",
+    "source": "Centres de données du Québec"
+  }
 }

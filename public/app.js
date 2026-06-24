@@ -282,6 +282,15 @@ Promise.all([
   fetchJSON('/Hydro-Quebec.geojson')
 ])
   .then(([geojson, densityMap, polysGeojson, hqGeojson]) => {
+    // Remplir les dates de collecte dans le tableau du À Propos
+    const dateDatacentersEl = document.getElementById('date-datacenters');
+    const dateBatiEl = document.getElementById('date-bati');
+    const dateHqEl = document.getElementById('date-hq');
+
+    if (dateDatacentersEl && geojson.metadata?.date) dateDatacentersEl.textContent = geojson.metadata.date;
+    if (dateBatiEl && polysGeojson.metadata?.date) dateBatiEl.textContent = polysGeojson.metadata.date;
+    if (dateHqEl && hqGeojson.metadata?.date) dateHqEl.textContent = hqGeojson.metadata.date;
+
     const types = new Set();
     const hebergeurs = new Set();
     const bounds = [];

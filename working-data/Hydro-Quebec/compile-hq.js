@@ -24,6 +24,10 @@ console.log("Loading HQ Transmission Lines and Nodes CSV data...");
 const nodesPath = path.join(__dirname, 'nodes_2026-06-17.csv');
 const linesPath = path.join(__dirname, 'transmission_lines_2026-06-17.csv');
 
+// Extracted date for metadata (from nodes file date if available, or today)
+const dateMatch = path.basename(nodesPath).match(/_(\d{4}-\d{2}-\d{2})/);
+const fileDate = dateMatch ? dateMatch[1] : new Date().toISOString().slice(0, 10);
+
 if (!fs.existsSync(nodesPath) || !fs.existsSync(linesPath)) {
     console.error("Error: CSV source files not found.");
     process.exit(1);
@@ -112,7 +116,8 @@ parsedLines.data.forEach((row, index) => {
             pole: poleString,
             nodes: nodes,
             isLine: true,
-            isPoint: false
+            isPoint: false,
+            date_collecte: fileDate
         },
         geometry: {
             type: "LineString",
@@ -140,7 +145,8 @@ referencedNodes.forEach(nodeCode => {
             pole: poleString,
             nodes: [[node.lat, node.lng]],
             isLine: false,
-            isPoint: true
+            isPoint: true,
+            date_collecte: fileDate
         },
         geometry: {
             type: "Point",
@@ -154,10 +160,6 @@ const outputDir = path.dirname(outputPath);
 if (!fs.existsSync(outputDir)) {
     fs.mkdirSync(outputDir, { recursive: true });
 }
-
-// Extracted date for metadata (from nodes file date if available, or today)
-const dateMatch = path.basename(nodesPath).match(/_(\d{4}-\d{2}-\d{2})/);
-const fileDate = dateMatch ? dateMatch[1] : new Date().toISOString().slice(0, 10);
 
 const geojson = {
     type: "FeatureCollection",

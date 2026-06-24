@@ -47,11 +47,14 @@ function getMostRecentFile(pattern) {
 }
 
 /**
- * Copie un fichier du dossier working-data vers le dossier data
+ * Lit un fichier geojson, ajoute la date de collecte (à la racine et dans les propriétés de chaque entité),
+ * et l'écrit dans le dossier de destination.
  * @param {string} srcName 
  * @param {string} destName 
+ * @param {string} date 
+ * @param {string} sourceName
  */
-function copyFile(srcName, destName) {
+function processAndCopyGeojson(srcName, destName, date, sourceName) {
   const srcPath = path.join(WORKING_DIR, srcName);
   const destPath = path.join(DEST_DIR, destName);
   
@@ -59,8 +62,27 @@ function copyFile(srcName, destName) {
     fs.mkdirSync(DEST_DIR, { recursive: true });
   }
 
-  fs.copyFileSync(srcPath, destPath);
-  console.log(`Copié : ${srcName} -> ${destName}`);
+  const rawData = fs.readFileSync(srcPath, 'utf8');
+  const geojson = JSON.parse(rawData);
+
+  // Ajouter les métadonnées
+  geojson.metadata = {
+    date: date,
+    source: sourceName
+  };
+
+  // Ajouter la date dans chaque feature properties
+  if (geojson.features && Array.isArray(geojson.features)) {
+    geojson.features.forEach(feature => {
+      if (!feature.properties) {
+        feature.properties = {};
+      }
+      feature.properties.date_collecte = date;
+    });
+  }
+
+  fs.writeFileSync(destPath, JSON.stringify(geojson, null, 2), 'utf8');
+  console.log(`Traité et copié : ${srcName} -> ${destName} avec date ${date}`);
 }
 
 function main() {
@@ -71,7 +93,9 @@ function main() {
   const recentDatacenters = getMostRecentFile(datacentersPattern);
   
   if (recentDatacenters) {
-    copyFile(recentDatacenters, 'datacenters.geojson');
+    const match = recentDatacenters.match(datacentersPattern);
+    const date = match[1];
+    processAndCopyGeojson(recentDatacenters, 'datacenters.geojson', date, 'Centres de données du Québec');
   } else {
     console.warn('Aucun fichier datacenters_*.geojson trouvé.');
   }
@@ -81,7 +105,9 @@ function main() {
   const recentBati = getMostRecentFile(batiPattern);
   
   if (recentBati) {
-    copyFile(recentBati, 'DCbati_poly.geojson');
+    const match = recentBati.match(batiPattern);
+    const date = match[1];
+    processAndCopyGeojson(recentBati, 'DCbati_poly.geojson', date, 'Empreinte bâtiments');
   } else {
     console.warn('Aucun fichier DCbati_poly_*.geojson trouvé.');
   }

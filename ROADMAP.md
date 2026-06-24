@@ -31,7 +31,7 @@ de session.
 - [x] Titre 
 - [x] Favicon
 - [x] A propos
-- [ ] Permettre le téléchagement des geojson
+- [x] Permettre le téléchagement des geojson
 ---
 
 ## Phase 3 — Qualité des données (à venir)
