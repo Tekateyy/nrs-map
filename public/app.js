@@ -568,3 +568,70 @@ if (aboutModal) {
   });
 }
 
+// ---- Gestion de la Navigation Mobile (Bottom Sheets) ----
+const infoPanel = document.getElementById('info-panel');
+const filtersPanel = document.getElementById('filters');
+const btnMobileInfo = document.getElementById('btn-mobile-info');
+const btnMobileFilters = document.getElementById('btn-mobile-filters');
+const btnCloseInfo = document.getElementById('btn-close-info');
+const btnCloseFilters = document.getElementById('btn-close-filters');
+const mobileNav = document.getElementById('mobile-nav');
+
+function closeAllMobilePanels() {
+  if (infoPanel) infoPanel.classList.remove('open');
+  if (filtersPanel) filtersPanel.classList.remove('open');
+  if (btnMobileInfo) btnMobileInfo.classList.remove('active');
+  if (btnMobileFilters) btnMobileFilters.classList.remove('active');
+}
+
+if (btnMobileInfo && infoPanel) {
+  btnMobileInfo.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const isOpen = infoPanel.classList.contains('open');
+    closeAllMobilePanels();
+    if (!isOpen) {
+      infoPanel.classList.add('open');
+      btnMobileInfo.classList.add('active');
+    }
+  });
+}
+
+if (btnMobileFilters && filtersPanel) {
+  btnMobileFilters.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const isOpen = filtersPanel.classList.contains('open');
+    closeAllMobilePanels();
+    if (!isOpen) {
+      filtersPanel.classList.add('open');
+      btnMobileFilters.classList.add('active');
+    }
+  });
+}
+
+if (btnCloseInfo) {
+  btnCloseInfo.addEventListener('click', (e) => {
+    e.stopPropagation();
+    if (infoPanel) infoPanel.classList.remove('open');
+    if (btnMobileInfo) btnMobileInfo.classList.remove('active');
+  });
+}
+
+if (btnCloseFilters) {
+  btnCloseFilters.addEventListener('click', (e) => {
+    e.stopPropagation();
+    if (filtersPanel) filtersPanel.classList.remove('open');
+    if (btnMobileFilters) btnMobileFilters.classList.remove('active');
+  });
+}
+
+// Fermer les panneaux lors d'un clic sur la carte
+map.on('click', () => {
+  if (window.innerWidth <= 768) {
+    closeAllMobilePanels();
+  }
+});
+
+// Éviter la propagation du clic pour ne pas fermer les panneaux en interagissant avec
+if (infoPanel) L.DomEvent.disableClickPropagation(infoPanel);
+if (filtersPanel) L.DomEvent.disableClickPropagation(filtersPanel);
+if (mobileNav) L.DomEvent.disableClickPropagation(mobileNav);

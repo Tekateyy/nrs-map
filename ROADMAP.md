@@ -26,12 +26,14 @@ de session.
 - [x] Couleurs distinctes par Type (Hyperscale, Retail, Carrier Hotel…)
 - [x] Légende des couleurs/types
 - [x] Compteur de sites affichés / total après filtrage
-- [ ] Barre de recherche par nom de site et ville 
 - [x] Crédits et licence
 - [x] Titre 
 - [x] Favicon
 - [x] A propos
 - [x] Permettre le téléchagement des geojson
+- [x] Responsive design
+- [ ] Barre de recherche par nom de site et ville 
+
 ---
 
 ## Phase 3 — Qualité des données (à venir)

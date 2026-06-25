@@ -1238,4 +1238,236 @@ body:not(.theme-sombre) .popup-link:hover {
   color: #0369a1 !important;
 }
 
+/* ---- Bouton de fermeture des panneaux (masqué par défaut) ---- */
+.panel-close-btn {
+  display: none;
+}
 
+/* ---- Responsivité Mobile (max-width: 768px) ---- */
+@media (max-width: 768px) {
+  .panel-close-btn {
+    display: flex;
+    position: absolute;
+    top: 1.5rem;
+    right: 1.25rem;
+    width: 31px;
+    height: 31px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #94a3b8;
+    font-size: 1.3rem;
+    line-height: 1;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    z-index: 10;
+  }
+  
+  .panel-close-btn:hover {
+    background: rgba(255, 255, 255, 0.12);
+    color: #fff;
+  }
+
+  body:not(.theme-sombre) .panel-close-btn {
+    background: rgba(0, 0, 0, 0.04);
+    border-color: rgba(0, 0, 0, 0.08);
+    color: #64748b;
+  }
+
+  body:not(.theme-sombre) .panel-close-btn:hover {
+    background: rgba(0, 0, 0, 0.08);
+    color: #0f172a;
+  }
+
+  /* Panneaux convertis en Bottom Sheets */
+  .panel {
+    position: fixed;
+    top: auto;
+    bottom: 0;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100%;
+    max-height: 75dvh;
+    border-radius: 24px 24px 0 0;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.4);
+    padding: 1.5rem 1.25rem 2.5rem 1.25rem;
+    transform: translateY(105%);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1010;
+  }
+
+  .panel.open {
+    transform: translateY(0);
+  }
+
+  /* Ajustements titres des panneaux pour éviter le bouton close */
+  .panel h1, .panel h2 {
+    padding-right: 2.2rem;
+  }
+
+  /* Éviter la superposition du bouton close avec le bouton theme */
+  #btn-theme {
+    width: calc(100% - 39px) !important;
+  }
+
+  /* Masquer la bulle de licence de Leaflet pour ne pas chevaucher le dock mobile */
+  .leaflet-control-attribution {
+    display: none !important;
+  }
+
+  /* Barre de navigation mobile dock */
+  #mobile-nav {
+    display: flex;
+    position: fixed;
+    bottom: 2.8rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1005;
+    background: rgba(15, 23, 42, 0.75);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 30px;
+    padding: 6px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    gap: 6px;
+    width: max-content;
+    max-width: 90%;
+  }
+
+  body:not(.theme-sombre) #mobile-nav {
+    background: rgba(255, 255, 255, 0.85);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  }
+
+  .mobile-nav-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: transparent;
+    border: 1px solid transparent;
+    color: #94a3b8;
+    padding: 8px 18px;
+    font-family: inherit;
+    font-size: 0.82rem;
+    font-weight: 600;
+    border-radius: 24px;
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .mobile-nav-btn svg {
+    transition: transform 0.2s ease;
+  }
+
+  .mobile-nav-btn:hover {
+    color: #fff;
+  }
+
+  .mobile-nav-btn.active {
+    background: rgba(14, 165, 233, 0.18);
+    color: #38bdf8;
+    border-color: rgba(14, 165, 233, 0.35);
+    box-shadow: 0 0 12px rgba(56, 189, 248, 0.15);
+  }
+
+  .mobile-nav-btn.active svg {
+    transform: scale(1.1);
+  }
+
+  body:not(.theme-sombre) .mobile-nav-btn {
+    color: #475569;
+  }
+
+  body:not(.theme-sombre) .mobile-nav-btn:hover {
+    color: #0f172a;
+  }
+
+  body:not(.theme-sombre) .mobile-nav-btn.active {
+    background: rgba(14, 165, 233, 0.12);
+    color: #0284c7;
+    border-color: rgba(14, 165, 233, 0.25);
+    box-shadow: none;
+  }
+
+  /* Pied de page mobile (centré et réduit sous le dock) */
+  #map-footer {
+    left: 50% !important;
+    transform: translateX(-50%);
+    bottom: 0.5rem;
+    width: 92%;
+    text-align: center;
+    font-size: 0.58rem;
+    padding: 0.25rem 0.5rem;
+    background: rgba(15, 23, 42, 0.6);
+    border-radius: 6px;
+    z-index: 1000;
+    box-shadow: none;
+    border: none;
+    white-space: normal;
+    line-height: 1.3;
+  }
+
+  body:not(.theme-sombre) #map-footer {
+    background: rgba(255, 255, 255, 0.7);
+  }
+
+  /* Décaler les contrôles Leaflet vers le haut pour ne pas chevaucher le dock */
+  .leaflet-bottom.leaflet-right {
+    bottom: 6.4rem !important;
+    transition: bottom 0.3s ease;
+  }
+
+  /* Ajustements Modal A Propos sur mobile */
+  .modal-content {
+    padding: 1.5rem 1.1rem;
+    max-height: 82dvh;
+    border-radius: 16px;
+  }
+
+  .modal-content h2 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .modal-desc {
+    font-size: 0.8rem;
+    margin-bottom: 1.25rem;
+    line-height: 1.5;
+  }
+
+  .modal-content h3 {
+    font-size: 0.75rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .data-table th, .data-table td {
+    padding: 0.6rem 0.75rem;
+    font-size: 0.74rem;
+  }
+
+  .source-cell {
+    font-size: 0.74rem;
+  }
+
+  .btn-download {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.7rem;
+  }
+
+  .modal-credits {
+    font-size: 0.78rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .btn-github {
+    padding: 0.6rem 1.1rem;
+    font-size: 0.8rem;
+  }
+}
