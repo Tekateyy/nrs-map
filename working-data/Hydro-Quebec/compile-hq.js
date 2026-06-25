@@ -143,6 +143,7 @@ referencedNodes.forEach(nodeCode => {
         properties: {
             id: node.name,
             pole: poleString,
+            node_type: node.type,
             nodes: [[node.lat, node.lng]],
             isLine: false,
             isPoint: true,

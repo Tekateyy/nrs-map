@@ -52,6 +52,7 @@ let selectedType = null;
 let selectedHebergeur = null;
 let filterAI = false;
 let hqNodesVisible = true;
+let hqGenVisible = true;
 let connectionsLayer = null;
 let connectionsGeojson = null;
 
@@ -75,6 +76,20 @@ function creerIcone(type) {
     iconSize: [28, 28],
     iconAnchor: [14, 14],
     popupAnchor: [0, -16],
+  });
+}
+
+function creerIconeGeneration(color) {
+  return L.divIcon({
+    className: '',
+    html: `<div class="generation-icon" style="background:${color};--marker-color:${color};--marker-color-glow:${color}40">
+             <svg viewBox="0 0 24 24" width="10" height="10" fill="#fff" style="display: block;">
+               <path d="M7 2v11h3v9l7-12h-4l4-8z" />
+             </svg>
+           </div>`,
+    iconSize: [20, 20],
+    iconAnchor: [10, 10],
+    popupAnchor: [0, -12],
   });
 }
 
@@ -424,22 +439,42 @@ Promise.all([
       }
     }).addTo(map);
 
-    // Couche des postes électriques Hydro-Québec (postes discrets, sans bordure blanche intense, rayon réduit)
+    // Couche des postes électriques et centrales Hydro-Québec (rendus différemment)
     const hqNodesLayer = L.geoJSON(hqGeojson, {
-      filter: feature => feature.properties.isPoint === true,
+      filter: feature => {
+        if (feature.properties.isPoint !== true) return false;
+        
+        // N'afficher que les très grosses centrales de 735 kV
+        const p = feature.properties;
+        const isGen = p.node_type === 'Generation' || (p.pole && p.pole.startsWith('Generation'));
+        if (isGen) {
+          const match = (p.pole || '').match(/(\d+)\s*kV/);
+          const kv = match ? parseInt(match[1], 10) : 0;
+          if (kv !== 735) return false;
+        }
+        return true;
+      },
       pointToLayer: (feature, latlng) => {
-        const { color, opacity } = getHqStyleParams(feature.properties.pole);
-        return L.circleMarker(latlng, {
-          radius: 2.5,
-          fillColor: color,
-          stroke: false,
-          fillOpacity: opacity * 1.5
-        });
+        const p = feature.properties;
+        const isGen = p.node_type === 'Generation' || (p.pole && p.pole.startsWith('Generation'));
+        const { color, opacity } = getHqStyleParams(p.pole);
+        if (isGen) {
+          return L.marker(latlng, { icon: creerIconeGeneration(color) });
+        } else {
+          return L.circleMarker(latlng, {
+            radius: 2.5,
+            fillColor: color,
+            stroke: false,
+            fillOpacity: opacity * 1.5
+          });
+        }
       },
       onEachFeature: (feature, layer) => {
         const p = feature.properties;
+        const isGen = p.node_type === 'Generation' || (p.pole && p.pole.startsWith('Generation'));
+        const popupTitle = isGen ? 'Centrale de production' : 'Poste électrique';
         layer.bindPopup(`
-          <div class="popup-title">Poste électrique</div>
+          <div class="popup-title">${popupTitle}</div>
           <div class="popup-row"><span class="popup-label">Nom</span><span class="popup-value">${val(p.id)}</span></div>
           <div class="popup-row"><span class="popup-label">Tension max</span><span class="popup-value">${val(p.pole)}</span></div>
         `, { maxWidth: 280 });
@@ -515,10 +550,30 @@ Promise.all([
         return getHqVoltageCategory(f.properties.pole) === selectedVoltage;
       });
 
-      const lineFeatures = filteredFeatures.filter(f => f.properties.isLine === true);
-      const pointFeatures = filteredFeatures.filter(f => f.properties.isPoint === true);
+      // Lignes
+      if (hqLinesVisible) {
+        const lineFeatures = filteredFeatures.filter(f => f.properties.isLine === true);
+        hqLinesLayer.addData(lineFeatures);
+      }
 
-      hqLinesLayer.addData(lineFeatures);
+      // Points (Postes et Centrales)
+      const pointFeatures = filteredFeatures.filter(f => {
+        if (f.properties.isPoint !== true) return false;
+        
+        const isGen = f.properties.node_type === 'Generation' || (f.properties.pole && f.properties.pole.startsWith('Generation'));
+        if (isGen) {
+          if (!hqGenVisible) return false;
+          
+          // N'afficher que les très grosses centrales de 735 kV
+          const match = (f.properties.pole || '').match(/(\d+)\s*kV/);
+          const kv = match ? parseInt(match[1], 10) : 0;
+          if (kv !== 735) return false;
+        } else {
+          if (!hqNodesVisible) return false;
+        }
+        
+        return true;
+      });
       hqNodesLayer.addData(pointFeatures);
 
       // Ré-appliquer la taille dynamique des postes
@@ -553,13 +608,15 @@ Promise.all([
 
     // Gestion des boutons Hydro-Québec
     let hqLinesVisible = true;
+    let hqGenVisible = true;
+
     const btnLines = document.getElementById('btn-hq-lines');
     if (btnLines) {
       btnLines.addEventListener('click', () => {
         hqLinesVisible = !hqLinesVisible;
         btnLines.classList.toggle('active', hqLinesVisible);
         btnLines.classList.toggle('inactive', !hqLinesVisible);
-        hqLinesVisible ? hqLinesLayer.addTo(map) : map.removeLayer(hqLinesLayer);
+        applyHqFilters();
       });
     }
 
@@ -569,8 +626,18 @@ Promise.all([
         hqNodesVisible = !hqNodesVisible;
         btnNodes.classList.toggle('active', hqNodesVisible);
         btnNodes.classList.toggle('inactive', !hqNodesVisible);
-        hqNodesVisible ? hqNodesLayer.addTo(map) : map.removeLayer(hqNodesLayer);
+        applyHqFilters();
         applyFilters();
+      });
+    }
+
+    const btnGen = document.getElementById('btn-hq-gen');
+    if (btnGen) {
+      btnGen.addEventListener('click', () => {
+        hqGenVisible = !hqGenVisible;
+        btnGen.classList.toggle('active', hqGenVisible);
+        btnGen.classList.toggle('inactive', !hqGenVisible);
+        applyHqFilters();
       });
     }
 

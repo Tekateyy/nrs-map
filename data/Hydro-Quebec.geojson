@@ -45088,6 +45088,7 @@
       "properties": {
         "id": "Boundary Road TS JCT",
         "pole": "Junction (230 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             45.058736,
@@ -45111,6 +45112,7 @@
       "properties": {
         "id": "IPT Dennison 1",
         "pole": "International (230 kV)",
+        "node_type": "International",
         "nodes": [
           [
             45.214325,
@@ -45134,6 +45136,7 @@
       "properties": {
         "id": "Boundary Road TS",
         "pole": "Distribution (230 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.058555,
@@ -45157,6 +45160,7 @@
       "properties": {
         "id": "Cornwall TS JCT",
         "pole": "Junction (230 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             45.030652,
@@ -45180,6 +45184,7 @@
       "properties": {
         "id": "Cornwall TS",
         "pole": "Distribution (230 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.02646,
@@ -45203,6 +45208,7 @@
       "properties": {
         "id": "INT Cornwall Massena 1",
         "pole": "International (230 kV)",
+        "node_type": "International",
         "nodes": [
           [
             45.004734,
@@ -45226,6 +45232,7 @@
       "properties": {
         "id": "IPT Dennison 2",
         "pole": "International (230 kV)",
+        "node_type": "International",
         "nodes": [
           [
             45.21433,
@@ -45249,6 +45256,7 @@
       "properties": {
         "id": "INT Cornwall Massena 2",
         "pole": "International (230 kV)",
+        "node_type": "International",
         "nodes": [
           [
             45.004734,
@@ -45272,6 +45280,7 @@
       "properties": {
         "id": "Outaouais",
         "pole": "Terminal (315 kV)",
+        "node_type": "Terminal",
         "nodes": [
           [
             45.599702,
@@ -45295,6 +45304,7 @@
       "properties": {
         "id": "IPT Outaouais 2",
         "pole": "Interprovincial (230 kV)",
+        "node_type": "Interprovincial",
         "nodes": [
           [
             45.519743,
@@ -45318,6 +45328,7 @@
       "properties": {
         "id": "IPT Outaouais 1",
         "pole": "Interprovincial (230 kV)",
+        "node_type": "Interprovincial",
         "nodes": [
           [
             45.519744,
@@ -45341,6 +45352,7 @@
       "properties": {
         "id": "Les CÃ¨dres",
         "pole": "Generation (120 kV)",
+        "node_type": "Generation",
         "nodes": [
           [
             45.311963,
@@ -45364,6 +45376,7 @@
       "properties": {
         "id": "Saint-Polycarpe JCT",
         "pole": "Junction (230 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             45.269339,
@@ -45387,6 +45400,7 @@
       "properties": {
         "id": "IPT Dennison 1",
         "pole": "International (230 kV)",
+        "node_type": "International",
         "nodes": [
           [
             45.214328,
@@ -45410,6 +45424,7 @@
       "properties": {
         "id": "IPT Dennison 2",
         "pole": "International (230 kV)",
+        "node_type": "International",
         "nodes": [
           [
             45.214333,
@@ -45433,6 +45448,7 @@
       "properties": {
         "id": "Rapides-des-Iles",
         "pole": "Generation (120 kV)",
+        "node_type": "Generation",
         "nodes": [
           [
             47.577221,
@@ -45456,6 +45472,7 @@
       "properties": {
         "id": "IPT Dymond",
         "pole": "Interprovincial (120 kV)",
+        "node_type": "Interprovincial",
         "nodes": [
           [
             47.630348,
@@ -45479,6 +45496,7 @@
       "properties": {
         "id": "Masson-Sud",
         "pole": "Distribution (230 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.543494,
@@ -45502,6 +45520,7 @@
       "properties": {
         "id": "IPT Masson 1",
         "pole": "Interprovincial (230 kV)",
+        "node_type": "Interprovincial",
         "nodes": [
           [
             45.519679,
@@ -45525,6 +45544,7 @@
       "properties": {
         "id": "Kipawa",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             46.714687,
@@ -45548,6 +45568,7 @@
       "properties": {
         "id": "IPT Kipawa",
         "pole": "Interprovincial (120 kV)",
+        "node_type": "Interprovincial",
         "nodes": [
           [
             46.38225,
@@ -45571,6 +45592,7 @@
       "properties": {
         "id": "IPT Masson 2",
         "pole": "Interprovincial (120 kV)",
+        "node_type": "Interprovincial",
         "nodes": [
           [
             45.519679,
@@ -45594,6 +45616,7 @@
       "properties": {
         "id": "High Falls",
         "pole": "Generation (120 kV)",
+        "node_type": "Generation",
         "nodes": [
           [
             45.839707,
@@ -45617,6 +45640,7 @@
       "properties": {
         "id": "Masson-Nord",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.544109,
@@ -45640,6 +45664,7 @@
       "properties": {
         "id": "Manic-1",
         "pole": "Generation (120 kV)",
+        "node_type": "Generation",
         "nodes": [
           [
             49.197257,
@@ -45663,6 +45688,7 @@
       "properties": {
         "id": "Alcoa Baie Comeau",
         "pole": "Industrial (161 kV)",
+        "node_type": "Industrial",
         "nodes": [
           [
             49.257037,
@@ -45686,6 +45712,7 @@
       "properties": {
         "id": "Gracefield JCT",
         "pole": "Junction (120 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             46.12731,
@@ -45709,6 +45736,7 @@
       "properties": {
         "id": "Paugan",
         "pole": "Generation (230 kV)",
+        "node_type": "Generation",
         "nodes": [
           [
             45.807827,
@@ -45732,6 +45760,7 @@
       "properties": {
         "id": "Maniwaki",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             46.396082,
@@ -45755,6 +45784,7 @@
       "properties": {
         "id": "Gracefield",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             46.103012,
@@ -45778,6 +45808,7 @@
       "properties": {
         "id": "Buckingham JCT",
         "pole": "Junction (120 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             45.554275,
@@ -45801,6 +45832,7 @@
       "properties": {
         "id": "Thurso",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.608036,
@@ -45824,6 +45856,7 @@
       "properties": {
         "id": "Erco Mondial Buckingham JCT",
         "pole": "Junction (120 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             45.540343,
@@ -45847,6 +45880,7 @@
       "properties": {
         "id": "Interconnexion-Maclaren",
         "pole": "Switching (120 kV)",
+        "node_type": "Switching",
         "nodes": [
           [
             45.549665,
@@ -45870,6 +45904,7 @@
       "properties": {
         "id": "FPS Canada Inc.",
         "pole": "Industrial (120 kV)",
+        "node_type": "Industrial",
         "nodes": [
           [
             45.60095,
@@ -45893,6 +45928,7 @@
       "properties": {
         "id": "Petite-Nation",
         "pole": "Terminal (315 kV)",
+        "node_type": "Terminal",
         "nodes": [
           [
             45.654819,
@@ -45916,6 +45952,7 @@
       "properties": {
         "id": "Gatineau",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.486752,
@@ -45939,6 +45976,7 @@
       "properties": {
         "id": "Templeton",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.509476,
@@ -45962,6 +46000,7 @@
       "properties": {
         "id": "Buckingham",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.573478,
@@ -45985,6 +46024,7 @@
       "properties": {
         "id": "Erco Mondial Buckingham",
         "pole": "Industrial (120 kV)",
+        "node_type": "Industrial",
         "nodes": [
           [
             45.592544,
@@ -46008,6 +46048,7 @@
       "properties": {
         "id": "Resolute Forest Products Gatineau JCT",
         "pole": "Junction (120 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             45.486811,
@@ -46031,6 +46072,7 @@
       "properties": {
         "id": "Vignan",
         "pole": "Terminal (315 kV)",
+        "node_type": "Terminal",
         "nodes": [
           [
             45.496135,
@@ -46054,6 +46096,7 @@
       "properties": {
         "id": "Gatineau JCT",
         "pole": "Junction (120 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             45.486167,
@@ -46077,6 +46120,7 @@
       "properties": {
         "id": "Resolute Forest Products Gatineau",
         "pole": "Industrial (120 kV)",
+        "node_type": "Industrial",
         "nodes": [
           [
             45.48195,
@@ -46100,6 +46144,7 @@
       "properties": {
         "id": "Chelsea",
         "pole": "Generation (120 kV)",
+        "node_type": "Generation",
         "nodes": [
           [
             45.511898,
@@ -46123,6 +46168,7 @@
       "properties": {
         "id": "Rapides-Farmers",
         "pole": "Generation (120 kV)",
+        "node_type": "Generation",
         "nodes": [
           [
             45.498749,
@@ -46146,6 +46192,7 @@
       "properties": {
         "id": "Limbour",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.497499,
@@ -46169,6 +46216,7 @@
       "properties": {
         "id": "Touraine",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.492886,
@@ -46192,6 +46240,7 @@
       "properties": {
         "id": "Wakefield",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.666073,
@@ -46215,6 +46264,7 @@
       "properties": {
         "id": "Lucerne",
         "pole": "Switching (120 kV)",
+        "node_type": "Switching",
         "nodes": [
           [
             45.452281,
@@ -46238,6 +46288,7 @@
       "properties": {
         "id": "Gamelin",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.444722,
@@ -46261,6 +46312,7 @@
       "properties": {
         "id": "Cadieux",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.657026,
@@ -46284,6 +46336,7 @@
       "properties": {
         "id": "Bryson",
         "pole": "Generation (120 kV)",
+        "node_type": "Generation",
         "nodes": [
           [
             45.660665,
@@ -46307,6 +46360,7 @@
       "properties": {
         "id": "Calumet",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.647799,
@@ -46330,6 +46384,7 @@
       "properties": {
         "id": "Mont-Laurier",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             46.549975,
@@ -46353,6 +46408,7 @@
       "properties": {
         "id": "Lac-des-ÃŽles",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             46.405951,
@@ -46376,6 +46432,7 @@
       "properties": {
         "id": "Quyon",
         "pole": "Terminal (230 kV)",
+        "node_type": "Terminal",
         "nodes": [
           [
             45.544123,
@@ -46399,6 +46456,7 @@
       "properties": {
         "id": "Glenwood",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.409778,
@@ -46422,6 +46480,7 @@
       "properties": {
         "id": "Val-TÃ©treau",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.419706,
@@ -46445,6 +46504,7 @@
       "properties": {
         "id": "Hull-2",
         "pole": "Generation (120 kV)",
+        "node_type": "Generation",
         "nodes": [
           [
             45.422084,
@@ -46468,6 +46528,7 @@
       "properties": {
         "id": "Dorion JCT",
         "pole": "Junction (120 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             45.372757,
@@ -46491,6 +46552,7 @@
       "properties": {
         "id": "Dorion",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.374052,
@@ -46514,6 +46576,7 @@
       "properties": {
         "id": "Vaudreuil-Soulanges",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.413078,
@@ -46537,6 +46600,7 @@
       "properties": {
         "id": "Lafontaine",
         "pole": "Terminal (315 kV)",
+        "node_type": "Terminal",
         "nodes": [
           [
             45.711635,
@@ -46560,6 +46624,7 @@
       "properties": {
         "id": "Achigan JCT",
         "pole": "Junction (120 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             45.846846,
@@ -46583,6 +46648,7 @@
       "properties": {
         "id": "Saint-Lin",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.817955,
@@ -46606,6 +46672,7 @@
       "properties": {
         "id": "Paquin",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.822662,
@@ -46629,6 +46696,7 @@
       "properties": {
         "id": "Achigan",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.902266,
@@ -46652,6 +46720,7 @@
       "properties": {
         "id": "Lachute JCT",
         "pole": "Junction (120 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             45.756416,
@@ -46675,6 +46744,7 @@
       "properties": {
         "id": "SGL Canada JCT",
         "pole": "Junction (120 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             45.648799,
@@ -46698,6 +46768,7 @@
       "properties": {
         "id": "Lachute",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.627382,
@@ -46721,6 +46792,7 @@
       "properties": {
         "id": "SGL Canada",
         "pole": "Industrial (120 kV)",
+        "node_type": "Industrial",
         "nodes": [
           [
             45.636338,
@@ -46744,6 +46816,7 @@
       "properties": {
         "id": "Arthur-Buies",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.805406,
@@ -46767,6 +46840,7 @@
       "properties": {
         "id": "Rolland Enterprises Inc. JCT",
         "pole": "Junction (120 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             45.757692,
@@ -46790,6 +46864,7 @@
       "properties": {
         "id": "Rolland",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.756788,
@@ -46813,6 +46888,7 @@
       "properties": {
         "id": "Rolland Enterprises Inc.",
         "pole": "Industrial (120 kV)",
+        "node_type": "Industrial",
         "nodes": [
           [
             45.761758,
@@ -46836,6 +46912,7 @@
       "properties": {
         "id": "Notre-Dame-du-Laus",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             46.095928,
@@ -46859,6 +46936,7 @@
       "properties": {
         "id": "Contrecoeur",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.847226,
@@ -46882,6 +46960,7 @@
       "properties": {
         "id": "Sorel",
         "pole": "Distribution (230 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             46.032082,
@@ -46905,6 +46984,7 @@
       "properties": {
         "id": "Carillon",
         "pole": "Generation (120 kV)",
+        "node_type": "Generation",
         "nodes": [
           [
             45.569547,
@@ -46928,6 +47008,7 @@
       "properties": {
         "id": "Doc-Grignon JCT",
         "pole": "Junction (120 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             45.937256,
@@ -46951,6 +47032,7 @@
       "properties": {
         "id": "Saint-JÃ©rÃ´me",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.779933,
@@ -46974,6 +47056,7 @@
       "properties": {
         "id": "SSPM Pontiac",
         "pole": "Industrial (120 kV)",
+        "node_type": "Industrial",
         "nodes": [
           [
             45.642371,
@@ -46997,6 +47080,7 @@
       "properties": {
         "id": "Rigaud",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.474638,
@@ -47020,6 +47104,7 @@
       "properties": {
         "id": "Saint-Polycarpe",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.303853,
@@ -47043,6 +47128,7 @@
       "properties": {
         "id": "Duvernay",
         "pole": "Terminal (735 kV)",
+        "node_type": "Terminal",
         "nodes": [
           [
             45.662106,
@@ -47066,6 +47152,7 @@
       "properties": {
         "id": "Landry",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.606428,
@@ -47089,6 +47176,7 @@
       "properties": {
         "id": "Saint-FranÃ§ois",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.673726,
@@ -47112,6 +47200,7 @@
       "properties": {
         "id": "Terrebonne JCT",
         "pole": "Junction (120 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             45.736964,
@@ -47135,6 +47224,7 @@
       "properties": {
         "id": "Renaud",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.575774,
@@ -47158,6 +47248,7 @@
       "properties": {
         "id": "Renaud JCT",
         "pole": "Junction (120 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             45.593569,
@@ -47181,6 +47272,7 @@
       "properties": {
         "id": "Chomedey",
         "pole": "Terminal (315 kV)",
+        "node_type": "Terminal",
         "nodes": [
           [
             45.561217,
@@ -47204,6 +47296,7 @@
       "properties": {
         "id": "Chute-Hemmings",
         "pole": "Generation (120 kV)",
+        "node_type": "Generation",
         "nodes": [
           [
             45.863744,
@@ -47227,6 +47320,7 @@
       "properties": {
         "id": "Marcotte",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.85285,
@@ -47250,6 +47344,7 @@
       "properties": {
         "id": "Heriot",
         "pole": "Terminal (230 kV)",
+        "node_type": "Terminal",
         "nodes": [
           [
             45.823493,
@@ -47273,6 +47368,7 @@
       "properties": {
         "id": "Sainte-PerpÃ©tue",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             46.067829,
@@ -47296,6 +47392,7 @@
       "properties": {
         "id": "Moras",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             46.224075,
@@ -47319,6 +47416,7 @@
       "properties": {
         "id": "Sainte-PerpÃ©tue JCT",
         "pole": "Junction (120 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             46.247179,
@@ -47342,6 +47440,7 @@
       "properties": {
         "id": "BÃ©cancour",
         "pole": "Terminal (230 kV)",
+        "node_type": "Terminal",
         "nodes": [
           [
             46.363478,
@@ -47365,6 +47464,7 @@
       "properties": {
         "id": "Asbestos JCT",
         "pole": "Junction (120 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             45.799128,
@@ -47388,6 +47488,7 @@
       "properties": {
         "id": "Kingsey",
         "pole": "Terminal (230 kV)",
+        "node_type": "Terminal",
         "nodes": [
           [
             45.841684,
@@ -47411,6 +47512,7 @@
       "properties": {
         "id": "Asbestos",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.784199,
@@ -47434,6 +47536,7 @@
       "properties": {
         "id": "Charette",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             46.438819,
@@ -47457,6 +47560,7 @@
       "properties": {
         "id": "Leman",
         "pole": "Switching (120 kV)",
+        "node_type": "Switching",
         "nodes": [
           [
             46.535863,
@@ -47480,6 +47584,7 @@
       "properties": {
         "id": "Grand-PrÃ©",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             46.26474,
@@ -47503,6 +47608,7 @@
       "properties": {
         "id": "Shawinigan-3",
         "pole": "Generation (120 kV)",
+        "node_type": "Generation",
         "nodes": [
           [
             46.533799,
@@ -47526,6 +47632,7 @@
       "properties": {
         "id": "Forges-de-Sorel",
         "pole": "Industrial (120 kV)",
+        "node_type": "Industrial",
         "nodes": [
           [
             46.045854,
@@ -47549,6 +47656,7 @@
       "properties": {
         "id": "Almaville",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             46.522538,
@@ -47572,6 +47680,7 @@
       "properties": {
         "id": "Shawinigan-2",
         "pole": "Generation (120 kV)",
+        "node_type": "Generation",
         "nodes": [
           [
             46.535741,
@@ -47595,6 +47704,7 @@
       "properties": {
         "id": "Yamaska",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.969646,
@@ -47618,6 +47728,7 @@
       "properties": {
         "id": "Sorel-Sud",
         "pole": "Distribution (230 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             46.016066,
@@ -47641,6 +47752,7 @@
       "properties": {
         "id": "Trois-RiviÃ¨res",
         "pole": "Switching (230 kV)",
+        "node_type": "Switching",
         "nodes": [
           [
             46.36447,
@@ -47664,6 +47776,7 @@
       "properties": {
         "id": "Kruger Inc. Trois-RiviÃ¨res",
         "pole": "Industrial (230 kV)",
+        "node_type": "Industrial",
         "nodes": [
           [
             46.324974,
@@ -47687,6 +47800,7 @@
       "properties": {
         "id": "Sainte-Rose",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.62316,
@@ -47710,6 +47824,7 @@
       "properties": {
         "id": "Boulevard-Labelle",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.656603,
@@ -47733,6 +47848,7 @@
       "properties": {
         "id": "Arthabaska JCT",
         "pole": "Junction (120 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             45.99004,
@@ -47756,6 +47872,7 @@
       "properties": {
         "id": "Bois-Francs",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             46.066785,
@@ -47779,6 +47896,7 @@
       "properties": {
         "id": "Rosiers",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.838485,
@@ -47802,6 +47920,7 @@
       "properties": {
         "id": "Arthabaska",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             46.005375,
@@ -47825,6 +47944,7 @@
       "properties": {
         "id": "Chambly",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.444682,
@@ -47848,6 +47968,7 @@
       "properties": {
         "id": "Infasco JCT",
         "pole": "Junction (120 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             45.422261,
@@ -47871,6 +47992,7 @@
       "properties": {
         "id": "Saint-CÃ©saire",
         "pole": "Distribution (230 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.411497,
@@ -47894,6 +48016,7 @@
       "properties": {
         "id": "Infasco",
         "pole": "Industrial (120 kV)",
+        "node_type": "Industrial",
         "nodes": [
           [
             45.432079,
@@ -47917,6 +48040,7 @@
       "properties": {
         "id": "Institute-de-Recherche JCT",
         "pole": "Junction (120 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             45.637971,
@@ -47940,6 +48064,7 @@
       "properties": {
         "id": "Pierre Boucher",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.603655,
@@ -47963,6 +48088,7 @@
       "properties": {
         "id": "Varennes",
         "pole": "Distribution (230 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.703101,
@@ -47986,6 +48112,7 @@
       "properties": {
         "id": "Institute-de-Recherche",
         "pole": "Industrial (120 kV)",
+        "node_type": "Industrial",
         "nodes": [
           [
             45.615142,
@@ -48009,6 +48136,7 @@
       "properties": {
         "id": "Praxair Canada Contrecoeur",
         "pole": "Industrial (120 kV)",
+        "node_type": "Industrial",
         "nodes": [
           [
             45.825435,
@@ -48032,6 +48160,7 @@
       "properties": {
         "id": "Argonal Inc.",
         "pole": "Industrial (120 kV)",
+        "node_type": "Industrial",
         "nodes": [
           [
             45.826575,
@@ -48055,6 +48184,7 @@
       "properties": {
         "id": "Praxair Canada Contrecoeur JCT",
         "pole": "Junction (120 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             45.815538,
@@ -48078,6 +48208,7 @@
       "properties": {
         "id": "Aqueduc",
         "pole": "Terminal (315 kV)",
+        "node_type": "Terminal",
         "nodes": [
           [
             45.428008,
@@ -48101,6 +48232,7 @@
       "properties": {
         "id": "Hadley",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.449369,
@@ -48124,6 +48256,7 @@
       "properties": {
         "id": "Lambton",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.833989,
@@ -48147,6 +48280,7 @@
       "properties": {
         "id": "Saint-Ã‰variste",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.965661,
@@ -48170,6 +48304,7 @@
       "properties": {
         "id": "Lambton JCT",
         "pole": "Junction (120 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             45.735387,
@@ -48193,6 +48328,7 @@
       "properties": {
         "id": "MÃ©gantic",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.587491,
@@ -48216,6 +48352,7 @@
       "properties": {
         "id": "Weedon",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.68563,
@@ -48239,6 +48376,7 @@
       "properties": {
         "id": "Cleveland",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.350572,
@@ -48262,6 +48400,7 @@
       "properties": {
         "id": "Cowansville",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.204296,
@@ -48285,6 +48424,7 @@
       "properties": {
         "id": "Leclerc",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.4238,
@@ -48308,6 +48448,7 @@
       "properties": {
         "id": "Des Cantons",
         "pole": "Terminal (735 kV)",
+        "node_type": "Terminal",
         "nodes": [
           [
             45.565813,
@@ -48331,6 +48472,7 @@
       "properties": {
         "id": "Kruger Inc. Bromptonville",
         "pole": "Industrial (120 kV)",
+        "node_type": "Industrial",
         "nodes": [
           [
             45.480094,
@@ -48354,6 +48496,7 @@
       "properties": {
         "id": "Windsor",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.568782,
@@ -48377,6 +48520,7 @@
       "properties": {
         "id": "Wyman",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.552742,
@@ -48400,6 +48544,7 @@
       "properties": {
         "id": "Kruger Inc. Bromptonville JCT",
         "pole": "Junction (120 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             45.497873,
@@ -48423,6 +48568,7 @@
       "properties": {
         "id": "Sherbrooke",
         "pole": "Terminal (230 kV)",
+        "node_type": "Terminal",
         "nodes": [
           [
             45.41265,
@@ -48446,6 +48592,7 @@
       "properties": {
         "id": "Bromptonville",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.484009,
@@ -48469,6 +48616,7 @@
       "properties": {
         "id": "East Angus JCT",
         "pole": "Junction (120 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             45.490663,
@@ -48492,6 +48640,7 @@
       "properties": {
         "id": "GPI East Angus",
         "pole": "Industrial (120 kV)",
+        "node_type": "Industrial",
         "nodes": [
           [
             45.482844,
@@ -48515,6 +48664,7 @@
       "properties": {
         "id": "East Angus",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.467707,
@@ -48538,6 +48688,7 @@
       "properties": {
         "id": "Hampstead",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.472705,
@@ -48561,6 +48712,7 @@
       "properties": {
         "id": "Rockfield",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.439117,
@@ -48584,6 +48736,7 @@
       "properties": {
         "id": "Pierre-Le Gardeur",
         "pole": "Terminal (315 kV)",
+        "node_type": "Terminal",
         "nodes": [
           [
             45.736857,
@@ -48607,6 +48760,7 @@
       "properties": {
         "id": "Terrebonne",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.702743,
@@ -48630,6 +48784,7 @@
       "properties": {
         "id": "Casavant",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.62607,
@@ -48653,6 +48808,7 @@
       "properties": {
         "id": "Saint-CÃ©saire JCT",
         "pole": "Junction (120 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             45.557775,
@@ -48676,6 +48832,7 @@
       "properties": {
         "id": "MontÃ©rÃ©gie",
         "pole": "Terminal (735 kV)",
+        "node_type": "Terminal",
         "nodes": [
           [
             45.49832,
@@ -48699,6 +48856,7 @@
       "properties": {
         "id": "Sainte-Rosalie",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.634738,
@@ -48722,6 +48880,7 @@
       "properties": {
         "id": "Grantham",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.878203,
@@ -48745,6 +48904,7 @@
       "properties": {
         "id": "GPI East Angus JCT",
         "pole": "Junction (120 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             45.490372,
@@ -48768,6 +48928,7 @@
       "properties": {
         "id": "Acadie",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.318109,
@@ -48791,6 +48952,7 @@
       "properties": {
         "id": "Ville de Sherbrooke Saint-FranÃ§ois",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.421698,
@@ -48814,6 +48976,7 @@
       "properties": {
         "id": "Ville de Sherbrooke Galt",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.390661,
@@ -48837,6 +49000,7 @@
       "properties": {
         "id": "Stukely",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.322067,
@@ -48860,6 +49024,7 @@
       "properties": {
         "id": "Waterloo",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.341647,
@@ -48883,6 +49048,7 @@
       "properties": {
         "id": "Acadie JCT",
         "pole": "Junction (120 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             45.333544,
@@ -48906,6 +49072,7 @@
       "properties": {
         "id": "Richelieu",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.31376,
@@ -48929,6 +49096,7 @@
       "properties": {
         "id": "La Prairie",
         "pole": "Terminal (315 kV)",
+        "node_type": "Terminal",
         "nodes": [
           [
             45.437019,
@@ -48952,6 +49120,7 @@
       "properties": {
         "id": "AdÃ©lard-Godbout",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.497382,
@@ -48975,6 +49144,7 @@
       "properties": {
         "id": "Central-2",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.498256,
@@ -48998,6 +49168,7 @@
       "properties": {
         "id": "Brossard",
         "pole": "Distribution (315 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.460177,
@@ -49021,6 +49192,7 @@
       "properties": {
         "id": "Viger",
         "pole": "Switching (315 kV)",
+        "node_type": "Switching",
         "nodes": [
           [
             45.487957,
@@ -49044,6 +49216,7 @@
       "properties": {
         "id": "Atwater",
         "pole": "Distribution (315 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.473715,
@@ -49067,6 +49240,7 @@
       "properties": {
         "id": "Maissonneuve",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.483528,
@@ -49090,6 +49264,7 @@
       "properties": {
         "id": "Beausite MÃ©tal",
         "pole": "Industrial (120 kV)",
+        "node_type": "Industrial",
         "nodes": [
           [
             45.760621,
@@ -49113,6 +49288,7 @@
       "properties": {
         "id": "LanaudiÃ¨re",
         "pole": "Terminal (315 kV)",
+        "node_type": "Terminal",
         "nodes": [
           [
             46.01604,
@@ -49136,6 +49312,7 @@
       "properties": {
         "id": "Ramezay",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             46.150351,
@@ -49159,6 +49336,7 @@
       "properties": {
         "id": "Royalmount",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.485633,
@@ -49182,6 +49360,7 @@
       "properties": {
         "id": "LÃ©ry",
         "pole": "Industrial (315 kV)",
+        "node_type": "Industrial",
         "nodes": [
           [
             45.285482,
@@ -49205,6 +49384,7 @@
       "properties": {
         "id": "Mercier",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.33444,
@@ -49228,6 +49408,7 @@
       "properties": {
         "id": "Saint-RÃ©mi JCT",
         "pole": "Junction (120 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             45.348445,
@@ -49251,6 +49432,7 @@
       "properties": {
         "id": "Saint-RÃ©mi",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.266865,
@@ -49274,6 +49456,7 @@
       "properties": {
         "id": "Delson",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.386732,
@@ -49297,6 +49480,7 @@
       "properties": {
         "id": "MontÃ©rÃ©gie GS",
         "pole": "Generation (120 kV)",
+        "node_type": "Generation",
         "nodes": [
           [
             45.276001,
@@ -49320,6 +49504,7 @@
       "properties": {
         "id": "Saint-Louis",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.294397,
@@ -49343,6 +49528,7 @@
       "properties": {
         "id": "Saint-Basile JCT",
         "pole": "Junction (120 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             45.429688,
@@ -49366,6 +49552,7 @@
       "properties": {
         "id": "Saint-Basile",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.534047,
@@ -49389,6 +49576,7 @@
       "properties": {
         "id": "Saint-Maxime",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.503171,
@@ -49412,6 +49600,7 @@
       "properties": {
         "id": "Marie-Victorin",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.520342,
@@ -49435,6 +49624,7 @@
       "properties": {
         "id": "Guy",
         "pole": "Distribution (315 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.491062,
@@ -49458,6 +49648,7 @@
       "properties": {
         "id": "Huntingdon",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.093866,
@@ -49481,6 +49672,7 @@
       "properties": {
         "id": "Ormstown JCT",
         "pole": "Junction (120 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             45.178994,
@@ -49504,6 +49696,7 @@
       "properties": {
         "id": "Ormstown",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.152982,
@@ -49527,6 +49720,7 @@
       "properties": {
         "id": "Berri",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.517008,
@@ -49550,6 +49744,7 @@
       "properties": {
         "id": "De Lorimier",
         "pole": "Distribution (315 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.52753,
@@ -49573,6 +49768,7 @@
       "properties": {
         "id": "MontrÃ©al-Est",
         "pole": "Distribution (315 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.622927,
@@ -49596,6 +49792,7 @@
       "properties": {
         "id": "Indorama",
         "pole": "Industrial (120 kV)",
+        "node_type": "Industrial",
         "nodes": [
           [
             45.621131,
@@ -49619,6 +49816,7 @@
       "properties": {
         "id": "Nexans Canada Inc.",
         "pole": "Industrial (120 kV)",
+        "node_type": "Industrial",
         "nodes": [
           [
             45.626431,
@@ -49642,6 +49840,7 @@
       "properties": {
         "id": "Richelieu JCT",
         "pole": "Junction (120 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             45.433851,
@@ -49665,6 +49864,7 @@
       "properties": {
         "id": "Henri-Bourassa",
         "pole": "Distribution (315 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.639309,
@@ -49688,6 +49888,7 @@
       "properties": {
         "id": "Bout-de-lÃŽle",
         "pole": "Distribution (735 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.664822,
@@ -49711,6 +49912,7 @@
       "properties": {
         "id": "Laurent",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.491483,
@@ -49734,6 +49936,7 @@
       "properties": {
         "id": "Mont-Royal",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.502531,
@@ -49757,6 +49960,7 @@
       "properties": {
         "id": "Saraguay",
         "pole": "Distribution (315 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.505683,
@@ -49780,6 +49984,7 @@
       "properties": {
         "id": "Dorchester",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.508364,
@@ -49803,6 +50008,7 @@
       "properties": {
         "id": "Reed",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.523583,
@@ -49826,6 +50032,7 @@
       "properties": {
         "id": "Fleury",
         "pole": "Distribution (315 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.538721,
@@ -49849,6 +50056,7 @@
       "properties": {
         "id": "Napierville",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.181466,
@@ -49872,6 +50080,7 @@
       "properties": {
         "id": "Canara Biotech Inc. JCT",
         "pole": "Junction (120 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             45.246718,
@@ -49895,6 +50104,7 @@
       "properties": {
         "id": "EKA Chimie Canada Inc. Valleyfield JCT",
         "pole": "Junction (120 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             45.235574,
@@ -49918,6 +50128,7 @@
       "properties": {
         "id": "Larocque",
         "pole": "Industrial (120 kV)",
+        "node_type": "Industrial",
         "nodes": [
           [
             45.231081,
@@ -49941,6 +50152,7 @@
       "properties": {
         "id": "Langlois",
         "pole": "Terminal (315 kV)",
+        "node_type": "Terminal",
         "nodes": [
           [
             45.287485,
@@ -49964,6 +50176,7 @@
       "properties": {
         "id": "EKA Chimie Canada Inc. Valleyfield",
         "pole": "Industrial (120 kV)",
+        "node_type": "Industrial",
         "nodes": [
           [
             45.237559,
@@ -49987,6 +50200,7 @@
       "properties": {
         "id": "Canara Biotech Inc.",
         "pole": "Industrial (120 kV)",
+        "node_type": "Industrial",
         "nodes": [
           [
             45.243321,
@@ -50010,6 +50224,7 @@
       "properties": {
         "id": "Longue-Pointe",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.588541,
@@ -50033,6 +50248,7 @@
       "properties": {
         "id": "Notre-Dame",
         "pole": "Terminal (315 kV)",
+        "node_type": "Terminal",
         "nodes": [
           [
             45.582542,
@@ -50056,6 +50272,7 @@
       "properties": {
         "id": "Jeanne-dArc",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.550856,
@@ -50079,6 +50296,7 @@
       "properties": {
         "id": "Saint-Jean",
         "pole": "Distribution (315 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.473023,
@@ -50102,6 +50320,7 @@
       "properties": {
         "id": "Thimens",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.505383,
@@ -50125,6 +50344,7 @@
       "properties": {
         "id": "Baie dUrfÃ©",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.419299,
@@ -50148,6 +50368,7 @@
       "properties": {
         "id": "Hypertec",
         "pole": "Industrial (120 kV)",
+        "node_type": "Industrial",
         "nodes": [
           [
             45.488978,
@@ -50171,6 +50392,7 @@
       "properties": {
         "id": "Hypertec JCT",
         "pole": "Junction (120 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             45.488926,
@@ -50194,6 +50416,7 @@
       "properties": {
         "id": "LÃŽle-Perrot JCT",
         "pole": "Junction (120 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             45.33227,
@@ -50217,6 +50440,7 @@
       "properties": {
         "id": "Beauharnois-Ouest",
         "pole": "Terminal (230 kV)",
+        "node_type": "Terminal",
         "nodes": [
           [
             45.31324,
@@ -50240,6 +50464,7 @@
       "properties": {
         "id": "LÃŽle-Perrot",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.377993,
@@ -50263,6 +50488,7 @@
       "properties": {
         "id": "Monseigneur-Ã‰mard",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.27569,
@@ -50286,6 +50512,7 @@
       "properties": {
         "id": "Valleyfield",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.251243,
@@ -50309,6 +50536,7 @@
       "properties": {
         "id": "La SociÃ©tÃ© en commandite revenu Noranda",
         "pole": "Industrial (120 kV)",
+        "node_type": "Industrial",
         "nodes": [
           [
             45.229161,
@@ -50332,6 +50560,7 @@
       "properties": {
         "id": "Mirabel",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.619172,
@@ -50355,6 +50584,7 @@
       "properties": {
         "id": "Sainte-ThÃ©rÃ¨se-Ouest JCT",
         "pole": "Junction (120 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             45.593624,
@@ -50378,6 +50608,7 @@
       "properties": {
         "id": "Sainte-ThÃ©rÃ¨se-Ouest",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.622205,
@@ -50401,6 +50632,7 @@
       "properties": {
         "id": "La Trappe JCT",
         "pole": "Junction (120 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             45.578219,
@@ -50424,6 +50656,7 @@
       "properties": {
         "id": "Saint-Eustache",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.581196,
@@ -50447,6 +50680,7 @@
       "properties": {
         "id": "La Trappe",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.500972,
@@ -50470,6 +50704,7 @@
       "properties": {
         "id": "Goodyear Canada JCT",
         "pole": "Junction (120 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             45.268875,
@@ -50493,6 +50728,7 @@
       "properties": {
         "id": "Goodyear Canada",
         "pole": "Industrial (120 kV)",
+        "node_type": "Industrial",
         "nodes": [
           [
             45.271153,
@@ -50516,6 +50752,7 @@
       "properties": {
         "id": "Hemmingford JCT",
         "pole": "Junction (120 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             45.173822,
@@ -50539,6 +50776,7 @@
       "properties": {
         "id": "Saint-Chrysostome",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.114802,
@@ -50562,6 +50800,7 @@
       "properties": {
         "id": "Hemmingford",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.072864,
@@ -50585,6 +50824,7 @@
       "properties": {
         "id": "Saint-Maxime JCT",
         "pole": "Junction (120 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             45.473582,
@@ -50608,6 +50848,7 @@
       "properties": {
         "id": "Beaumont",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.525015,
@@ -50631,6 +50872,7 @@
       "properties": {
         "id": "Plouffe JCT",
         "pole": "Junction (120 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             45.579646,
@@ -50654,6 +50896,7 @@
       "properties": {
         "id": "Plouffe",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.556703,
@@ -50677,6 +50920,7 @@
       "properties": {
         "id": "Beauharnois-Est",
         "pole": "Generation (120 kV)",
+        "node_type": "Generation",
         "nodes": [
           [
             45.312557,
@@ -50700,6 +50944,7 @@
       "properties": {
         "id": "ChÃ¢teauguay",
         "pole": "Distribution (765 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.253268,
@@ -50723,6 +50968,7 @@
       "properties": {
         "id": "Rosemont",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.541763,
@@ -50746,6 +50992,7 @@
       "properties": {
         "id": "BÃ©langer",
         "pole": "Terminal (315 kV)",
+        "node_type": "Terminal",
         "nodes": [
           [
             45.571621,
@@ -50769,6 +51016,7 @@
       "properties": {
         "id": "Figuery",
         "pole": "Terminal (315 kV)",
+        "node_type": "Terminal",
         "nodes": [
           [
             48.547136,
@@ -50792,6 +51040,7 @@
       "properties": {
         "id": "QuÃ©bec Lithium JCT",
         "pole": "Junction (120 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             48.405793,
@@ -50815,6 +51064,7 @@
       "properties": {
         "id": "Val dOr",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             48.116903,
@@ -50838,6 +51088,7 @@
       "properties": {
         "id": "QuÃ©bec Lithium",
         "pole": "Industrial (120 kV)",
+        "node_type": "Industrial",
         "nodes": [
           [
             48.406368,
@@ -50861,6 +51112,7 @@
       "properties": {
         "id": "Notre-Dame-du-Nord",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             47.6058,
@@ -50884,6 +51136,7 @@
       "properties": {
         "id": "PremiÃ¨re Chute",
         "pole": "Generation (120 kV)",
+        "node_type": "Generation",
         "nodes": [
           [
             47.602426,
@@ -50907,6 +51160,7 @@
       "properties": {
         "id": "Rouyn",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             48.260478,
@@ -50930,6 +51184,7 @@
       "properties": {
         "id": "Cadillac",
         "pole": "Generation (120 kV)",
+        "node_type": "Generation",
         "nodes": [
           [
             48.213977,
@@ -50953,6 +51208,7 @@
       "properties": {
         "id": "Louvicourt",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             48.088396,
@@ -50976,6 +51232,7 @@
       "properties": {
         "id": "Pandora JCT",
         "pole": "Junction (120 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             48.213366,
@@ -50999,6 +51256,7 @@
       "properties": {
         "id": "Rapide-7",
         "pole": "Generation (120 kV)",
+        "node_type": "Generation",
         "nodes": [
           [
             47.768753,
@@ -51022,6 +51280,7 @@
       "properties": {
         "id": "Pandora",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             48.224522,
@@ -51045,6 +51304,7 @@
       "properties": {
         "id": "Mine Doyon JCT",
         "pole": "Industrial (120 kV)",
+        "node_type": "Industrial",
         "nodes": [
           [
             48.238847,
@@ -51068,6 +51328,7 @@
       "properties": {
         "id": "Mine Doyon",
         "pole": "Industrial (120 kV)",
+        "node_type": "Industrial",
         "nodes": [
           [
             48.253187,
@@ -51091,6 +51352,7 @@
       "properties": {
         "id": "Rapide-2",
         "pole": "Generation (120 kV)",
+        "node_type": "Generation",
         "nodes": [
           [
             47.933491,
@@ -51114,6 +51376,7 @@
       "properties": {
         "id": "Saint-Blaise 2 JCT",
         "pole": "Junction (120 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             48.481076,
@@ -51137,6 +51400,7 @@
       "properties": {
         "id": "Senneterre",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             48.38723,
@@ -51160,6 +51424,7 @@
       "properties": {
         "id": "Boralex",
         "pole": "Industrial (120 kV)",
+        "node_type": "Industrial",
         "nodes": [
           [
             48.383535,
@@ -51183,6 +51448,7 @@
       "properties": {
         "id": "Saint-Blaise",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             48.517773,
@@ -51206,6 +51472,7 @@
       "properties": {
         "id": "Palmarolle",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             48.747616,
@@ -51229,6 +51496,7 @@
       "properties": {
         "id": "Reneault",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             48.470353,
@@ -51252,6 +51520,7 @@
       "properties": {
         "id": "Coigny",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             49.056248,
@@ -51275,6 +51544,7 @@
       "properties": {
         "id": "Poirier",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             49.430904,
@@ -51298,6 +51568,7 @@
       "properties": {
         "id": "Joutel",
         "pole": "Switching (120 kV)",
+        "node_type": "Switching",
         "nodes": [
           [
             49.561912,
@@ -51321,6 +51592,7 @@
       "properties": {
         "id": "Mines Agnico-Eagle LimitÃ©e Laronde JCT",
         "pole": "Junction (120 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             48.234952,
@@ -51344,6 +51616,7 @@
       "properties": {
         "id": "Mines Agnico-Eagle LimitÃ©e Laronde",
         "pole": "Industrial (120 kV)",
+        "node_type": "Industrial",
         "nodes": [
           [
             48.247029,
@@ -51367,6 +51640,7 @@
       "properties": {
         "id": "Resolute Forest Products Amos JCT",
         "pole": "Junction (120 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             48.559954,
@@ -51390,6 +51664,7 @@
       "properties": {
         "id": "Amos",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             48.561431,
@@ -51413,6 +51688,7 @@
       "properties": {
         "id": "Resolute Forest Products Amos",
         "pole": "Industrial (120 kV)",
+        "node_type": "Industrial",
         "nodes": [
           [
             48.568175,
@@ -51436,6 +51712,7 @@
       "properties": {
         "id": "Malartic-2",
         "pole": "Generation (120 kV)",
+        "node_type": "Generation",
         "nodes": [
           [
             48.157166,
@@ -51459,6 +51736,7 @@
       "properties": {
         "id": "Mines Agnico-Eagle LimitÃ©e Goldex JCT",
         "pole": "Junction (120 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             48.097529,
@@ -51482,6 +51760,7 @@
       "properties": {
         "id": "Mines Agnico-Eagle LimitÃ©e Goldex",
         "pole": "Industrial (120 kV)",
+        "node_type": "Industrial",
         "nodes": [
           [
             48.09301,
@@ -51505,6 +51784,7 @@
       "properties": {
         "id": "Mines Bouchard-HÃ©bert JCT",
         "pole": "Junction (120 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             48.423116,
@@ -51528,6 +51808,7 @@
       "properties": {
         "id": "Mines Bouchard-HÃ©bert",
         "pole": "Industrial (120 kV)",
+        "node_type": "Industrial",
         "nodes": [
           [
             48.391904,
@@ -51551,6 +51832,7 @@
       "properties": {
         "id": "Lorrainville",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             47.389961,
@@ -51574,6 +51856,7 @@
       "properties": {
         "id": "Quevillon",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             49.006106,
@@ -51597,6 +51880,7 @@
       "properties": {
         "id": "Saint-Blaise JCT",
         "pole": "Junction (120 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             48.546375,
@@ -51620,6 +51904,7 @@
       "properties": {
         "id": "Granby",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.39041,
@@ -51643,6 +51928,7 @@
       "properties": {
         "id": "Rapides-des-Quinze",
         "pole": "Generation (120 kV)",
+        "node_type": "Generation",
         "nodes": [
           [
             47.590055,
@@ -51666,6 +51952,7 @@
       "properties": {
         "id": "Normetal",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             48.995429,
@@ -51689,6 +51976,7 @@
       "properties": {
         "id": "Mines Casa-Berardi",
         "pole": "Industrial (120 kV)",
+        "node_type": "Industrial",
         "nodes": [
           [
             49.571557,
@@ -51712,6 +52000,7 @@
       "properties": {
         "id": "Mines Selbaie",
         "pole": "Industrial (120 kV)",
+        "node_type": "Industrial",
         "nodes": [
           [
             49.816313,
@@ -51735,6 +52024,7 @@
       "properties": {
         "id": "Matagami",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             49.705867,
@@ -51758,6 +52048,7 @@
       "properties": {
         "id": "Rayonier A.M. Canada Inc. JCT",
         "pole": "Junction (120 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             46.713411,
@@ -51781,6 +52072,7 @@
       "properties": {
         "id": "Temcell",
         "pole": "Industrial (120 kV)",
+        "node_type": "Industrial",
         "nodes": [
           [
             46.713128,
@@ -51804,6 +52096,7 @@
       "properties": {
         "id": "Rayonier A.M. Canada Inc.",
         "pole": "Industrial (120 kV)",
+        "node_type": "Industrial",
         "nodes": [
           [
             46.71311,
@@ -51827,6 +52120,7 @@
       "properties": {
         "id": "Acton",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.646908,
@@ -51850,6 +52144,7 @@
       "properties": {
         "id": "Saint-Donat JCT",
         "pole": "Junction (120 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             46.104935,
@@ -51873,6 +52168,7 @@
       "properties": {
         "id": "Grand-BrulÃ©",
         "pole": "Terminal (735 kV)",
+        "node_type": "Terminal",
         "nodes": [
           [
             46.060633,
@@ -51896,6 +52192,7 @@
       "properties": {
         "id": "Sainte-Agathe-des-Monts",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             46.058911,
@@ -51919,6 +52216,7 @@
       "properties": {
         "id": "Saint-Donat",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             46.291377,
@@ -51942,6 +52240,7 @@
       "properties": {
         "id": "Joly",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             46.295406,
@@ -51965,6 +52264,7 @@
       "properties": {
         "id": "Ouimet",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             46.134447,
@@ -51988,6 +52288,7 @@
       "properties": {
         "id": "LAnnonciation",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             46.436108,
@@ -52011,6 +52312,7 @@
       "properties": {
         "id": "Granby JCT",
         "pole": "Junction (120 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             45.365317,
@@ -52034,6 +52336,7 @@
       "properties": {
         "id": "Magog",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.28658,
@@ -52057,6 +52360,7 @@
       "properties": {
         "id": "Ville de Magog JCT",
         "pole": "Junction (120 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             45.293712,
@@ -52080,6 +52384,7 @@
       "properties": {
         "id": "EKA Chimie Canada Inc. Magog JCT",
         "pole": "Junction (120 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             45.275539,
@@ -52103,6 +52408,7 @@
       "properties": {
         "id": "Ville de Magog",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.274014,
@@ -52126,6 +52432,7 @@
       "properties": {
         "id": "Messer Canada Inc. JCT",
         "pole": "Junction (120 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             45.277512,
@@ -52149,6 +52456,7 @@
       "properties": {
         "id": "Messer Canada Inc.",
         "pole": "Industrial (120 kV)",
+        "node_type": "Industrial",
         "nodes": [
           [
             45.275187,
@@ -52172,6 +52480,7 @@
       "properties": {
         "id": "EKA Chimie Canada Inc. Magog",
         "pole": "Industrial (120 kV)",
+        "node_type": "Industrial",
         "nodes": [
           [
             45.273955,
@@ -52195,6 +52504,7 @@
       "properties": {
         "id": "Cournoyer",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             46.372775,
@@ -52218,6 +52528,7 @@
       "properties": {
         "id": "Air Liquide Canada JCT",
         "pole": "Junction (120 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             46.382908,
@@ -52241,6 +52552,7 @@
       "properties": {
         "id": "Air Liquide Canada",
         "pole": "Industrial (120 kV)",
+        "node_type": "Industrial",
         "nodes": [
           [
             46.382259,
@@ -52264,6 +52576,7 @@
       "properties": {
         "id": "Olin",
         "pole": "Industrial (120 kV)",
+        "node_type": "Industrial",
         "nodes": [
           [
             46.383451,
@@ -52287,6 +52600,7 @@
       "properties": {
         "id": "Viterra Inc.",
         "pole": "Industrial (120 kV)",
+        "node_type": "Industrial",
         "nodes": [
           [
             46.388524,
@@ -52310,6 +52624,7 @@
       "properties": {
         "id": "Silicium-BÃ©cancour",
         "pole": "Industrial (120 kV)",
+        "node_type": "Industrial",
         "nodes": [
           [
             46.371996,
@@ -52333,6 +52648,7 @@
       "properties": {
         "id": "Parisville",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             46.517143,
@@ -52356,6 +52672,7 @@
       "properties": {
         "id": "Plessisville",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             46.20688,
@@ -52379,6 +52696,7 @@
       "properties": {
         "id": "Villeroy",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             46.383215,
@@ -52402,6 +52720,7 @@
       "properties": {
         "id": "Daveluyville",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             46.198956,
@@ -52425,6 +52744,7 @@
       "properties": {
         "id": "Domtar Windsor",
         "pole": "Industrial (120 kV)",
+        "node_type": "Industrial",
         "nodes": [
           [
             45.565563,
@@ -52448,6 +52768,7 @@
       "properties": {
         "id": "Stanstead",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.020811,
@@ -52471,6 +52792,7 @@
       "properties": {
         "id": "INT Derby",
         "pole": "International (120 kV)",
+        "node_type": "International",
         "nodes": [
           [
             45.005626,
@@ -52494,6 +52816,7 @@
       "properties": {
         "id": "Beaulieu JCT",
         "pole": "Junction (120 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             45.260156,
@@ -52517,6 +52840,7 @@
       "properties": {
         "id": "Stanstead JCT",
         "pole": "Junction (120 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             45.103716,
@@ -52540,6 +52864,7 @@
       "properties": {
         "id": "Coaticook",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.112622,
@@ -52563,6 +52888,7 @@
       "properties": {
         "id": "Beaulieu",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.334173,
@@ -52586,6 +52912,7 @@
       "properties": {
         "id": "Magnan",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             46.015598,
@@ -52609,6 +52936,7 @@
       "properties": {
         "id": "Sainte-Ã‰mÃ©lie JCT",
         "pole": "Junction (120 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             46.196441,
@@ -52632,6 +52960,7 @@
       "properties": {
         "id": "Ville de Joliette 2 JCT",
         "pole": "Junction (120 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             46.02465,
@@ -52655,6 +52984,7 @@
       "properties": {
         "id": "Laurendeau JCT",
         "pole": "Junction (120 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             46.204163,
@@ -52678,6 +53008,7 @@
       "properties": {
         "id": "Sainte-Ã‰mÃ©lie",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             46.302911,
@@ -52701,6 +53032,7 @@
       "properties": {
         "id": "Laurendeau",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             46.281641,
@@ -52724,6 +53056,7 @@
       "properties": {
         "id": "Ville de Joliette",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             46.023732,
@@ -52747,6 +53080,7 @@
       "properties": {
         "id": "Provost",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             46.595882,
@@ -52770,6 +53104,7 @@
       "properties": {
         "id": "Berthier JCT",
         "pole": "Junction (120 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             45.954948,
@@ -52793,6 +53128,7 @@
       "properties": {
         "id": "Lavaltrie",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.934053,
@@ -52816,6 +53152,7 @@
       "properties": {
         "id": "LAssomption",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.845466,
@@ -52839,6 +53176,7 @@
       "properties": {
         "id": "Saint-Sulpice",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.80154,
@@ -52862,6 +53200,7 @@
       "properties": {
         "id": "Berthier",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             46.095155,
@@ -52885,6 +53224,7 @@
       "properties": {
         "id": "Kruger Inc. Crabtree JCT",
         "pole": "Junction (120 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             45.983702,
@@ -52908,6 +53248,7 @@
       "properties": {
         "id": "Kildare",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             46.101693,
@@ -52931,6 +53272,7 @@
       "properties": {
         "id": "Kruger Inc. Crabtree",
         "pole": "Industrial (120 kV)",
+        "node_type": "Industrial",
         "nodes": [
           [
             45.964468,
@@ -52954,6 +53296,7 @@
       "properties": {
         "id": "Ville de Joliette 1 JCT",
         "pole": "Junction (120 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             46.024238,
@@ -52977,6 +53320,7 @@
       "properties": {
         "id": "Joliette",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             46.024878,
@@ -53000,6 +53344,7 @@
       "properties": {
         "id": "Judith-Jasmin",
         "pole": "Distribution (735 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.717602,
@@ -53023,6 +53368,7 @@
       "properties": {
         "id": "Groulx JCT",
         "pole": "Junction (120 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             45.712726,
@@ -53046,6 +53392,7 @@
       "properties": {
         "id": "Groulx",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.691948,
@@ -53069,6 +53416,7 @@
       "properties": {
         "id": "Sainte-Anne-des-Plaines JCT",
         "pole": "Junction (120 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             45.709769,
@@ -53092,6 +53440,7 @@
       "properties": {
         "id": "Sainte-Anne-des-Plaines",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.731595,
@@ -53115,6 +53464,7 @@
       "properties": {
         "id": "TCPL Blainville",
         "pole": "Industrial (120 kV)",
+        "node_type": "Industrial",
         "nodes": [
           [
             45.710882,
@@ -53138,6 +53488,7 @@
       "properties": {
         "id": "ChenÃ©ville",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.884646,
@@ -53161,6 +53512,7 @@
       "properties": {
         "id": "Papineauville",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.636198,
@@ -53184,6 +53536,7 @@
       "properties": {
         "id": "Beauceville",
         "pole": "Terminal (230 kV)",
+        "node_type": "Terminal",
         "nodes": [
           [
             46.224455,
@@ -53207,6 +53560,7 @@
       "properties": {
         "id": "Saint-Joseph",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             46.314192,
@@ -53230,6 +53584,7 @@
       "properties": {
         "id": "Neubois",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             46.472914,
@@ -53253,6 +53608,7 @@
       "properties": {
         "id": "Sainte-Marie",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             46.443567,
@@ -53276,6 +53632,7 @@
       "properties": {
         "id": "Sainte-Rosalie JCT",
         "pole": "Junction (120 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             45.80588,
@@ -53299,6 +53656,7 @@
       "properties": {
         "id": "Iberville",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.310653,
@@ -53322,6 +53680,7 @@
       "properties": {
         "id": "Saint-SÃ©bastien JCT",
         "pole": "Junction (120 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             45.306434,
@@ -53345,6 +53704,7 @@
       "properties": {
         "id": "Saint-SÃ©bastien",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.130021,
@@ -53368,6 +53728,7 @@
       "properties": {
         "id": "Farnham",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.288067,
@@ -53391,6 +53752,7 @@
       "properties": {
         "id": "Bedford",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.134608,
@@ -53414,6 +53776,7 @@
       "properties": {
         "id": "INT Highgate",
         "pole": "International (120 kV)",
+        "node_type": "International",
         "nodes": [
           [
             45.014169,
@@ -53437,6 +53800,7 @@
       "properties": {
         "id": "Sainte-Claire",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             46.598273,
@@ -53460,6 +53824,7 @@
       "properties": {
         "id": "ChaudiÃ¨re",
         "pole": "Distribution (230 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             46.699855,
@@ -53483,6 +53848,7 @@
       "properties": {
         "id": "Neubois JCT",
         "pole": "Junction (120 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             46.498433,
@@ -53506,6 +53872,7 @@
       "properties": {
         "id": "Saint-Lazare",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             46.646571,
@@ -53529,6 +53896,7 @@
       "properties": {
         "id": "Axiall Canada Inc. JCT",
         "pole": "Industrial (120 kV)",
+        "node_type": "Industrial",
         "nodes": [
           [
             45.309243,
@@ -53552,6 +53920,7 @@
       "properties": {
         "id": "Axiall Canada Inc.",
         "pole": "Industrial (120 kV)",
+        "node_type": "Industrial",
         "nodes": [
           [
             45.310598,
@@ -53575,6 +53944,7 @@
       "properties": {
         "id": "OVH Cloud Canada",
         "pole": "Industrial (120 kV)",
+        "node_type": "Industrial",
         "nodes": [
           [
             45.307993,
@@ -53598,6 +53968,7 @@
       "properties": {
         "id": "F.F. Soucy S.E.C. JCT",
         "pole": "Junction (120 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             47.815397,
@@ -53621,6 +53992,7 @@
       "properties": {
         "id": "F.F. Soucy S.E.C.",
         "pole": "Industrial (120 kV)",
+        "node_type": "Industrial",
         "nodes": [
           [
             47.819126,
@@ -53644,6 +54016,7 @@
       "properties": {
         "id": "Grand-Portage",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             47.816793,
@@ -53667,6 +54040,7 @@
       "properties": {
         "id": "RiviÃ¨re-du-Loup",
         "pole": "Terminal (315 kV)",
+        "node_type": "Terminal",
         "nodes": [
           [
             47.79318,
@@ -53690,6 +54064,7 @@
       "properties": {
         "id": "La PocatiÃ¨re",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             47.35741,
@@ -53713,6 +54088,7 @@
       "properties": {
         "id": "Saint-Pascal",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             47.521316,
@@ -53736,6 +54112,7 @@
       "properties": {
         "id": "Saint-Alexandre",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             47.679131,
@@ -53759,6 +54136,7 @@
       "properties": {
         "id": "Sully JCT",
         "pole": "Junction (120 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             47.658501,
@@ -53782,6 +54160,7 @@
       "properties": {
         "id": "Squatec JCT",
         "pole": "Junction (120 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             47.682799,
@@ -53805,6 +54184,7 @@
       "properties": {
         "id": "Cabano",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             47.671188,
@@ -53828,6 +54208,7 @@
       "properties": {
         "id": "Squatec",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             47.878283,
@@ -53851,6 +54232,7 @@
       "properties": {
         "id": "DÃ©gelis JCT",
         "pole": "Junction (120 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             47.665865,
@@ -53874,6 +54256,7 @@
       "properties": {
         "id": "DÃ©gelis",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             47.555845,
@@ -53897,6 +54280,7 @@
       "properties": {
         "id": "Amqui",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             48.467816,
@@ -53920,6 +54304,7 @@
       "properties": {
         "id": "Causapscal",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             48.331881,
@@ -53943,6 +54328,7 @@
       "properties": {
         "id": "Vents du Kempt",
         "pole": "Generation (120 kV)",
+        "node_type": "Generation",
         "nodes": [
           [
             48.316301,
@@ -53966,6 +54352,7 @@
       "properties": {
         "id": "TÃ©miscouata",
         "pole": "Generation (120 kV)",
+        "node_type": "Generation",
         "nodes": [
           [
             45.710882,
@@ -53989,6 +54376,7 @@
       "properties": {
         "id": "Sully",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             47.46039,
@@ -54012,6 +54400,7 @@
       "properties": {
         "id": "Les Boules",
         "pole": "Terminal (230 kV)",
+        "node_type": "Terminal",
         "nodes": [
           [
             48.667122,
@@ -54035,6 +54424,7 @@
       "properties": {
         "id": "Saint-Damase JCT",
         "pole": "Junction (120 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             48.624607,
@@ -54058,6 +54448,7 @@
       "properties": {
         "id": "Saint-Damase",
         "pole": "Generation (120 kV)",
+        "node_type": "Generation",
         "nodes": [
           [
             48.625398,
@@ -54081,6 +54472,7 @@
       "properties": {
         "id": "Sayabec",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             48.556449,
@@ -54104,6 +54496,7 @@
       "properties": {
         "id": "Uniboard Canada Inc. JCT",
         "pole": "Junction (120 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             48.551488,
@@ -54127,6 +54520,7 @@
       "properties": {
         "id": "Uniboard Canada Inc.",
         "pole": "Industrial (120 kV)",
+        "node_type": "Industrial",
         "nodes": [
           [
             48.554359,
@@ -54150,6 +54544,7 @@
       "properties": {
         "id": "Beauceville-Est",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             46.209066,
@@ -54173,6 +54568,7 @@
       "properties": {
         "id": "Saint-Georges",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             46.147443,
@@ -54196,6 +54592,7 @@
       "properties": {
         "id": "Bolduc",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.947705,
@@ -54219,6 +54616,7 @@
       "properties": {
         "id": "Saint-Robert-Bellarmin",
         "pole": "Generation (120 kV)",
+        "node_type": "Generation",
         "nodes": [
           [
             45.700711,
@@ -54242,6 +54640,7 @@
       "properties": {
         "id": "East Broughton",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             46.236052,
@@ -54265,6 +54664,7 @@
       "properties": {
         "id": "Mont Sainte-Marguerite",
         "pole": "Generation (120 kV)",
+        "node_type": "Generation",
         "nodes": [
           [
             46.239398,
@@ -54288,6 +54688,7 @@
       "properties": {
         "id": "LiniÃ¨re",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             46.069214,
@@ -54311,6 +54712,7 @@
       "properties": {
         "id": "Sainte-Germaine",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             46.404956,
@@ -54334,6 +54736,7 @@
       "properties": {
         "id": "Cacouna",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             47.886627,
@@ -54357,6 +54760,7 @@
       "properties": {
         "id": "Saint-ClÃ©ment",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             47.942491,
@@ -54380,6 +54784,7 @@
       "properties": {
         "id": "Coleraine",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.937666,
@@ -54403,6 +54808,7 @@
       "properties": {
         "id": "Thetford",
         "pole": "Distribution (230 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             46.07551,
@@ -54426,6 +54832,7 @@
       "properties": {
         "id": "La VÃ©rendrye",
         "pole": "Terminal (735 kV)",
+        "node_type": "Terminal",
         "nodes": [
           [
             47.496116,
@@ -54449,6 +54856,7 @@
       "properties": {
         "id": "Parent",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             47.919178,
@@ -54472,6 +54880,7 @@
       "properties": {
         "id": "Des HÃªtres",
         "pole": "Distribution (230 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             46.572831,
@@ -54495,6 +54904,7 @@
       "properties": {
         "id": "Thibaudeau",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             46.565473,
@@ -54518,6 +54928,7 @@
       "properties": {
         "id": "Lebel",
         "pole": "Industrial (315 kV)",
+        "node_type": "Industrial",
         "nodes": [
           [
             49.004548,
@@ -54541,6 +54952,7 @@
       "properties": {
         "id": "Mine Gonzague-Langlois",
         "pole": "Industrial (120 kV)",
+        "node_type": "Industrial",
         "nodes": [
           [
             49.24569,
@@ -54564,6 +54976,7 @@
       "properties": {
         "id": "Domtar QuÃ©villon",
         "pole": "Industrial (120 kV)",
+        "node_type": "Industrial",
         "nodes": [
           [
             49.024122,
@@ -54587,6 +55000,7 @@
       "properties": {
         "id": "La Grande-1",
         "pole": "Generation (315 kV)",
+        "node_type": "Generation",
         "nodes": [
           [
             53.731868,
@@ -54610,6 +55024,7 @@
       "properties": {
         "id": "Chisasibi",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             53.7736,
@@ -54633,6 +55048,7 @@
       "properties": {
         "id": "Wemindji",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             53.006197,
@@ -54656,6 +55072,7 @@
       "properties": {
         "id": "Mont-Tremblant",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             46.180836,
@@ -54679,6 +55096,7 @@
       "properties": {
         "id": "LÃ‰rable JCT",
         "pole": "Junction (120 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             46.174021,
@@ -54702,6 +55120,7 @@
       "properties": {
         "id": "LÃ‰rable",
         "pole": "Generation (120 kV)",
+        "node_type": "Generation",
         "nodes": [
           [
             46.1059,
@@ -54725,6 +55144,7 @@
       "properties": {
         "id": "RiviÃ¨re-des-Prairies",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.590381,
@@ -54748,6 +55168,7 @@
       "properties": {
         "id": "Repetigny",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.734672,
@@ -54771,6 +55192,7 @@
       "properties": {
         "id": "Massif-du-Sud",
         "pole": "Generation (120 kV)",
+        "node_type": "Generation",
         "nodes": [
           [
             46.566621,
@@ -54794,6 +55216,7 @@
       "properties": {
         "id": "Daaquam",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             46.565344,
@@ -54817,6 +55240,7 @@
       "properties": {
         "id": "Mine Malartic",
         "pole": "Industrial (120 kV)",
+        "node_type": "Industrial",
         "nodes": [
           [
             48.112631,
@@ -54840,6 +55264,7 @@
       "properties": {
         "id": "Ville de Sherbrooke Orford",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.399108,
@@ -54863,6 +55288,7 @@
       "properties": {
         "id": "Adamsville",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.312002,
@@ -54886,6 +55312,7 @@
       "properties": {
         "id": "Saint-Sauveur",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.898262,
@@ -54909,6 +55336,7 @@
       "properties": {
         "id": "Doc-Grignon",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.950487,
@@ -54932,6 +55360,7 @@
       "properties": {
         "id": "Coteau-du-Lac JCT",
         "pole": "Junction (120 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             45.32752,
@@ -54955,6 +55384,7 @@
       "properties": {
         "id": "Coteau-du-Lac",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.300181,
@@ -54978,6 +55408,7 @@
       "properties": {
         "id": "Ville de Sherbrooke MassÃ©",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.371325,
@@ -55001,6 +55432,7 @@
       "properties": {
         "id": "Compass YUL II",
         "pole": "Industrial (120 kV)",
+        "node_type": "Industrial",
         "nodes": [
           [
             45.423721,
@@ -55024,6 +55456,7 @@
       "properties": {
         "id": "GoÃ©mon",
         "pole": "Terminal (230 kV)",
+        "node_type": "Terminal",
         "nodes": [
           [
             49.091228,
@@ -55047,6 +55480,7 @@
       "properties": {
         "id": "RiviÃ¨re-Sainte-Anne",
         "pole": "Distribution (161 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             48.950322,
@@ -55070,6 +55504,7 @@
       "properties": {
         "id": "Copper Mountain",
         "pole": "Distribution (161 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             48.938005,
@@ -55093,6 +55528,7 @@
       "properties": {
         "id": "Micmac",
         "pole": "Distribution (230 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             48.353568,
@@ -55116,6 +55552,7 @@
       "properties": {
         "id": "PercÃ©",
         "pole": "Distribution (161 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             48.534998,
@@ -55139,6 +55576,7 @@
       "properties": {
         "id": "GaspÃ©",
         "pole": "Distribution (161 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             48.82703,
@@ -55162,6 +55600,7 @@
       "properties": {
         "id": "RiviÃ¨re-au-Renard",
         "pole": "Distribution (161 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             48.991632,
@@ -55185,6 +55624,7 @@
       "properties": {
         "id": "Hauterive",
         "pole": "Distribution (315 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             49.189113,
@@ -55208,6 +55648,7 @@
       "properties": {
         "id": "LaflÃ¨che",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             49.202708,
@@ -55231,6 +55672,7 @@
       "properties": {
         "id": "McCormick",
         "pole": "Generation (120 kV)",
+        "node_type": "Generation",
         "nodes": [
           [
             49.192957,
@@ -55254,6 +55696,7 @@
       "properties": {
         "id": "Mont-Copper JCT",
         "pole": "Junction (161 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             48.950311,
@@ -55277,6 +55720,7 @@
       "properties": {
         "id": "Mont-Copper",
         "pole": "Generation (161 kV)",
+        "node_type": "Generation",
         "nodes": [
           [
             48.940044,
@@ -55300,6 +55744,7 @@
       "properties": {
         "id": "Mont-Miller",
         "pole": "Generation (161 kV)",
+        "node_type": "Generation",
         "nodes": [
           [
             48.980047,
@@ -55323,6 +55768,7 @@
       "properties": {
         "id": "Mont-Rothery",
         "pole": "Generation (161 kV)",
+        "node_type": "Generation",
         "nodes": [
           [
             48.939274,
@@ -55346,6 +55792,7 @@
       "properties": {
         "id": "Alcoa Baie Comeau JCT",
         "pole": "Junction (120 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             49.261808,
@@ -55369,6 +55816,7 @@
       "properties": {
         "id": "Franquelin",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             49.301377,
@@ -55392,6 +55840,7 @@
       "properties": {
         "id": "Godbout",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             49.327552,
@@ -55415,6 +55864,7 @@
       "properties": {
         "id": "Baie-TrinitÃ©",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             49.409588,
@@ -55438,6 +55888,7 @@
       "properties": {
         "id": "LaflÃ¨che JCT",
         "pole": "Junction (120 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             49.208831,
@@ -55461,6 +55912,7 @@
       "properties": {
         "id": "Port Cartier",
         "pole": "Switching (120 kV)",
+        "node_type": "Switching",
         "nodes": [
           [
             50.049862,
@@ -55484,6 +55936,7 @@
       "properties": {
         "id": "Laure",
         "pole": "Distribution (161 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             50.19213,
@@ -55507,6 +55960,7 @@
       "properties": {
         "id": "RiviÃ¨re-aux-Rochers",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             50.029889,
@@ -55530,6 +55984,7 @@
       "properties": {
         "id": "Arnaud",
         "pole": "Terminal (735 kV)",
+        "node_type": "Terminal",
         "nodes": [
           [
             50.194081,
@@ -55553,6 +56008,7 @@
       "properties": {
         "id": "Sept-ÃŽles",
         "pole": "Distribution (161 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             50.215325,
@@ -55576,6 +56032,7 @@
       "properties": {
         "id": "Iron-Ore-du-Canada",
         "pole": "Industrial (161 kV)",
+        "node_type": "Industrial",
         "nodes": [
           [
             50.203182,
@@ -55599,6 +56056,7 @@
       "properties": {
         "id": "Aluminerie Alouette",
         "pole": "Industrial (161 kV)",
+        "node_type": "Industrial",
         "nodes": [
           [
             50.160795,
@@ -55622,6 +56080,7 @@
       "properties": {
         "id": "Sept-ÃŽles JCT",
         "pole": "Junction (161 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             50.283729,
@@ -55645,6 +56104,7 @@
       "properties": {
         "id": "RiviÃ¨re-Ã -la-Chaloupe",
         "pole": "Distribution (161 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             50.294521,
@@ -55668,6 +56128,7 @@
       "properties": {
         "id": "Sheldrake JCT",
         "pole": "Junction (161 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             50.290158,
@@ -55691,6 +56152,7 @@
       "properties": {
         "id": "RiviÃ¨re-au-Tonnerre",
         "pole": "Distribution (161 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             50.289248,
@@ -55714,6 +56176,7 @@
       "properties": {
         "id": "Magpie",
         "pole": "Generation (161 kV)",
+        "node_type": "Generation",
         "nodes": [
           [
             50.322238,
@@ -55737,6 +56200,7 @@
       "properties": {
         "id": "RiviÃ¨re-aux-Bouleaux",
         "pole": "Distribution (161 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             50.289632,
@@ -55760,6 +56224,7 @@
       "properties": {
         "id": "Sheldrake",
         "pole": "Generation (161 kV)",
+        "node_type": "Generation",
         "nodes": [
           [
             50.313069,
@@ -55783,6 +56248,7 @@
       "properties": {
         "id": "Produits Forestiers Arbec Inc. JCT",
         "pole": "Junction (120 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             50.038917,
@@ -55806,6 +56272,7 @@
       "properties": {
         "id": "Companie-MiniÃ¨re-QuÃ©bec-Cartier",
         "pole": "Industrial (120 kV)",
+        "node_type": "Industrial",
         "nodes": [
           [
             50.033728,
@@ -55829,6 +56296,7 @@
       "properties": {
         "id": "Produits Forestiers Arbec Inc.",
         "pole": "Industrial (120 kV)",
+        "node_type": "Industrial",
         "nodes": [
           [
             50.025386,
@@ -55852,6 +56320,7 @@
       "properties": {
         "id": "CogÃ©nÃ©ration Saint-FÃ©licien",
         "pole": "Generation (120 kV)",
+        "node_type": "Generation",
         "nodes": [
           [
             48.63835,
@@ -55875,6 +56344,7 @@
       "properties": {
         "id": "Saint-FÃ©licien",
         "pole": "Distribution (161 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             48.68754,
@@ -55898,6 +56368,7 @@
       "properties": {
         "id": "Roberval",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             48.506847,
@@ -55921,6 +56392,7 @@
       "properties": {
         "id": "Desbiens",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             48.417753,
@@ -55944,6 +56416,7 @@
       "properties": {
         "id": "LIsle Maligne",
         "pole": "Industrial (230 kV)",
+        "node_type": "Industrial",
         "nodes": [
           [
             48.576698,
@@ -55967,6 +56440,7 @@
       "properties": {
         "id": "Obalski",
         "pole": "Distribution (161 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             49.87718,
@@ -55990,6 +56464,7 @@
       "properties": {
         "id": "Waconichi JCT",
         "pole": "Junction (161 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             50.120602,
@@ -56013,6 +56488,7 @@
       "properties": {
         "id": "First Quantum Minerals",
         "pole": "Industrial (161 kV)",
+        "node_type": "Industrial",
         "nodes": [
           [
             51.004389,
@@ -56036,6 +56512,7 @@
       "properties": {
         "id": "Waconichi",
         "pole": "Distribution (161 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             50.292875,
@@ -56059,6 +56536,7 @@
       "properties": {
         "id": "Chapais",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             49.789432,
@@ -56082,6 +56560,7 @@
       "properties": {
         "id": "Obalski JCT",
         "pole": "Junction (120 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             49.791496,
@@ -56105,6 +56584,7 @@
       "properties": {
         "id": "Chibougamau",
         "pole": "Terminal (735 kV)",
+        "node_type": "Terminal",
         "nodes": [
           [
             49.783532,
@@ -56128,6 +56608,7 @@
       "properties": {
         "id": "Chigoubiche JCT",
         "pole": "Junction (120 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             49.819792,
@@ -56151,6 +56632,7 @@
       "properties": {
         "id": "Chigoubiche",
         "pole": "Distribution (161 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             49.000394,
@@ -56174,6 +56656,7 @@
       "properties": {
         "id": "Mistassini",
         "pole": "Distribution (161 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             48.881792,
@@ -56197,6 +56680,7 @@
       "properties": {
         "id": "Resolute Forest Products Alma",
         "pole": "Industrial (161 kV)",
+        "node_type": "Industrial",
         "nodes": [
           [
             48.564555,
@@ -56220,6 +56704,7 @@
       "properties": {
         "id": "Fibrek SENC JCT",
         "pole": "Junction (161 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             48.742514,
@@ -56243,6 +56728,7 @@
       "properties": {
         "id": "Normandin",
         "pole": "Distribution (161 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             48.844777,
@@ -56266,6 +56752,7 @@
       "properties": {
         "id": "Fibrek SENC",
         "pole": "Industrial (161 kV)",
+        "node_type": "Industrial",
         "nodes": [
           [
             48.745555,
@@ -56289,6 +56776,7 @@
       "properties": {
         "id": "Serres Toundra",
         "pole": "Industrial (161 kV)",
+        "node_type": "Industrial",
         "nodes": [
           [
             48.743957,
@@ -56312,6 +56800,7 @@
       "properties": {
         "id": "Resolute Forest Products Dolbeau",
         "pole": "Industrial (161 kV)",
+        "node_type": "Industrial",
         "nodes": [
           [
             48.87973,
@@ -56335,6 +56824,7 @@
       "properties": {
         "id": "Dubuc",
         "pole": "Industrial (161 kV)",
+        "node_type": "Industrial",
         "nodes": [
           [
             48.411584,
@@ -56358,6 +56848,7 @@
       "properties": {
         "id": "Chicoutimi-Nord",
         "pole": "Distribution (161 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             48.454039,
@@ -56381,6 +56872,7 @@
       "properties": {
         "id": "Saguenay",
         "pole": "Terminal (735 kV)",
+        "node_type": "Terminal",
         "nodes": [
           [
             48.375798,
@@ -56404,6 +56896,7 @@
       "properties": {
         "id": "Chicoutimi",
         "pole": "Distribution (161 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             48.417842,
@@ -56427,6 +56920,7 @@
       "properties": {
         "id": "Cascades Canada Saguenay JCT",
         "pole": "Junction (161 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             48.442936,
@@ -56450,6 +56944,7 @@
       "properties": {
         "id": "JonquiÃ¨re JCT",
         "pole": "Junction (161 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             48.447317,
@@ -56473,6 +56968,7 @@
       "properties": {
         "id": "Saint-Ambroise JCT",
         "pole": "Junction (161 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             48.51904,
@@ -56496,6 +56992,7 @@
       "properties": {
         "id": "Simard",
         "pole": "Terminal (161 kV)",
+        "node_type": "Terminal",
         "nodes": [
           [
             48.546877,
@@ -56519,6 +57016,7 @@
       "properties": {
         "id": "Resolute Forest Products KÃ©nogami 1 JCT",
         "pole": "Junction (161 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             48.437636,
@@ -56542,6 +57040,7 @@
       "properties": {
         "id": "Cascades Canada Saguenay",
         "pole": "Industrial (161 kV)",
+        "node_type": "Industrial",
         "nodes": [
           [
             48.435958,
@@ -56565,6 +57064,7 @@
       "properties": {
         "id": "Resolute Forest Products KÃ©nogami",
         "pole": "Industrial (161 kV)",
+        "node_type": "Industrial",
         "nodes": [
           [
             48.431259,
@@ -56588,6 +57088,7 @@
       "properties": {
         "id": "Jean-DechÃªne JCT",
         "pole": "Junction (161 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             48.427711,
@@ -56611,6 +57112,7 @@
       "properties": {
         "id": "Jean-DechÃªne",
         "pole": "Distribution (161 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             48.421237,
@@ -56634,6 +57136,7 @@
       "properties": {
         "id": "JonquiÃ¨re",
         "pole": "Distribution (161 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             48.419537,
@@ -56657,6 +57160,7 @@
       "properties": {
         "id": "Resolute Forest Products KÃ©nogami 2 JCT",
         "pole": "Junction (161 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             48.446791,
@@ -56680,6 +57184,7 @@
       "properties": {
         "id": "Saint-Ambroise",
         "pole": "Distribution (161 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             48.542363,
@@ -56703,6 +57208,7 @@
       "properties": {
         "id": "Alcan Usine LaterriÃ¨re",
         "pole": "Industrial (161 kV)",
+        "node_type": "Industrial",
         "nodes": [
           [
             48.30461,
@@ -56726,6 +57232,7 @@
       "properties": {
         "id": "Niobec JCT",
         "pole": "Junction (161 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             48.513941,
@@ -56749,6 +57256,7 @@
       "properties": {
         "id": "Niobec",
         "pole": "Industrial (161 kV)",
+        "node_type": "Industrial",
         "nodes": [
           [
             48.531422,
@@ -56772,6 +57280,7 @@
       "properties": {
         "id": "PÃ©ribonka",
         "pole": "Generation (161 kV)",
+        "node_type": "Generation",
         "nodes": [
           [
             49.510826,
@@ -56795,6 +57304,7 @@
       "properties": {
         "id": "Pointe-Noire",
         "pole": "Industrial (161 kV)",
+        "node_type": "Industrial",
         "nodes": [
           [
             50.15626,
@@ -56818,6 +57328,7 @@
       "properties": {
         "id": "Johan-Beetz JCT",
         "pole": "Junction (120 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             50.319589,
@@ -56841,6 +57352,7 @@
       "properties": {
         "id": "Johan-Beetz",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             50.309568,
@@ -56864,6 +57376,7 @@
       "properties": {
         "id": "Natashquan",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             50.227779,
@@ -56887,6 +57400,7 @@
       "properties": {
         "id": "Romaine-1",
         "pole": "Generation (315 kV)",
+        "node_type": "Generation",
         "nodes": [
           [
             50.390086,
@@ -56910,6 +57424,7 @@
       "properties": {
         "id": "Havre-Saint-Pierre",
         "pole": "Distribution (161 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             50.266438,
@@ -56933,6 +57448,7 @@
       "properties": {
         "id": "LAnse-Ã -Valleau",
         "pole": "Generation (161 kV)",
+        "node_type": "Generation",
         "nodes": [
           [
             49.079363,
@@ -56956,6 +57472,7 @@
       "properties": {
         "id": "Montagne-SÃ¨che",
         "pole": "Generation (161 kV)",
+        "node_type": "Generation",
         "nodes": [
           [
             49.177963,
@@ -56979,6 +57496,7 @@
       "properties": {
         "id": "Grande VallÃ©e",
         "pole": "Distribution (161 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             49.218655,
@@ -57002,6 +57520,7 @@
       "properties": {
         "id": "PentecÃ´te",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             49.730647,
@@ -57025,6 +57544,7 @@
       "properties": {
         "id": "Lac-Hope JCT",
         "pole": "Junction (120 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             52.340294,
@@ -57048,6 +57568,7 @@
       "properties": {
         "id": "Hart-Jaune",
         "pole": "Generation (120 kV)",
+        "node_type": "Generation",
         "nodes": [
           [
             51.78445,
@@ -57071,6 +57592,7 @@
       "properties": {
         "id": "Lac-Hope",
         "pole": "Distribution (120 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             52.335427,
@@ -57094,6 +57616,7 @@
       "properties": {
         "id": "Normand",
         "pole": "Distribution (315 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             52.774375,
@@ -57117,6 +57640,7 @@
       "properties": {
         "id": "MatapÃ©dia",
         "pole": "Distribution (315 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             48.016863,
@@ -57140,6 +57664,7 @@
       "properties": {
         "id": "IPT MatapÃ©dia 1",
         "pole": "Interprovincial (230 kV)",
+        "node_type": "Interprovincial",
         "nodes": [
           [
             48.000251,
@@ -57163,6 +57688,7 @@
       "properties": {
         "id": "IPT MatapÃ©dia 2",
         "pole": "Interprovincial (230 kV)",
+        "node_type": "Interprovincial",
         "nodes": [
           [
             48.000312,
@@ -57186,6 +57712,7 @@
       "properties": {
         "id": "Chute-Allard",
         "pole": "Generation (230 kV)",
+        "node_type": "Generation",
         "nodes": [
           [
             47.891495,
@@ -57209,6 +57736,7 @@
       "properties": {
         "id": "Rapide-des-Coeurs",
         "pole": "Generation (230 kV)",
+        "node_type": "Generation",
         "nodes": [
           [
             47.787815,
@@ -57232,6 +57760,7 @@
       "properties": {
         "id": "Rapide-Blanc",
         "pole": "Terminal (230 kV)",
+        "node_type": "Terminal",
         "nodes": [
           [
             47.796284,
@@ -57255,6 +57784,7 @@
       "properties": {
         "id": "Bourget 1 JCT",
         "pole": "Junction (230 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             46.774529,
@@ -57278,6 +57808,7 @@
       "properties": {
         "id": "Bourget",
         "pole": "Distribution (230 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             46.806517,
@@ -57301,6 +57832,7 @@
       "properties": {
         "id": "La Durantaye",
         "pole": "Distribution (230 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             46.81554,
@@ -57324,6 +57856,7 @@
       "properties": {
         "id": "Montmagny",
         "pole": "Distribution (230 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             46.963474,
@@ -57347,6 +57880,7 @@
       "properties": {
         "id": "LÃ©vis",
         "pole": "Distribution (735 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             46.707337,
@@ -57370,6 +57904,7 @@
       "properties": {
         "id": "Bourget 2 JCT",
         "pole": "Junction (230 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             46.775502,
@@ -57393,6 +57928,7 @@
       "properties": {
         "id": "Trois-Pistoles",
         "pole": "Distribution (230 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             48.109749,
@@ -57416,6 +57952,7 @@
       "properties": {
         "id": "Rimouski",
         "pole": "Terminal (315 kV)",
+        "node_type": "Terminal",
         "nodes": [
           [
             48.407908,
@@ -57439,6 +57976,7 @@
       "properties": {
         "id": "Qit-Fer-et-Titane",
         "pole": "Industrial (230 kV)",
+        "node_type": "Industrial",
         "nodes": [
           [
             46.04274,
@@ -57462,6 +58000,7 @@
       "properties": {
         "id": "Rouville JCT",
         "pole": "Junction (230 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             45.50525,
@@ -57485,6 +58024,7 @@
       "properties": {
         "id": "Boucherville",
         "pole": "Terminal (735 kV)",
+        "node_type": "Terminal",
         "nodes": [
           [
             45.600886,
@@ -57508,6 +58048,7 @@
       "properties": {
         "id": "Rouville",
         "pole": "Distribution (230 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.532195,
@@ -57531,6 +58072,7 @@
       "properties": {
         "id": "Sidbec-Dosco",
         "pole": "Industrial (230 kV)",
+        "node_type": "Industrial",
         "nodes": [
           [
             45.834155,
@@ -57554,6 +58096,7 @@
       "properties": {
         "id": "Carignan",
         "pole": "Terminal (735 kV)",
+        "node_type": "Terminal",
         "nodes": [
           [
             45.972672,
@@ -57577,6 +58120,7 @@
       "properties": {
         "id": "Mittal Canada Inc. Contrecoeur West JCT",
         "pole": "Junction (230 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             45.815215,
@@ -57600,6 +58144,7 @@
       "properties": {
         "id": "Mittal Canada Inc. Contrecoeur West",
         "pole": "Industrial (230 kV)",
+        "node_type": "Industrial",
         "nodes": [
           [
             45.818624,
@@ -57623,6 +58168,7 @@
       "properties": {
         "id": "Mittal Canada Inc. Contrecoeur East",
         "pole": "Industrial (230 kV)",
+        "node_type": "Industrial",
         "nodes": [
           [
             45.836597,
@@ -57646,6 +58192,7 @@
       "properties": {
         "id": "Alma",
         "pole": "Distribution (230 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             48.521028,
@@ -57669,6 +58216,7 @@
       "properties": {
         "id": "Charlesbourg",
         "pole": "Distribution (230 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             46.886146,
@@ -57692,6 +58240,7 @@
       "properties": {
         "id": "Appalaches",
         "pole": "Terminal (735 kV)",
+        "node_type": "Terminal",
         "nodes": [
           [
             46.134455,
@@ -57715,6 +58264,7 @@
       "properties": {
         "id": "QuÃ©bec",
         "pole": "Terminal (315 kV)",
+        "node_type": "Terminal",
         "nodes": [
           [
             46.831007,
@@ -57738,6 +58288,7 @@
       "properties": {
         "id": "La SuÃ¨te",
         "pole": "Distribution (230 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             46.782885,
@@ -57761,6 +58312,7 @@
       "properties": {
         "id": "Trenche",
         "pole": "Generation (230 kV)",
+        "node_type": "Generation",
         "nodes": [
           [
             47.751591,
@@ -57784,6 +58336,7 @@
       "properties": {
         "id": "Chenaux JCT",
         "pole": "Junction (230 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             46.369423,
@@ -57807,6 +58360,7 @@
       "properties": {
         "id": "Cap-de-la-Madeleine",
         "pole": "Distribution (230 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             46.401482,
@@ -57830,6 +58384,7 @@
       "properties": {
         "id": "Chenaux",
         "pole": "Distribution (230 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             46.355492,
@@ -57853,6 +58408,7 @@
       "properties": {
         "id": "Laurentides",
         "pole": "Terminal (735 kV)",
+        "node_type": "Terminal",
         "nodes": [
           [
             46.85905,
@@ -57876,6 +58432,7 @@
       "properties": {
         "id": "Le Nordais-1 JCT",
         "pole": "Junction (230 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             48.802346,
@@ -57899,6 +58456,7 @@
       "properties": {
         "id": "Spruce Falls Inc. JCT",
         "pole": "Junction (230 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             48.80573,
@@ -57922,6 +58480,7 @@
       "properties": {
         "id": "Matane",
         "pole": "Distribution (230 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             48.836453,
@@ -57945,6 +58504,7 @@
       "properties": {
         "id": "Spruce Falls Inc.",
         "pole": "Industrial (230 kV)",
+        "node_type": "Industrial",
         "nodes": [
           [
             48.831441,
@@ -57968,6 +58528,7 @@
       "properties": {
         "id": "Le Nordais-1",
         "pole": "Generation (230 kV)",
+        "node_type": "Generation",
         "nodes": [
           [
             48.801312,
@@ -57991,6 +58552,7 @@
       "properties": {
         "id": "Alcan Usine Shawinigan",
         "pole": "Industrial (230 kV)",
+        "node_type": "Industrial",
         "nodes": [
           [
             46.56223,
@@ -58014,6 +58576,7 @@
       "properties": {
         "id": "Trans Canada Ã‰nergie",
         "pole": "Industrial (230 kV)",
+        "node_type": "Industrial",
         "nodes": [
           [
             46.366867,
@@ -58037,6 +58600,7 @@
       "properties": {
         "id": "La Gabelle",
         "pole": "Generation (230 kV)",
+        "node_type": "Generation",
         "nodes": [
           [
             46.449132,
@@ -58060,6 +58624,7 @@
       "properties": {
         "id": "Mauricie JCT",
         "pole": "Junction (230 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             46.47144,
@@ -58083,6 +58648,7 @@
       "properties": {
         "id": "Mauricie",
         "pole": "Terminal (315 kV)",
+        "node_type": "Terminal",
         "nodes": [
           [
             46.47725,
@@ -58106,6 +58672,7 @@
       "properties": {
         "id": "Le Nordais-2 JCT",
         "pole": "Junction (230 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             49.052766,
@@ -58129,6 +58696,7 @@
       "properties": {
         "id": "Le Nordais-2",
         "pole": "Generation (230 kV)",
+        "node_type": "Generation",
         "nodes": [
           [
             49.054093,
@@ -58152,6 +58720,7 @@
       "properties": {
         "id": "PaspÃ©biac JCT",
         "pole": "Junction (230 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             48.06779,
@@ -58175,6 +58744,7 @@
       "properties": {
         "id": "CascapÃ©dia",
         "pole": "Distribution (230 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             48.171836,
@@ -58198,6 +58768,7 @@
       "properties": {
         "id": "PaspÃ©biac",
         "pole": "Distribution (230 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             48.039602,
@@ -58221,6 +58792,7 @@
       "properties": {
         "id": "Alcoa BÃ©cancour",
         "pole": "Industrial (230 kV)",
+        "node_type": "Industrial",
         "nodes": [
           [
             46.377781,
@@ -58244,6 +58816,7 @@
       "properties": {
         "id": "Francheville",
         "pole": "Distribution (230 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             46.353149,
@@ -58267,6 +58840,7 @@
       "properties": {
         "id": "New Richmond",
         "pole": "Generation (230 kV)",
+        "node_type": "Generation",
         "nodes": [
           [
             48.201967,
@@ -58290,6 +58864,7 @@
       "properties": {
         "id": "Beaumont GS",
         "pole": "Generation (230 kV)",
+        "node_type": "Generation",
         "nodes": [
           [
             47.555923,
@@ -58313,6 +58888,7 @@
       "properties": {
         "id": "MÃ©kanic",
         "pole": "Distribution (230 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             46.746129,
@@ -58336,6 +58912,7 @@
       "properties": {
         "id": "Nicolet",
         "pole": "Terminal (735 kV)",
+        "node_type": "Terminal",
         "nodes": [
           [
             46.079876,
@@ -58359,6 +58936,7 @@
       "properties": {
         "id": "La Tuque",
         "pole": "Generation (230 kV)",
+        "node_type": "Generation",
         "nodes": [
           [
             47.442942,
@@ -58382,6 +58960,7 @@
       "properties": {
         "id": "Compagnie Westrock du Canada Inc.",
         "pole": "Industrial (230 kV)",
+        "node_type": "Industrial",
         "nodes": [
           [
             47.447125,
@@ -58405,6 +58984,7 @@
       "properties": {
         "id": "Moulins JCT",
         "pole": "Junction (230 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             46.121806,
@@ -58428,6 +59008,7 @@
       "properties": {
         "id": "Antoine-Lemieux",
         "pole": "Distribution (230 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             46.115745,
@@ -58451,6 +59032,7 @@
       "properties": {
         "id": "Moulins",
         "pole": "Generation (230 kV)",
+        "node_type": "Generation",
         "nodes": [
           [
             46.146316,
@@ -58474,6 +59056,7 @@
       "properties": {
         "id": "BÃ©cancour GS",
         "pole": "Generation (230 kV)",
+        "node_type": "Generation",
         "nodes": [
           [
             46.392484,
@@ -58497,6 +59080,7 @@
       "properties": {
         "id": "Kruger Inc. Trois-RiviÃ¨res JCT",
         "pole": "Junction (230 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             46.323894,
@@ -58520,6 +59104,7 @@
       "properties": {
         "id": "Jules-A.-Brillant 1 JCT",
         "pole": "Junction (230 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             48.439784,
@@ -58543,6 +59128,7 @@
       "properties": {
         "id": "Jules-A.-Brillant",
         "pole": "Distribution (230 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             48.461779,
@@ -58566,6 +59152,7 @@
       "properties": {
         "id": "Jules-A.-Brillant 2 JCT",
         "pole": "Junction (230 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             48.44414,
@@ -58589,6 +59176,7 @@
       "properties": {
         "id": "Mont-Joli",
         "pole": "Distribution (230 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             48.568001,
@@ -58612,6 +59200,7 @@
       "properties": {
         "id": "Baie-des-Sables JCT",
         "pole": "Junction (230 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             48.681723,
@@ -58635,6 +59224,7 @@
       "properties": {
         "id": "Baie-des-Sables",
         "pole": "Generation (230 kV)",
+        "node_type": "Generation",
         "nodes": [
           [
             48.706515,
@@ -58658,6 +59248,7 @@
       "properties": {
         "id": "IREQ",
         "pole": "Industrial (735 kV)",
+        "node_type": "Industrial",
         "nodes": [
           [
             45.612242,
@@ -58681,6 +59272,7 @@
       "properties": {
         "id": "Mont-Louis JCT",
         "pole": "Junction (230 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             49.180499,
@@ -58704,6 +59296,7 @@
       "properties": {
         "id": "LAnse Pleureuse",
         "pole": "Distribution (230 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             49.14977,
@@ -58727,6 +59320,7 @@
       "properties": {
         "id": "Mont-Louis",
         "pole": "Generation (230 kV)",
+        "node_type": "Generation",
         "nodes": [
           [
             49.181777,
@@ -58750,6 +59344,7 @@
       "properties": {
         "id": "Gros-Morne",
         "pole": "Generation (230 kV)",
+        "node_type": "Generation",
         "nodes": [
           [
             49.180979,
@@ -58773,6 +59368,7 @@
       "properties": {
         "id": "RiviÃ¨re-Nouvelle JCT",
         "pole": "Junction (230 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             48.055497,
@@ -58796,6 +59392,7 @@
       "properties": {
         "id": "RiviÃ¨re-Nouvelle",
         "pole": "Generation (230 kV)",
+        "node_type": "Generation",
         "nodes": [
           [
             48.249686,
@@ -58819,6 +59416,7 @@
       "properties": {
         "id": "Carleton JCT",
         "pole": "Junction (230 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             48.117031,
@@ -58842,6 +59440,7 @@
       "properties": {
         "id": "Carleton",
         "pole": "Generation (230 kV)",
+        "node_type": "Generation",
         "nodes": [
           [
             48.173699,
@@ -58865,6 +59464,7 @@
       "properties": {
         "id": "Laurentides JCT",
         "pole": "Junction (230 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             46.875732,
@@ -58888,6 +59488,7 @@
       "properties": {
         "id": "Frontenac-2",
         "pole": "Distribution (315 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             46.831866,
@@ -58911,6 +59512,7 @@
       "properties": {
         "id": "Limoilou",
         "pole": "Distribution (230 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             46.829855,
@@ -58934,6 +59536,7 @@
       "properties": {
         "id": "Frontenac-1",
         "pole": "Distribution (315 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             46.832806,
@@ -58957,6 +59560,7 @@
       "properties": {
         "id": "Compagnie Papiers Stadacona S.E.C.",
         "pole": "Industrial (230 kV)",
+        "node_type": "Industrial",
         "nodes": [
           [
             46.828055,
@@ -58980,6 +59584,7 @@
       "properties": {
         "id": "Bersimis-1",
         "pole": "Generation (315 kV)",
+        "node_type": "Generation",
         "nodes": [
           [
             49.295233,
@@ -59003,6 +59608,7 @@
       "properties": {
         "id": "Anne-HÃ©bert",
         "pole": "Distribution (315 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             46.751804,
@@ -59026,6 +59632,7 @@
       "properties": {
         "id": "Brossard JCT",
         "pole": "Junction (315 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             45.446874,
@@ -59049,6 +59656,7 @@
       "properties": {
         "id": "Saint-Bruno-de-Montarville",
         "pole": "Distribution (315 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.513654,
@@ -59072,6 +59680,7 @@
       "properties": {
         "id": "Bersimis-2",
         "pole": "Generation (315 kV)",
+        "node_type": "Generation",
         "nodes": [
           [
             49.171281,
@@ -59095,6 +59704,7 @@
       "properties": {
         "id": "Manicouagan",
         "pole": "Terminal (735 kV)",
+        "node_type": "Terminal",
         "nodes": [
           [
             49.291916,
@@ -59118,6 +59728,7 @@
       "properties": {
         "id": "Les Basques",
         "pole": "Distribution (315 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             48.346519,
@@ -59141,6 +59752,7 @@
       "properties": {
         "id": "Charlevoix",
         "pole": "Distribution (315 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             47.690757,
@@ -59164,6 +59776,7 @@
       "properties": {
         "id": "Charland JCT",
         "pole": "Junction (315 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             45.63741,
@@ -59187,6 +59800,7 @@
       "properties": {
         "id": "Anjou",
         "pole": "Distribution (315 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.613337,
@@ -59210,6 +59824,7 @@
       "properties": {
         "id": "BÃ©langer JCT",
         "pole": "Junction (315 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             45.59125,
@@ -59233,6 +59848,7 @@
       "properties": {
         "id": "Charland",
         "pole": "Distribution (315 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.560216,
@@ -59256,6 +59872,7 @@
       "properties": {
         "id": "Saint-Michel",
         "pole": "Distribution (315 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.584357,
@@ -59279,6 +59896,7 @@
       "properties": {
         "id": "Lachenaie",
         "pole": "Distribution (315 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.725663,
@@ -59302,6 +59920,7 @@
       "properties": {
         "id": "Manic-2",
         "pole": "Generation (315 kV)",
+        "node_type": "Generation",
         "nodes": [
           [
             49.321295,
@@ -59325,6 +59944,7 @@
       "properties": {
         "id": "Outardes-2",
         "pole": "Generation (315 kV)",
+        "node_type": "Generation",
         "nodes": [
           [
             49.144476,
@@ -59348,6 +59968,7 @@
       "properties": {
         "id": "Manic-3",
         "pole": "Generation (315 kV)",
+        "node_type": "Generation",
         "nodes": [
           [
             49.738504,
@@ -59371,6 +59992,7 @@
       "properties": {
         "id": "Micoua",
         "pole": "Terminal (735 kV)",
+        "node_type": "Terminal",
         "nodes": [
           [
             49.767261,
@@ -59394,6 +60016,7 @@
       "properties": {
         "id": "Outardes-3",
         "pole": "Generation (315 kV)",
+        "node_type": "Generation",
         "nodes": [
           [
             49.557292,
@@ -59417,6 +60040,7 @@
       "properties": {
         "id": "Manic-5",
         "pole": "Generation (315 kV)",
+        "node_type": "Generation",
         "nodes": [
           [
             50.639811,
@@ -59440,6 +60064,7 @@
       "properties": {
         "id": "Manic-5A",
         "pole": "Generation (315 kV)",
+        "node_type": "Generation",
         "nodes": [
           [
             50.656795,
@@ -59463,6 +60088,7 @@
       "properties": {
         "id": "Outardes-4",
         "pole": "Generation (315 kV)",
+        "node_type": "Generation",
         "nodes": [
           [
             49.703688,
@@ -59486,6 +60112,7 @@
       "properties": {
         "id": "Lac Bloom JCT",
         "pole": "Junction (315 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             52.783092,
@@ -59509,6 +60136,7 @@
       "properties": {
         "id": "Lac Bloom",
         "pole": "Industrial (315 kV)",
+        "node_type": "Industrial",
         "nodes": [
           [
             52.797815,
@@ -59532,6 +60160,7 @@
       "properties": {
         "id": "Montagnais",
         "pole": "Terminal (735 kV)",
+        "node_type": "Terminal",
         "nodes": [
           [
             51.892644,
@@ -59555,6 +60184,7 @@
       "properties": {
         "id": "Blainville JCT",
         "pole": "Junction (315 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             45.655477,
@@ -59578,6 +60208,7 @@
       "properties": {
         "id": "Blainville",
         "pole": "Distribution (315 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.687802,
@@ -59601,6 +60232,7 @@
       "properties": {
         "id": "ChÃ©nier",
         "pole": "Terminal (735 kV)",
+        "node_type": "Terminal",
         "nodes": [
           [
             45.58773,
@@ -59624,6 +60256,7 @@
       "properties": {
         "id": "Roussillon",
         "pole": "Distribution (315 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.39549,
@@ -59647,6 +60280,7 @@
       "properties": {
         "id": "Hertel",
         "pole": "Terminal (735 kV)",
+        "node_type": "Terminal",
         "nodes": [
           [
             45.409898,
@@ -59670,6 +60304,7 @@
       "properties": {
         "id": "Sources",
         "pole": "Distribution (315 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.488184,
@@ -59693,6 +60328,7 @@
       "properties": {
         "id": "Le Corbusier",
         "pole": "Distribution (315 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.590243,
@@ -59716,6 +60352,7 @@
       "properties": {
         "id": "Patriotes JCT",
         "pole": "Junction (315 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             45.590143,
@@ -59739,6 +60376,7 @@
       "properties": {
         "id": "Patriotes",
         "pole": "Distribution (315 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.548582,
@@ -59762,6 +60400,7 @@
       "properties": {
         "id": "Du Tremblay JCT",
         "pole": "Junction (315 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             45.566828,
@@ -59785,6 +60424,7 @@
       "properties": {
         "id": "Du Tremblay",
         "pole": "Distribution (315 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.547511,
@@ -59808,6 +60448,7 @@
       "properties": {
         "id": "Mittal Canada Inc. Longueuil JCT",
         "pole": "Junction (315 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             45.567478,
@@ -59831,6 +60472,7 @@
       "properties": {
         "id": "Mittal Canada Inc. Longueuil",
         "pole": "Industrial (315 kV)",
+        "node_type": "Industrial",
         "nodes": [
           [
             45.569561,
@@ -59854,6 +60496,7 @@
       "properties": {
         "id": "Jacques-Cartier",
         "pole": "Terminal (735 kV)",
+        "node_type": "Terminal",
         "nodes": [
           [
             46.792719,
@@ -59877,6 +60520,7 @@
       "properties": {
         "id": "Leneuf",
         "pole": "Distribution (315 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             46.723337,
@@ -59900,6 +60544,7 @@
       "properties": {
         "id": "NeufchÃ¢tel",
         "pole": "Distribution (315 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             46.835565,
@@ -59923,6 +60568,7 @@
       "properties": {
         "id": "Pierre-Le Gardeur JCT",
         "pole": "Junction (315 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             45.774662,
@@ -59946,6 +60592,7 @@
       "properties": {
         "id": "Langelier",
         "pole": "Distribution (315 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.601618,
@@ -59969,6 +60616,7 @@
       "properties": {
         "id": "Saint-Patrick",
         "pole": "Distribution (315 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.474706,
@@ -59992,6 +60640,7 @@
       "properties": {
         "id": "Des Irlandais",
         "pole": "Distribution (315 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             45.488031,
@@ -60015,6 +60664,7 @@
       "properties": {
         "id": "Kamouraska",
         "pole": "Switching (315 kV)",
+        "node_type": "Switching",
         "nodes": [
           [
             47.462092,
@@ -60038,6 +60688,7 @@
       "properties": {
         "id": "Nicolas-Riou JCT",
         "pole": "Junction (315 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             48.130525,
@@ -60061,6 +60712,7 @@
       "properties": {
         "id": "Nicolas-Riou",
         "pole": "Generation (315 kV)",
+        "node_type": "Generation",
         "nodes": [
           [
             48.129658,
@@ -60084,6 +60736,7 @@
       "properties": {
         "id": "Madawaska",
         "pole": "Switching (345 kV)",
+        "node_type": "Switching",
         "nodes": [
           [
             47.508839,
@@ -60107,6 +60760,7 @@
       "properties": {
         "id": "Le Plateau",
         "pole": "Generation (315 kV)",
+        "node_type": "Generation",
         "nodes": [
           [
             48.138114,
@@ -60130,6 +60784,7 @@
       "properties": {
         "id": "Lac-Alfred JCT",
         "pole": "Junction (315 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             48.161337,
@@ -60153,6 +60808,7 @@
       "properties": {
         "id": "Lac-Alfred",
         "pole": "Generation (315 kV)",
+        "node_type": "Generation",
         "nodes": [
           [
             48.389016,
@@ -60176,6 +60832,7 @@
       "properties": {
         "id": "Delisle",
         "pole": "Industrial (345 kV)",
+        "node_type": "Industrial",
         "nodes": [
           [
             48.591575,
@@ -60199,6 +60856,7 @@
       "properties": {
         "id": "RiviÃ¨re-du-Moulin JCT",
         "pole": "Junction (345 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             47.876917,
@@ -60222,6 +60880,7 @@
       "properties": {
         "id": "Alain-Grandbois",
         "pole": "Distribution (315 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             46.659235,
@@ -60245,6 +60904,7 @@
       "properties": {
         "id": "Duchesnay JCT",
         "pole": "Junction (315 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             46.798536,
@@ -60268,6 +60928,7 @@
       "properties": {
         "id": "Duchesnay",
         "pole": "Distribution (315 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             46.828135,
@@ -60291,6 +60952,7 @@
       "properties": {
         "id": "Deschambault",
         "pole": "Switching (315 kV)",
+        "node_type": "Switching",
         "nodes": [
           [
             46.702095,
@@ -60314,6 +60976,7 @@
       "properties": {
         "id": "Alcoa Deschambault",
         "pole": "Industrial (315 kV)",
+        "node_type": "Industrial",
         "nodes": [
           [
             46.698835,
@@ -60337,6 +61000,7 @@
       "properties": {
         "id": "IPT Madawaska 1",
         "pole": "Interprovincial (315 kV)",
+        "node_type": "Interprovincial",
         "nodes": [
           [
             47.45859,
@@ -60360,6 +61024,7 @@
       "properties": {
         "id": "IPT Madawaska 2",
         "pole": "Interprovincial (345 kV)",
+        "node_type": "Interprovincial",
         "nodes": [
           [
             47.458752,
@@ -60383,6 +61048,7 @@
       "properties": {
         "id": "Sainte-Marguerite-3",
         "pole": "Generation (315 kV)",
+        "node_type": "Generation",
         "nodes": [
           [
             50.714911,
@@ -60406,6 +61072,7 @@
       "properties": {
         "id": "Toulnustouc",
         "pole": "Generation (315 kV)",
+        "node_type": "Generation",
         "nodes": [
           [
             49.970609,
@@ -60429,6 +61096,7 @@
       "properties": {
         "id": "Romaine-2",
         "pole": "Generation (315 kV)",
+        "node_type": "Generation",
         "nodes": [
           [
             50.61578,
@@ -60452,6 +61120,7 @@
       "properties": {
         "id": "Murailles",
         "pole": "Terminal (315 kV)",
+        "node_type": "Terminal",
         "nodes": [
           [
             50.617891,
@@ -60475,6 +61144,7 @@
       "properties": {
         "id": "Romaine-3",
         "pole": "Generation (735 kV)",
+        "node_type": "Generation",
         "nodes": [
           [
             51.113405,
@@ -60498,6 +61168,7 @@
       "properties": {
         "id": "Romaine-4",
         "pole": "Generation (735 kV)",
+        "node_type": "Generation",
         "nodes": [
           [
             51.349728,
@@ -60521,6 +61192,7 @@
       "properties": {
         "id": "Abitibi",
         "pole": "Terminal (735 kV)",
+        "node_type": "Terminal",
         "nodes": [
           [
             49.82676,
@@ -60544,6 +61216,7 @@
       "properties": {
         "id": "Waswanipi",
         "pole": "Distribution (315 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             49.613084,
@@ -60567,6 +61240,7 @@
       "properties": {
         "id": "Radisson",
         "pole": "Terminal (735 kV)",
+        "node_type": "Terminal",
         "nodes": [
           [
             53.726127,
@@ -60590,6 +61264,7 @@
       "properties": {
         "id": "La Grande-2A",
         "pole": "Generation (315 kV)",
+        "node_type": "Generation",
         "nodes": [
           [
             53.781361,
@@ -60613,6 +61288,7 @@
       "properties": {
         "id": "Brisay",
         "pole": "Generation (315 kV)",
+        "node_type": "Generation",
         "nodes": [
           [
             54.44902,
@@ -60636,6 +61312,7 @@
       "properties": {
         "id": "Laforge-2",
         "pole": "Generation (315 kV)",
+        "node_type": "Generation",
         "nodes": [
           [
             54.588356,
@@ -60659,6 +61336,7 @@
       "properties": {
         "id": "Nikamo",
         "pole": "Switching (315 kV)",
+        "node_type": "Switching",
         "nodes": [
           [
             54.154545,
@@ -60682,6 +61360,7 @@
       "properties": {
         "id": "Laforge-1",
         "pole": "Generation (315 kV)",
+        "node_type": "Generation",
         "nodes": [
           [
             54.167523,
@@ -60705,6 +61384,7 @@
       "properties": {
         "id": "Tilly",
         "pole": "Terminal (735 kV)",
+        "node_type": "Terminal",
         "nodes": [
           [
             53.871672,
@@ -60728,6 +61408,7 @@
       "properties": {
         "id": "Nemiscau",
         "pole": "Distribution (735 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             51.709993,
@@ -60751,6 +61432,7 @@
       "properties": {
         "id": "Eastmain-1",
         "pole": "Generation (315 kV)",
+        "node_type": "Generation",
         "nodes": [
           [
             52.183013,
@@ -60774,6 +61456,7 @@
       "properties": {
         "id": "Beauport JCT",
         "pole": "Junction (315 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             46.901125,
@@ -60797,6 +61480,7 @@
       "properties": {
         "id": "BeauprÃ©",
         "pole": "Distribution (315 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             47.057459,
@@ -60820,6 +61504,7 @@
       "properties": {
         "id": "Le FranÃ§ois",
         "pole": "Distribution (315 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             46.935637,
@@ -60843,6 +61528,7 @@
       "properties": {
         "id": "Beauport",
         "pole": "Distribution (315 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             46.884178,
@@ -60866,6 +61552,7 @@
       "properties": {
         "id": "Baie-Saint-Paul",
         "pole": "Distribution (315 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             47.452379,
@@ -60889,6 +61576,7 @@
       "properties": {
         "id": "Seigneurie de BeauprÃ© JCT",
         "pole": "Junction (315 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             47.235164,
@@ -60912,6 +61600,7 @@
       "properties": {
         "id": "Seigneurie de BeauprÃ©",
         "pole": "Generation (315 kV)",
+        "node_type": "Generation",
         "nodes": [
           [
             47.325569,
@@ -60935,6 +61624,7 @@
       "properties": {
         "id": "Sarcelle",
         "pole": "Generation (315 kV)",
+        "node_type": "Generation",
         "nodes": [
           [
             52.667913,
@@ -60958,6 +61648,7 @@
       "properties": {
         "id": "Jean-R Marcotte JCT",
         "pole": "Junction (315 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             45.675555,
@@ -60981,6 +61672,7 @@
       "properties": {
         "id": "Jean-R Marcotte",
         "pole": "Industrial (315 kV)",
+        "node_type": "Industrial",
         "nodes": [
           [
             45.675642,
@@ -61004,6 +61696,7 @@
       "properties": {
         "id": "Grondines",
         "pole": "Switching (450 kV)",
+        "node_type": "Switching",
         "nodes": [
           [
             46.625728,
@@ -61027,6 +61720,7 @@
       "properties": {
         "id": "LotbiniÃ¨re",
         "pole": "Switching (450 kV)",
+        "node_type": "Switching",
         "nodes": [
           [
             46.592951,
@@ -61050,6 +61744,7 @@
       "properties": {
         "id": "INT Sandy Pond 1",
         "pole": "International (450 kV)",
+        "node_type": "International",
         "nodes": [
           [
             45.011385,
@@ -61073,6 +61768,7 @@
       "properties": {
         "id": "INT Sandy Pond 2",
         "pole": "International (450 kV)",
+        "node_type": "International",
         "nodes": [
           [
             45.011385,
@@ -61096,6 +61792,7 @@
       "properties": {
         "id": "Outardes",
         "pole": "Terminal (735 kV)",
+        "node_type": "Terminal",
         "nodes": [
           [
             49.727807,
@@ -61119,6 +61816,7 @@
       "properties": {
         "id": "PÃ©rigny",
         "pole": "Switching (735 kV)",
+        "node_type": "Switching",
         "nodes": [
           [
             48.165975,
@@ -61142,6 +61840,7 @@
       "properties": {
         "id": "Bergeronnes",
         "pole": "Switching (735 kV)",
+        "node_type": "Switching",
         "nodes": [
           [
             48.341426,
@@ -61165,6 +61864,7 @@
       "properties": {
         "id": "Chamouchouane",
         "pole": "Switching (735 kV)",
+        "node_type": "Switching",
         "nodes": [
           [
             48.66556,
@@ -61188,6 +61888,7 @@
       "properties": {
         "id": "INT Massena Dundee",
         "pole": "International (765 kV)",
+        "node_type": "International",
         "nodes": [
           [
             44.996951,
@@ -61211,6 +61912,7 @@
       "properties": {
         "id": "IPT Montagnais 1",
         "pole": "Interprovincial (735 kV)",
+        "node_type": "Interprovincial",
         "nodes": [
           [
             52.101531,
@@ -61234,6 +61936,7 @@
       "properties": {
         "id": "IPT Montagnais 2",
         "pole": "Interprovincial (735 kV)",
+        "node_type": "Interprovincial",
         "nodes": [
           [
             52.101707,
@@ -61257,6 +61960,7 @@
       "properties": {
         "id": "IPT Montagnais 3",
         "pole": "Interprovincial (735 kV)",
+        "node_type": "Interprovincial",
         "nodes": [
           [
             52.101895,
@@ -61280,6 +61984,7 @@
       "properties": {
         "id": "Le Moyne",
         "pole": "Switching (735 kV)",
+        "node_type": "Switching",
         "nodes": [
           [
             53.484125,
@@ -61303,6 +62008,7 @@
       "properties": {
         "id": "Chissibi",
         "pole": "Switching (735 kV)",
+        "node_type": "Switching",
         "nodes": [
           [
             53.733522,
@@ -61326,6 +62032,7 @@
       "properties": {
         "id": "Albanel",
         "pole": "Switching (735 kV)",
+        "node_type": "Switching",
         "nodes": [
           [
             51.669994,
@@ -61349,6 +62056,7 @@
       "properties": {
         "id": "La Grande-2",
         "pole": "Generation (735 kV)",
+        "node_type": "Generation",
         "nodes": [
           [
             53.782776,
@@ -61372,6 +62080,7 @@
       "properties": {
         "id": "Opinaca-1",
         "pole": "Terminal (735 kV)",
+        "node_type": "Terminal",
         "nodes": [
           [
             52.36853,
@@ -61395,6 +62104,7 @@
       "properties": {
         "id": "Opinaca-2",
         "pole": "Terminal (735 kV)",
+        "node_type": "Terminal",
         "nodes": [
           [
             52.272739,
@@ -61418,6 +62128,7 @@
       "properties": {
         "id": "Opinaca-3",
         "pole": "Terminal (735 kV)",
+        "node_type": "Terminal",
         "nodes": [
           [
             52.272398,
@@ -61441,6 +62152,7 @@
       "properties": {
         "id": "La Grande-3",
         "pole": "Generation (735 kV)",
+        "node_type": "Generation",
         "nodes": [
           [
             53.727381,
@@ -61464,6 +62176,7 @@
       "properties": {
         "id": "La Grande-4",
         "pole": "Generation (735 kV)",
+        "node_type": "Generation",
         "nodes": [
           [
             53.886381,
@@ -61487,6 +62200,7 @@
       "properties": {
         "id": "INT Maine",
         "pole": "International (320 kV)",
+        "node_type": "International",
         "nodes": [
           [
             45.515639,
@@ -61510,6 +62224,7 @@
       "properties": {
         "id": "INT Champlain",
         "pole": "International (400 kV)",
+        "node_type": "International",
         "nodes": [
           [
             45.010725,
@@ -61533,6 +62248,7 @@
       "properties": {
         "id": "IPT Beauharnois 2",
         "pole": "Interprovincial (230 kV)",
+        "node_type": "Interprovincial",
         "nodes": [
           [
             45.239565,
@@ -61556,6 +62272,7 @@
       "properties": {
         "id": "IPT Beauharnois 1",
         "pole": "Interprovincial (230 kV)",
+        "node_type": "Interprovincial",
         "nodes": [
           [
             45.239219,
@@ -61579,6 +62296,7 @@
       "properties": {
         "id": "Chute-Ã -Caron",
         "pole": "Generation (161 kV)",
+        "node_type": "Generation",
         "nodes": [
           [
             48.450727,
@@ -61602,6 +62320,7 @@
       "properties": {
         "id": "Shipshaw 1 JCT",
         "pole": "Junction (161 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             48.445522,
@@ -61625,6 +62344,7 @@
       "properties": {
         "id": "Alcan Usine JonquiÃ¨re",
         "pole": "Industrial (161 kV)",
+        "node_type": "Industrial",
         "nodes": [
           [
             48.432744,
@@ -61648,6 +62368,7 @@
       "properties": {
         "id": "Shipshaw",
         "pole": "Generation (161 kV)",
+        "node_type": "Generation",
         "nodes": [
           [
             48.447041,
@@ -61671,6 +62392,7 @@
       "properties": {
         "id": "Shipshaw 2 JCT",
         "pole": "Junction (161 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             48.45387,
@@ -61694,6 +62416,7 @@
       "properties": {
         "id": "Chute-du-diable",
         "pole": "Generation (161 kV)",
+        "node_type": "Generation",
         "nodes": [
           [
             48.780431,
@@ -61717,6 +62440,7 @@
       "properties": {
         "id": "Chute-Ã -la-Savane",
         "pole": "Generation (161 kV)",
+        "node_type": "Generation",
         "nodes": [
           [
             48.751506,
@@ -61740,6 +62464,7 @@
       "properties": {
         "id": "LÃŽle",
         "pole": "Distribution (161 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             48.645185,
@@ -61763,6 +62488,7 @@
       "properties": {
         "id": "Alcan Usine Alma",
         "pole": "Industrial (161 kV)",
+        "node_type": "Industrial",
         "nodes": [
           [
             48.583205,
@@ -61786,6 +62512,7 @@
       "properties": {
         "id": "Chute-des-Passes",
         "pole": "Distribution (345 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             49.840667,
@@ -61809,6 +62536,7 @@
       "properties": {
         "id": "Elkem Metal Canada JCT",
         "pole": "Junction (161 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             48.421108,
@@ -61832,6 +62560,7 @@
       "properties": {
         "id": "Elkem Metal Canada",
         "pole": "Industrial (161 kV)",
+        "node_type": "Industrial",
         "nodes": [
           [
             48.413181,
@@ -61855,6 +62584,7 @@
       "properties": {
         "id": "Port-Alfred",
         "pole": "Distribution (161 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             48.332362,
@@ -61878,6 +62608,7 @@
       "properties": {
         "id": "Alcan Usine Grande-Baie JCT",
         "pole": "Junction (161 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             48.353121,
@@ -61901,6 +62632,7 @@
       "properties": {
         "id": "La Baie JCT",
         "pole": "Junction (161 kV)",
+        "node_type": "Junction",
         "nodes": [
           [
             48.313523,
@@ -61924,6 +62656,7 @@
       "properties": {
         "id": "Alcan Usine Grande-Baie",
         "pole": "Industrial (161 kV)",
+        "node_type": "Industrial",
         "nodes": [
           [
             48.308822,
@@ -61947,6 +62680,7 @@
       "properties": {
         "id": "La Baie",
         "pole": "Distribution (161 kV)",
+        "node_type": "Distribution",
         "nodes": [
           [
             48.311315,
@@ -61970,6 +62704,7 @@
       "properties": {
         "id": "Papier Masson Inc.",
         "pole": "Industrial (120 kV)",
+        "node_type": "Industrial",
         "nodes": [
           [
             45.540219,
@@ -61993,6 +62728,7 @@
       "properties": {
         "id": "IPT Chats Falls 1",
         "pole": "Interprovincial (230 kV)",
+        "node_type": "Interprovincial",
         "nodes": [
           [
             45.516802,
@@ -62016,6 +62752,7 @@
       "properties": {
         "id": "IPT Chats Falls 2",
         "pole": "Interprovincial (230 kV)",
+        "node_type": "Interprovincial",
         "nodes": [
           [
             45.516733,
@@ -62039,6 +62776,7 @@
       "properties": {
         "id": "IPT Chenaux",
         "pole": "Interprovincial (120 kV)",
+        "node_type": "Interprovincial",
         "nodes": [
           [
             45.632663,

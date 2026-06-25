@@ -36,6 +36,7 @@ de session.
 - [x] Connecter les DC avec le poste électrique le plus proche 
 - [ ] Animation de flux ? 
 - [x] Faire un filtre IA
+- [ ] Afficher les centrales distinctement
 
 ---
 
