@@ -1627,3 +1627,61 @@ body:not(.theme-sombre) .popup-link:hover {
     font-size: 0.8rem;
   }
 }
+
+/* ---- Animations du flux d'électrons ---- */
+
+/* Règles de base pour les lignes de transport haute tension */
+.flow-line-transmission {
+  /* Pas de filtre drop-shadow gourmand pour préserver les performances de rendu */
+}
+
+/* 735 kV : Électrons très rapides et gros tirets */
+.flow-transmission-735.animate-flow {
+  stroke-dasharray: 10, 10;
+  animation: flow-735 5.0s linear infinite;
+}
+@keyframes flow-735 {
+  from { stroke-dashoffset: 40; }
+  to { stroke-dashoffset: 0; }
+}
+
+/* 315 - 450 kV : Électrons rapides */
+.flow-transmission-315.animate-flow {
+  stroke-dasharray: 8, 8;
+  animation: flow-315 5.0s linear infinite;
+}
+@keyframes flow-315 {
+  from { stroke-dashoffset: 32; }
+  to { stroke-dashoffset: 0; }
+}
+
+/* 230 kV : Électrons à vitesse moyenne */
+.flow-transmission-230.animate-flow {
+  stroke-dasharray: 6, 6;
+  animation: flow-230 5.0s linear infinite;
+}
+@keyframes flow-230 {
+  from { stroke-dashoffset: 24; }
+  to { stroke-dashoffset: 0; }
+}
+
+/* 120 - 161 kV : Électrons lents et petits tirets */
+.flow-transmission-120.animate-flow {
+  stroke-dasharray: 4, 6;
+  animation: flow-120 5.0s linear infinite;
+}
+@keyframes flow-120 {
+  from { stroke-dashoffset: 20; }
+  to { stroke-dashoffset: 0; }
+}
+
+/* Liaisons électriques finales (poste -> datacenter) - Animées en continu car légères (pas de filtre) */
+.flow-line-dc {
+  stroke-dasharray: 5, 5;
+  animation: flow-dc 5.0s linear infinite;
+}
+
+@keyframes flow-dc {
+  from { stroke-dashoffset: 20; }
+  to { stroke-dashoffset: 0; }
+}

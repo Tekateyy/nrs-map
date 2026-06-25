@@ -354,6 +354,37 @@ Promise.all([
 ])
   .then(([geojson, densityMap, polysGeojson, hqGeojson, loadedConnectionsGeojson]) => {
     connectionsGeojson = loadedConnectionsGeojson;
+
+    // 1. Orienter le sens des liaisons électriques (du poste vers le centre de données)
+    if (connectionsGeojson && connectionsGeojson.features) {
+      connectionsGeojson.features.forEach(f => {
+        if (f.geometry && f.geometry.type === 'LineString') {
+          // Dans connections.geojson, l'ordre d'origine est [datacenter, substation].
+          // On l'inverse pour orienter le tracé et donc l'animation de la source (poste) vers le datacenter.
+          f.geometry.coordinates.reverse();
+        }
+      });
+    }
+
+    // 2. Orienter le réseau haute tension d'Hydro-Québec (Nord-Est -> Sud-Ouest)
+    if (hqGeojson && hqGeojson.features) {
+      hqGeojson.features.forEach(f => {
+        if (f.properties?.isLine === true && f.geometry && f.geometry.type === 'LineString') {
+          const coords = f.geometry.coordinates;
+          if (coords.length >= 2) {
+            const start = coords[0];
+            const end = coords[coords.length - 1];
+            // Score pondéré 2*lat + lng (plus élevé = plus au Nord et à l'Est)
+            const scoreStart = 2 * start[1] + start[0];
+            const scoreEnd = 2 * end[1] + end[0];
+            if (scoreStart < scoreEnd) {
+              coords.reverse();
+            }
+          }
+        }
+      });
+    }
+
     // Remplir les dates de collecte dans le tableau du À Propos
     const dateDatacentersEl = document.getElementById('date-datacenters');
     const dateBatiEl = document.getElementById('date-bati');
@@ -393,7 +424,8 @@ Promise.all([
           color: cfg.couleur,
           weight: 1.5,
           opacity: 0.6,
-          dashArray: '4, 6'
+          dashArray: '4, 6',
+          className: 'flow-line-dc'
         };
       },
       onEachFeature: (feature, layer) => {
@@ -427,7 +459,20 @@ Promise.all([
       filter: feature => feature.properties.isLine === true,
       style: feature => {
         const { color, weight, opacity, dashArray } = getHqStyleParams(feature.properties.pole);
-        return { color, weight, opacity, dashArray };
+        const match = (feature.properties.pole || '').match(/(\d+)\s*kV/);
+        const kv = match ? parseInt(match[1], 10) : 0;
+        let speedClass = 'flow-transmission-120';
+        if (kv >= 735) speedClass = 'flow-transmission-735';
+        else if (kv >= 315) speedClass = 'flow-transmission-315';
+        else if (kv >= 230) speedClass = 'flow-transmission-230';
+
+        return { 
+          color, 
+          weight, 
+          opacity, 
+          dashArray, 
+          className: `flow-line-transmission ${speedClass}` 
+        };
       },
       onEachFeature: (feature, layer) => {
         const p = feature.properties;
@@ -529,6 +574,50 @@ Promise.all([
     }
     map.on('zoomend', updateNodesRadius);
 
+    // Mettre à jour l'animation des lignes selon la visibilité et le zoom
+    function updateLineAnimations() {
+      if (!map || !hqLinesLayer) return;
+      const bounds = map.getBounds();
+      const zoom = map.getZoom();
+
+      // On n'anime les lignes 120 kV et 230 kV que si le niveau de zoom est assez proche (zoom >= 10)
+      // et que la ligne est actuellement visible à l'écran.
+      const animateLowVoltage = zoom >= 10;
+
+      hqLinesLayer.eachLayer(layer => {
+        if (!layer.feature || !layer.feature.properties) return;
+        const p = layer.feature.properties;
+        const match = (p.pole || '').match(/(\d+)\s*kV/);
+        const kv = match ? parseInt(match[1], 10) : 0;
+
+        let shouldAnimate = false;
+
+        if (layer.getBounds) {
+          const lineBounds = layer.getBounds();
+          const isVisible = bounds.intersects(lineBounds);
+
+          if (kv >= 315) {
+            // Toujours animer les lignes principales (735 et 315 kV) si visibles
+            shouldAnimate = isVisible;
+          } else {
+            // Animer les lignes secondaires (120 et 230 kV) si visibles ET zoom >= 10
+            shouldAnimate = animateLowVoltage && isVisible;
+          }
+        }
+
+        const el = layer.getElement();
+        if (el) {
+          if (shouldAnimate) {
+            el.classList.add('animate-flow');
+          } else {
+            el.classList.remove('animate-flow');
+          }
+        }
+      });
+    }
+
+    map.on('moveend', updateLineAnimations);
+
     // Gestion du filtrage par niveau de tension
     let selectedVoltage = null;
 
@@ -576,8 +665,9 @@ Promise.all([
       });
       hqNodesLayer.addData(pointFeatures);
 
-      // Ré-appliquer la taille dynamique des postes
+      // Ré-appliquer la taille dynamique des postes et l'animation des lignes
       updateNodesRadius();
+      updateLineAnimations();
     }
 
     // Cabler le clic sur la légende pour filtrer les tensions
@@ -712,10 +802,13 @@ Promise.all([
     // Afficher tous les marqueurs
     applyFilters();
 
-    // Centrer la carte sur l'emprise des points
-    if (bounds.length) {
-      map.fitBounds(bounds, { padding: [40, 40] });
-    }
+     // Centrer la carte sur l'emprise des points
+     if (bounds.length) {
+       map.fitBounds(bounds, { padding: [40, 40] });
+     }
+     
+     // Premier calcul des animations pour les éléments visibles
+     setTimeout(updateLineAnimations, 200);
   })
   .catch(err => {
     console.error('Erreur de chargement :', err);

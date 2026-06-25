@@ -34,9 +34,9 @@ de session.
 - [x] Responsive design
 - [ ] Barre de recherche par nom de site et ville - Plus très sur de la pertinence pour celui là
 - [x] Connecter les DC avec le poste électrique le plus proche 
-- [ ] Animation de flux ? 
+- [x] Animation de flux
 - [x] Faire un filtre IA
-- [ ] Afficher les centrales distinctement
+- [x] Afficher les centrales distinctement
 
 ---
 
