@@ -47,9 +47,13 @@ function basculerFond() {
 }
 
 // ---- État : marqueurs et filtres actifs ----
-let allMarkers = [];   // [{ marker, type, hebergeur }]
+let allMarkers = [];   // [{ marker, type, hebergeur, estimatedPower, surfaceSqFt, equipIA, uniqid }]
 let selectedType = null;
 let selectedHebergeur = null;
+let filterAI = false;
+let hqNodesVisible = true;
+let connectionsLayer = null;
+let connectionsGeojson = null;
 
 // ---- Config icônes par type ----
 const ICON_CONFIG = {
@@ -147,6 +151,7 @@ function buildPopup(p, densityMap) {
     <div class="popup-row"><span class="popup-label">Puissance annoncée</span><span class="popup-value">${p.PuissanceAnnMW !== null ? p.PuissanceAnnMW + ' MW' : '—'}</span></div>
     <div class="popup-row"><span class="popup-label">Puissance estimée</span><span class="popup-value">${puissEstStr}</span></div>
     <div class="popup-row"><span class="popup-label">Bâtiments</span><span class="popup-value">${val(p.NombreBatiments)}</span></div>
+    <div class="popup-row"><span class="popup-label">Équipé pour l'IA</span><span class="popup-value">${p.ÉquipIA === 'IA' ? 'Oui ✅' : 'Non'}</span></div>
     <div class="popup-row"><span class="popup-label">Site web</span><span class="popup-value">${lien}</span></div>
   `;
 }
@@ -270,13 +275,15 @@ function applyFilters() {
   let totalSurfaceSqFt = 0;
   let countWithSurface = 0;
   const hostCounts = {};
+  const visibleDatacenterIds = new Set();
 
-  for (const { marker, type, hebergeur, estimatedPower, surfaceSqFt } of allMarkers) {
+  for (const { marker, type, hebergeur, estimatedPower, surfaceSqFt, equipIA, uniqid } of allMarkers) {
     const matchType = !selectedType || type === selectedType;
     const matchHebergeur = !selectedHebergeur || hebergeur === selectedHebergeur;
+    const matchAI = !filterAI || equipIA === 'IA';
     
     // Affichage sur la carte (tient compte de tous les filtres)
-    if (matchType && matchHebergeur) {
+    if (matchType && matchHebergeur && matchAI) {
       clusterGroup.addLayer(marker);
       countVisible++;
       if (estimatedPower !== null && estimatedPower !== undefined) {
@@ -287,16 +294,34 @@ function applyFilters() {
         totalSurfaceSqFt += surfaceSqFt;
         countWithSurface++;
       }
+      if (uniqid) {
+        visibleDatacenterIds.add(uniqid);
+      }
     }
 
     // Répartition par hébergeur (indépendante du filtre hébergeur actif pour éviter de vider la liste)
-    if (matchType) {
+    if (matchType && matchAI) {
       hostCounts[hebergeur] = (hostCounts[hebergeur] || 0) + 1;
     }
   }
 
   updateStatsUI(countVisible, totalPower, countWithPower, totalSurfaceSqFt, countWithSurface);
   updateHostBreakdownUI(hostCounts);
+  updateConnections(visibleDatacenterIds);
+}
+
+// ---- Mise à jour des lignes de connexion datacenters -> postes ----
+function updateConnections(visibleDatacenterIds) {
+  if (!connectionsLayer || !connectionsGeojson) return;
+
+  connectionsLayer.clearLayers();
+
+  if (hqNodesVisible) {
+    const filteredFeatures = connectionsGeojson.features.filter(f => 
+      visibleDatacenterIds.has(f.properties.datacenter_id)
+    );
+    connectionsLayer.addData(filteredFeatures);
+  }
 }
 
 // ---- Chargement des données ----
@@ -309,9 +334,11 @@ Promise.all([
   fetchJSON('/datacenters.geojson'),
   fetchJSON('/datacenter_types.json'),
   fetchJSON('/DCbati_poly.geojson'),
-  fetchJSON('/Hydro-Quebec.geojson')
+  fetchJSON('/Hydro-Quebec.geojson'),
+  fetchJSON('/connections.geojson')
 ])
-  .then(([geojson, densityMap, polysGeojson, hqGeojson]) => {
+  .then(([geojson, densityMap, polysGeojson, hqGeojson, loadedConnectionsGeojson]) => {
+    connectionsGeojson = loadedConnectionsGeojson;
     // Remplir les dates de collecte dans le tableau du À Propos
     const dateDatacentersEl = document.getElementById('date-datacenters');
     const dateBatiEl = document.getElementById('date-bati');
@@ -340,6 +367,44 @@ Promise.all([
         return { color: cfg.couleur, fillColor: cfg.couleur, fillOpacity: 0.25, weight: 1.5, opacity: 0.7 };
       },
       interactive: false,
+    }).addTo(map);
+
+    // Couche des liaisons électriques (overlayPane) - ajoutée sous les lignes de transport
+    connectionsLayer = L.geoJSON(connectionsGeojson, {
+      style: feature => {
+        const type = feature.properties.datacenter_type || 'Inconnu';
+        const cfg = ICON_CONFIG[type] || ICON_CONFIG['Inconnu'];
+        return {
+          color: cfg.couleur,
+          weight: 1.5,
+          opacity: 0.6,
+          dashArray: '4, 6'
+        };
+      },
+      onEachFeature: (feature, layer) => {
+        const p = feature.properties;
+        layer.bindPopup(`
+          <div class="popup-title">Liaison électrique</div>
+          <div class="popup-row"><span class="popup-label">Datacenter</span><span class="popup-value">${val(p.datacenter_name)}</span></div>
+          <div class="popup-row"><span class="popup-label">Poste Hydro-Québec</span><span class="popup-value">${val(p.substation_name)}</span></div>
+          <div class="popup-row"><span class="popup-label">Distance</span><span class="popup-value">${p.distance_km !== undefined ? p.distance_km.toFixed(2) + ' km' : '—'}</span></div>
+        `, { maxWidth: 280 });
+
+        layer.on({
+          mouseover: e => {
+            const l = e.target;
+            l.setStyle({
+              weight: 3.5,
+              opacity: 0.9,
+              dashArray: ''
+            });
+          },
+          mouseout: e => {
+            const l = e.target;
+            connectionsLayer.resetStyle(l);
+          }
+        });
+      }
     }).addTo(map);
 
     // Couche des lignes Hydro-Québec (overlayPane, sous les postes et marqueurs)
@@ -498,7 +563,6 @@ Promise.all([
       });
     }
 
-    let hqNodesVisible = true;
     const btnNodes = document.getElementById('btn-hq-nodes');
     if (btnNodes) {
       btnNodes.addEventListener('click', () => {
@@ -506,6 +570,7 @@ Promise.all([
         btnNodes.classList.toggle('active', hqNodesVisible);
         btnNodes.classList.toggle('inactive', !hqNodesVisible);
         hqNodesVisible ? hqNodesLayer.addTo(map) : map.removeLayer(hqNodesLayer);
+        applyFilters();
       });
     }
 
@@ -530,13 +595,29 @@ Promise.all([
       const puissEst = estimerPuissance(p, densityMap);
       const surfaceSqFt = parseSurfaceSqFt(p.SurfBatimentPI2);
 
-      allMarkers.push({ marker, type, hebergeur, estimatedPower: puissEst, surfaceSqFt });
+      allMarkers.push({ marker, type, hebergeur, estimatedPower: puissEst, surfaceSqFt, equipIA: p.ÉquipIA, uniqid: p.UNIQID });
     }
 
     if (ignorés > 0) console.info(`ℹ️ ${ignorés} site(s) sans coordonnées ignoré(s)`);
 
     // Générer les filtres dynamiquement
     buildClickFilters('filters-type', types, true);
+
+    // Bouton "Équipé pour l'IA"
+    const btnFilterIA = document.getElementById('btn-filter-ia');
+    if (btnFilterIA) {
+      btnFilterIA.addEventListener('click', () => {
+        filterAI = !filterAI;
+        if (filterAI) {
+          btnFilterIA.classList.add('active');
+          btnFilterIA.classList.remove('inactive');
+        } else {
+          btnFilterIA.classList.remove('active');
+          btnFilterIA.classList.remove('inactive');
+        }
+        applyFilters();
+      });
+    }
 
     // Bouton "Empreinte bâtiments"
     const btnPoly = document.createElement('div');

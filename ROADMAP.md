@@ -32,7 +32,10 @@ de session.
 - [x] A propos
 - [x] Permettre le téléchagement des geojson
 - [x] Responsive design
-- [ ] Barre de recherche par nom de site et ville 
+- [ ] Barre de recherche par nom de site et ville - Plus très sur de la pertinence pour celui là
+- [x] Connecter les DC avec le poste électrique le plus proche 
+- [ ] Animation de flux ? 
+- [x] Faire un filtre IA
 
 ---
 

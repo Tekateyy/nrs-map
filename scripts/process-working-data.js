@@ -122,6 +122,15 @@ function main() {
     console.error('Erreur lors de la compilation des données Hydro-Québec :', error.message);
     process.exit(1);
   }
+
+  console.log('\n--- Génération des connexions Datacenter -> Hydro-Québec ---');
+  const generateConnectionsScript = path.join(__dirname, 'generate-connections.js');
+  try {
+    execSync(`node "${generateConnectionsScript}"`, { stdio: 'inherit' });
+  } catch (error) {
+    console.error('Erreur lors de la génération des connexions :', error.message);
+    process.exit(1);
+  }
 }
 
 main();

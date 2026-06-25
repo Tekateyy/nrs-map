@@ -1,0 +1,1021 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "date": "2026-06-25",
+    "source": "Liaisons Datacenters -> Postes Hydro-Québec les plus proches"
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.41830319972901,
+            45.65345439976834
+          ],
+          [
+            -73.419784,
+            45.637971
+          ]
+        ]
+      },
+      "properties": {
+        "datacenter_name": "AWS YUL",
+        "datacenter_id": "AWSDVAR1",
+        "datacenter_type": "Hyperscale",
+        "substation_name": "Institute-de-Recherche JCT",
+        "distance_km": 1.7255193572255376
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.57149439992654,
+            45.50892110040983
+          ],
+          [
+            -73.563213,
+            45.508364
+          ]
+        ]
+      },
+      "properties": {
+        "datacenter_name": "Beanfield  - 3445 Park Ave",
+        "datacenter_id": "BNFDMTL1",
+        "datacenter_type": "Retail",
+        "substation_name": "Dorchester",
+        "distance_km": 0.6482993513435822
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.56714289960483,
+            45.502583700377926
+          ],
+          [
+            -73.563213,
+            45.508364
+          ]
+        ]
+      },
+      "properties": {
+        "datacenter_name": "Cologix MTL1",
+        "datacenter_id": "CLGXMTL1",
+        "datacenter_type": "Carrier Hotel",
+        "substation_name": "Dorchester",
+        "distance_km": 0.7119747457715258
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.4758005001064,
+            45.56636159948349
+          ],
+          [
+            -73.458076,
+            45.569561
+          ]
+        ]
+      },
+      "properties": {
+        "datacenter_name": "Cologix MTL10",
+        "datacenter_id": "CLGXLGL10",
+        "datacenter_type": "Wholesale",
+        "substation_name": "Mittal Canada Inc. Longueuil",
+        "distance_km": 1.4248628108980776
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.5650301994988,
+            45.49952479983997
+          ],
+          [
+            -73.556098,
+            45.498256
+          ]
+        ]
+      },
+      "properties": {
+        "datacenter_name": "Cologix MTL11",
+        "datacenter_id": "CLGXMTL11",
+        "datacenter_type": "Carrier Hotel",
+        "substation_name": "Central-2",
+        "distance_km": 0.7103195864141838
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.54132189935126,
+            45.46697280005937
+          ],
+          [
+            -73.544175,
+            45.487957
+          ]
+        ]
+      },
+      "properties": {
+        "datacenter_name": "Cologix MTL12",
+        "datacenter_id": "CLGXMTL12",
+        "datacenter_type": "Carrier Hotel",
+        "substation_name": "Viger",
+        "distance_km": 2.3439165408201625
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.54132189935126,
+            45.46697280005937
+          ],
+          [
+            -73.544175,
+            45.487957
+          ]
+        ]
+      },
+      "properties": {
+        "datacenter_name": "Cologix MTL2",
+        "datacenter_id": "CLGXMTL02",
+        "datacenter_type": "Retail",
+        "substation_name": "Viger",
+        "distance_km": 2.3439165408201625
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.57097299976931,
+            45.49751909988249
+          ],
+          [
+            -73.571077,
+            45.491062
+          ]
+        ]
+      },
+      "properties": {
+        "datacenter_name": "Cologix MTL3",
+        "datacenter_id": "CLGXMTL03",
+        "datacenter_type": "Carrier Hotel",
+        "substation_name": "Guy",
+        "distance_km": 0.7180425075477193
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.56957590031358,
+            45.59899139995212
+          ],
+          [
+            -73.570574,
+            45.601618
+          ]
+        ]
+      },
+      "properties": {
+        "datacenter_name": "Cologix MTL4",
+        "datacenter_id": "CLGXMTL04",
+        "datacenter_type": "Retail",
+        "substation_name": "Langelier",
+        "distance_km": 0.30221080271643086
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.75989179961414,
+            45.48231069954045
+          ],
+          [
+            -73.745647,
+            45.488978
+          ]
+        ]
+      },
+      "properties": {
+        "datacenter_name": "Cologix MTL5",
+        "datacenter_id": "CLGXMTL05",
+        "datacenter_type": "Carrier Hotel",
+        "substation_name": "Hypertec",
+        "distance_km": 1.3352201158777972
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.75989179961414,
+            45.48231069954045
+          ],
+          [
+            -73.745647,
+            45.488978
+          ]
+        ]
+      },
+      "properties": {
+        "datacenter_name": "Cologix MTL6",
+        "datacenter_id": "CLGXMTL06",
+        "datacenter_type": "Carrier Hotel",
+        "substation_name": "Hypertec",
+        "distance_km": 1.3352201158777972
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.56762390072707,
+            45.50241459984311
+          ],
+          [
+            -73.563213,
+            45.508364
+          ]
+        ]
+      },
+      "properties": {
+        "datacenter_name": "Cologix MTL7",
+        "datacenter_id": "CLGXMTL07",
+        "datacenter_type": "Retail",
+        "substation_name": "Dorchester",
+        "distance_km": 0.7455184709412473
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.76998809983964,
+            45.48073089995432
+          ],
+          [
+            -73.745647,
+            45.488978
+          ]
+        ]
+      },
+      "properties": {
+        "datacenter_name": "Cologix MTL8",
+        "datacenter_id": "CLGXMTL08",
+        "datacenter_type": "Wholesale",
+        "substation_name": "Hypertec",
+        "distance_km": 2.107563777529362
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -72.54594279987467,
+            45.87948410003477
+          ],
+          [
+            -72.521221,
+            45.878203
+          ]
+        ]
+      },
+      "properties": {
+        "datacenter_name": "Cologix MTL9",
+        "datacenter_id": "CLGXDMD01",
+        "datacenter_type": "Wholesale",
+        "substation_name": "Grantham",
+        "distance_km": 1.919044871499551
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.91413309983608,
+            45.42414460034444
+          ],
+          [
+            -73.91379,
+            45.423721
+          ]
+        ]
+      },
+      "properties": {
+        "datacenter_name": "Compass Montreal II",
+        "datacenter_id": "CMPSMTL01",
+        "datacenter_type": "Hyperscale",
+        "substation_name": "Compass YUL II",
+        "distance_km": 0.05418115148499607
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.64267470037109,
+            45.439471200113935
+          ],
+          [
+            -73.656729,
+            45.439117
+          ]
+        ]
+      },
+      "properties": {
+        "datacenter_name": "Compass Montreal I",
+        "datacenter_id": "CMPSMTL02",
+        "datacenter_type": "Wholesale",
+        "substation_name": "Rockfield",
+        "distance_km": 1.0972451966013945
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.83767669997879,
+            45.45831450012441
+          ],
+          [
+            -73.833092,
+            45.473023
+          ]
+        ]
+      },
+      "properties": {
+        "datacenter_name": "Enovum Data Centers - MTL02",
+        "datacenter_id": "EVNMPCL01",
+        "datacenter_type": "Retail",
+        "substation_name": "Saint-Jean",
+        "distance_km": 1.6741350920729112
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -74.01841099957564,
+            45.78410400012658
+          ],
+          [
+            -74.008064,
+            45.805406
+          ]
+        ]
+      },
+      "properties": {
+        "datacenter_name": "Enovum Data Centers - MTL03",
+        "datacenter_id": "EVNMSJM01",
+        "datacenter_type": "Retail",
+        "substation_name": "Arthur-Buies",
+        "distance_km": 2.5008244343760357
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.74512430033538,
+            45.487959700003714
+          ],
+          [
+            -73.745647,
+            45.488978
+          ]
+        ]
+      },
+      "properties": {
+        "datacenter_name": "Equinix MTL 1 ",
+        "datacenter_id": "EQNXMTL01",
+        "datacenter_type": "Retail",
+        "substation_name": "Hypertec",
+        "distance_km": 0.12033804510496128
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -74.050532999726,
+            45.412654599670326
+          ],
+          [
+            -74.044027,
+            45.374052
+          ]
+        ]
+      },
+      "properties": {
+        "datacenter_name": "Equinix MTL 2",
+        "datacenter_id": "EQNXMTL02",
+        "datacenter_type": "Retail",
+        "substation_name": "Dorion",
+        "distance_km": 4.322371683414162
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.3983961001658,
+            45.574544399948635
+          ],
+          [
+            -75.405579,
+            45.573478
+          ]
+        ]
+      },
+      "properties": {
+        "datacenter_name": "Equinix OT1",
+        "datacenter_id": "EQNXGAT01",
+        "datacenter_type": "Retail",
+        "substation_name": "Buckingham",
+        "distance_km": 0.571517902542331
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.56158689952261,
+            45.500773700150134
+          ],
+          [
+            -73.556098,
+            45.498256
+          ]
+        ]
+      },
+      "properties": {
+        "datacenter_name": "Estruxture MTL1",
+        "datacenter_id": "ESTRMTL01",
+        "datacenter_type": "Retail",
+        "substation_name": "Central-2",
+        "distance_km": 0.5112569919442528
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.63188970044479,
+            45.45742240009864
+          ],
+          [
+            -73.657771,
+            45.472705
+          ]
+        ]
+      },
+      "properties": {
+        "datacenter_name": "Estruxture MTL1",
+        "datacenter_id": "ESTRMTL01",
+        "datacenter_type": "Retail",
+        "substation_name": "Hampstead",
+        "distance_km": 2.638489228750409
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.4306385993092,
+            45.56836260012281
+          ],
+          [
+            -73.444527,
+            45.567478
+          ]
+        ]
+      },
+      "properties": {
+        "datacenter_name": "Estruxture MTL3",
+        "datacenter_id": "ESTRMTL02",
+        "datacenter_type": "Retail",
+        "substation_name": "Mittal Canada Inc. Longueuil JCT",
+        "distance_km": 1.085586913691958
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.86948159932545,
+            45.44596860032175
+          ],
+          [
+            -73.833092,
+            45.473023
+          ]
+        ]
+      },
+      "properties": {
+        "datacenter_name": "Estruxture MTL4",
+        "datacenter_id": "ESTRMTL04",
+        "datacenter_type": "Wholesale",
+        "substation_name": "Saint-Jean",
+        "distance_km": 4.135827510933138
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.56548169994713,
+            45.502473399766856
+          ],
+          [
+            -73.563213,
+            45.508364
+          ]
+        ]
+      },
+      "properties": {
+        "datacenter_name": "Estruxture MTL5",
+        "datacenter_id": "ESTRMTL05",
+        "datacenter_type": "Retail",
+        "substation_name": "Dorchester",
+        "distance_km": 0.678446442184254
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.56548169994713,
+            45.502473399766856
+          ],
+          [
+            -73.563213,
+            45.508364
+          ]
+        ]
+      },
+      "properties": {
+        "datacenter_name": "Hive MTL-1 - opéré par Ventage",
+        "datacenter_id": "HIVDMTL01",
+        "datacenter_type": "Unknown",
+        "substation_name": "Dorchester",
+        "distance_km": 0.678446442184254
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.75620779965081,
+            45.48676290044371
+          ],
+          [
+            -73.745647,
+            45.488978
+          ]
+        ]
+      },
+      "properties": {
+        "datacenter_name": "Hive MTL-2",
+        "datacenter_id": "HIVDMTL02",
+        "datacenter_type": "Wholesale",
+        "substation_name": "Hypertec",
+        "distance_km": 0.859316525601163
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.53810180018043,
+            45.46792850020424
+          ],
+          [
+            -73.544175,
+            45.487957
+          ]
+        ]
+      },
+      "properties": {
+        "datacenter_name": "LeaseWeb MTL-01",
+        "datacenter_id": "LSWBMTL01",
+        "datacenter_type": "Retail",
+        "substation_name": "Viger",
+        "distance_km": 2.2768502544120683
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.61803700053564,
+            45.44342890017276
+          ],
+          [
+            -73.617121,
+            45.428008
+          ]
+        ]
+      },
+      "properties": {
+        "datacenter_name": "LeaseWeb MTL-02",
+        "datacenter_id": "LSWBMTL02",
+        "datacenter_type": "Retail",
+        "substation_name": "Aqueduc",
+        "distance_km": 1.7162147525233014
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.60777930000303,
+            45.59925279976341
+          ],
+          [
+            -73.621934,
+            45.59125
+          ]
+        ]
+      },
+      "properties": {
+        "datacenter_name": "LeaseWeb MTL-03",
+        "datacenter_id": "LSWBMTL03",
+        "datacenter_type": "Retail",
+        "substation_name": "BÃ©langer JCT",
+        "distance_km": 1.4158970340394996
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -72.77631349971576,
+            46.563492499552765
+          ],
+          [
+            -72.735125,
+            46.56223
+          ]
+        ]
+      },
+      "properties": {
+        "datacenter_name": "Nordik NDC1",
+        "datacenter_id": "NRDKSHW01",
+        "datacenter_type": "Retail",
+        "substation_name": "Alcan Usine Shawinigan",
+        "distance_km": 3.152111877955
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.89788829951303,
+            45.309742599743885
+          ],
+          [
+            -73.898681,
+            45.309243
+          ]
+        ]
+      },
+      "properties": {
+        "datacenter_name": "OVHcloud BHS Campus",
+        "datacenter_id": "OVHCBHS01",
+        "datacenter_type": "Hyperscale",
+        "substation_name": "Axiall Canada Inc. JCT",
+        "distance_km": 0.0832398367942273
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.325108699471,
+            46.676137700336184
+          ],
+          [
+            -71.29486,
+            46.699855
+          ]
+        ]
+      },
+      "properties": {
+        "datacenter_name": "QScale Campus 1",
+        "datacenter_id": "QSCLLVS01",
+        "datacenter_type": "Hyperscale",
+        "substation_name": "ChaudiÃ¨re",
+        "distance_km": 3.504071931830257
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.56493739993671,
+            45.54170949959536
+          ],
+          [
+            -73.582187,
+            45.541763
+          ]
+        ]
+      },
+      "properties": {
+        "datacenter_name": "SmartDC MTL-1",
+        "datacenter_id": "SMRTMTL01",
+        "datacenter_type": "Unknown",
+        "substation_name": "Rosemont",
+        "distance_km": 1.3434079082246022
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -68.50234530053004,
+            48.46429520022404
+          ],
+          [
+            -68.495829,
+            48.461779
+          ]
+        ]
+      },
+      "properties": {
+        "datacenter_name": "Telus - Super Internet Data Center (SIDC)",
+        "datacenter_id": "TLUSRKI01",
+        "datacenter_type": "Wholesale",
+        "substation_name": "Jules-A.-Brillant",
+        "distance_km": 0.5559982353260013
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.56291270059256,
+            45.49731470009746
+          ],
+          [
+            -73.556098,
+            45.498256
+          ]
+        ]
+      },
+      "properties": {
+        "datacenter_name": "Urbacon DC Montreal",
+        "datacenter_id": "UBCNMTL01",
+        "datacenter_type": "Wholesale",
+        "substation_name": "Central-2",
+        "distance_km": 0.541356770958408
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.75620779965081,
+            45.48676290044371
+          ],
+          [
+            -73.745647,
+            45.488978
+          ]
+        ]
+      },
+      "properties": {
+        "datacenter_name": "Vantage Data Centers Canada Montreal I QC1",
+        "datacenter_id": "VNTGMTL01",
+        "datacenter_type": "Wholesale",
+        "substation_name": "Hypertec",
+        "distance_km": 0.859316525601163
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.80006909981671,
+            45.47463650059129
+          ],
+          [
+            -73.803795,
+            45.488184
+          ]
+        ]
+      },
+      "properties": {
+        "datacenter_name": "Vantage Data Centers Canada Montreal II QC4",
+        "datacenter_id": "VNTGMTL02",
+        "datacenter_type": "Wholesale",
+        "substation_name": "Sources",
+        "distance_km": 1.534164706558511
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.82162570039853,
+            45.471945300110065
+          ],
+          [
+            -73.833092,
+            45.473023
+          ]
+        ]
+      },
+      "properties": {
+        "datacenter_name": "Vantage Data Centers Canada Montreal III QC6",
+        "datacenter_id": "VNTGMTL03",
+        "datacenter_type": "Wholesale",
+        "substation_name": "Saint-Jean",
+        "distance_km": 0.9020869258469286
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.3072116997111,
+            46.79550479982587
+          ],
+          [
+            -71.322811,
+            46.782885
+          ]
+        ]
+      },
+      "properties": {
+        "datacenter_name": "Vantage Data Centers Canada Québec QC2",
+        "datacenter_id": "VNTGQC01",
+        "datacenter_type": "Wholesale",
+        "substation_name": "La SuÃ¨te",
+        "distance_km": 1.8383671451262804
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.97117439998304,
+            45.39818960046551
+          ],
+          [
+            -71.964182,
+            45.399108
+          ]
+        ]
+      },
+      "properties": {
+        "datacenter_name": "Bitfarm Leger",
+        "datacenter_id": "BITFSHB01",
+        "datacenter_type": "Crypto",
+        "substation_name": "Ville de Sherbrooke Orford",
+        "distance_km": 0.5554195864234193
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -68.19013949944043,
+            49.222381500641504
+          ],
+          [
+            -68.156315,
+            49.257037
+          ]
+        ]
+      },
+      "properties": {
+        "datacenter_name": "Keel Infrastructure",
+        "datacenter_id": "KEELBCO01",
+        "datacenter_type": "Crypto",
+        "substation_name": "Alcoa Baie Comeau",
+        "distance_km": 4.569422939463947
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -72.71985989976469,
+            45.29617870009422
+          ],
+          [
+            -72.715339,
+            45.312002
+          ]
+        ]
+      },
+      "properties": {
+        "datacenter_name": "IBM Quantum System One",
+        "datacenter_id": "IBMDMTL01",
+        "datacenter_type": "Quantique",
+        "substation_name": "Adamsville",
+        "distance_km": 1.7946448273791225
+      }
+    }
+  ]
+}
