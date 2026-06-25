@@ -141,6 +141,11 @@ body:not(.theme-sombre) #map {
   text-shadow: 0 0 10px rgba(255, 214, 0, 0.2);
 }
 
+.info-card-surface .info-card-value {
+  color: #00b0ff; /* Bleu vif */
+  text-shadow: 0 0 10px rgba(0, 176, 255, 0.2);
+}
+
 .info-card-subtext {
   display: block;
   font-size: 0.7rem;
@@ -412,6 +417,11 @@ body:not(.theme-sombre) .info-card-dc .info-card-value {
 
 body:not(.theme-sombre) .info-card-power .info-card-value {
   color: #b45309; /* Jaune/orange pour le contraste */
+  text-shadow: none;
+}
+
+body:not(.theme-sombre) .info-card-surface .info-card-value {
+  color: #0284c7; /* Bleu plus sombre pour le contraste */
   text-shadow: none;
 }
 

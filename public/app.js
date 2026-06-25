@@ -83,11 +83,17 @@ function val(v) {
   return (v !== null && v !== undefined && v !== '') ? v : '—';
 }
 
+// ---- Extraction et nettoyage de la surface au sol ----
+function parseSurfaceSqFt(surfValue) {
+  if (surfValue === null || surfValue === undefined || surfValue === '') return null;
+  const surf = parseInt(String(surfValue).replace(/\s/g, ''), 10);
+  return isNaN(surf) ? null : surf;
+}
+
 // ---- Puissance estimée selon SurfBatimentPI2 × 50% × PowerDensity / 1 000 000 ----
 function estimerPuissance(p, densityMap) {
-  if (!p.SurfBatimentPI2) return null;
-  const surf = parseInt(String(p.SurfBatimentPI2).replace(/\s/g, ''), 10);
-  if (isNaN(surf)) return null;
+  const surf = parseSurfaceSqFt(p.SurfBatimentPI2);
+  if (surf === null) return null;
   const type = (p.Type || '').toLowerCase().trim();
   const entry = Object.entries(densityMap).find(([k]) => k.toLowerCase().trim() === type);
   if (!entry) return null;
@@ -188,16 +194,34 @@ function updateFilterUI(containerId, selectedValue) {
   });
 }
 
+// ---- Formatage des nombres en français canadien ----
+const numberFormatter = new Intl.NumberFormat('fr-CA', { maximumFractionDigits: 0 });
+
 // ---- Mise à jour des statistiques ----
-function updateStatsUI(countVisible, totalPower, countWithPower) {
+function updateStatsUI(countVisible, totalPower, countWithPower, totalSurfaceSqFt, countWithSurface) {
   const countEl = document.getElementById('stats-count');
   const powerEl = document.getElementById('stats-power');
   const detailsEl = document.getElementById('stats-power-details');
+  const surfaceEl = document.getElementById('stats-surface');
+  const surfaceDetailsEl = document.getElementById('stats-surface-details');
 
   if (countEl) countEl.textContent = countVisible;
   if (powerEl) powerEl.textContent = totalPower > 0 ? totalPower.toFixed(1) + ' MW' : '0.0 MW';
   if (detailsEl) {
     detailsEl.textContent = `Calculée sur ${countWithPower} / ${countVisible} site${countVisible > 1 ? 's' : ''}`;
+  }
+
+  if (surfaceEl) {
+    if (totalSurfaceSqFt > 0) {
+      const surfaceM2 = totalSurfaceSqFt * 0.09290304;
+      surfaceEl.textContent = numberFormatter.format(surfaceM2) + ' m²';
+    } else {
+      surfaceEl.textContent = '0 m²';
+    }
+  }
+  if (surfaceDetailsEl) {
+    const formattedSqFt = totalSurfaceSqFt > 0 ? numberFormatter.format(totalSurfaceSqFt) + ' pi²' : '0 pi²';
+    surfaceDetailsEl.textContent = `${formattedSqFt} — sur ${countWithSurface} / ${countVisible} site${countVisible > 1 ? 's' : ''}`;
   }
 }
 
@@ -243,9 +267,11 @@ function applyFilters() {
   let countVisible = 0;
   let totalPower = 0;
   let countWithPower = 0;
+  let totalSurfaceSqFt = 0;
+  let countWithSurface = 0;
   const hostCounts = {};
 
-  for (const { marker, type, hebergeur, estimatedPower } of allMarkers) {
+  for (const { marker, type, hebergeur, estimatedPower, surfaceSqFt } of allMarkers) {
     const matchType = !selectedType || type === selectedType;
     const matchHebergeur = !selectedHebergeur || hebergeur === selectedHebergeur;
     
@@ -257,6 +283,10 @@ function applyFilters() {
         totalPower += estimatedPower;
         countWithPower++;
       }
+      if (surfaceSqFt !== null && surfaceSqFt !== undefined) {
+        totalSurfaceSqFt += surfaceSqFt;
+        countWithSurface++;
+      }
     }
 
     // Répartition par hébergeur (indépendante du filtre hébergeur actif pour éviter de vider la liste)
@@ -265,7 +295,7 @@ function applyFilters() {
     }
   }
 
-  updateStatsUI(countVisible, totalPower, countWithPower);
+  updateStatsUI(countVisible, totalPower, countWithPower, totalSurfaceSqFt, countWithSurface);
   updateHostBreakdownUI(hostCounts);
 }
 
@@ -498,8 +528,9 @@ Promise.all([
       marker.bindPopup(buildPopup(p, densityMap), { maxWidth: 280 });
 
       const puissEst = estimerPuissance(p, densityMap);
+      const surfaceSqFt = parseSurfaceSqFt(p.SurfBatimentPI2);
 
-      allMarkers.push({ marker, type, hebergeur, estimatedPower: puissEst });
+      allMarkers.push({ marker, type, hebergeur, estimatedPower: puissEst, surfaceSqFt });
     }
 
     if (ignorés > 0) console.info(`ℹ️ ${ignorés} site(s) sans coordonnées ignoré(s)`);
