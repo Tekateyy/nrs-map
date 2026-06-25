@@ -38,6 +38,7 @@ de session.
 
 ## Phase 3 — Qualité des données (à venir)
 
+- [ ] Ajout du bloc calculé "surface au sol" à partir des données des polygones
 - [ ] Géocodage des 5 sites sans coordonnées (Enovum MTL01, Hive QC-1, Hyper Bit, Exaion/PINQ2, HIVE Canada 1.0)
 - [ ] Nettoyage des champs manquants ou incohérents dans `datacenter_types.geojson`
 
