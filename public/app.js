@@ -574,50 +574,6 @@ Promise.all([
     }
     map.on('zoomend', updateNodesRadius);
 
-    // Mettre à jour l'animation des lignes selon la visibilité et le zoom
-    function updateLineAnimations() {
-      if (!map || !hqLinesLayer) return;
-      const bounds = map.getBounds();
-      const zoom = map.getZoom();
-
-      // On n'anime les lignes 120 kV et 230 kV que si le niveau de zoom est assez proche (zoom >= 10)
-      // et que la ligne est actuellement visible à l'écran.
-      const animateLowVoltage = zoom >= 10;
-
-      hqLinesLayer.eachLayer(layer => {
-        if (!layer.feature || !layer.feature.properties) return;
-        const p = layer.feature.properties;
-        const match = (p.pole || '').match(/(\d+)\s*kV/);
-        const kv = match ? parseInt(match[1], 10) : 0;
-
-        let shouldAnimate = false;
-
-        if (layer.getBounds) {
-          const lineBounds = layer.getBounds();
-          const isVisible = bounds.intersects(lineBounds);
-
-          if (kv >= 315) {
-            // Toujours animer les lignes principales (735 et 315 kV) si visibles
-            shouldAnimate = isVisible;
-          } else {
-            // Animer les lignes secondaires (120 et 230 kV) si visibles ET zoom >= 10
-            shouldAnimate = animateLowVoltage && isVisible;
-          }
-        }
-
-        const el = layer.getElement();
-        if (el) {
-          if (shouldAnimate) {
-            el.classList.add('animate-flow');
-          } else {
-            el.classList.remove('animate-flow');
-          }
-        }
-      });
-    }
-
-    map.on('moveend', updateLineAnimations);
-
     // Gestion du filtrage par niveau de tension
     let selectedVoltage = null;
 
@@ -665,9 +621,8 @@ Promise.all([
       });
       hqNodesLayer.addData(pointFeatures);
 
-      // Ré-appliquer la taille dynamique des postes et l'animation des lignes
+      // Ré-appliquer la taille dynamique des postes
       updateNodesRadius();
-      updateLineAnimations();
     }
 
     // Cabler le clic sur la légende pour filtrer les tensions
@@ -806,9 +761,6 @@ Promise.all([
      if (bounds.length) {
        map.fitBounds(bounds, { padding: [40, 40] });
      }
-     
-     // Premier calcul des animations pour les éléments visibles
-     setTimeout(updateLineAnimations, 200);
   })
   .catch(err => {
     console.error('Erreur de chargement :', err);
