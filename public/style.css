@@ -1612,6 +1612,7 @@ body:not(.theme-sombre) .popup-link:hover {
     line-height: 1;
     align-items: center;
     justify-content: center;
+    padding-bottom: 3px;
     cursor: pointer;
     transition: all 0.15s ease;
     z-index: 10;
@@ -1653,13 +1654,18 @@ body:not(.theme-sombre) .popup-link:hover {
     z-index: 1010;
   }
 
+  #info-panel {
+    width: 100%;
+    left: 0;
+  }
+
   .panel.open {
     transform: translateY(0);
   }
 
-  /* Ajustements titres des panneaux pour éviter le bouton close */
-  .panel h1, .panel h2 {
-    padding-right: 2.2rem;
+  /* Ajustements titres et descriptions des panneaux pour éviter le bouton close */
+  .panel h1, .panel h2, .panel-desc {
+    padding-right: 3rem;
   }
 
   /* Éviter la superposition du bouton close avec le bouton theme */
