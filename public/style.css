@@ -1382,6 +1382,58 @@ body:not(.theme-sombre) .btn-download:hover {
   color: #7dd3fc !important;
 }
 
+/* Bouton de partage dans la popup */
+.popup-share-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: 100%;
+  margin-top: 10px;
+  padding: 6px 12px;
+  background: rgba(14, 165, 233, 0.12);
+  color: #38bdf8 !important;
+  border: 1px solid rgba(14, 165, 233, 0.25);
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  text-decoration: none;
+}
+
+.popup-share-btn:hover {
+  background: #0284c7;
+  color: #ffffff !important;
+  border-color: #0284c7;
+}
+
+.popup-share-btn.copied {
+  background: rgba(0, 230, 118, 0.15) !important;
+  color: #00e676 !important;
+  border-color: rgba(0, 230, 118, 0.4) !important;
+}
+
+body:not(.theme-sombre) .popup-share-btn {
+  background: rgba(2, 132, 199, 0.08);
+  color: #0284c7 !important;
+  border-color: rgba(2, 132, 199, 0.2);
+}
+
+body:not(.theme-sombre) .popup-share-btn:hover {
+  background: #0284c7;
+  color: #ffffff !important;
+  border-color: #0284c7;
+}
+
+body:not(.theme-sombre) .popup-share-btn.copied {
+  background: rgba(5, 150, 105, 0.1) !important;
+  color: #059669 !important;
+  border-color: rgba(5, 150, 105, 0.3) !important;
+}
+
+
 /* ---- Adaptation Thème Clair pour Popups ---- */
 body:not(.theme-sombre) .leaflet-popup-content-wrapper {
   background: rgba(255, 255, 255, 0.95) !important;

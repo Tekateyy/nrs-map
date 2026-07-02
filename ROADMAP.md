@@ -37,7 +37,7 @@ de session.
 - [x] Animation de flux
 - [x] Faire un filtre IA
 - [x] Afficher les centrales distinctement
-- [ ] Permettre de partager une fiche datacenter specifique via un lien
+- [x] Permettre de partager une fiche datacenter specifique via un lien
 - [x] Ajouter les projets de datacenter en construction
 - [x] Infos sur la nationalité des entreprises et de leurs actionnaires
 - [ ] Internationnaliser (i18n)

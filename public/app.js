@@ -208,6 +208,55 @@ function obtenirDrapeaux(nationalite, uniqueUniquement = false) {
   return ' ' + flags.join('');
 }
 
+// ---- Fonctions de partage de lien ----
+function fallbackCopyTextToClipboard(text, callback) {
+  const textArea = document.createElement("textarea");
+  textArea.value = text;
+  textArea.style.top = "0";
+  textArea.style.left = "0";
+  textArea.style.position = "fixed";
+  document.body.appendChild(textArea);
+  textArea.focus();
+  textArea.select();
+  try {
+    const successful = document.execCommand('copy');
+    if (successful) callback();
+  } catch (err) {
+    console.error('Fallback copy command failed', err);
+  }
+  document.body.removeChild(textArea);
+}
+
+window.copyDcLink = function(uniqid, button) {
+  const shareUrl = `${window.location.origin}${window.location.pathname}?dc=${encodeURIComponent(uniqid)}`;
+  const originalText = button.innerHTML;
+  
+  const doCopy = () => {
+    button.classList.add('copied');
+    button.innerHTML = `
+      <svg viewBox="0 0 24 24" width="12" height="12" fill="currentColor">
+        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+      </svg>
+      Lien copié !
+    `;
+    setTimeout(() => {
+      button.classList.remove('copied');
+      button.innerHTML = originalText;
+    }, 2000);
+  };
+
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(shareUrl)
+      .then(doCopy)
+      .catch(err => {
+        console.error('Failed to copy using clipboard API:', err);
+        fallbackCopyTextToClipboard(shareUrl, doCopy);
+      });
+  } else {
+    fallbackCopyTextToClipboard(shareUrl, doCopy);
+  }
+};
+
 // ---- Construction du contenu popup ----
 function buildPopup(p, densityMap) {
   const lien = p.Siteweb
@@ -233,8 +282,15 @@ function buildPopup(p, densityMap) {
     <div class="popup-row"><span class="popup-label">Actionnaire maj.</span><span class="popup-value">${val(p.ShareholderMaj)}</span></div>
     <div class="popup-row"><span class="popup-label">Siège social</span><span class="popup-value">${val(p.SiegeSocial)}</span></div>
     <div class="popup-row"><span class="popup-label">Site web</span><span class="popup-value">${lien}</span></div>
+    <button class="popup-share-btn" onclick="copyDcLink('${p.UNIQID}', this)">
+      <svg viewBox="0 0 24 24" width="12" height="12" fill="currentColor">
+        <path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z"/>
+      </svg>
+      Partager la fiche
+    </button>
   `;
 }
+
 
 // ---- Génération des boutons de filtrage à clic unique (Chips) ----
 function buildClickFilters(containerId, values, isTypeCategory) {
@@ -913,8 +969,24 @@ Promise.all([
     // Afficher tous les marqueurs
     applyFilters();
 
-     // Centrer la carte sur l'emprise des points
-     if (bounds.length) {
+     // Centrer la carte sur l'emprise des points ou sur le datacenter partagé
+     let startWithSharedDc = false;
+     const params = new URLSearchParams(window.location.search);
+     const dcParam = params.get('dc');
+     if (dcParam) {
+       const match = allMarkers.find(m => m.uniqid === dcParam);
+       if (match) {
+         startWithSharedDc = true;
+         // Initialiser d'abord la vue de la carte pour éviter les erreurs de zoom non défini dans Leaflet
+         map.setView(match.marker.getLatLng(), 15);
+         // zoomToShowLayer s'assure de dé-clustériser et faire le zoom nécessaire
+         clusterGroup.zoomToShowLayer(match.marker, () => {
+           match.marker.openPopup();
+         });
+       }
+     }
+
+     if (!startWithSharedDc && bounds.length) {
        map.fitBounds(bounds, { padding: [40, 40] });
      }
   })
