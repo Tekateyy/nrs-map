@@ -550,9 +550,9 @@
         ]
       },
       "properties": {
-        "datacenter_name": "Estruxture MTL3",
+        "datacenter_name": "Estruxture MTL2",
         "datacenter_id": "ESTRMTL02",
-        "datacenter_type": "Retail",
+        "datacenter_type": "Wholesale",
         "substation_name": "Mittal Canada Inc. Longueuil JCT",
         "distance_km": 1.085586913691958
       }
@@ -782,7 +782,7 @@
       "properties": {
         "datacenter_name": "SmartDC MTL-1",
         "datacenter_id": "SMRTMTL01",
-        "datacenter_type": "Unknown",
+        "datacenter_type": "Wholesale",
         "substation_name": "Rosemont",
         "distance_km": 1.3434079082246022
       }
@@ -941,7 +941,7 @@
         ]
       },
       "properties": {
-        "datacenter_name": "Keel Infrastructure",
+        "datacenter_name": "Keel Infrastructure Baie-Comeau",
         "datacenter_id": "KEELBCO01",
         "datacenter_type": "Crypto",
         "substation_name": "Alcoa Baie Comeau",
@@ -1345,8 +1345,8 @@
         "type": "LineString",
         "coordinates": [
           [
-            -71.4711937,
-            46.8810961
+            -71.468767,
+            46.8806855
           ],
           [
             -71.35986,
@@ -1359,7 +1359,7 @@
         "datacenter_id": "RDDCQC01",
         "datacenter_type": "Quantique",
         "substation_name": "NeufchÃ¢tel",
-        "distance_km": 9.863768136121614
+        "distance_km": 9.68216434005265
       }
     },
     {

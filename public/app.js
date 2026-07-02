@@ -122,9 +122,9 @@ function estimerPuissance(p, densityMap) {
     calcul = (surf * 0.5 * entry[1].power_density_w_pi2) / 1_000_000;
   }
   
-  // Si le calcul par surface est impossible, donne 0, ou si le type est Crypto/Minage :
-  // On privilégie la puissance annoncée si elle est présente
-  if (calcul === null || calcul === 0 || type === 'crypto') {
+  // Si le calcul par surface est impossible ou donne 0,
+  // on privilégie la puissance annoncée si elle est présente
+  if (calcul === null || calcul === 0) {
     return (p.PuissanceAnnMW !== null && p.PuissanceAnnMW !== undefined) ? p.PuissanceAnnMW : calcul;
   }
   
@@ -478,8 +478,8 @@ function applyFilters() {
         }
       } else {
         countProjet++;
-        if (announcedPower !== null && announcedPower !== undefined) {
-          totalProjectPower += announcedPower;
+        if (estimatedPower !== null && estimatedPower !== undefined) {
+          totalProjectPower += estimatedPower;
           countWithProjectPower++;
         }
       }

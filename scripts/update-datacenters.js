@@ -330,12 +330,7 @@ async function main() {
       };
 
       for (const [key, newVal] of Object.entries(updates)) {
-        if (newVal !== null && newVal !== undefined && newVal !== '') {
-          if (props[key] === null || props[key] === undefined || String(props[key]).trim() === '' || props[key] === '—') {
-            console.log(`[COMPLÉTÉ] ${uniqId} : propriété "${key}" complétée avec "${newVal}"`);
-            props[key] = newVal;
-          }
-        }
+        props[key] = newVal;
       }
     } else {
       // Nouveau datacenter à ajouter

@@ -1,27 +1,27 @@
 {
     "Retail": {
         "description": "Retail (< 10 MW, 5k - 21k pi2)",
-        "power_density_w_pi2": 149
+        "power_density_w_pi2": 186
     },
     "Wholesale": {
         "description": "Wholesale (>10MW, 21k - 100k pi2)",
-        "power_density_w_pi2": 297
+        "power_density_w_pi2": 186
     },
     "Hyperscale": {
         "description": "Hyperscale / HPC (>40MW - 100k pi2)",
-        "power_density_w_pi2": 743
+        "power_density_w_pi2": 557
     },
     "Carrier Hotel": {
         "description": "Datacenter d'interconnexion réseaux",
-        "power_density_w_pi2": 80
+        "power_density_w_pi2": 186
     },
     "Crypto": {
         "description": "Minage de cryptomonaies",
-        "power_density_w_pi2": 0
+        "power_density_w_pi2": 743
     },
     "Quantique": {
         "description": "Contient un ordinateur quantique",
-        "power_density_w_pi2": 2230
+        "power_density_w_pi2": 93
     },
     "Unkown": {
         "description": "",
