@@ -69,11 +69,12 @@ const ICON_CONFIG = {
   'Inconnu':       { couleur: '#888888', lettre: '?', texte: '#fff' },
 };
 
-function creerIcone(type) {
+function creerIcone(type, status) {
   const cfg = ICON_CONFIG[type] || ICON_CONFIG['Inconnu'];
+  const classeProjet = (status === 'En projet') ? ' projet' : '';
   return L.divIcon({
     className: '',
-    html: `<div class="marker-icon" style="background:${cfg.couleur};color:${cfg.texte};--marker-color:${cfg.couleur};--marker-color-glow:${cfg.couleur}40">${cfg.lettre}</div>`,
+    html: `<div class="marker-icon${classeProjet}" style="background:${cfg.couleur};color:${cfg.texte};--marker-color:${cfg.couleur};--marker-color-glow:${cfg.couleur}40"><span class="marker-text">${cfg.lettre}</span></div>`,
     iconSize: [28, 28],
     iconAnchor: [14, 14],
     popupAnchor: [0, -16],
@@ -221,6 +222,7 @@ function buildPopup(p, densityMap) {
 
   return `
     <div class="popup-title">${titreAffiche}</div>
+    <div class="popup-row"><span class="popup-label">Statut</span><span class="popup-value">${val(p.Status)}</span></div>
     <div class="popup-row"><span class="popup-label">Type</span><span class="popup-value">${val(p.Type)}</span></div>
     <div class="popup-row"><span class="popup-label">Hébergeur</span><span class="popup-value">${val(p.Hebergeur)}</span></div>
     <div class="popup-row"><span class="popup-label">Adresse</span><span class="popup-value">${val(p.Adresse)}</span></div>
@@ -281,17 +283,41 @@ function updateFilterUI(containerId, selectedValue) {
 const numberFormatter = new Intl.NumberFormat('fr-CA', { maximumFractionDigits: 0 });
 
 // ---- Mise à jour des statistiques ----
-function updateStatsUI(countVisible, totalPower, countWithPower, totalSurfaceSqFt, countWithSurface) {
+function updateStatsUI(
+  countVisible, 
+  totalPower, 
+  countWithPower, 
+  totalSurfaceSqFt, 
+  countWithSurface,
+  countOperation,
+  countProjet,
+  totalProjectPower,
+  countWithProjectPower
+) {
   const countEl = document.getElementById('stats-count');
+  const countDetailsEl = document.getElementById('stats-count-details');
   const powerEl = document.getElementById('stats-power');
   const detailsEl = document.getElementById('stats-power-details');
+  const projectPowerEl = document.getElementById('stats-project-power');
+  const projectDetailsEl = document.getElementById('stats-project-power-details');
   const surfaceEl = document.getElementById('stats-surface');
   const surfaceDetailsEl = document.getElementById('stats-surface-details');
 
   if (countEl) countEl.textContent = countVisible;
+  if (countDetailsEl) {
+    countDetailsEl.textContent = `${countOperation} en opération, ${countProjet} en projet`;
+  }
+
   if (powerEl) powerEl.textContent = totalPower > 0 ? totalPower.toFixed(1) + ' MW' : '0.0 MW';
   if (detailsEl) {
-    detailsEl.textContent = `Calculée sur ${countWithPower} / ${countVisible} site${countVisible > 1 ? 's' : ''}`;
+    detailsEl.textContent = `Calculée sur ${countWithPower} / ${countOperation} site${countOperation > 1 ? 's' : ''}`;
+  }
+
+  if (projectPowerEl) {
+    projectPowerEl.textContent = totalProjectPower > 0 ? totalProjectPower.toFixed(1) + ' MW' : '0.0 MW';
+  }
+  if (projectDetailsEl) {
+    projectDetailsEl.textContent = `Cumulée sur ${countWithProjectPower} / ${countProjet} site${countProjet > 1 ? 's' : ''}`;
   }
 
   if (surfaceEl) {
@@ -304,7 +330,7 @@ function updateStatsUI(countVisible, totalPower, countWithPower, totalSurfaceSqF
   }
   if (surfaceDetailsEl) {
     const formattedSqFt = totalSurfaceSqFt > 0 ? numberFormatter.format(totalSurfaceSqFt) + ' pi²' : '0 pi²';
-    surfaceDetailsEl.textContent = `${formattedSqFt} — sur ${countWithSurface} / ${countVisible} site${countVisible > 1 ? 's' : ''}`;
+    surfaceDetailsEl.textContent = `${formattedSqFt} — sur ${countWithSurface} / ${countOperation} site${countOperation > 1 ? 's' : ''}`;
   }
 }
 
@@ -314,8 +340,8 @@ function updateHostBreakdownUI(hostCounts) {
   if (!container) return;
   container.innerHTML = '';
 
-  // Trier par nombre décroissant de sites
-  const sortedHosts = Object.entries(hostCounts).sort((a, b) => b[1] - a[1]);
+  // Trier par ordre alphabétique
+  const sortedHosts = Object.entries(hostCounts).sort((a, b) => a[0].localeCompare(b[0], 'fr', { sensitivity: 'base' }));
 
   sortedHosts.forEach(([hostName, count]) => {
     const row = document.createElement('div');
@@ -353,14 +379,21 @@ function updateHostBreakdownUI(hostCounts) {
 function applyFilters() {
   clusterGroup.clearLayers();
   let countVisible = 0;
+  let countOperation = 0;
+  let countProjet = 0;
+
   let totalPower = 0;
   let countWithPower = 0;
   let totalSurfaceSqFt = 0;
   let countWithSurface = 0;
+
+  let totalProjectPower = 0;
+  let countWithProjectPower = 0;
+
   const hostCounts = {};
   const visibleDatacenterIds = new Set();
 
-  for (const { marker, type, hebergeur, estimatedPower, surfaceSqFt, equipIA, uniqid, nationaliteShareholder } of allMarkers) {
+  for (const { marker, type, hebergeur, estimatedPower, surfaceSqFt, equipIA, uniqid, nationaliteShareholder, status, announcedPower } of allMarkers) {
     const matchType = !selectedType || type === selectedType;
     const matchHebergeur = !selectedHebergeur || hebergeur === selectedHebergeur;
     const matchAI = !filterAI || equipIA === 'IA';
@@ -375,14 +408,26 @@ function applyFilters() {
     if (matchType && matchHebergeur && matchAI && matchCanadian) {
       clusterGroup.addLayer(marker);
       countVisible++;
-      if (estimatedPower !== null && estimatedPower !== undefined) {
-        totalPower += estimatedPower;
-        countWithPower++;
+      
+      const isOperation = !status || !status.toLowerCase().includes('projet');
+      if (isOperation) {
+        countOperation++;
+        if (estimatedPower !== null && estimatedPower !== undefined) {
+          totalPower += estimatedPower;
+          countWithPower++;
+        }
+        if (surfaceSqFt !== null && surfaceSqFt !== undefined) {
+          totalSurfaceSqFt += surfaceSqFt;
+          countWithSurface++;
+        }
+      } else {
+        countProjet++;
+        if (announcedPower !== null && announcedPower !== undefined) {
+          totalProjectPower += announcedPower;
+          countWithProjectPower++;
+        }
       }
-      if (surfaceSqFt !== null && surfaceSqFt !== undefined) {
-        totalSurfaceSqFt += surfaceSqFt;
-        countWithSurface++;
-      }
+
       if (uniqid) {
         visibleDatacenterIds.add(uniqid);
       }
@@ -394,7 +439,17 @@ function applyFilters() {
     }
   }
 
-  updateStatsUI(countVisible, totalPower, countWithPower, totalSurfaceSqFt, countWithSurface);
+  updateStatsUI(
+    countVisible, 
+    totalPower, 
+    countWithPower, 
+    totalSurfaceSqFt, 
+    countWithSurface,
+    countOperation,
+    countProjet,
+    totalProjectPower,
+    countWithProjectPower
+  );
   updateHostBreakdownUI(hostCounts);
   updateConnections(visibleDatacenterIds);
 }
@@ -775,13 +830,24 @@ Promise.all([
       hebergeurs.add(hebergeur);
       bounds.push([lat, lng]);
 
-      const marker = L.marker([lat, lng], { icon: creerIcone(type) });
+      const marker = L.marker([lat, lng], { icon: creerIcone(type, p.Status) });
       marker.bindPopup(buildPopup(p, densityMap), { maxWidth: 280 });
 
       const puissEst = estimerPuissance(p, densityMap);
       const surfaceSqFt = parseSurfaceSqFt(p.SurfBatimentPI2);
 
-      allMarkers.push({ marker, type, hebergeur, estimatedPower: puissEst, surfaceSqFt, equipIA: p.ÉquipIA, uniqid: p.UNIQID, nationaliteShareholder: p.NationaliteShareholder });
+      allMarkers.push({ 
+        marker, 
+        type, 
+        hebergeur, 
+        estimatedPower: puissEst, 
+        surfaceSqFt, 
+        equipIA: p.ÉquipIA, 
+        uniqid: p.UNIQID, 
+        nationaliteShareholder: p.NationaliteShareholder,
+        status: p.Status,
+        announcedPower: p.PuissanceAnnMW
+      });
     }
 
     if (ignorés > 0) console.info(`ℹ️ ${ignorés} site(s) sans coordonnées ignoré(s)`);

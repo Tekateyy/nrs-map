@@ -293,7 +293,8 @@ async function main() {
         Source: row["Source"],
         ShareholderMaj: row[shareholderNameKey],
         NationaliteShareholder: row[shareholderNationKey],
-        SiegeSocial: row[siegeSocialKey]
+        SiegeSocial: row[siegeSocialKey],
+        Status: row["Status"] || "En opération"
       };
 
       for (const [key, newVal] of Object.entries(updates)) {
@@ -369,7 +370,8 @@ async function main() {
           date_collecte: "2026-07-01",
           ShareholderMaj: row[shareholderNameKey] || null,
           NationaliteShareholder: row[shareholderNationKey] || null,
-          SiegeSocial: row[siegeSocialKey] || null
+          SiegeSocial: row[siegeSocialKey] || null,
+          Status: row["Status"] || "En opération"
         }
       };
 

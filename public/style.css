@@ -37,7 +37,7 @@ body:not(.theme-sombre) #map {
   top: 1rem;
   z-index: 1000;
   width: 320px;
-  max-height: calc(100dvh - 3rem);
+  height: 80dvh;
   overflow-y: auto;
   background: rgba(15, 23, 42, 0.85); /* Navy très sombre */
   backdrop-filter: blur(12px);
@@ -45,7 +45,7 @@ body:not(.theme-sombre) #map {
   border-radius: 16px;
   border: 1px solid rgba(255, 255, 255, 0.08);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-  padding: 1.25rem;
+  padding: 0.95rem;
   transition: all 0.2s ease-in-out;
   color: #f8fafc;
 }
@@ -57,6 +57,19 @@ body:not(.theme-sombre) #map {
 
 #info-panel {
   left: 1rem;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+#info-panel .info-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  margin-top: 0.75rem;
+  margin-bottom: 0;
 }
 
 #filters {
@@ -65,31 +78,31 @@ body:not(.theme-sombre) #map {
 
 /* Titres et descriptions */
 .panel h1 {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 800;
   color: #fff;
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.25rem;
   letter-spacing: -0.01em;
 }
 
 .panel-desc {
-  font-size: 0.74rem;
+  font-size: 0.72rem;
   color: #94a3b8;
-  line-height: 1.45;
-  margin-bottom: 1.25rem;
+  line-height: 1.4;
+  margin-bottom: 0.75rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  padding-bottom: 0.75rem;
+  padding-bottom: 0.5rem;
 }
 
 .panel h2 {
-  font-size: 1.05rem;
+  font-size: 0.95rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.06em;
   color: #fff;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  padding-bottom: 0.5rem;
+  padding-bottom: 0.35rem;
 }
 
 .panel section, .info-section {
@@ -108,28 +121,44 @@ body:not(.theme-sombre) #map {
 }
 
 /* ---- Cartes d'infos (Panneau Gauche) ---- */
+.info-cards-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.info-cards-row .info-card {
+  margin-bottom: 0;
+  padding: 0.6rem 0.75rem;
+}
+
+.info-cards-row .info-card-value {
+  font-size: 1.3rem;
+}
+
 .info-card {
   background: rgba(30, 41, 59, 0.5);
   border: 1px solid rgba(255, 255, 255, 0.06);
   border-radius: 12px;
-  padding: 0.9rem 1.1rem;
-  margin-bottom: 0.75rem;
+  padding: 0.65rem 0.85rem;
+  margin-bottom: 0.5rem;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
 }
 
 .info-card-label {
   display: block;
-  font-size: 0.65rem;
+  font-size: 0.6rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: #94a3b8;
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.25rem;
 }
 
 .info-card-value {
   display: block;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: 800;
   line-height: 1.1;
   font-family: monospace;
@@ -143,6 +172,11 @@ body:not(.theme-sombre) #map {
 .info-card-power .info-card-value {
   color: #ffd600; /* Or/jaune vif */
   text-shadow: 0 0 10px rgba(255, 214, 0, 0.2);
+}
+
+.info-card-project-power .info-card-value {
+  color: #d500f9; /* Violet/magenta néon */
+  text-shadow: 0 0 10px rgba(213, 0, 249, 0.25);
 }
 
 .info-card-surface .info-card-value {
@@ -163,7 +197,7 @@ body:not(.theme-sombre) #map {
   display: flex;
   flex-direction: column;
   gap: 0.45rem;
-  max-height: 250px;
+  flex: 1;
   overflow-y: auto;
   padding-right: 4px;
 }
@@ -463,6 +497,11 @@ body:not(.theme-sombre) .info-card-power .info-card-value {
   text-shadow: none;
 }
 
+body:not(.theme-sombre) .info-card-project-power .info-card-value {
+  color: #a21caf; /* Magenta/violet pour contraste */
+  text-shadow: none;
+}
+
 body:not(.theme-sombre) .info-card-surface .info-card-value {
   color: #0284c7; /* Bleu plus sombre pour le contraste */
   text-shadow: none;
@@ -626,6 +665,25 @@ body:not(.theme-sombre) .leaflet-bar a:hover {
     transform: scale(1.6);
     opacity: 0;
   }
+}
+
+.marker-icon.projet {
+  border-radius: 4px !important;
+  transform: rotate(45deg);
+}
+
+.marker-icon.projet::before,
+.marker-icon.projet::after {
+  border-radius: 4px !important;
+}
+
+.marker-icon.projet .marker-text {
+  display: inline-block;
+  transform: rotate(-45deg);
+}
+
+.marker-icon.projet:hover {
+  transform: scale(1.2) rotate(45deg) !important;
 }
 
 .marker-icon:hover {

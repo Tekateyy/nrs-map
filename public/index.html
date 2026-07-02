@@ -44,12 +44,21 @@
     <div class="info-card info-card-dc">
       <span class="info-card-label">CENTRES DE DONNÉES</span>
       <span id="stats-count" class="info-card-value">—</span>
+      <span id="stats-count-details" class="info-card-subtext">—</span>
     </div>
 
-    <div class="info-card info-card-power">
-      <span class="info-card-label">PUISSANCE ESTIMÉE</span>
-      <span id="stats-power" class="info-card-value">—</span>
-      <span id="stats-power-details" class="info-card-subtext">Calculée sur —</span>
+    <div class="info-cards-row">
+      <div class="info-card info-card-power">
+        <span class="info-card-label">PUISSANCE ESTIMÉE</span>
+        <span id="stats-power" class="info-card-value">—</span>
+        <span id="stats-power-details" class="info-card-subtext">Calculée sur —</span>
+      </div>
+
+      <div class="info-card info-card-project-power">
+        <span class="info-card-label">PUISSANCE PROJETS</span>
+        <span id="stats-project-power" class="info-card-value">—</span>
+        <span id="stats-project-power-details" class="info-card-subtext">Cumulée sur —</span>
+      </div>
     </div>
 
     <div class="info-card info-card-surface">
@@ -245,7 +254,7 @@
     </div>
   </div>
 
-  <script src="app.js"></script>
+  <script src="app.js?v=1.1"></script>
 </body>
 
 </html>
