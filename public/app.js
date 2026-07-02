@@ -51,6 +51,7 @@ let allMarkers = [];   // [{ marker, type, hebergeur, estimatedPower, surfaceSqF
 let selectedType = null;
 let selectedHebergeur = null;
 let filterAI = false;
+let filterCanadian = false;
 let hqNodesVisible = true;
 let hqGenVisible = true;
 let connectionsLayer = null;
@@ -112,11 +113,21 @@ function parseSurfaceSqFt(surfValue) {
 // ---- Puissance estimée selon SurfBatimentPI2 × 50% × PowerDensity / 1 000 000 ----
 function estimerPuissance(p, densityMap) {
   const surf = parseSurfaceSqFt(p.SurfBatimentPI2);
-  if (surf === null) return null;
   const type = (p.Type || '').toLowerCase().trim();
   const entry = Object.entries(densityMap).find(([k]) => k.toLowerCase().trim() === type);
-  if (!entry) return null;
-  return (surf * 0.5 * entry[1].power_density_w_pi2) / 1_000_000;
+  
+  let calcul = null;
+  if (surf !== null && entry && entry[1].power_density_w_pi2 > 0) {
+    calcul = (surf * 0.5 * entry[1].power_density_w_pi2) / 1_000_000;
+  }
+  
+  // Si le calcul par surface est impossible, donne 0, ou si le type est Crypto/Minage :
+  // On privilégie la puissance annoncée si elle est présente
+  if (calcul === null || calcul === 0 || type === 'crypto') {
+    return (p.PuissanceAnnMW !== null && p.PuissanceAnnMW !== undefined) ? p.PuissanceAnnMW : calcul;
+  }
+  
+  return calcul;
 }
 
 // ---- Config couleurs réseau électrique par niveau de tension (kV) ----
@@ -149,6 +160,53 @@ function getHqStyleParams(pole) {
   return { color, weight, opacity, dashArray };
 }
 
+/**
+ * Retourne les émojis drapeau correspondant à la nationalité.
+ * @param {string} nationalite 
+ * @param {boolean} uniqueUniquement
+ * @returns {string}
+ */
+function obtenirDrapeaux(nationalite, uniqueUniquement = false) {
+  if (!nationalite || nationalite.trim() === '' || nationalite === '—') return '';
+  const text = nationalite.toLowerCase();
+  const flags = [];
+  
+  if (text.includes('canada') || text.includes('canadian') || text.includes('québec') || text.includes('quebec')) {
+    flags.push('🇨🇦');
+  }
+  if (text.includes('united states') || text.includes('usa') || text.includes('u.s.')) {
+    flags.push('🇺🇸');
+  }
+  if (text.includes('u.k.') || text.includes('united kingdom') || text.includes('uk')) {
+    flags.push('🇬🇧');
+  }
+  if (text.includes('netherlands')) {
+    flags.push('🇳🇱');
+  }
+  if (text.includes('france')) {
+    flags.push('🇫🇷');
+  }
+  if (text.includes('japan')) {
+    flags.push('🇯🇵');
+  }
+  if (text.includes('poland')) {
+    flags.push('🇵🇱');
+  }
+  if (text.includes('uae')) {
+    flags.push('🇦🇪');
+  }
+  if (text.includes('singapore')) {
+    flags.push('🇸🇬');
+  }
+  if (text.includes('european')) {
+    flags.push('🇪🇺');
+  }
+  
+  if (flags.length === 0) return '';
+  if (uniqueUniquement) return ' ' + flags[0];
+  return ' ' + flags.join('');
+}
+
 // ---- Construction du contenu popup ----
 function buildPopup(p, densityMap) {
   const lien = p.Siteweb
@@ -158,8 +216,11 @@ function buildPopup(p, densityMap) {
   const puissEst = estimerPuissance(p, densityMap);
   const puissEstStr = puissEst !== null ? puissEst.toFixed(2) + ' MW' : '—';
 
+  const drapeaux = obtenirDrapeaux(p.NationaliteShareholder);
+  const titreAffiche = `${val(p.NomSite)}${drapeaux}`;
+
   return `
-    <div class="popup-title">${val(p.NomSite)}</div>
+    <div class="popup-title">${titreAffiche}</div>
     <div class="popup-row"><span class="popup-label">Type</span><span class="popup-value">${val(p.Type)}</span></div>
     <div class="popup-row"><span class="popup-label">Hébergeur</span><span class="popup-value">${val(p.Hebergeur)}</span></div>
     <div class="popup-row"><span class="popup-label">Adresse</span><span class="popup-value">${val(p.Adresse)}</span></div>
@@ -167,6 +228,8 @@ function buildPopup(p, densityMap) {
     <div class="popup-row"><span class="popup-label">Puissance estimée</span><span class="popup-value">${puissEstStr}</span></div>
     <div class="popup-row"><span class="popup-label">Bâtiments</span><span class="popup-value">${val(p.NombreBatiments)}</span></div>
     <div class="popup-row"><span class="popup-label">Équipé pour l'IA</span><span class="popup-value">${p.ÉquipIA === 'IA' ? 'Oui ✅' : 'Non'}</span></div>
+    <div class="popup-row"><span class="popup-label">Actionnaire maj.</span><span class="popup-value">${val(p.ShareholderMaj)}</span></div>
+    <div class="popup-row"><span class="popup-label">Siège social</span><span class="popup-value">${val(p.SiegeSocial)}</span></div>
     <div class="popup-row"><span class="popup-label">Site web</span><span class="popup-value">${lien}</span></div>
   `;
 }
@@ -267,8 +330,13 @@ function updateHostBreakdownUI(hostCounts) {
       }
     }
 
+    const markerForHost = allMarkers.find(m => m.hebergeur === hostName);
+    const nationalite = markerForHost ? markerForHost.nationaliteShareholder : '';
+    const drapeaux = obtenirDrapeaux(nationalite, true);
+    const drapeauxHTML = drapeaux ? `<span class="host-flag">${drapeaux.trim()}</span> ` : '';
+
     row.innerHTML = `
-      <span class="host-name" title="${hostName}">${hostName}</span>
+      <span class="host-name" title="${hostName}">${drapeauxHTML}${hostName}</span>
       <span class="host-count">${count}</span>
     `;
 
@@ -292,13 +360,19 @@ function applyFilters() {
   const hostCounts = {};
   const visibleDatacenterIds = new Set();
 
-  for (const { marker, type, hebergeur, estimatedPower, surfaceSqFt, equipIA, uniqid } of allMarkers) {
+  for (const { marker, type, hebergeur, estimatedPower, surfaceSqFt, equipIA, uniqid, nationaliteShareholder } of allMarkers) {
     const matchType = !selectedType || type === selectedType;
     const matchHebergeur = !selectedHebergeur || hebergeur === selectedHebergeur;
     const matchAI = !filterAI || equipIA === 'IA';
     
+    let matchCanadian = true;
+    if (filterCanadian) {
+      const shareNation = nationaliteShareholder ? nationaliteShareholder.toLowerCase() : '';
+      matchCanadian = shareNation.includes('canada') || shareNation.includes('canadian') || shareNation.includes('québec') || shareNation.includes('quebec');
+    }
+    
     // Affichage sur la carte (tient compte de tous les filtres)
-    if (matchType && matchHebergeur && matchAI) {
+    if (matchType && matchHebergeur && matchAI && matchCanadian) {
       clusterGroup.addLayer(marker);
       countVisible++;
       if (estimatedPower !== null && estimatedPower !== undefined) {
@@ -707,7 +781,7 @@ Promise.all([
       const puissEst = estimerPuissance(p, densityMap);
       const surfaceSqFt = parseSurfaceSqFt(p.SurfBatimentPI2);
 
-      allMarkers.push({ marker, type, hebergeur, estimatedPower: puissEst, surfaceSqFt, equipIA: p.ÉquipIA, uniqid: p.UNIQID });
+      allMarkers.push({ marker, type, hebergeur, estimatedPower: puissEst, surfaceSqFt, equipIA: p.ÉquipIA, uniqid: p.UNIQID, nationaliteShareholder: p.NationaliteShareholder });
     }
 
     if (ignorés > 0) console.info(`ℹ️ ${ignorés} site(s) sans coordonnées ignoré(s)`);
@@ -726,6 +800,22 @@ Promise.all([
         } else {
           btnFilterIA.classList.remove('active');
           btnFilterIA.classList.remove('inactive');
+        }
+        applyFilters();
+      });
+    }
+
+    // Bouton "Actionnaires canadiens"
+    const btnFilterCanadien = document.getElementById('btn-filter-canadien');
+    if (btnFilterCanadien) {
+      btnFilterCanadien.addEventListener('click', () => {
+        filterCanadian = !filterCanadian;
+        if (filterCanadian) {
+          btnFilterCanadien.classList.add('active');
+          btnFilterCanadien.classList.remove('inactive');
+        } else {
+          btnFilterCanadien.classList.remove('active');
+          btnFilterCanadien.classList.remove('inactive');
         }
         applyFilters();
       });

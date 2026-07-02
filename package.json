@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "build": "node scripts/process-working-data.js",
+    "update-data": "node scripts/update-datacenters.js",
     "start": "node server.js"
   },
   "dependencies": {

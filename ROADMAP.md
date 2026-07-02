@@ -39,6 +39,7 @@ de session.
 - [x] Afficher les centrales distinctement
 - [ ] Permettre de partager une fiche datacenter specifique via un lien
 - [ ] Ajouter les projets de datacenter en construction
+- [x] Infos sur la nationalité des entreprises et de leurs actionnaires
 - [ ] Internationnaliser (i18n)
 
 ---
@@ -55,3 +56,4 @@ de session.
 
 - [ ] Choisir une plateforme d'hébergement (Railway, Fly.io, VPS…)
 - [ ] Domaine custom
+- [ ] Scripter l'export vers un csv format Hubblo

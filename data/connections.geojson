@@ -1,7 +1,7 @@
 {
   "type": "FeatureCollection",
   "metadata": {
-    "date": "2026-06-25",
+    "date": "2026-07-01",
     "source": "Liaisons Datacenters -> Postes Hydro-Québec les plus proches"
   },
   "features": [
@@ -379,6 +379,29 @@
         "type": "LineString",
         "coordinates": [
           [
+            -73.5698065,
+            45.5031824
+          ],
+          [
+            -73.563213,
+            45.508364
+          ]
+        ]
+      },
+      "properties": {
+        "datacenter_name": "Enovum Data Centers - MTL01",
+        "datacenter_id": "EVNMMTL01",
+        "datacenter_type": "Retail",
+        "substation_name": "Dorchester",
+        "distance_km": 0.7720031985955991
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
             -73.83767669997879,
             45.45831450012441
           ],
@@ -517,29 +540,6 @@
         "type": "LineString",
         "coordinates": [
           [
-            -73.63188970044479,
-            45.45742240009864
-          ],
-          [
-            -73.657771,
-            45.472705
-          ]
-        ]
-      },
-      "properties": {
-        "datacenter_name": "Estruxture MTL1",
-        "datacenter_id": "ESTRMTL01",
-        "datacenter_type": "Retail",
-        "substation_name": "Hampstead",
-        "distance_km": 2.638489228750409
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "LineString",
-        "coordinates": [
-          [
             -73.4306385993092,
             45.56836260012281
           ],
@@ -599,29 +599,6 @@
         "datacenter_name": "Estruxture MTL5",
         "datacenter_id": "ESTRMTL05",
         "datacenter_type": "Retail",
-        "substation_name": "Dorchester",
-        "distance_km": 0.678446442184254
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "LineString",
-        "coordinates": [
-          [
-            -73.56548169994713,
-            45.502473399766856
-          ],
-          [
-            -73.563213,
-            45.508364
-          ]
-        ]
-      },
-      "properties": {
-        "datacenter_name": "Hive MTL-1 - opéré par Ventage",
-        "datacenter_id": "HIVDMTL01",
-        "datacenter_type": "Unknown",
         "substation_name": "Dorchester",
         "distance_km": 0.678446442184254
       }
@@ -954,29 +931,6 @@
         "type": "LineString",
         "coordinates": [
           [
-            -71.97117439998304,
-            45.39818960046551
-          ],
-          [
-            -71.964182,
-            45.399108
-          ]
-        ]
-      },
-      "properties": {
-        "datacenter_name": "Bitfarm Leger",
-        "datacenter_id": "BITFSHB01",
-        "datacenter_type": "Crypto",
-        "substation_name": "Ville de Sherbrooke Orford",
-        "distance_km": 0.5554195864234193
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "LineString",
-        "coordinates": [
-          [
             -68.19013949944043,
             49.222381500641504
           ],
@@ -1000,6 +954,29 @@
         "type": "LineString",
         "coordinates": [
           [
+            -71.889038,
+            45.403271
+          ],
+          [
+            -71.88213,
+            45.390661
+          ]
+        ]
+      },
+      "properties": {
+        "datacenter_name": "Exaion / PINQ2 Bellevue",
+        "datacenter_id": "EXINSHB01",
+        "datacenter_type": "Wholesale",
+        "substation_name": "Ville de Sherbrooke Galt",
+        "distance_km": 1.5023324182279068
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
             -72.71985989976469,
             45.29617870009422
           ],
@@ -1015,6 +992,719 @@
         "datacenter_type": "Quantique",
         "substation_name": "Adamsville",
         "distance_km": 1.7946448273791225
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -74.3401388,
+            45.6560478
+          ],
+          [
+            -74.301276,
+            45.648799
+          ]
+        ]
+      },
+      "properties": {
+        "datacenter_name": "HIVE Canada 1.0 ",
+        "datacenter_id": "HIVDLCH01",
+        "datacenter_type": "Wholesale",
+        "substation_name": "SGL Canada JCT",
+        "distance_km": 3.126352284597483
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -68.185631,
+            49.214231
+          ],
+          [
+            -68.156315,
+            49.257037
+          ]
+        ]
+      },
+      "properties": {
+        "datacenter_name": "Argo Blockchain",
+        "datacenter_id": "ARGOBCO01",
+        "datacenter_type": "Crypto",
+        "substation_name": "Alcoa Baie Comeau",
+        "distance_km": 5.21404007069075
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.5698065,
+            45.5031824
+          ],
+          [
+            -73.563213,
+            45.508364
+          ]
+        ]
+      },
+      "properties": {
+        "datacenter_name": "Calcul Quebec - HPC",
+        "datacenter_id": "CLCQMTL01",
+        "datacenter_type": "Hyperscale",
+        "substation_name": "Dorchester",
+        "distance_km": 0.7720031985955991
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.5698065,
+            45.5031824
+          ],
+          [
+            -73.563213,
+            45.508364
+          ]
+        ]
+      },
+      "properties": {
+        "datacenter_name": "Calcul Quebec - Quantique",
+        "datacenter_id": "CLCQMTL02",
+        "datacenter_type": "Quantique",
+        "substation_name": "Dorchester",
+        "distance_km": 0.7720031985955991
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -72.7496891,
+            46.5458313
+          ],
+          [
+            -72.762637,
+            46.535863
+          ]
+        ]
+      },
+      "properties": {
+        "datacenter_name": "DigiHub - quantique",
+        "datacenter_id": "DIGHSHW01",
+        "datacenter_type": "Quantique",
+        "substation_name": "Leman",
+        "distance_km": 1.4863758956522244
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.9221694,
+            45.3897607
+          ],
+          [
+            -71.88213,
+            45.390661
+          ]
+        ]
+      },
+      "properties": {
+        "datacenter_name": "Distriq - Zone Innovation Quantique",
+        "datacenter_id": "DSTQSHB01",
+        "datacenter_type": "Quantique",
+        "substation_name": "Ville de Sherbrooke Galt",
+        "distance_km": 3.1282542402175335
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.4306386,
+            45.5683626
+          ],
+          [
+            -73.444527,
+            45.567478
+          ]
+        ]
+      },
+      "properties": {
+        "datacenter_name": "Estruxture MTL3",
+        "datacenter_id": "ESTRMTL03",
+        "datacenter_type": "Retail",
+        "substation_name": "Mittal Canada Inc. Longueuil JCT",
+        "distance_km": 1.0855868589035202
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -72.7637534,
+            45.2019913
+          ],
+          [
+            -72.762857,
+            45.204296
+          ]
+        ]
+      },
+      "properties": {
+        "datacenter_name": "Keel Infrastructure Cowansville",
+        "datacenter_id": "KEELCWV01",
+        "datacenter_type": "Crypto",
+        "substation_name": "Cowansville",
+        "distance_km": 0.2657200397459146
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -72.974968,
+            45.2831
+          ],
+          [
+            -72.956038,
+            45.288067
+          ]
+        ]
+      },
+      "properties": {
+        "datacenter_name": "Keel Infrastructure Farnham",
+        "datacenter_id": "KEELFHM01",
+        "datacenter_type": "Crypto",
+        "substation_name": "Farnham",
+        "distance_km": 1.5806015334822534
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -72.1333915,
+            45.2725417
+          ],
+          [
+            -72.121252,
+            45.274014
+          ]
+        ]
+      },
+      "properties": {
+        "datacenter_name": "Keel Infrastructure Magog",
+        "datacenter_id": "KEELMGG01",
+        "datacenter_type": "Crypto",
+        "substation_name": "Ville de Magog",
+        "distance_km": 0.96392934367248
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.9711744,
+            45.3981896
+          ],
+          [
+            -71.964182,
+            45.399108
+          ]
+        ]
+      },
+      "properties": {
+        "datacenter_name": "Keel Infrastructure Sherbrooke Leger 1",
+        "datacenter_id": "KEELSHB01",
+        "datacenter_type": "Crypto",
+        "substation_name": "Ville de Sherbrooke Orford",
+        "distance_km": 0.5554195972438623
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.889038,
+            45.403271
+          ],
+          [
+            -71.88213,
+            45.390661
+          ]
+        ]
+      },
+      "properties": {
+        "datacenter_name": "Keel Infrastructure Sherbrooke 2 Garlock",
+        "datacenter_id": "KEELSHB02",
+        "datacenter_type": "Crypto",
+        "substation_name": "Ville de Sherbrooke Galt",
+        "distance_km": 1.5023324182279068
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.9836085,
+            45.4044613
+          ],
+          [
+            -71.964182,
+            45.399108
+          ]
+        ]
+      },
+      "properties": {
+        "datacenter_name": "Keel Infrastructure Sherbrooke 3",
+        "datacenter_id": "KEELSHB03",
+        "datacenter_type": "Crypto",
+        "substation_name": "Ville de Sherbrooke Orford",
+        "distance_km": 1.6293222686686077
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -72.9656026,
+            45.6249924
+          ],
+          [
+            -72.9724,
+            45.62607
+          ]
+        ]
+      },
+      "properties": {
+        "datacenter_name": "Keel Infrastructure Saint-Hyacinthe",
+        "datacenter_id": "KEELSHY01",
+        "datacenter_type": "Crypto",
+        "substation_name": "Casavant",
+        "distance_km": 0.5420013299850752
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -69.5461351,
+            48.4268757
+          ],
+          [
+            -69.46301,
+            48.346519
+          ]
+        ]
+      },
+      "properties": {
+        "datacenter_name": "MWC MegaWatt Canada Escoumins",
+        "datacenter_id": "MWCAESC01",
+        "datacenter_type": "Crypto",
+        "substation_name": "Les Basques",
+        "distance_km": 10.8405689211087
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.4711937,
+            46.8810961
+          ],
+          [
+            -71.35986,
+            46.835565
+          ]
+        ]
+      },
+      "properties": {
+        "datacenter_name": "RDDc - quantique",
+        "datacenter_id": "RDDCQC01",
+        "datacenter_type": "Quantique",
+        "substation_name": "NeufchÃ¢tel",
+        "distance_km": 9.863768136121614
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.8976601,
+            45.288182
+          ],
+          [
+            -73.895791,
+            45.285482
+          ]
+        ]
+      },
+      "properties": {
+        "datacenter_name": "Google Beauharnois",
+        "datacenter_id": "GGLEBEA01",
+        "datacenter_type": "Hyperscale",
+        "substation_name": "LÃ©ry",
+        "distance_km": 0.3339418672243149
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.3481367,
+            46.7905581
+          ],
+          [
+            -71.322811,
+            46.782885
+          ]
+        ]
+      },
+      "properties": {
+        "datacenter_name": "Microsoft YQB01",
+        "datacenter_id": "MSFTYQB01",
+        "datacenter_type": "Wholesale",
+        "substation_name": "La SuÃ¨te",
+        "distance_km": 2.1085552184803107
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.4306333,
+            46.0185868
+          ],
+          [
+            -73.423798,
+            46.023732
+          ]
+        ]
+      },
+      "properties": {
+        "datacenter_name": "SATO Quebec",
+        "datacenter_id": "SATOJOL01",
+        "datacenter_type": "Crypto",
+        "substation_name": "Ville de Joliette",
+        "distance_km": 0.7783742328242629
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.7479609,
+            45.5926218
+          ],
+          [
+            -73.749963,
+            45.590243
+          ]
+        ]
+      },
+      "properties": {
+        "datacenter_name": "D-Central Laval",
+        "datacenter_id": "DCENLAV01",
+        "datacenter_type": "Crypto",
+        "substation_name": "Le Corbusier",
+        "distance_km": 0.3069769127883633
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -67.547759,
+            48.834417
+          ],
+          [
+            -67.55558,
+            48.831441
+          ]
+        ]
+      },
+      "properties": {
+        "datacenter_name": "Flumen Matane",
+        "datacenter_id": "FLUMMAT01",
+        "datacenter_type": "Crypto",
+        "substation_name": "Spruce Falls Inc.",
+        "distance_km": 0.6612202486609038
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.2908286,
+            46.8956499
+          ],
+          [
+            -71.321357,
+            46.886146
+          ]
+        ]
+      },
+      "properties": {
+        "datacenter_name": "FirstBlock Québec DC1",
+        "datacenter_id": "FBLKCHA01",
+        "datacenter_type": "Crypto",
+        "substation_name": "Charlesbourg",
+        "distance_km": 2.549203677442405
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.2962873,
+            46.8118545
+          ],
+          [
+            -71.264079,
+            46.831007
+          ]
+        ]
+      },
+      "properties": {
+        "datacenter_name": "FirstBlock Québec DC2",
+        "datacenter_id": "FBLKDUB01",
+        "datacenter_type": "Crypto",
+        "substation_name": "QuÃ©bec",
+        "distance_km": 3.2467198011082408
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.3099877,
+            46.766989
+          ],
+          [
+            -71.322811,
+            46.782885
+          ]
+        ]
+      },
+      "properties": {
+        "datacenter_name": "FirstBlock Québec DC3",
+        "datacenter_id": "FBLKSAI01",
+        "datacenter_type": "Crypto",
+        "substation_name": "La SuÃ¨te",
+        "distance_km": 2.0193763192806085
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.5698065,
+            45.5031824
+          ],
+          [
+            -73.563213,
+            45.508364
+          ]
+        ]
+      },
+      "properties": {
+        "datacenter_name": "FirstBlock Montréal DC1",
+        "datacenter_id": "FBLKMTL01",
+        "datacenter_type": "Crypto",
+        "substation_name": "Dorchester",
+        "distance_km": 0.7720031985955991
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.5698065,
+            45.5031824
+          ],
+          [
+            -73.563213,
+            45.508364
+          ]
+        ]
+      },
+      "properties": {
+        "datacenter_name": "FirstBlock Montréal DC2",
+        "datacenter_id": "FBLKMTL02",
+        "datacenter_type": "Crypto",
+        "substation_name": "Dorchester",
+        "distance_km": 0.7720031985955991
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.5698065,
+            45.5031824
+          ],
+          [
+            -73.563213,
+            45.508364
+          ]
+        ]
+      },
+      "properties": {
+        "datacenter_name": "FirstBlock Montréal DC3",
+        "datacenter_id": "FBLKMTL03",
+        "datacenter_type": "Crypto",
+        "substation_name": "Dorchester",
+        "distance_km": 0.7720031985955991
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.5698065,
+            45.5031824
+          ],
+          [
+            -73.563213,
+            45.508364
+          ]
+        ]
+      },
+      "properties": {
+        "datacenter_name": "FirstBlock Montréal DC4",
+        "datacenter_id": "FBLKMTL04",
+        "datacenter_type": "Crypto",
+        "substation_name": "Dorchester",
+        "distance_km": 0.7720031985955991
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -72.5428485,
+            46.3432325
+          ],
+          [
+            -72.545674,
+            46.355492
+          ]
+        ]
+      },
+      "properties": {
+        "datacenter_name": "FirstBlock Trois-Rivières DC1",
+        "datacenter_id": "FBLKTRO01",
+        "datacenter_type": "Crypto",
+        "substation_name": "Chenaux",
+        "distance_km": 1.3803367452630062
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.889038,
+            45.403271
+          ],
+          [
+            -71.88213,
+            45.390661
+          ]
+        ]
+      },
+      "properties": {
+        "datacenter_name": "FirstBlock Sherbrooke DC1",
+        "datacenter_id": "FBLKSHE01",
+        "datacenter_type": "Crypto",
+        "substation_name": "Ville de Sherbrooke Galt",
+        "distance_km": 1.5023324182279068
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -71.5567165,
+            45.4810986
+          ],
+          [
+            -71.657893,
+            45.467707
+          ]
+        ]
+      },
+      "properties": {
+        "datacenter_name": "FirstBlock Estrie DC1",
+        "datacenter_id": "FBLKEST01",
+        "datacenter_type": "Crypto",
+        "substation_name": "East Angus",
+        "distance_km": 8.028336473424837
       }
     }
   ]
