@@ -7,7 +7,38 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const CSV_FILE = path.join(__dirname, '../working-data/Datacenters/Datacenters_2026_07_01.csv');
-const GEOJSON_FILE = path.join(__dirname, '../data/datacenters.geojson');
+const WORKING_DIR = path.join(__dirname, '../working-data/Datacenters');
+
+// Déterminer la date cible à partir du nom du fichier CSV (ex: Datacenters_2026_07_01.csv -> 2026-07-01)
+const csvBasename = path.basename(CSV_FILE);
+const csvDateMatch = csvBasename.match(/Datacenters_(\d{4})_(\d{2})_(\d{2})/i);
+const targetDate = csvDateMatch ? `${csvDateMatch[1]}-${csvDateMatch[2]}-${csvDateMatch[3]}` : '2026-07-01';
+
+const GEOJSON_OUTPUT_FILE = path.join(WORKING_DIR, `datacenters_${targetDate}.geojson`);
+
+/**
+ * Trouve le fichier GeoJSON source le plus récent antérieur à la date cible.
+ * @param {string} targetDate
+ * @returns {string|null}
+ */
+function getSourceGeojsonFile(targetDate) {
+  if (!fs.existsSync(WORKING_DIR)) return null;
+  const files = fs.readdirSync(WORKING_DIR);
+  const pattern = /^datacenters_(\d{4}-\d{2}-\d{2})\.geojson$/;
+  const matched = files
+    .map(file => {
+      const match = file.match(pattern);
+      return match ? { filename: file, date: match[1] } : null;
+    })
+    .filter(Boolean)
+    .filter(item => item.date < targetDate);
+
+  if (matched.length === 0) return null;
+  matched.sort((a, b) => b.date.localeCompare(a.date));
+  return path.join(WORKING_DIR, matched[0].filename);
+}
+
+const sourceFile = getSourceGeojsonFile(targetDate) || path.join(__dirname, '../data/datacenters.geojson');
 
 const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
 
@@ -171,12 +202,13 @@ async function geocodeAddress(address, city) {
 async function main() {
   console.log('--- DÉBUT DE LA MISE À JOUR INC R É M E N T A L E ---');
 
+  console.log(`Fichier source GeoJSON utilisé : ${sourceFile}`);
   // 1. Lire le GeoJSON actuel
-  if (!fs.existsSync(GEOJSON_FILE)) {
-    console.error(`Fichier GeoJSON cible introuvable : ${GEOJSON_FILE}`);
+  if (!fs.existsSync(sourceFile)) {
+    console.error(`Fichier GeoJSON source introuvable : ${sourceFile}`);
     process.exit(1);
   }
-  const geojson = JSON.parse(fs.readFileSync(GEOJSON_FILE, 'utf8'));
+  const geojson = JSON.parse(fs.readFileSync(sourceFile, 'utf8'));
   const features = geojson.features || [];
   
   // 2. Lire le CSV des nouveaux datacenters
@@ -367,7 +399,7 @@ async function main() {
           FicheTechDocumentation: row["Fiche technique / documentation"] || null,
           Source: row["Source"] || null,
           display_na: displayName,
-          date_collecte: "2026-07-01",
+          date_collecte: targetDate,
           ShareholderMaj: row[shareholderNameKey] || null,
           NationaliteShareholder: row[shareholderNationKey] || null,
           SiegeSocial: row[siegeSocialKey] || null,
@@ -386,11 +418,12 @@ async function main() {
   if (!geojson.metadata) {
     geojson.metadata = {};
   }
-  geojson.metadata.date = "2026-07-01";
-  geojson.metadata.source = "Mise à jour des centres de données de juillet 2026";
+  geojson.metadata.date = targetDate;
+  geojson.metadata.source = `Mise à jour des centres de données de ${targetDate}`;
 
   // 5. Sauvegarder le fichier mis à jour
-  fs.writeFileSync(GEOJSON_FILE, JSON.stringify(geojson, null, 2), 'utf8');
+  console.log(`Sauvegarde du nouveau GeoJSON dans : ${GEOJSON_OUTPUT_FILE}`);
+  fs.writeFileSync(GEOJSON_OUTPUT_FILE, JSON.stringify(geojson, null, 2), 'utf8');
 
   console.log('\n--- BILAN DE LA MISE À JOUR ---');
   console.log(`Nouveaux datacenters ajoutés : ${addedCount}`);
