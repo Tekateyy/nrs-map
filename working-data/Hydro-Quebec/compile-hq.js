@@ -21,17 +21,32 @@ function haversine(lat1, lon1, lat2, lon2) {
 
 console.log("Loading HQ Transmission Lines and Nodes CSV data...");
 
-const nodesPath = path.join(__dirname, 'nodes_2026-06-17.csv');
-const linesPath = path.join(__dirname, 'transmission_lines_2026-06-17.csv');
+function getMostRecentFile(prefix, suffix) {
+    const files = fs.readdirSync(__dirname);
+    const pattern = new RegExp(`^${prefix}_(\\d{4}-\\d{2}-\\d{2})${suffix}$`);
+    const matched = files
+        .map(f => {
+            const m = f.match(pattern);
+            return m ? { filename: f, date: m[1] } : null;
+        })
+        .filter(Boolean);
+    
+    if (matched.length === 0) return null;
+    matched.sort((a, b) => b.date.localeCompare(a.date));
+    return path.join(__dirname, matched[0].filename);
+}
 
-// Extracted date for metadata (from nodes file date if available, or today)
-const dateMatch = path.basename(nodesPath).match(/_(\d{4}-\d{2}-\d{2})/);
-const fileDate = dateMatch ? dateMatch[1] : new Date().toISOString().slice(0, 10);
+const nodesPath = getMostRecentFile('nodes', '.csv');
+const linesPath = getMostRecentFile('transmission_lines', '.csv');
 
-if (!fs.existsSync(nodesPath) || !fs.existsSync(linesPath)) {
-    console.error("Error: CSV source files not found.");
+if (!nodesPath || !linesPath || !fs.existsSync(nodesPath) || !fs.existsSync(linesPath)) {
+    console.error("Error: CSV source files not found (nodes_*.csv or transmission_lines_*.csv).");
     process.exit(1);
 }
+
+// Extracted date for metadata
+const dateMatch = path.basename(nodesPath).match(/_(\d{4}-\d{2}-\d{2})/);
+const fileDate = dateMatch ? dateMatch[1] : new Date().toISOString().slice(0, 10);
 
 // Read and parse nodes CSV
 const nodesRaw = fs.readFileSync(nodesPath, 'utf8');

@@ -59,14 +59,13 @@ let connectionsGeojson = null;
 
 // ---- Config icônes par type ----
 const ICON_CONFIG = {
-  'Hyperscale':    { couleur: '#FF6B35', lettre: 'H', texte: '#fff' },
-  'Wholesale':     { couleur: '#4ECDC4', lettre: 'W', texte: '#fff' },
-  'Retail':        { couleur: '#45B7D1', lettre: 'R', texte: '#fff' },
-  'Carrier Hotel': { couleur: '#96CEB4', lettre: 'C', texte: '#fff' },
-  'Crypto':        { couleur: '#FFD93D', lettre: '₿', texte: '#333' },
-  'Quantique':     { couleur: '#C39BD3', lettre: 'Q', texte: '#fff' },
-  'Unknown':       { couleur: '#888888', lettre: '?', texte: '#fff' },
-  'Inconnu':       { couleur: '#888888', lettre: '?', texte: '#fff' },
+  'Hyperscale': { couleur: '#FF6B35', lettre: 'H', texte: '#fff' },
+  'Wholesale': { couleur: '#4ECDC4', lettre: 'W', texte: '#fff' },
+  'Retail': { couleur: '#45B7D1', lettre: 'R', texte: '#fff' },
+  'Crypto': { couleur: '#FFD93D', lettre: '₿', texte: '#333' },
+  'Quantique': { couleur: '#C39BD3', lettre: 'Q', texte: '#fff' },
+  'Unknown': { couleur: '#888888', lettre: '?', texte: '#fff' },
+  'Inconnu': { couleur: '#888888', lettre: '?', texte: '#fff' },
 };
 
 function creerIcone(type, status) {
@@ -116,18 +115,18 @@ function estimerPuissance(p, densityMap) {
   const surf = parseSurfaceSqFt(p.SurfBatimentPI2);
   const type = (p.Type || '').toLowerCase().trim();
   const entry = Object.entries(densityMap).find(([k]) => k.toLowerCase().trim() === type);
-  
+
   let calcul = null;
   if (surf !== null && entry && entry[1].power_density_w_pi2 > 0) {
     calcul = (surf * 0.5 * entry[1].power_density_w_pi2) / 1_000_000;
   }
-  
+
   // Si le calcul par surface est impossible ou donne 0,
   // on privilégie la puissance annoncée si elle est présente
   if (calcul === null || calcul === 0) {
     return (p.PuissanceAnnMW !== null && p.PuissanceAnnMW !== undefined) ? p.PuissanceAnnMW : calcul;
   }
-  
+
   return calcul;
 }
 
@@ -171,7 +170,7 @@ function obtenirDrapeaux(nationalite, uniqueUniquement = false) {
   if (!nationalite || nationalite.trim() === '' || nationalite === '—') return '';
   const text = nationalite.toLowerCase();
   const flags = [];
-  
+
   if (text.includes('canada') || text.includes('canadian') || text.includes('québec') || text.includes('quebec')) {
     flags.push('🇨🇦');
   }
@@ -202,7 +201,7 @@ function obtenirDrapeaux(nationalite, uniqueUniquement = false) {
   if (text.includes('european')) {
     flags.push('🇪🇺');
   }
-  
+
   if (flags.length === 0) return '';
   if (uniqueUniquement) return ' ' + flags[0];
   return ' ' + flags.join('');
@@ -227,10 +226,10 @@ function fallbackCopyTextToClipboard(text, callback) {
   document.body.removeChild(textArea);
 }
 
-window.copyDcLink = function(uniqid, button) {
+window.copyDcLink = function (uniqid, button) {
   const shareUrl = `${window.location.origin}${window.location.pathname}?dc=${encodeURIComponent(uniqid)}`;
   const originalText = button.innerHTML;
-  
+
   const doCopy = () => {
     button.classList.add('copied');
     button.innerHTML = `
@@ -340,10 +339,10 @@ const numberFormatter = new Intl.NumberFormat('fr-CA', { maximumFractionDigits: 
 
 // ---- Mise à jour des statistiques ----
 function updateStatsUI(
-  countVisible, 
-  totalPower, 
-  countWithPower, 
-  totalSurfaceSqFt, 
+  countVisible,
+  totalPower,
+  countWithPower,
+  totalSurfaceSqFt,
   countWithSurface,
   countOperation,
   countProjet,
@@ -402,7 +401,7 @@ function updateHostBreakdownUI(hostCounts) {
   sortedHosts.forEach(([hostName, count]) => {
     const row = document.createElement('div');
     row.className = 'host-row';
-    
+
     // Appliquer les classes active/inactive
     if (selectedHebergeur !== null) {
       if (hostName === selectedHebergeur) {
@@ -453,18 +452,18 @@ function applyFilters() {
     const matchType = !selectedType || type === selectedType;
     const matchHebergeur = !selectedHebergeur || hebergeur === selectedHebergeur;
     const matchAI = !filterAI || equipIA === 'IA';
-    
+
     let matchCanadian = true;
     if (filterCanadian) {
       const shareNation = nationaliteShareholder ? nationaliteShareholder.toLowerCase() : '';
       matchCanadian = shareNation.includes('canada') || shareNation.includes('canadian') || shareNation.includes('québec') || shareNation.includes('quebec');
     }
-    
+
     // Affichage sur la carte (tient compte de tous les filtres)
     if (matchType && matchHebergeur && matchAI && matchCanadian) {
       clusterGroup.addLayer(marker);
       countVisible++;
-      
+
       const isOperation = !status || !status.toLowerCase().includes('projet');
       if (isOperation) {
         countOperation++;
@@ -496,10 +495,10 @@ function applyFilters() {
   }
 
   updateStatsUI(
-    countVisible, 
-    totalPower, 
-    countWithPower, 
-    totalSurfaceSqFt, 
+    countVisible,
+    totalPower,
+    countWithPower,
+    totalSurfaceSqFt,
     countWithSurface,
     countOperation,
     countProjet,
@@ -517,7 +516,7 @@ function updateConnections(visibleDatacenterIds) {
   connectionsLayer.clearLayers();
 
   if (hqNodesVisible) {
-    const filteredFeatures = connectionsGeojson.features.filter(f => 
+    const filteredFeatures = connectionsGeojson.features.filter(f =>
       visibleDatacenterIds.has(f.properties.datacenter_id)
     );
     connectionsLayer.addData(filteredFeatures);
@@ -651,12 +650,12 @@ Promise.all([
         else if (kv >= 315) speedClass = 'flow-transmission-315';
         else if (kv >= 230) speedClass = 'flow-transmission-230';
 
-        return { 
-          color, 
-          weight, 
-          opacity, 
-          dashArray, 
-          className: `flow-line-transmission ${speedClass}` 
+        return {
+          color,
+          weight,
+          opacity,
+          dashArray,
+          className: `flow-line-transmission ${speedClass}`
         };
       },
       onEachFeature: (feature, layer) => {
@@ -673,7 +672,7 @@ Promise.all([
     const hqNodesLayer = L.geoJSON(hqGeojson, {
       filter: feature => {
         if (feature.properties.isPoint !== true) return false;
-        
+
         // N'afficher que les très grosses centrales de 735 kV
         const p = feature.properties;
         const isGen = p.node_type === 'Generation' || (p.pole && p.pole.startsWith('Generation'));
@@ -789,11 +788,11 @@ Promise.all([
       // Points (Postes et Centrales)
       const pointFeatures = filteredFeatures.filter(f => {
         if (f.properties.isPoint !== true) return false;
-        
+
         const isGen = f.properties.node_type === 'Generation' || (f.properties.pole && f.properties.pole.startsWith('Generation'));
         if (isGen) {
           if (!hqGenVisible) return false;
-          
+
           // N'afficher que les très grosses centrales de 735 kV
           const match = (f.properties.pole || '').match(/(\d+)\s*kV/);
           const kv = match ? parseInt(match[1], 10) : 0;
@@ -801,7 +800,7 @@ Promise.all([
         } else {
           if (!hqNodesVisible) return false;
         }
-        
+
         return true;
       });
       hqNodesLayer.addData(pointFeatures);
@@ -892,14 +891,14 @@ Promise.all([
       const puissEst = estimerPuissance(p, densityMap);
       const surfaceSqFt = parseSurfaceSqFt(p.SurfBatimentPI2);
 
-      allMarkers.push({ 
-        marker, 
-        type, 
-        hebergeur, 
-        estimatedPower: puissEst, 
-        surfaceSqFt, 
-        equipIA: p.ÉquipIA, 
-        uniqid: p.UNIQID, 
+      allMarkers.push({
+        marker,
+        type,
+        hebergeur,
+        estimatedPower: puissEst,
+        surfaceSqFt,
+        equipIA: p.ÉquipIA,
+        uniqid: p.UNIQID,
         nationaliteShareholder: p.NationaliteShareholder,
         status: p.Status,
         announcedPower: p.PuissanceAnnMW
@@ -969,26 +968,26 @@ Promise.all([
     // Afficher tous les marqueurs
     applyFilters();
 
-     // Centrer la carte sur l'emprise des points ou sur le datacenter partagé
-     let startWithSharedDc = false;
-     const params = new URLSearchParams(window.location.search);
-     const dcParam = params.get('dc');
-     if (dcParam) {
-       const match = allMarkers.find(m => m.uniqid === dcParam);
-       if (match) {
-         startWithSharedDc = true;
-         // Initialiser d'abord la vue de la carte pour éviter les erreurs de zoom non défini dans Leaflet
-         map.setView(match.marker.getLatLng(), 15);
-         // zoomToShowLayer s'assure de dé-clustériser et faire le zoom nécessaire
-         clusterGroup.zoomToShowLayer(match.marker, () => {
-           match.marker.openPopup();
-         });
-       }
-     }
+    // Centrer la carte sur l'emprise des points ou sur le datacenter partagé
+    let startWithSharedDc = false;
+    const params = new URLSearchParams(window.location.search);
+    const dcParam = params.get('dc');
+    if (dcParam) {
+      const match = allMarkers.find(m => m.uniqid === dcParam);
+      if (match) {
+        startWithSharedDc = true;
+        // Initialiser d'abord la vue de la carte pour éviter les erreurs de zoom non défini dans Leaflet
+        map.setView(match.marker.getLatLng(), 15);
+        // zoomToShowLayer s'assure de dé-clustériser et faire le zoom nécessaire
+        clusterGroup.zoomToShowLayer(match.marker, () => {
+          match.marker.openPopup();
+        });
+      }
+    }
 
-     if (!startWithSharedDc && bounds.length) {
-       map.fitBounds(bounds, { padding: [40, 40] });
-     }
+    if (!startWithSharedDc && bounds.length) {
+      map.fitBounds(bounds, { padding: [40, 40] });
+    }
   })
   .catch(err => {
     console.error('Erreur de chargement :', err);

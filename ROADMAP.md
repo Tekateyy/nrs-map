@@ -23,7 +23,7 @@ de session.
 - [x] Robustesse au chargement : sites sans coordonnées ignorés gracieusement
 - [x] Puissance estimée (MW) calculée à la volée via `datacenter_types.json`
 - [x] Polygones bâtiments (`DCbati_poly.geojson`) avec filtre on/off
-- [x] Couleurs distinctes par Type (Hyperscale, Retail, Carrier Hotel…)
+- [x] Couleurs distinctes par Type (Hyperscale, Retail, Wholesale...)
 - [x] Légende des couleurs/types
 - [x] Compteur de sites affichés / total après filtrage
 - [x] Crédits et licence
@@ -32,7 +32,6 @@ de session.
 - [x] A propos
 - [x] Permettre le téléchagement des geojson
 - [x] Responsive design
-- [ ] Barre de recherche par nom de site et ville - Plus très sur de la pertinence pour celui là
 - [x] Connecter les DC avec le poste électrique le plus proche 
 - [x] Animation de flux
 - [x] Faire un filtre IA
@@ -40,7 +39,9 @@ de session.
 - [x] Permettre de partager une fiche datacenter specifique via un lien
 - [x] Ajouter les projets de datacenter en construction
 - [x] Infos sur la nationalité des entreprises et de leurs actionnaires
+- [x] Suprimmer la catégorie "Carrier Hotel"
 - [ ] Internationnaliser (i18n)
+- [ ] Barre de recherche par nom de site et ville - Plus très sur de la pertinence pour celui là
 
 ---
 
@@ -57,3 +58,4 @@ de session.
 - [ ] Choisir une plateforme d'hébergement (Railway, Fly.io, VPS…)
 - [ ] Domaine custom
 - [ ] Scripter l'export vers un csv format Hubblo
+- [ ] Ajouter nom des membres de l'équipe projet

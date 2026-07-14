@@ -11,10 +11,6 @@
         "description": "Hyperscale / HPC (>40MW - 100k pi2)",
         "power_density_w_pi2": 557
     },
-    "Carrier Hotel": {
-        "description": "Datacenter d'interconnexion réseaux",
-        "power_density_w_pi2": 186
-    },
     "Crypto": {
         "description": "Minage de cryptomonaies",
         "power_density_w_pi2": 743

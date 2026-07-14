@@ -53,7 +53,6 @@ function normalizeType(csvType) {
   if (typeStr.includes('retail')) return 'Retail';
   if (typeStr.includes('wholesale')) return 'Wholesale';
   if (typeStr.includes('hyperscale')) return 'Hyperscale';
-  if (typeStr.includes('carrier hotel')) return 'Carrier Hotel';
   if (typeStr.includes('crypto')) return 'Crypto';
   if (typeStr.includes('quantique')) return 'Quantique';
   return 'Unknown';
@@ -130,7 +129,7 @@ async function geocodeAddress(address, city) {
       return null;
     }
   }
-  
+
   let query = address;
   if (city && !address.toLowerCase().includes(city.toLowerCase())) {
     query += `, ${city}`;
@@ -143,19 +142,19 @@ async function geocodeAddress(address, city) {
   }
 
   const url = `https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(query)}&format=json&limit=1&addressdetails=1`;
-  
+
   try {
     const response = await fetch(url, {
       headers: {
         'User-Agent': 'nrs-map-updater/1.0 (alexandre.theve@gmail.com)'
       }
     });
-    
+
     if (!response.ok) {
       console.warn(`[Géocodage] Erreur HTTP ${response.status} pour la requête : "${query}"`);
       return null;
     }
-    
+
     const data = await response.json();
     if (Array.isArray(data) && data.length > 0) {
       const result = data[0];
@@ -166,7 +165,7 @@ async function geocodeAddress(address, city) {
         postcode: result.address?.postcode || null
       };
     }
-    
+
     // Essai de repli si l'adresse complète échoue, en cherchant uniquement par ville
     if (city && query !== `${city}, Québec, Canada`) {
       console.log(`[Géocodage] Adresse exacte non trouvée pour "${query}". Repli sur la ville : "${city}, Québec, Canada"...`);
@@ -190,7 +189,7 @@ async function geocodeAddress(address, city) {
         }
       }
     }
-    
+
     console.warn(`[Géocodage] Aucun résultat trouvé pour la requête : "${query}"`);
     return null;
   } catch (error) {
@@ -210,7 +209,7 @@ async function main() {
   }
   const geojson = JSON.parse(fs.readFileSync(sourceFile, 'utf8'));
   const features = geojson.features || [];
-  
+
   // 2. Lire le CSV des nouveaux datacenters
   if (!fs.existsSync(CSV_FILE)) {
     console.error(`Fichier CSV source introuvable : ${CSV_FILE}`);
@@ -229,7 +228,7 @@ async function main() {
   const csvUniqIds = new Set(csvRows.map(row => cleanUniqId(row["UNIQID (4code heb,3loc,2num)"])).filter(id => id && id !== 'HPBTQBC01'));
   const filteredFeatures = [];
   const seenUniqIds = new Set();
-  
+
   features.forEach(f => {
     const cleanId = cleanUniqId(f.properties?.UNIQID);
     if (csvUniqIds.has(cleanId) && !seenUniqIds.has(cleanId)) {
@@ -284,12 +283,12 @@ async function main() {
       // Le datacenter existe déjà dans le GeoJSON
       const coords = existingFeature.geometry?.coordinates;
       const isEmptyCoords = !Array.isArray(coords) || coords.length < 2 || (coords[0] === null || coords[1] === null || coords[0] === undefined);
-      
+
       if (isEmptyCoords) {
         console.log(`[EXISTANT] ${uniqId} (${existingFeature.properties.NomSite}) a des coordonnées vides. Géocodage en cours...`);
         const address = row["Adresse"] || existingFeature.properties.Adresse;
         const city = cleanCityName(row["Ville"] || existingFeature.properties.ville);
-        
+
         await sleep(1000); // Respecter les limites Nominatim (1 req/sec)
         const geoResult = await geocodeAddress(address, city);
         if (geoResult) {
@@ -305,7 +304,7 @@ async function main() {
           updatedCoordsCount++;
         }
       }
-      
+
       // Compléter les propriétés manquantes/nulles avec les données du CSV
       const props = existingFeature.properties;
       const updates = {
@@ -335,17 +334,17 @@ async function main() {
     } else {
       // Nouveau datacenter à ajouter
       console.log(`[NOUVEAU] Ajout du datacenter ${uniqId} (${row["Nom du site"]}). Géocodage de l'adresse...`);
-      
+
       const address = row["Adresse"];
       const city = cleanCityName(row["Ville"]);
-      
+
       await sleep(1000); // Respecter les limites Nominatim (1 req/sec)
       const geoResult = await geocodeAddress(address, city);
-      
+
       let coordinates = [];
       let displayName = " ";
       let extractedPostcode = "";
- 
+
       // Regex de repli pour extraire le code postal canadien de l'adresse si Nominatim ne le retourne pas
       const postcodeRegex = /[A-Z]\d[A-Z]\s?\d[A-Z]\d/i;
       const postcodeMatch = address ? address.match(postcodeRegex) : null;

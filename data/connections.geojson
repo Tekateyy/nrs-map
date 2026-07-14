@@ -1,7 +1,7 @@
 {
   "type": "FeatureCollection",
   "metadata": {
-    "date": "2026-07-02",
+    "date": "2026-07-09",
     "source": "Liaisons Datacenters -> Postes Hydro-Québec les plus proches"
   },
   "features": [
@@ -69,7 +69,7 @@
       "properties": {
         "datacenter_name": "Cologix MTL1",
         "datacenter_id": "CLGXMTL1",
-        "datacenter_type": "Carrier Hotel",
+        "datacenter_type": "Retail",
         "substation_name": "Dorchester",
         "distance_km": 0.7119747457715258
       }
@@ -115,7 +115,7 @@
       "properties": {
         "datacenter_name": "Cologix MTL11",
         "datacenter_id": "CLGXMTL11",
-        "datacenter_type": "Carrier Hotel",
+        "datacenter_type": "Retail",
         "substation_name": "Central-2",
         "distance_km": 0.7103195864141838
       }
@@ -138,7 +138,7 @@
       "properties": {
         "datacenter_name": "Cologix MTL12",
         "datacenter_id": "CLGXMTL12",
-        "datacenter_type": "Carrier Hotel",
+        "datacenter_type": "Retail",
         "substation_name": "Viger",
         "distance_km": 2.3439165408201625
       }
@@ -184,7 +184,7 @@
       "properties": {
         "datacenter_name": "Cologix MTL3",
         "datacenter_id": "CLGXMTL03",
-        "datacenter_type": "Carrier Hotel",
+        "datacenter_type": "Retail",
         "substation_name": "Guy",
         "distance_km": 0.7180425075477193
       }
@@ -230,7 +230,7 @@
       "properties": {
         "datacenter_name": "Cologix MTL5",
         "datacenter_id": "CLGXMTL05",
-        "datacenter_type": "Carrier Hotel",
+        "datacenter_type": "Retail",
         "substation_name": "Hypertec",
         "distance_km": 1.3352201158777972
       }
@@ -253,7 +253,7 @@
       "properties": {
         "datacenter_name": "Cologix MTL6",
         "datacenter_id": "CLGXMTL06",
-        "datacenter_type": "Carrier Hotel",
+        "datacenter_type": "Retail",
         "substation_name": "Hypertec",
         "distance_km": 1.3352201158777972
       }

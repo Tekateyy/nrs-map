@@ -76,7 +76,7 @@ empreintes réelles des bâtiments de data centers. Situé dans `data/DCbati_pol
 Table de correspondance `Type → power_density_w_pi2` utilisée par `app.js` pour
 calculer la puissance estimée à la volée. Situé dans `data/datacenter_types.json`. Servi à `/datacenter_types.json` par Express.
 
-Types couverts : `Retail`, `Wholesale`, `Hyperscale`, `Carrier Hotel`, `Crypto`,
+Types couverts : `Retail`, `Wholesale`, `Hyperscale`, `Crypto`,
 `Quantique`, `Unknown`. La correspondance est insensible à la casse (toLowerCase).
 
 ## Données — datacenters.geojson
@@ -86,7 +86,7 @@ Champs `properties` utiles (certains peuvent être `null`) :
 | Champ | Type | Description |
 |-------|------|-------------|
 | `NomSite` | string | Nom du site (toujours présent) |
-| `Type` | string | Catégorie : `Hyperscale`, `Retail`, `Carrier Hotel`, `Enterprise`… |
+| `Type` | string | Catégorie : `Hyperscale`, `Retail`, `Enterprise`… |
 | `Hebergeur` | string | Nom de l'hébergeur (ex. Amazon, Cologix…) |
 | `Adresse` | string | Adresse postale |
 | `ville` | string | Ville |
