@@ -42,6 +42,7 @@ de session.
 - [x] Suprimmer la catégorie "Carrier Hotel"
 - [ ] Internationnaliser (i18n)
 - [ ] Barre de recherche par nom de site et ville - Plus très sur de la pertinence pour celui là
+- [ ] Ajouter date installation
 
 ---
 

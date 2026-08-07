@@ -96,9 +96,9 @@ function main() {
           ]
         },
         properties: {
-          datacenter_name: dc.properties?.NomSite || 'Inconnu',
-          datacenter_id: dc.properties?.UNIQID,
-          datacenter_type: dc.properties?.Type || 'Unknown',
+          datacenter_name: dc.properties?.dci_nomsite || dc.properties?.NomSite || 'Inconnu',
+          datacenter_id: dc.properties?.dci_id || dc.properties?.UNIQID,
+          datacenter_type: dc.properties?.dci_type || dc.properties?.Type || 'Unknown',
           substation_name: closestSubstation.properties?.id || 'Inconnu',
           distance_km: distanceKm
         }

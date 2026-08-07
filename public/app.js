@@ -70,7 +70,9 @@ const ICON_CONFIG = {
 
 function creerIcone(type, status) {
   const cfg = ICON_CONFIG[type] || ICON_CONFIG['Inconnu'];
-  const classeProjet = (status === 'En projet') ? ' projet' : '';
+  const statusLower = (status || '').toLowerCase();
+  const isProjetOrConst = statusLower.includes('projet') || statusLower.includes('construction');
+  const classeProjet = isProjetOrConst ? ' projet' : '';
   return L.divIcon({
     className: '',
     html: `<div class="marker-icon${classeProjet}" style="background:${cfg.couleur};color:${cfg.texte};--marker-color:${cfg.couleur};--marker-color-glow:${cfg.couleur}40"><span class="marker-text">${cfg.lettre}</span></div>`,
@@ -103,6 +105,30 @@ function val(v) {
   return (v !== null && v !== undefined && v !== '') ? v : '—';
 }
 
+// ---- Injection des motifs SVG de hachures pour les polygones en projet / en construction ----
+function injectHatchPatterns() {
+  if (document.getElementById('svg-hatch-defs')) return;
+
+  const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+  svg.id = 'svg-hatch-defs';
+  svg.setAttribute('style', 'position: absolute; width: 0; height: 0; overflow: hidden; pointer-events: none;');
+
+  let defsHtml = '<defs>';
+  for (const [type, cfg] of Object.entries(ICON_CONFIG)) {
+    const typeKey = type.toLowerCase().replace(/[^a-z0-9]/g, '');
+    const color = cfg.couleur;
+    defsHtml += `
+      <pattern id="hatch-${typeKey}" width="10" height="10" patternTransform="rotate(45 0 0)" patternUnits="userSpaceOnUse">
+        <rect width="10" height="10" fill="${color}" fill-opacity="0.15" />
+        <line x1="0" y1="0" x2="0" y2="10" stroke="${color}" stroke-width="3" opacity="0.9" />
+      </pattern>
+    `;
+  }
+  defsHtml += '</defs>';
+  svg.innerHTML = defsHtml;
+  document.body.appendChild(svg);
+}
+
 // ---- Extraction et nettoyage de la surface au sol ----
 function parseSurfaceSqFt(surfValue) {
   if (surfValue === null || surfValue === undefined || surfValue === '') return null;
@@ -110,24 +136,38 @@ function parseSurfaceSqFt(surfValue) {
   return isNaN(surf) ? null : surf;
 }
 
-// ---- Puissance estimée selon SurfBatimentPI2 × 50% × PowerDensity / 1 000 000 ----
-function estimerPuissance(p, densityMap) {
-  const surf = parseSurfaceSqFt(p.SurfBatimentPI2);
-  const type = (p.Type || '').toLowerCase().trim();
+// ---- Puissance estimée : puissance annoncée prioritaire, sinon calcul depuis la surface (en opération uniquement) ----
+function estimerPuissance(p, densityMap, dcSurfaceMap = {}) {
+  const puissAnn = p.dci_puiss_annoncee !== undefined ? p.dci_puiss_annoncee : p.PuissanceAnnMW;
+  const status = (p.dci_statut || p.Status || '').toLowerCase();
+  const isOperation = status.includes('opération') || status.includes('operation') || (!status.includes('projet') && !status.includes('construction'));
+
+  // 1. Si une puissance annoncée existe et n'est pas nulle, on l'utilise en priorité
+  if (puissAnn !== null && puissAnn !== undefined && puissAnn !== '' && !isNaN(Number(puissAnn))) {
+    return Number(puissAnn);
+  }
+
+  // 2. Pour les sites en projet ou en construction sans puissance annoncée, on n'estime pas la puissance depuis la surface
+  if (!isOperation) {
+    return null;
+  }
+
+  // 3. Pour les sites en opération sans puissance annoncée, calcul depuis la surface au sol × 50% × densité / 1 000 000
+  const dcId = p.dci_id || p.UNIQID;
+  const surfFromMap = dcSurfaceMap[dcId];
+  const surf = (surfFromMap !== undefined && surfFromMap !== null)
+    ? surfFromMap
+    : parseSurfaceSqFt(p.dcbat_areapi2 !== undefined ? p.dcbat_areapi2 : p.SurfBatimentPI2);
+
+  const rawType = p.dci_type || p.Type || '';
+  const type = rawType.toLowerCase().trim();
   const entry = Object.entries(densityMap).find(([k]) => k.toLowerCase().trim() === type);
 
-  let calcul = null;
-  if (surf !== null && entry && entry[1].power_density_w_pi2 > 0) {
-    calcul = (surf * 0.5 * entry[1].power_density_w_pi2) / 1_000_000;
+  if (surf !== null && surf !== undefined && entry && entry[1].power_density_w_pi2 > 0) {
+    return (surf * 0.5 * entry[1].power_density_w_pi2) / 1_000_000;
   }
 
-  // Si le calcul par surface est impossible ou donne 0,
-  // on privilégie la puissance annoncée si elle est présente
-  if (calcul === null || calcul === 0) {
-    return (p.PuissanceAnnMW !== null && p.PuissanceAnnMW !== undefined) ? p.PuissanceAnnMW : calcul;
-  }
-
-  return calcul;
+  return null;
 }
 
 // ---- Config couleurs réseau électrique par niveau de tension (kV) ----
@@ -257,31 +297,54 @@ window.copyDcLink = function (uniqid, button) {
 };
 
 // ---- Construction du contenu popup ----
-function buildPopup(p, densityMap) {
-  const lien = p.Siteweb
-    ? `<a class="popup-link" href="${p.Siteweb}" target="_blank" rel="noopener">Voir le site</a>`
+function buildPopup(p, densityMap, dcSurfaceMap = {}) {
+  const siteWeb = p.dc_hebwebsite || p.Siteweb;
+  const lien = (siteWeb && siteWeb !== '-' && siteWeb !== 'En cours')
+    ? `<a class="popup-link" href="${siteWeb.startsWith('http') ? siteWeb : 'https://' + siteWeb}" target="_blank" rel="noopener">Voir le site</a>`
     : '—';
 
-  const puissEst = estimerPuissance(p, densityMap);
+  const puissEst = estimerPuissance(p, densityMap, dcSurfaceMap);
   const puissEstStr = puissEst !== null ? puissEst.toFixed(2) + ' MW' : '—';
 
-  const drapeaux = obtenirDrapeaux(p.NationaliteShareholder);
-  const titreAffiche = `${val(p.NomSite)}${drapeaux}`;
+  const nationalite = p.dci_shareholder_majo_nationalite || p.NationaliteShareholder;
+  const drapeaux = obtenirDrapeaux(nationalite);
+  const nomSite = p.dci_nomsite || p.NomSite;
+  const titreAffiche = `${val(nomSite)}${drapeaux}`;
+
+  const puissAnn = p.dci_puiss_annoncee !== undefined ? p.dci_puiss_annoncee : p.PuissanceAnnMW;
+  const equipIA = p.dci_iaready || p.ÉquipIA;
+  const uniqid = p.dci_id || p.UNIQID;
+  const status = p.dci_statut || p.Status;
+  const type = p.dci_type || p.Type;
+  const hebergeur = p.dci_hebergeur || p.Hebergeur;
+  const adresse = p.dci_adresse || p.Adresse;
+  const ville = p.dci_nomville || p.ville;
+  const anMiseService = p.dci_an_mise_service;
+  const shareholder = p.dci_shareholder_majoritaire || p.ShareholderMaj;
+  const siegeSocial = p.dci_siegesocial_loc || p.SiegeSocial;
+
+  const surfFromMap = dcSurfaceMap[uniqid];
+  const surfaceSqFt = (surfFromMap !== undefined && surfFromMap !== null)
+    ? surfFromMap
+    : parseSurfaceSqFt(p.dcbat_areapi2 !== undefined ? p.dcbat_areapi2 : p.SurfBatimentPI2);
+  const surfaceStr = surfaceSqFt !== null && surfaceSqFt !== undefined ? numberFormatter.format(surfaceSqFt) + ' pi²' : '—';
 
   return `
     <div class="popup-title">${titreAffiche}</div>
-    <div class="popup-row"><span class="popup-label">Statut</span><span class="popup-value">${val(p.Status)}</span></div>
-    <div class="popup-row"><span class="popup-label">Type</span><span class="popup-value">${val(p.Type)}</span></div>
-    <div class="popup-row"><span class="popup-label">Hébergeur</span><span class="popup-value">${val(p.Hebergeur)}</span></div>
-    <div class="popup-row"><span class="popup-label">Adresse</span><span class="popup-value">${val(p.Adresse)}</span></div>
-    <div class="popup-row"><span class="popup-label">Puissance annoncée</span><span class="popup-value">${p.PuissanceAnnMW !== null ? p.PuissanceAnnMW + ' MW' : '—'}</span></div>
+    <div class="popup-row"><span class="popup-label">Statut</span><span class="popup-value">${val(status)}</span></div>
+    <div class="popup-row"><span class="popup-label">Type</span><span class="popup-value">${val(type)}</span></div>
+    <div class="popup-row"><span class="popup-label">Hébergeur</span><span class="popup-value">${val(hebergeur)}</span></div>
+    <div class="popup-row"><span class="popup-label">Adresse</span><span class="popup-value">${val(adresse)}</span></div>
+    <div class="popup-row"><span class="popup-label">Ville</span><span class="popup-value">${val(ville)}</span></div>
+    ${anMiseService ? `<div class="popup-row"><span class="popup-label">Mise en service</span><span class="popup-value">${anMiseService}</span></div>` : ''}
+    <div class="popup-row"><span class="popup-label">Surface au sol</span><span class="popup-value">${surfaceStr}</span></div>
+    <div class="popup-row"><span class="popup-label">Puissance annoncée</span><span class="popup-value">${puissAnn !== null && puissAnn !== undefined ? puissAnn + ' MW' : '—'}</span></div>
     <div class="popup-row"><span class="popup-label">Puissance estimée</span><span class="popup-value">${puissEstStr}</span></div>
-    <div class="popup-row"><span class="popup-label">Bâtiments</span><span class="popup-value">${val(p.NombreBatiments)}</span></div>
-    <div class="popup-row"><span class="popup-label">Équipé pour l'IA</span><span class="popup-value">${p.ÉquipIA === 'IA' ? 'Oui ✅' : 'Non'}</span></div>
-    <div class="popup-row"><span class="popup-label">Actionnaire maj.</span><span class="popup-value">${val(p.ShareholderMaj)}</span></div>
-    <div class="popup-row"><span class="popup-label">Siège social</span><span class="popup-value">${val(p.SiegeSocial)}</span></div>
+    <div class="popup-row"><span class="popup-label">Équipé pour l'IA</span><span class="popup-value">${equipIA === 'IA' ? 'Oui ✅' : 'Non'}</span></div>
+    <div class="popup-row"><span class="popup-label">Actionnaire maj.</span><span class="popup-value">${val(shareholder)}</span></div>
+    <div class="popup-row"><span class="popup-label">Siège social</span><span class="popup-value">${val(siegeSocial)}</span></div>
     <div class="popup-row"><span class="popup-label">Site web</span><span class="popup-value">${lien}</span></div>
-    <button class="popup-share-btn" onclick="copyDcLink('${p.UNIQID}', this)">
+    <button class="popup-share-btn" onclick="copyDcLink('${uniqid}', this)">
       <svg viewBox="0 0 24 24" width="12" height="12" fill="currentColor">
         <path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z"/>
       </svg>
@@ -464,7 +527,8 @@ function applyFilters() {
       clusterGroup.addLayer(marker);
       countVisible++;
 
-      const isOperation = !status || !status.toLowerCase().includes('projet');
+      const statusLower = (status || '').toLowerCase();
+      const isOperation = statusLower.includes('opération') || statusLower.includes('operation') || (!statusLower.includes('projet') && !statusLower.includes('construction'));
       if (isOperation) {
         countOperation++;
         if (estimatedPower !== null && estimatedPower !== undefined) {
@@ -507,7 +571,34 @@ function applyFilters() {
   );
   updateHostBreakdownUI(hostCounts);
   updateConnections(visibleDatacenterIds);
+  updatePolygons(visibleDatacenterIds);
 }
+
+let polyLayer = null;
+let polysGeojson = null;
+let polysVisible = true;
+let lastVisibleDatacenterIds = new Set();
+
+// ---- Mise à jour des polygones de bâtiments selon les datacenters visibles ----
+function updatePolygons(visibleDatacenterIds) {
+  if (!polyLayer || !polysGeojson) return;
+
+  if (visibleDatacenterIds) {
+    lastVisibleDatacenterIds = visibleDatacenterIds;
+  }
+
+  polyLayer.clearLayers();
+
+  if (polysVisible && lastVisibleDatacenterIds) {
+    const filteredFeatures = (polysGeojson.features || []).filter(f => {
+      const dcId = f.properties.dcbat_dcid || f.properties.UNIQID;
+      return lastVisibleDatacenterIds.has(dcId);
+    });
+    polyLayer.addData(filteredFeatures);
+  }
+}
+
+let hqGridVisible = true;
 
 // ---- Mise à jour des lignes de connexion datacenters -> postes ----
 function updateConnections(visibleDatacenterIds) {
@@ -515,7 +606,7 @@ function updateConnections(visibleDatacenterIds) {
 
   connectionsLayer.clearLayers();
 
-  if (hqNodesVisible) {
+  if (hqGridVisible) {
     const filteredFeatures = connectionsGeojson.features.filter(f =>
       visibleDatacenterIds.has(f.properties.datacenter_id)
     );
@@ -536,7 +627,8 @@ Promise.all([
   fetchJSON('/Hydro-Quebec.geojson'),
   fetchJSON('/connections.geojson')
 ])
-  .then(([geojson, densityMap, polysGeojson, hqGeojson, loadedConnectionsGeojson]) => {
+  .then(([geojson, densityMap, loadedPolysGeojson, hqGeojson, loadedConnectionsGeojson]) => {
+    polysGeojson = loadedPolysGeojson;
     connectionsGeojson = loadedConnectionsGeojson;
 
     // 1. Orienter le sens des liaisons électriques (du poste vers le centre de données)
@@ -582,18 +674,54 @@ Promise.all([
     const hebergeurs = new Set();
     const bounds = [];
 
-    // Table UNIQID → Type pour coloriser les polygones
+    injectHatchPatterns();
+
+    // Table dci_id / UNIQID → Type, Statut et Surface au sol
     const uniqidToType = {};
+    const uniqidToStatus = {};
+    const dcSurfaceMap = {};
+
+    if (polysGeojson && polysGeojson.features) {
+      polysGeojson.features.forEach(f => {
+        const id = f.properties.dcbat_dcid || f.properties.UNIQID;
+        const surf = f.properties.dcbat_areapi2 || (f.properties.dcbat_areasqm ? f.properties.dcbat_areasqm * 10.76391 : 0);
+        if (id && surf) {
+          dcSurfaceMap[id] = (dcSurfaceMap[id] || 0) + Math.round(surf);
+        }
+      });
+    }
+
     for (const f of geojson.features) {
-      if (f.properties.UNIQID) uniqidToType[f.properties.UNIQID] = f.properties.Type || 'Inconnu';
+      const id = f.properties.dci_id || f.properties.UNIQID;
+      const type = f.properties.dci_type || f.properties.Type || 'Inconnu';
+      const status = (f.properties.dci_statut || f.properties.Status || '').toLowerCase();
+      if (id) {
+        uniqidToType[id] = type;
+        uniqidToStatus[id] = status;
+      }
     }
 
     // Couche polygones (overlayPane z-400, sous les marqueurs markerPane z-600)
-    let polysVisible = true;
-    const polyLayer = L.geoJSON(polysGeojson, {
+    polyLayer = L.geoJSON(null, {
       style: feature => {
-        const type = uniqidToType[feature.properties.UNIQID] || 'Inconnu';
+        const dcId = feature.properties.dcbat_dcid || feature.properties.UNIQID;
+        const type = uniqidToType[dcId] || 'Inconnu';
+        const status = uniqidToStatus[dcId] || '';
         const cfg = ICON_CONFIG[type] || ICON_CONFIG['Inconnu'];
+        const isProjectOrConst = status.includes('projet') || status.includes('construction');
+
+        if (isProjectOrConst) {
+          const typeKey = type.toLowerCase().replace(/[^a-z0-9]/g, '');
+          return {
+            color: cfg.couleur,
+            fillColor: `url(#hatch-${typeKey})`,
+            fillOpacity: 1,
+            weight: 2,
+            dashArray: '5, 5',
+            opacity: 0.9
+          };
+        }
+
         return { color: cfg.couleur, fillColor: cfg.couleur, fillOpacity: 0.25, weight: 1.5, opacity: 0.7 };
       },
       interactive: false,
@@ -774,16 +902,16 @@ Promise.all([
       hqLinesLayer.clearLayers();
       hqNodesLayer.clearLayers();
 
+      if (!hqGridVisible) return;
+
       const filteredFeatures = hqGeojson.features.filter(f => {
         if (!selectedVoltage) return true;
         return getHqVoltageCategory(f.properties.pole) === selectedVoltage;
       });
 
       // Lignes
-      if (hqLinesVisible) {
-        const lineFeatures = filteredFeatures.filter(f => f.properties.isLine === true);
-        hqLinesLayer.addData(lineFeatures);
-      }
+      const lineFeatures = filteredFeatures.filter(f => f.properties.isLine === true);
+      hqLinesLayer.addData(lineFeatures);
 
       // Points (Postes et Centrales)
       const pointFeatures = filteredFeatures.filter(f => {
@@ -791,14 +919,10 @@ Promise.all([
 
         const isGen = f.properties.node_type === 'Generation' || (f.properties.pole && f.properties.pole.startsWith('Generation'));
         if (isGen) {
-          if (!hqGenVisible) return false;
-
           // N'afficher que les très grosses centrales de 735 kV
           const match = (f.properties.pole || '').match(/(\d+)\s*kV/);
           const kv = match ? parseInt(match[1], 10) : 0;
           if (kv !== 735) return false;
-        } else {
-          if (!hqNodesVisible) return false;
         }
 
         return true;
@@ -835,38 +959,15 @@ Promise.all([
       });
     });
 
-    // Gestion des boutons Hydro-Québec
-    let hqLinesVisible = true;
-    let hqGenVisible = true;
-
-    const btnLines = document.getElementById('btn-hq-lines');
-    if (btnLines) {
-      btnLines.addEventListener('click', () => {
-        hqLinesVisible = !hqLinesVisible;
-        btnLines.classList.toggle('active', hqLinesVisible);
-        btnLines.classList.toggle('inactive', !hqLinesVisible);
-        applyHqFilters();
-      });
-    }
-
-    const btnNodes = document.getElementById('btn-hq-nodes');
-    if (btnNodes) {
-      btnNodes.addEventListener('click', () => {
-        hqNodesVisible = !hqNodesVisible;
-        btnNodes.classList.toggle('active', hqNodesVisible);
-        btnNodes.classList.toggle('inactive', !hqNodesVisible);
+    // Bouton unique Réseau Hydro-Québec
+    const btnHqAll = document.getElementById('btn-hq-all');
+    if (btnHqAll) {
+      btnHqAll.addEventListener('click', () => {
+        hqGridVisible = !hqGridVisible;
+        btnHqAll.classList.toggle('active', hqGridVisible);
+        btnHqAll.classList.toggle('inactive', !hqGridVisible);
         applyHqFilters();
         applyFilters();
-      });
-    }
-
-    const btnGen = document.getElementById('btn-hq-gen');
-    if (btnGen) {
-      btnGen.addEventListener('click', () => {
-        hqGenVisible = !hqGenVisible;
-        btnGen.classList.toggle('active', hqGenVisible);
-        btnGen.classList.toggle('inactive', !hqGenVisible);
-        applyHqFilters();
       });
     }
 
@@ -879,17 +980,26 @@ Promise.all([
       const [lng, lat] = coords;
       const p = feature.properties;
 
-      const type = p.Type || 'Inconnu';
-      const hebergeur = (p.Hebergeur || 'Inconnu').trim();
+      const type = p.dci_type || p.Type || 'Inconnu';
+      const hebergeur = (p.dci_hebergeur || p.Hebergeur || 'Inconnu').trim();
+      const status = p.dci_statut || p.Status || 'en opération';
+      const equipIA = p.dci_iaready || p.ÉquipIA;
+      const uniqid = p.dci_id || p.UNIQID;
+      const nationaliteShareholder = p.dci_shareholder_majo_nationalite || p.NationaliteShareholder;
+      const announcedPower = p.dci_puiss_annoncee !== undefined ? p.dci_puiss_annoncee : p.PuissanceAnnMW;
+
       types.add(type);
       hebergeurs.add(hebergeur);
       bounds.push([lat, lng]);
 
-      const marker = L.marker([lat, lng], { icon: creerIcone(type, p.Status) });
-      marker.bindPopup(buildPopup(p, densityMap), { maxWidth: 280 });
+      const marker = L.marker([lat, lng], { icon: creerIcone(type, status) });
+      marker.bindPopup(buildPopup(p, densityMap, dcSurfaceMap), { maxWidth: 280 });
 
-      const puissEst = estimerPuissance(p, densityMap);
-      const surfaceSqFt = parseSurfaceSqFt(p.SurfBatimentPI2);
+      const puissEst = estimerPuissance(p, densityMap, dcSurfaceMap);
+      const surfFromMap = dcSurfaceMap[uniqid];
+      const surfaceSqFt = (surfFromMap !== undefined && surfFromMap !== null)
+        ? surfFromMap
+        : parseSurfaceSqFt(p.dcbat_areapi2 !== undefined ? p.dcbat_areapi2 : p.SurfBatimentPI2);
 
       allMarkers.push({
         marker,
@@ -897,11 +1007,11 @@ Promise.all([
         hebergeur,
         estimatedPower: puissEst,
         surfaceSqFt,
-        equipIA: p.ÉquipIA,
-        uniqid: p.UNIQID,
-        nationaliteShareholder: p.NationaliteShareholder,
-        status: p.Status,
-        announcedPower: p.PuissanceAnnMW
+        equipIA,
+        uniqid,
+        nationaliteShareholder,
+        status,
+        announcedPower
       });
     }
 
@@ -950,7 +1060,7 @@ Promise.all([
       polysVisible = !polysVisible;
       btnPoly.classList.toggle('active', polysVisible);
       btnPoly.classList.toggle('inactive', !polysVisible);
-      polysVisible ? polyLayer.addTo(map) : map.removeLayer(polyLayer);
+      updatePolygons();
     });
     document.getElementById('filters-polygones').appendChild(btnPoly);
 
