@@ -3,7 +3,7 @@
 Carte interactive des **data centers au Québec et au Canada**.
 
 Application web single-page construite avec Node.js, Leaflet et OpenStreetMap.
-Aucune clé API, aucun build requis.
+Aucune clé API requise.
 
 ## Fonctionnalités
 
@@ -16,12 +16,13 @@ Aucune clé API, aucun build requis.
 
 - [Node.js](https://nodejs.org/) ≥ 18
 
-## Installation
+## Installation et préparation des données
 
 ```bash
 git clone <repo-url>
 cd nrs-map
 npm install
+npm run build   # Génère, compile et copie les fichiers de données les plus récents dans le dossier data/
 ```
 
 ## Lancement
@@ -34,5 +35,5 @@ Ouvrir [http://localhost:3000](http://localhost:3000) dans le navigateur.
 
 ## Source des données
 
-Les données proviennent du fichier `points.geojson` (49 data centers, champs :
+Les données proviennent du fichier `data/datacenters.geojson` (49 data centers, champs :
 nom, type, hébergeur, adresse, puissance MW, surface bâtiment…).

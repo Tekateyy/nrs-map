@@ -12,6 +12,9 @@ RUN npm ci --omit=dev
 # Copier le reste de l'application (en respectant le fichier .dockerignore)
 COPY . .
 
+# Lancer le script de build pour copier/traiter les données
+RUN npm run build
+
 # Exposer le port par défaut de l'application
 EXPOSE 3000
 

@@ -1,0 +1,2052 @@
+{
+  "type": "FeatureCollection",
+  "name": "datacenters_2026_08_07",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "dci_id": "MSFTALO01",
+        "dci_nomsite": "Microsoft Ancienne Lorette",
+        "dci_type": "Wholesale",
+        "dci_statut": "en projet",
+        "dci_iaready": "",
+        "dci_puiss_annoncee": 9.8,
+        "dci_nomville": "L'Ancienne-Lorette",
+        "dci_adresse": "6505 Rue Yvon-Dolbec  L'Ancienne-Lorette G2E 0A3",
+        "dci_an_mise_service": "2027",
+        "dci_hebergeur": "Microsoft",
+        "dci_siegesocial_loc": ", USA",
+        "dc_hebwebsite": "En cours",
+        "dci_shareholder_majoritaire": "",
+        "dci_shareholder_majo_nationalite": "",
+        "date_collecte": "2026-08-07",
+        "SurfBatimentPI2": "2734458",
+        "dcbat_areapi2": 2734458
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.3481367,
+          46.7905581
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "dci_id": "ARGOBCO01",
+        "dci_nomsite": "Argo Blockchain",
+        "dci_type": "Crypto",
+        "dci_statut": "en opération",
+        "dci_iaready": "",
+        "dci_puiss_annoncee": 15,
+        "dci_nomville": "Baie-Comeau",
+        "dci_adresse": "8 Avenue William-Dobell Baie-Comeau G4Z 1T7",
+        "dci_an_mise_service": "2021",
+        "dci_hebergeur": "Argo Blockchain",
+        "dci_siegesocial_loc": ", ",
+        "dc_hebwebsite": "https://www.argoblockchain.com",
+        "dci_shareholder_majoritaire": "",
+        "dci_shareholder_majo_nationalite": "",
+        "date_collecte": "2026-08-07",
+        "SurfBatimentPI2": "91196",
+        "dcbat_areapi2": 91196
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.185631,
+          49.214231
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "dci_id": "ESTRBOU03",
+        "dci_nomsite": "Estruxture MTL3",
+        "dci_type": "Retail",
+        "dci_statut": "en opération",
+        "dci_iaready": "",
+        "dci_puiss_annoncee": 1.2,
+        "dci_nomville": "Boucherville",
+        "dci_adresse": "1350 Rue Nobel Boucherville J4B 5H3",
+        "dci_an_mise_service": "2009",
+        "dci_hebergeur": "Estruxture",
+        "dci_siegesocial_loc": "Montréal, CA",
+        "dc_hebwebsite": "https://www.estruxture.com/fr/",
+        "dci_shareholder_majoritaire": "Fengate Asset Management",
+        "dci_shareholder_majo_nationalite": "Canada",
+        "date_collecte": "2026-08-07"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.4306386,
+          45.5683626
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "dci_id": "KEELCWV01",
+        "dci_nomsite": "Keel Infrastructure Cowansville",
+        "dci_type": "Crypto",
+        "dci_statut": "en opération",
+        "dci_iaready": "",
+        "dci_puiss_annoncee": 17,
+        "dci_nomville": "Cowansville",
+        "dci_adresse": "135 rue Dean Cowansville J2K 3Y2",
+        "dci_an_mise_service": "2018",
+        "dci_hebergeur": "Bitfarms / Keel Infrastructure",
+        "dci_siegesocial_loc": "NY, USA",
+        "dc_hebwebsite": "https://www.keelinfra.com/",
+        "dci_shareholder_majoritaire": "Jane Street Group LLC- Jane Street Capital LLC-Jane Street Global Trading LLC",
+        "dci_shareholder_majo_nationalite": "United States (largest holder)",
+        "date_collecte": "2026-08-07"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -72.76375339999998,
+          45.2019913
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "dci_id": "CLGXDMD01",
+        "dci_nomsite": "Cologix MTL9",
+        "dci_type": "Wholesale",
+        "dci_statut": "en opération",
+        "dci_iaready": "",
+        "dci_puiss_annoncee": 25,
+        "dci_nomville": "Drummondville",
+        "dci_adresse": "2525 Rue Canadien Drummondville J2C 7W2",
+        "dci_an_mise_service": "2013",
+        "dci_hebergeur": "Cologix",
+        "dci_siegesocial_loc": "Denver, USA",
+        "dc_hebwebsite": "https://www.cologix.com",
+        "dci_shareholder_majoritaire": "Stonepeak (majority owner)",
+        "dci_shareholder_majo_nationalite": "USA",
+        "date_collecte": "2026-08-07",
+        "SurfBatimentPI2": "141763",
+        "dcbat_areapi2": 141763
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -72.5459428,
+          45.8794841
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "dci_id": "KEELFHM01",
+        "dci_nomsite": "Keel Infrastructure Farnham",
+        "dci_type": "Crypto",
+        "dci_statut": "en opération",
+        "dci_iaready": "",
+        "dci_puiss_annoncee": 10,
+        "dci_nomville": "Farnham",
+        "dci_adresse": "1146  boulevard Magenta Est Farnham J2N 2S7",
+        "dci_an_mise_service": "2017",
+        "dci_hebergeur": "Bitfarms / Keel Infrastructure",
+        "dci_siegesocial_loc": "NY, USA",
+        "dc_hebwebsite": "https://www.keelinfra.com/",
+        "dci_shareholder_majoritaire": "Jane Street Group LLC- Jane Street Capital LLC-Jane Street Global Trading LLC",
+        "dci_shareholder_majo_nationalite": "United States (largest holder)",
+        "date_collecte": "2026-08-07"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -72.9744864,
+          45.29055
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "dci_id": "EQNXGAT01",
+        "dci_nomsite": "Equinix OT1",
+        "dci_type": "Retail",
+        "dci_statut": "en opération",
+        "dci_iaready": "",
+        "dci_puiss_annoncee": null,
+        "dci_nomville": "Gatineau",
+        "dci_adresse": "200 Av. Lepine Gatineau J8L 0B3",
+        "dci_an_mise_service": "2015",
+        "dci_hebergeur": "Equinix",
+        "dci_siegesocial_loc": "Redwood City, USA",
+        "dc_hebwebsite": "https://www.equinix.com/",
+        "dci_shareholder_majoritaire": "BlackRock Advisers LLC (largest shareholder among institutions) or Vanguard Capital Management LLC",
+        "dci_shareholder_majo_nationalite": "U.K. or USA",
+        "date_collecte": "2026-08-07",
+        "SurfBatimentPI2": "95494",
+        "dcbat_areapi2": 95494
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.39839609999999,
+          45.5745444
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "dci_id": "KEELHYA01",
+        "dci_nomsite": "Keel Infrastructure Saint-Hyacinthe",
+        "dci_type": "Crypto",
+        "dci_statut": "en opération",
+        "dci_iaready": "",
+        "dci_puiss_annoncee": 15,
+        "dci_nomville": "Saint-Hyacinthe",
+        "dci_adresse": "2805 Avenue Vanier Saint-Hyacinthe J2S 8P3",
+        "dci_an_mise_service": "2017",
+        "dci_hebergeur": "Bitfarms / Keel Infrastructure",
+        "dci_siegesocial_loc": "NY, USA",
+        "dc_hebwebsite": "https://www.keelinfra.com/",
+        "dci_shareholder_majoritaire": "Jane Street Group LLC- Jane Street Capital LLC-Jane Street Global Trading LLC",
+        "dci_shareholder_majo_nationalite": "United States (largest holder)",
+        "date_collecte": "2026-08-07"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -72.970526,
+          45.6287894
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "dci_id": "SATOJOL01",
+        "dci_nomsite": "SATO Quebec",
+        "dci_type": "Crypto",
+        "dci_statut": "en opération",
+        "dci_iaready": "",
+        "dci_puiss_annoncee": 20,
+        "dci_nomville": "Joliette",
+        "dci_adresse": "289 Rue Dugas Joliette J6E 4H1",
+        "dci_an_mise_service": "2022",
+        "dci_hebergeur": "SATO Technologies Corp",
+        "dci_siegesocial_loc": "",
+        "dc_hebwebsite": "https://www.bysato.com/mining",
+        "dci_shareholder_majoritaire": null,
+        "dci_shareholder_majo_nationalite": null,
+        "date_collecte": "2026-08-07"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.4306333,
+          46.0185868
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "dci_id": "DCENLAV01",
+        "dci_nomsite": "D-Central Laval",
+        "dci_type": "Crypto",
+        "dci_statut": "en opération",
+        "dci_iaready": "",
+        "dci_puiss_annoncee": null,
+        "dci_nomville": "Laval",
+        "dci_adresse": "1325 Rue Bergar Laval H7L 4Z7",
+        "dci_an_mise_service": "2021",
+        "dci_hebergeur": "D-Central",
+        "dci_siegesocial_loc": "",
+        "dc_hebwebsite": null,
+        "dci_shareholder_majoritaire": null,
+        "dci_shareholder_majo_nationalite": null,
+        "date_collecte": "2026-08-07"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.74796089999998,
+          45.5926218
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "dci_id": "HIVDLCH01",
+        "dci_nomsite": "HIVE Canada 1.0 ",
+        "dci_type": "Wholesale",
+        "dci_statut": "en opération",
+        "dci_iaready": "",
+        "dci_puiss_annoncee": 34.5,
+        "dci_nomville": "Lachute",
+        "dci_adresse": "963 Chemin Bethany Lachute J8H 2C5",
+        "dci_an_mise_service": "2021",
+        "dci_hebergeur": "Hive",
+        "dci_siegesocial_loc": "Vancouver, CA",
+        "dc_hebwebsite": "https://hivedatacenter.com/",
+        "dci_shareholder_majoritaire": "Invesco Capital Management LLC and Invesco Capital Management Japan",
+        "dci_shareholder_majo_nationalite": "USA and Japan",
+        "date_collecte": "2026-08-07"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.2879932,
+          45.6368637
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "dci_id": "CLGXLGL10",
+        "dci_nomsite": "Cologix MTL10",
+        "dci_type": "Wholesale",
+        "dci_statut": "en opération",
+        "dci_iaready": "IA",
+        "dci_puiss_annoncee": 35,
+        "dci_nomville": "Longueuil",
+        "dci_adresse": "530 Rue Beriault Longueuil J4G 1S8",
+        "dci_an_mise_service": "2016",
+        "dci_hebergeur": "Cologix",
+        "dci_siegesocial_loc": "Denver, USA",
+        "dc_hebwebsite": "https://www.cologix.com",
+        "dci_shareholder_majoritaire": "Stonepeak (majority owner)",
+        "dci_shareholder_majo_nationalite": "USA",
+        "date_collecte": "2026-08-07",
+        "SurfBatimentPI2": "322909",
+        "dcbat_areapi2": 322909
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.4758005,
+          45.5663616
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "dci_id": "QSCLLVS01",
+        "dci_nomsite": "QScale Campus 1",
+        "dci_type": "Hyperscale",
+        "dci_statut": "en opération",
+        "dci_iaready": "IA",
+        "dci_puiss_annoncee": 114,
+        "dci_nomville": "Levis",
+        "dci_adresse": "2280 Rue Albert-Dion Levis G7A 5M9",
+        "dci_an_mise_service": "2023",
+        "dci_hebergeur": "QScale",
+        "dci_siegesocial_loc": "Lévis, CA",
+        "dc_hebwebsite": "https://fr.qscale.com/q01-campus",
+        "dci_shareholder_majoritaire": "Goldman Sachs Alternatives (majority owner since 2026)",
+        "dci_shareholder_majo_nationalite": "USA",
+        "date_collecte": "2026-08-07",
+        "SurfBatimentPI2": "260566",
+        "dcbat_areapi2": 260566
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.32510870000002,
+          46.6761377
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "dci_id": "FLUMMAT01",
+        "dci_nomsite": "Flumen Matane",
+        "dci_type": "Wholesale",
+        "dci_statut": "en projet",
+        "dci_iaready": "IA",
+        "dci_puiss_annoncee": 17.5,
+        "dci_nomville": "Matane",
+        "dci_adresse": "90 Rue du Parc-Industriel Matane G4W 3M9",
+        "dci_an_mise_service": "NC",
+        "dci_hebergeur": "Flumen energie",
+        "dci_siegesocial_loc": ", ",
+        "dc_hebwebsite": "-",
+        "dci_shareholder_majoritaire": "",
+        "dci_shareholder_majo_nationalite": "",
+        "date_collecte": "2026-08-07"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.547759,
+          48.834417
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "dci_id": "KEELMGG01",
+        "dci_nomsite": "Keel Infrastructure Magog",
+        "dci_type": "Crypto",
+        "dci_statut": "en opération",
+        "dci_iaready": "",
+        "dci_puiss_annoncee": 10,
+        "dci_nomville": "Magog",
+        "dci_adresse": "1350 Boulevard Industriel  Magog J1X 4V9",
+        "dci_an_mise_service": "2019",
+        "dci_hebergeur": "Bitfarms / Keel Infrastructure",
+        "dci_siegesocial_loc": "NY, USA",
+        "dc_hebwebsite": "https://www.keelinfra.com/",
+        "dci_shareholder_majoritaire": "Jane Street Group LLC- Jane Street Capital LLC-Jane Street Global Trading LLC",
+        "dci_shareholder_majo_nationalite": "United States (largest holder)",
+        "date_collecte": "2026-08-07"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -72.13339149999999,
+          45.2725417
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "dci_id": "BNFDMTL01",
+        "dci_nomsite": "Beanfield Montreal 1",
+        "dci_type": "Retail",
+        "dci_statut": "en opération",
+        "dci_iaready": "",
+        "dci_puiss_annoncee": 5,
+        "dci_nomville": "Montreal",
+        "dci_adresse": "3445 Avenue du Parc Montreal H2X 2H6",
+        "dci_an_mise_service": "2016",
+        "dci_hebergeur": "Beanfield",
+        "dci_siegesocial_loc": "Toronto, CA",
+        "dc_hebwebsite": "https://www.beanfield.com/",
+        "dci_shareholder_majoritaire": "DigitalBridge (major investor/acquirer) and OMERS infrastructure",
+        "dci_shareholder_majo_nationalite": "U.K. and Netherlands",
+        "date_collecte": "2026-08-07",
+        "SurfBatimentPI2": "28506",
+        "dcbat_areapi2": 28506
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.5714944,
+          45.5089211
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "dci_id": "CLCQMTL01",
+        "dci_nomsite": "Calcul Quebec - HPC",
+        "dci_type": "Hyperscale",
+        "dci_statut": "en opération",
+        "dci_iaready": "IA",
+        "dci_puiss_annoncee": 2,
+        "dci_nomville": "Montreal",
+        "dci_adresse": "1100 Rue Notre-Dame Ouest Montreal H3C 1K3",
+        "dci_an_mise_service": "2019",
+        "dci_hebergeur": "Calcul Québec",
+        "dci_siegesocial_loc": "Montréal, CA",
+        "dc_hebwebsite": "https://www.calculquebec.ca/",
+        "dci_shareholder_majoritaire": "Government of Québec (primary funder)",
+        "dci_shareholder_majo_nationalite": "Canadian (Québec)",
+        "date_collecte": "2026-08-07"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.56285549999998,
+          45.4945155
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "dci_id": "CLCQMTL02",
+        "dci_nomsite": "Calcul Quebec - Quantique",
+        "dci_type": "Quantique",
+        "dci_statut": "en opération",
+        "dci_iaready": "",
+        "dci_puiss_annoncee": 0.025,
+        "dci_nomville": "Montreal",
+        "dci_adresse": "1101 Rue Notre Dame Ouest Montreal H3C 1K3",
+        "dci_an_mise_service": "2024",
+        "dci_hebergeur": "Calcul Québec",
+        "dci_siegesocial_loc": "Montréal, CA",
+        "dc_hebwebsite": "https://www.calculquebec.ca/",
+        "dci_shareholder_majoritaire": "Government of Québec (primary funder)",
+        "dci_shareholder_majo_nationalite": "Canadian (Québec)",
+        "date_collecte": "2026-08-07"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.566611,
+          45.4907715
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "dci_id": "CLGXMTL01",
+        "dci_nomsite": "Cologix MTL1",
+        "dci_type": "Retail",
+        "dci_statut": "en opération",
+        "dci_iaready": "",
+        "dci_puiss_annoncee": 0.07,
+        "dci_nomville": "Montreal",
+        "dci_adresse": "625 Boulevard Rene-Levesque Ouest Montreal H3B 1R2",
+        "dci_an_mise_service": "2012",
+        "dci_hebergeur": "Cologix",
+        "dci_siegesocial_loc": "Denver, USA",
+        "dc_hebwebsite": "https://www.cologix.com",
+        "dci_shareholder_majoritaire": "Stonepeak (majority owner)",
+        "dci_shareholder_majo_nationalite": "USA",
+        "date_collecte": "2026-08-07"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.5671429,
+          45.5025837
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "dci_id": "CLGXMTL03",
+        "dci_nomsite": "Cologix MTL3",
+        "dci_type": "Retail",
+        "dci_statut": "en opération",
+        "dci_iaready": "",
+        "dci_puiss_annoncee": 1.5,
+        "dci_nomville": "Montreal",
+        "dci_adresse": "1250 Boulevard Rene-Levesque Ouest Montreal H3B 4X4",
+        "dci_an_mise_service": "2012",
+        "dci_hebergeur": "Cologix",
+        "dci_siegesocial_loc": "Denver, USA",
+        "dc_hebwebsite": "https://www.cologix.com",
+        "dci_shareholder_majoritaire": "Stonepeak (majority owner)",
+        "dci_shareholder_majo_nationalite": "USA",
+        "date_collecte": "2026-08-07"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.5702894,
+          45.4971344
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "dci_id": "CLGXMTL04",
+        "dci_nomsite": "Cologix MTL4",
+        "dci_type": "Retail",
+        "dci_statut": "en opération",
+        "dci_iaready": "",
+        "dci_puiss_annoncee": 0.8,
+        "dci_nomville": "Montreal",
+        "dci_adresse": "7171 Rue Jean-Talon Est Montreal H1M 3N2",
+        "dci_an_mise_service": "2012",
+        "dci_hebergeur": "Cologix",
+        "dci_siegesocial_loc": "Denver, USA",
+        "dc_hebwebsite": "https://www.cologix.com",
+        "dci_shareholder_majoritaire": "Stonepeak (majority owner)",
+        "dci_shareholder_majo_nationalite": "USA",
+        "date_collecte": "2026-08-07",
+        "SurfBatimentPI2": "31139",
+        "dcbat_areapi2": 31139
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.5695759,
+          45.5989914
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "dci_id": "CLGXMTL05",
+        "dci_nomsite": "Cologix MTL5",
+        "dci_type": "Retail",
+        "dci_statut": "en opération",
+        "dci_iaready": "",
+        "dci_puiss_annoncee": 0.15,
+        "dci_nomville": "Montreal",
+        "dci_adresse": "2341 Boulevard Alfred-Nobel  Montreal H4S 2B8",
+        "dci_an_mise_service": "2012",
+        "dci_hebergeur": "Cologix",
+        "dci_siegesocial_loc": "Denver, USA",
+        "dc_hebwebsite": "https://www.cologix.com",
+        "dci_shareholder_majoritaire": "Stonepeak (majority owner)",
+        "dci_shareholder_majo_nationalite": "USA",
+        "date_collecte": "2026-08-07",
+        "SurfBatimentPI2": "16276",
+        "dcbat_areapi2": 16276
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.7598918,
+          45.4823107
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "dci_id": "CLGXMTL06",
+        "dci_nomsite": "Cologix MTL6",
+        "dci_type": "Retail",
+        "dci_statut": "en opération",
+        "dci_iaready": "",
+        "dci_puiss_annoncee": 0.184,
+        "dci_nomville": "Montreal",
+        "dci_adresse": "2341 Boulevard Alfred-Nobel  Montreal H4S 2B8",
+        "dci_an_mise_service": "2012",
+        "dci_hebergeur": "Cologix",
+        "dci_siegesocial_loc": "Denver, USA",
+        "dc_hebwebsite": "https://www.cologix.com",
+        "dci_shareholder_majoritaire": "Stonepeak (majority owner)",
+        "dci_shareholder_majo_nationalite": "USA",
+        "date_collecte": "2026-08-07",
+        "SurfBatimentPI2": "13490",
+        "dcbat_areapi2": 13490
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.7598918,
+          45.4823107
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "dci_id": "CLGXMTL02",
+        "dci_nomsite": "Cologix MTL2",
+        "dci_type": "Retail",
+        "dci_statut": "en opération",
+        "dci_iaready": "",
+        "dci_puiss_annoncee": 1.1,
+        "dci_nomville": "Montreal",
+        "dci_adresse": "3000 Boulevard Rene-Levesque Montreal H3E 1T9",
+        "dci_an_mise_service": "2012",
+        "dci_hebergeur": "Cologix",
+        "dci_siegesocial_loc": "Denver, USA",
+        "dc_hebwebsite": "https://www.cologix.com",
+        "dci_shareholder_majoritaire": "Stonepeak (majority owner)",
+        "dci_shareholder_majo_nationalite": "USA",
+        "date_collecte": "2026-08-07",
+        "SurfBatimentPI2": "918",
+        "dcbat_areapi2": 918
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.54142044635526,
+          45.46686088665988
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "dci_id": "MSFTAUG01",
+        "dci_nomsite": "Microsoft Donnaconna",
+        "dci_type": "Hyperscale",
+        "dci_statut": "en construction",
+        "dci_iaready": "",
+        "dci_puiss_annoncee": null,
+        "dci_nomville": "Saint-Augustin-de-Desmaures",
+        "dci_adresse": "250 Rue de Singapour Saint-Augustin-de-Desmaures G3A 0P8",
+        "dci_an_mise_service": "2027",
+        "dci_hebergeur": "Microsoft",
+        "dci_siegesocial_loc": ", USA",
+        "dc_hebwebsite": "En cours",
+        "dci_shareholder_majoritaire": "",
+        "dci_shareholder_majo_nationalite": "",
+        "date_collecte": "2026-08-07",
+        "SurfBatimentPI2": "756914",
+        "dcbat_areapi2": 756914
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.43384300407568,
+          46.76035550859096
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "dci_id": "MWCAESC01",
+        "dci_nomsite": "MWC MegaWatt Canada Escoumins",
+        "dci_type": "Crypto",
+        "dci_statut": "en opération",
+        "dci_iaready": "",
+        "dci_puiss_annoncee": 10,
+        "dci_nomville": "Les-Escoumins",
+        "dci_adresse": "281 Rte Forestiere Les-Escoumins G0T 1K0",
+        "dci_an_mise_service": "2022",
+        "dci_hebergeur": "MWC MegaWatt Canada",
+        "dci_siegesocial_loc": ", CA",
+        "dc_hebwebsite": "https://www.megawattcanada.com/",
+        "dci_shareholder_majoritaire": "",
+        "dci_shareholder_majo_nationalite": "",
+        "date_collecte": "2026-08-07",
+        "SurfBatimentPI2": "140497",
+        "dcbat_areapi2": 140497
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.45195832640448,
+          48.34416155253218
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "dci_id": "MSFTLVS01",
+        "dci_nomsite": "Microsoft Lévis",
+        "dci_type": "Hyperscale",
+        "dci_statut": "en construction",
+        "dci_iaready": "",
+        "dci_puiss_annoncee": null,
+        "dci_nomville": "Levis",
+        "dci_adresse": "2411 Av. de la Rotonde Levis G6Z 2L1",
+        "dci_an_mise_service": "2027",
+        "dci_hebergeur": "Microsoft",
+        "dci_siegesocial_loc": ", USA",
+        "dc_hebwebsite": "En cours",
+        "dci_shareholder_majoritaire": "",
+        "dci_shareholder_majo_nationalite": "",
+        "date_collecte": "2026-08-07",
+        "SurfBatimentPI2": "4478514",
+        "dcbat_areapi2": 4478514
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.26169289409326,
+          46.71033430197983
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "dci_id": "MSFTDNA01",
+        "dci_nomsite": "Microsoft St Augustin De Desmaures",
+        "dci_type": "Hyperscale",
+        "dci_statut": "en construction",
+        "dci_iaready": "",
+        "dci_puiss_annoncee": null,
+        "dci_nomville": "Donnacona",
+        "dci_adresse": "129 Rue Piche Donnacona G3M 1V4",
+        "dci_an_mise_service": "2027",
+        "dci_hebergeur": "Microsoft",
+        "dci_siegesocial_loc": ", USA",
+        "dc_hebwebsite": "En cours",
+        "dci_shareholder_majoritaire": "",
+        "dci_shareholder_majo_nationalite": "",
+        "date_collecte": "2026-08-07",
+        "SurfBatimentPI2": "324319",
+        "dcbat_areapi2": 324319
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.71526687676888,
+          46.68334511000959
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "dci_id": "OVHCBHS01",
+        "dci_nomsite": "OVHcloud BHS Campus",
+        "dci_type": "Hyperscale",
+        "dci_statut": "en opération",
+        "dci_iaready": "IA",
+        "dci_puiss_annoncee": 100,
+        "dci_nomville": "Beauharnois",
+        "dci_adresse": "50 Rue de l'Aluminerie Beauharnois J6N 0C2",
+        "dci_an_mise_service": "2012",
+        "dci_hebergeur": "OVHCloud",
+        "dci_siegesocial_loc": "Roubaix, FR",
+        "dc_hebwebsite": "https://www.ovhcloud.com/fr-ca/",
+        "dci_shareholder_majoritaire": "Klaba family",
+        "dci_shareholder_majo_nationalite": "France / Poland origin family (European)",
+        "date_collecte": "2026-08-07",
+        "SurfBatimentPI2": "543557",
+        "dcbat_areapi2": 543557
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.89630945794147,
+          45.308240666674784
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "dci_id": "CLGXMTL07",
+        "dci_nomsite": "Cologix MTL7",
+        "dci_type": "Retail",
+        "dci_statut": "en opération",
+        "dci_iaready": "",
+        "dci_puiss_annoncee": 3.1,
+        "dci_nomville": "Montreal",
+        "dci_adresse": "1155 Boulevard Robert-Bourassa Montreal H3B 3A7",
+        "dci_an_mise_service": "2012",
+        "dci_hebergeur": "Cologix",
+        "dci_siegesocial_loc": "Denver, USA",
+        "dc_hebwebsite": "https://www.cologix.com",
+        "dci_shareholder_majoritaire": "Stonepeak (majority owner)",
+        "dci_shareholder_majo_nationalite": "USA",
+        "date_collecte": "2026-08-07",
+        "SurfBatimentPI2": "31340",
+        "dcbat_areapi2": 31340
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.56762389999999,
+          45.5024146
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "dci_id": "CLGXMTL08",
+        "dci_nomsite": "Cologix MTL8",
+        "dci_type": "Wholesale",
+        "dci_statut": "en opération",
+        "dci_iaready": "IA",
+        "dci_puiss_annoncee": 21,
+        "dci_nomville": "Montreal",
+        "dci_adresse": "7350 Rue Frederick-Banting Montreal H4S 0B9",
+        "dci_an_mise_service": "2026",
+        "dci_hebergeur": "Cologix",
+        "dci_siegesocial_loc": "Denver, USA",
+        "dc_hebwebsite": "https://www.cologix.com",
+        "dci_shareholder_majoritaire": "Stonepeak (majority owner)",
+        "dci_shareholder_majo_nationalite": "USA",
+        "date_collecte": "2026-08-07",
+        "SurfBatimentPI2": "186429",
+        "dcbat_areapi2": 186429
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.7699881,
+          45.4807309
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "dci_id": "CLGXMTL11",
+        "dci_nomsite": "Cologix MTL11",
+        "dci_type": "Retail",
+        "dci_statut": "en opération",
+        "dci_iaready": "",
+        "dci_puiss_annoncee": 1,
+        "dci_nomville": "Montreal",
+        "dci_adresse": "875 Rue Saint-Antoine Ouest Montreal H3C 1A6",
+        "dci_an_mise_service": "2019",
+        "dci_hebergeur": "Cologix",
+        "dci_siegesocial_loc": "Denver, USA",
+        "dc_hebwebsite": "https://www.cologix.com",
+        "dci_shareholder_majoritaire": "Stonepeak (majority owner)",
+        "dci_shareholder_majo_nationalite": "USA",
+        "date_collecte": "2026-08-07",
+        "SurfBatimentPI2": "18127",
+        "dcbat_areapi2": 18127
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.5650302,
+          45.4995248
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "dci_id": "CMPSMTL01",
+        "dci_nomsite": "Compass Montreal II",
+        "dci_type": "Hyperscale",
+        "dci_statut": "en opération",
+        "dci_iaready": "",
+        "dci_puiss_annoncee": 50,
+        "dci_nomville": "Baie-D'Urfe",
+        "dci_adresse": "19701 Avenue Clark-Graham Baie-D'Urfe H9X 3T1",
+        "dci_an_mise_service": "2018",
+        "dci_hebergeur": "Compass Datacenters",
+        "dci_siegesocial_loc": "Dallas, USA",
+        "dc_hebwebsite": "https://www.compassdatacenters.com/",
+        "dci_shareholder_majoritaire": "Ontario Teachers Pension Plan and Brookfield Infrastructure Partners",
+        "dci_shareholder_majo_nationalite": " Canada and USA (mixed PE ownership) / Canada (Brookfield listed Canada - OTPP Canada)",
+        "date_collecte": "2026-08-07",
+        "SurfBatimentPI2": "66893",
+        "dcbat_areapi2": 66893
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9141331,
+          45.4241446
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "dci_id": "CMPSMTL02",
+        "dci_nomsite": "Compass Montreal I",
+        "dci_type": "Wholesale",
+        "dci_statut": "en opération",
+        "dci_iaready": "",
+        "dci_puiss_annoncee": 15,
+        "dci_nomville": "LaSalle",
+        "dci_adresse": "8501 Rue Elmslie LaSalle H8N 2W6",
+        "dci_an_mise_service": "2016",
+        "dci_hebergeur": "Compass Datacenters",
+        "dci_siegesocial_loc": "Dallas, USA",
+        "dc_hebwebsite": "https://www.compassdatacenters.com/",
+        "dci_shareholder_majoritaire": "Ontario Teachers Pension Plan and Brookfield Infrastructure Partners",
+        "dci_shareholder_majo_nationalite": " Canada and USA (mixed PE ownership) / Canada (Brookfield listed Canada - OTPP Canada)",
+        "date_collecte": "2026-08-07",
+        "SurfBatimentPI2": "301821",
+        "dcbat_areapi2": 301821
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.64124769999998,
+          45.4389855
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "dci_id": "EQNXMTL01",
+        "dci_nomsite": "Equinix MTL 1 ",
+        "dci_type": "Retail",
+        "dci_statut": "en opération",
+        "dci_iaready": "",
+        "dci_puiss_annoncee": null,
+        "dci_nomville": "Saint-Laurent",
+        "dci_adresse": "6205 Rue Vanden-Abeele Saint-Laurent H4S 1S1",
+        "dci_an_mise_service": "2007",
+        "dci_hebergeur": "Equinix",
+        "dci_siegesocial_loc": "Redwood City, USA",
+        "dc_hebwebsite": "https://www.equinix.com/",
+        "dci_shareholder_majoritaire": "BlackRock Advisers LLC (largest shareholder among institutions) or Vanguard Capital Management LLC",
+        "dci_shareholder_majo_nationalite": "U.K. or USA",
+        "date_collecte": "2026-08-07",
+        "SurfBatimentPI2": "727956",
+        "dcbat_areapi2": 727956
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.7542213,
+          45.4836905
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "dci_id": "ESTRMTL01",
+        "dci_nomsite": "Estruxture MTL1",
+        "dci_type": "Retail",
+        "dci_statut": "en opération",
+        "dci_iaready": "",
+        "dci_puiss_annoncee": 4.5,
+        "dci_nomville": "Montreal",
+        "dci_adresse": "800 Rue du Square-Victoria Montreal H4Z 1B7",
+        "dci_an_mise_service": "2017",
+        "dci_hebergeur": "Estruxture",
+        "dci_siegesocial_loc": "Montréal, CA",
+        "dc_hebwebsite": "https://www.estruxture.com/fr/",
+        "dci_shareholder_majoritaire": "Fengate Asset Management",
+        "dci_shareholder_majo_nationalite": "Canada",
+        "date_collecte": "2026-08-07",
+        "SurfBatimentPI2": "324088",
+        "dcbat_areapi2": 324088
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.5615869,
+          45.5007737
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "dci_id": "ESTRMTL02",
+        "dci_nomsite": "Estruxture MTL2",
+        "dci_type": "Wholesale",
+        "dci_statut": "en opération",
+        "dci_iaready": "",
+        "dci_puiss_annoncee": 30,
+        "dci_nomville": "Montreal",
+        "dci_adresse": "7001 Rue Saint-Jacques Montreal H4B 3A2",
+        "dci_an_mise_service": "2020",
+        "dci_hebergeur": "Estruxture",
+        "dci_siegesocial_loc": "Montréal, CA",
+        "dc_hebwebsite": "https://www.estruxture.com/fr/",
+        "dci_shareholder_majoritaire": "Fengate Asset Management",
+        "dci_shareholder_majo_nationalite": "Canada",
+        "date_collecte": "2026-08-07",
+        "SurfBatimentPI2": "203916",
+        "dcbat_areapi2": 203916
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.63188969999999,
+          45.4574224
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "dci_id": "ESTRMTL04",
+        "dci_nomsite": "Estruxture MTL4",
+        "dci_type": "Wholesale",
+        "dci_statut": "en opération",
+        "dci_iaready": "",
+        "dci_puiss_annoncee": 16,
+        "dci_nomville": "Kirkland",
+        "dci_adresse": "17500 Route Transcanadienne Kirkland H9J 2X8",
+        "dci_an_mise_service": "2021",
+        "dci_hebergeur": "Estruxture",
+        "dci_siegesocial_loc": "Montréal, CA",
+        "dc_hebwebsite": "https://www.estruxture.com/fr/",
+        "dci_shareholder_majoritaire": "Fengate Asset Management",
+        "dci_shareholder_majo_nationalite": "Canada",
+        "date_collecte": "2026-08-07",
+        "SurfBatimentPI2": "209716",
+        "dcbat_areapi2": 209716
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.8694816,
+          45.4459686
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "dci_id": "ESTRMTL05",
+        "dci_nomsite": "Estruxture MTL5",
+        "dci_type": "Retail",
+        "dci_statut": "en opération",
+        "dci_iaready": "",
+        "dci_puiss_annoncee": 0.5,
+        "dci_nomville": "Montreal",
+        "dci_adresse": "1080 Cote du Beaver Hall Montreal H2Z 1S8",
+        "dci_an_mise_service": "2021",
+        "dci_hebergeur": "Estruxture",
+        "dci_siegesocial_loc": "Montréal, CA",
+        "dc_hebwebsite": "https://www.estruxture.com/fr/",
+        "dci_shareholder_majoritaire": "Fengate Asset Management",
+        "dci_shareholder_majo_nationalite": "Canada",
+        "date_collecte": "2026-08-07",
+        "SurfBatimentPI2": "453",
+        "dcbat_areapi2": 453
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.5654817,
+          45.5024734
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "dci_id": "EVNMMTL01",
+        "dci_nomsite": "Enovum Data Centers - MTL01",
+        "dci_type": "Retail",
+        "dci_statut": "en opération",
+        "dci_iaready": "",
+        "dci_puiss_annoncee": 4,
+        "dci_nomville": "Montreal",
+        "dci_adresse": "3195 Chemin de Bedford Montreal H3S 1G3",
+        "dci_an_mise_service": "2021",
+        "dci_hebergeur": "Enovum",
+        "dci_siegesocial_loc": "Montréal, ",
+        "dc_hebwebsite": "https://www.enovumdc.com",
+        "dci_shareholder_majoritaire": "Bit Digital Inc. (owner since 2024)",
+        "dci_shareholder_majo_nationalite": "USA",
+        "date_collecte": "2026-08-07"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.6323569,
+          45.5093587
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "dci_id": "HIVDMTL02",
+        "dci_nomsite": "Hive MTL-2",
+        "dci_type": "Wholesale",
+        "dci_statut": "en opération",
+        "dci_iaready": "",
+        "dci_puiss_annoncee": null,
+        "dci_nomville": "Saint-Laurent",
+        "dci_adresse": "2900 Avenue Marie-Curie Saint-Laurent H4S 2C2",
+        "dci_an_mise_service": "2023",
+        "dci_hebergeur": "Hive",
+        "dci_siegesocial_loc": "Vancouver, CA",
+        "dc_hebwebsite": "https://hivedatacenter.com/",
+        "dci_shareholder_majoritaire": "Invesco Capital Management LLC and Invesco Capital Management Japan",
+        "dci_shareholder_majo_nationalite": "USA and Japan",
+        "date_collecte": "2026-08-07",
+        "SurfBatimentPI2": "191474",
+        "dcbat_areapi2": 191474
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.7562078,
+          45.4867629
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "dci_id": "LSWBMTL01",
+        "dci_nomsite": "LeaseWeb MTL-01",
+        "dci_type": "Retail",
+        "dci_statut": "en opération",
+        "dci_iaready": "",
+        "dci_puiss_annoncee": null,
+        "dci_nomville": "Verdun",
+        "dci_adresse": "20 Place du Commerce Verdun H3E 1Z6",
+        "dci_an_mise_service": "2021",
+        "dci_hebergeur": "Leaseweb",
+        "dci_siegesocial_loc": "Amsterdam, NL",
+        "dc_hebwebsite": "https://www.leaseweb.com/",
+        "dci_shareholder_majoritaire": "Ocom Group (parent company)",
+        "dci_shareholder_majo_nationalite": "Netherlands",
+        "date_collecte": "2026-08-07",
+        "SurfBatimentPI2": "31735",
+        "dcbat_areapi2": 31735
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.5381018,
+          45.4679285
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "dci_id": "LSWBMTL02",
+        "dci_nomsite": "LeaseWeb MTL-02",
+        "dci_type": "Retail",
+        "dci_statut": "en opération",
+        "dci_iaready": "",
+        "dci_puiss_annoncee": 1.8,
+        "dci_nomville": "LaSalle",
+        "dci_adresse": "7207 Boulevard Newman LaSalle H8N 0H7",
+        "dci_an_mise_service": "2021",
+        "dci_hebergeur": "Leaseweb",
+        "dci_siegesocial_loc": "Amsterdam, NL",
+        "dc_hebwebsite": "https://www.leaseweb.com/",
+        "dci_shareholder_majoritaire": "Ocom Group (parent company)",
+        "dci_shareholder_majo_nationalite": "Netherlands",
+        "date_collecte": "2026-08-07",
+        "SurfBatimentPI2": "54968",
+        "dcbat_areapi2": 54968
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.618037,
+          45.4434289
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "dci_id": "LSWBMTL03",
+        "dci_nomsite": "LeaseWeb MTL-03",
+        "dci_type": "Retail",
+        "dci_statut": "en opération",
+        "dci_iaready": "",
+        "dci_puiss_annoncee": 2.07,
+        "dci_nomville": "Saint-Leonard",
+        "dci_adresse": "5945 Boulevard Couture Saint-Leonard H1P 1A8",
+        "dci_an_mise_service": "2021",
+        "dci_hebergeur": "Leaseweb",
+        "dci_siegesocial_loc": "Amsterdam, NL",
+        "dc_hebwebsite": "https://www.leaseweb.com/",
+        "dci_shareholder_majoritaire": "Ocom Group (parent company)",
+        "dci_shareholder_majo_nationalite": "Netherlands",
+        "date_collecte": "2026-08-07",
+        "SurfBatimentPI2": "39599",
+        "dcbat_areapi2": 39599
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.6077793,
+          45.5992528
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "dci_id": "SMRTMTL01",
+        "dci_nomsite": "SmartDC MTL-1",
+        "dci_type": "Wholesale",
+        "dci_statut": "en opération",
+        "dci_iaready": "",
+        "dci_puiss_annoncee": null,
+        "dci_nomville": "Montreal",
+        "dci_adresse": "4101 Rue Molson Montreal H1Y 3L1",
+        "dci_an_mise_service": "2019",
+        "dci_hebergeur": "SmartDC",
+        "dci_siegesocial_loc": "Capelle aan den Ijssel, NL",
+        "dc_hebwebsite": "https://www.smartdc.net/",
+        "dci_shareholder_majoritaire": "i3D.net (Private ownership)",
+        "dci_shareholder_majo_nationalite": "Netherlands",
+        "date_collecte": "2026-08-07",
+        "SurfBatimentPI2": "45263",
+        "dcbat_areapi2": 45263
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.5649374,
+          45.5417095
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "dci_id": "UBCNMTL01",
+        "dci_nomsite": "Urbacon DC Montreal",
+        "dci_type": "Wholesale",
+        "dci_statut": "en opération",
+        "dci_iaready": "",
+        "dci_puiss_annoncee": 21,
+        "dci_nomville": "Montreal",
+        "dci_adresse": "544 Rue de l'Inspecteur Montreal H3C 2K9",
+        "dci_an_mise_service": "2020",
+        "dci_hebergeur": "Ubarcon",
+        "dci_siegesocial_loc": "Toronto, CA",
+        "dc_hebwebsite": "https://udcsdatacentres.com/",
+        "dci_shareholder_majoritaire": "Urbacon Group (private construction/services firm) Fonds FTQ",
+        "dci_shareholder_majo_nationalite": "Canada",
+        "date_collecte": "2026-08-07",
+        "SurfBatimentPI2": "6222",
+        "dcbat_areapi2": 6222
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.5629127,
+          45.4973147
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "dci_id": "VNTGMTL01",
+        "dci_nomsite": "Vantage Data Centers Canada Montreal I QC1",
+        "dci_type": "Wholesale",
+        "dci_statut": "en opération",
+        "dci_iaready": "",
+        "dci_puiss_annoncee": 11,
+        "dci_nomville": "Saint-Laurent",
+        "dci_adresse": "2900 Av. Marie Curie Saint-Laurent H4S 2C2",
+        "dci_an_mise_service": "2021",
+        "dci_hebergeur": "Vantage Datacenters",
+        "dci_siegesocial_loc": "Denver, USA",
+        "dc_hebwebsite": "https://vantage-dc.com",
+        "dci_shareholder_majoritaire": "Consortium incl DigitalBridge group Silver Lake -AustralianSuper- PSP Investments- Howard Hugues Holdings",
+        "dci_shareholder_majo_nationalite": "USA / Canada / UAE / Singapore (mixed sovereign & PE)??",
+        "date_collecte": "2026-08-07",
+        "SurfBatimentPI2": "131916",
+        "dcbat_areapi2": 131916
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.7562078,
+          45.4867629
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "dci_id": "VNTGMTL02",
+        "dci_nomsite": "Vantage Data Centers Canada Montreal II QC4",
+        "dci_type": "Hyperscale",
+        "dci_statut": "en opération",
+        "dci_iaready": "",
+        "dci_puiss_annoncee": 50,
+        "dci_nomville": "Pointe-Claire",
+        "dci_adresse": "2800 Route Transcanadienne Pointe-Claire H9R 1B1",
+        "dci_an_mise_service": "2021",
+        "dci_hebergeur": "Vantage Datacenters",
+        "dci_siegesocial_loc": "Denver, USA",
+        "dc_hebwebsite": "https://vantage-dc.com",
+        "dci_shareholder_majoritaire": "Consortium incl DigitalBridge group Silver Lake -AustralianSuper- PSP Investments- Howard Hugues Holdings",
+        "dci_shareholder_majo_nationalite": "USA / Canada / UAE / Singapore (mixed sovereign & PE)??",
+        "date_collecte": "2026-08-07",
+        "SurfBatimentPI2": "160933",
+        "dcbat_areapi2": 160933
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.8000691,
+          45.4746365
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "dci_id": "VNTGMTL03",
+        "dci_nomsite": "Vantage Data Centers Canada Montreal III QC6",
+        "dci_type": "Hyperscale",
+        "dci_statut": "en opération",
+        "dci_iaready": "",
+        "dci_puiss_annoncee": 45,
+        "dci_nomville": "Pointe-Claire",
+        "dci_adresse": "205 Boulevard Brunswick Pointe-Claire H9R 4R7",
+        "dci_an_mise_service": "2026",
+        "dci_hebergeur": "Vantage Datacenters",
+        "dci_siegesocial_loc": "Denver, USA",
+        "dc_hebwebsite": "https://vantage-dc.com",
+        "dci_shareholder_majoritaire": "Consortium incl DigitalBridge group Silver Lake -AustralianSuper- PSP Investments- Howard Hugues Holdings",
+        "dci_shareholder_majo_nationalite": "USA / Canada / UAE / Singapore (mixed sovereign & PE)??",
+        "date_collecte": "2026-08-07",
+        "SurfBatimentPI2": "321589",
+        "dcbat_areapi2": 321589
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.82162569999998,
+          45.4719453
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "dci_id": "EVNMPCL01",
+        "dci_nomsite": "Enovum Data Centers - MTL02",
+        "dci_type": "Retail",
+        "dci_statut": "en opération",
+        "dci_iaready": "",
+        "dci_puiss_annoncee": null,
+        "dci_nomville": "Pointe-Claire",
+        "dci_adresse": "7300 Route Transcanadienne Pointe-Claire H9R 1C7",
+        "dci_an_mise_service": "2025",
+        "dci_hebergeur": "Enovum",
+        "dci_siegesocial_loc": "Montréal, ",
+        "dc_hebwebsite": "https://www.enovumdc.com",
+        "dci_shareholder_majoritaire": "Bit Digital Inc. (owner since 2024)",
+        "dci_shareholder_majo_nationalite": "USA",
+        "date_collecte": "2026-08-07",
+        "SurfBatimentPI2": "157150",
+        "dcbat_areapi2": 157150
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.8376767,
+          45.4583145
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "dci_id": "VNTGQBC01",
+        "dci_nomsite": "Vantage Data Centers Canada Québec QC1",
+        "dci_type": "Hyperscale",
+        "dci_statut": "en opération",
+        "dci_iaready": "",
+        "dci_puiss_annoncee": 86,
+        "dci_nomville": "Quebec",
+        "dci_adresse": "2675 Boulevard du Parc-Technologique Quebec G1P 4S5",
+        "dci_an_mise_service": "2026",
+        "dci_hebergeur": "Vantage Datacenters",
+        "dci_siegesocial_loc": "Denver, USA",
+        "dc_hebwebsite": "https://vantage-dc.com",
+        "dci_shareholder_majoritaire": "Consortium incl DigitalBridge group Silver Lake -AustralianSuper- PSP Investments- Howard Hugues Holdings",
+        "dci_shareholder_majo_nationalite": "USA / Canada / UAE / Singapore (mixed sovereign & PE)??",
+        "date_collecte": "2026-08-07",
+        "SurfBatimentPI2": "447413",
+        "dcbat_areapi2": 447413
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.3072117,
+          46.7955048
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "dci_id": "TLUSRKI01",
+        "dci_nomsite": "Telus - Super Internet Data Center (SIDC)",
+        "dci_type": "Wholesale",
+        "dci_statut": "en opération",
+        "dci_iaready": "IA",
+        "dci_puiss_annoncee": 16,
+        "dci_nomville": "Rimouski",
+        "dci_adresse": "190 Rue des Negociants Rimouski G5M 1B7",
+        "dci_an_mise_service": "2011",
+        "dci_hebergeur": "Telus",
+        "dci_siegesocial_loc": "Vancouver, CA",
+        "dc_hebwebsite": "https://group.skanska.com/projects/57626/TELUS-Super-Internet-Data-Center",
+        "dci_shareholder_majoritaire": "No controlling shareholder: major canadian institutional investors (ex: Royal Bank Canada)",
+        "dci_shareholder_majo_nationalite": "Canada",
+        "date_collecte": "2026-08-07"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.5023453,
+          48.4642952
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "dci_id": "DSTQSHB01",
+        "dci_nomsite": "Distriq - Zone Innovation Quantique",
+        "dci_type": "Quantique",
+        "dci_statut": "en opération",
+        "dci_iaready": "",
+        "dci_puiss_annoncee": null,
+        "dci_nomville": "Sherbrooke",
+        "dci_adresse": "1950 rue Roy Sherbrooke J1K 1B7",
+        "dci_an_mise_service": "2023",
+        "dci_hebergeur": "Distriq",
+        "dci_siegesocial_loc": "Sherbrooke, CA",
+        "dc_hebwebsite": "https://www.distriq.com/",
+        "dci_shareholder_majoritaire": "Government of Québec + public‑private consortium",
+        "dci_shareholder_majo_nationalite": "Canadian",
+        "date_collecte": "2026-08-07"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.92216939999999,
+          45.38976069999999
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "dci_id": "EXINSHB01",
+        "dci_nomsite": "Exaion / PINQ2 Bellevue",
+        "dci_type": "Wholesale",
+        "dci_statut": "en opération",
+        "dci_iaready": "IA",
+        "dci_puiss_annoncee": 0.78,
+        "dci_nomville": "Sherbrooke",
+        "dci_adresse": "1820 Rue Galt Ouest Sherbrooke J1K 1H8",
+        "dci_an_mise_service": "2024",
+        "dci_hebergeur": "Exaion",
+        "dci_siegesocial_loc": "Neuilly-sur-seine, FR",
+        "dc_hebwebsite": "https://exaion.com/",
+        "dci_shareholder_majoritaire": "MARA France",
+        "dci_shareholder_majo_nationalite": "France",
+        "date_collecte": "2026-08-07"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.9192611,
+          45.3857961
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "dci_id": "KEELSHB02",
+        "dci_nomsite": "Keel Infrastructure Sherbrooke 2 Garlock",
+        "dci_type": "Crypto",
+        "dci_statut": "en opération",
+        "dci_iaready": "",
+        "dci_puiss_annoncee": 18,
+        "dci_nomville": "Sherbrooke",
+        "dci_adresse": "4220 rue de la Garlock Sherbrooke J1L 2P4",
+        "dci_an_mise_service": "2022",
+        "dci_hebergeur": "Bitfarms / Keel Infrastructure",
+        "dci_siegesocial_loc": "NY, USA",
+        "dc_hebwebsite": "https://www.keelinfra.com/",
+        "dci_shareholder_majoritaire": "Jane Street Group LLC- Jane Street Capital LLC-Jane Street Global Trading LLC",
+        "dci_shareholder_majo_nationalite": "United States (largest holder)",
+        "date_collecte": "2026-08-07",
+        "SurfBatimentPI2": "31190",
+        "dcbat_areapi2": 31190
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.9694672,
+          45.4072642
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "dci_id": "KEELSHB03",
+        "dci_nomsite": "Keel Infrastructure Sherbrooke 3",
+        "dci_type": "Crypto",
+        "dci_statut": "en opération",
+        "dci_iaready": "",
+        "dci_puiss_annoncee": 30,
+        "dci_nomville": "Sherbrooke",
+        "dci_adresse": "839 Rue Joseph-Louis-Mathieu Sherbrooke J1R 0X3",
+        "dci_an_mise_service": "NC",
+        "dci_hebergeur": "Bitfarms / Keel Infrastructure",
+        "dci_siegesocial_loc": "NY, USA",
+        "dc_hebwebsite": "https://www.keelinfra.com/",
+        "dci_shareholder_majoritaire": "Jane Street Group LLC- Jane Street Capital LLC-Jane Street Global Trading LLC",
+        "dci_shareholder_majo_nationalite": "United States (largest holder)",
+        "date_collecte": "2026-08-07",
+        "SurfBatimentPI2": "174574",
+        "dcbat_areapi2": 174574
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.9836085,
+          45.4044613
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "dci_id": "KEELSHB01",
+        "dci_nomsite": "Keel Infrastructure Sherbrooke Leger 1",
+        "dci_type": "Crypto",
+        "dci_statut": "en opération",
+        "dci_iaready": "",
+        "dci_puiss_annoncee": 30,
+        "dci_nomville": "Sherbrooke",
+        "dci_adresse": "290 Rue Leger Sherbrooke J1L 1Y5",
+        "dci_an_mise_service": "2019",
+        "dci_hebergeur": "Bitfarms / Keel Infrastructure",
+        "dci_siegesocial_loc": "NY, USA",
+        "dc_hebwebsite": "https://www.keelinfra.com/",
+        "dci_shareholder_majoritaire": "Jane Street Group LLC- Jane Street Capital LLC-Jane Street Global Trading LLC",
+        "dci_shareholder_majo_nationalite": "United States (largest holder)",
+        "date_collecte": "2026-08-07",
+        "SurfBatimentPI2": "133854",
+        "dcbat_areapi2": 133854
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.9711744,
+          45.3981896
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "dci_id": "DIGHSHW01",
+        "dci_nomsite": "DigiHub - quantique",
+        "dci_type": "Quantique",
+        "dci_statut": "en opération",
+        "dci_iaready": "",
+        "dci_puiss_annoncee": null,
+        "dci_nomville": "Shawinigan",
+        "dci_adresse": "1250 Avenue de la Station Shawinigan G9N 8K9",
+        "dci_an_mise_service": "2024",
+        "dci_hebergeur": "DigiHub",
+        "dci_siegesocial_loc": "Sherbrooke, CA",
+        "dc_hebwebsite": "https://digihub.ca/",
+        "dci_shareholder_majoritaire": "Public / regional innovation ecosystem (Sherbrooke)",
+        "dci_shareholder_majo_nationalite": "Canadian",
+        "date_collecte": "2026-08-07"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -72.7506747,
+          46.5450255
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "dci_id": "NRDKSHW01",
+        "dci_nomsite": "Nordik NDC1",
+        "dci_type": "Retail",
+        "dci_statut": "en opération",
+        "dci_iaready": "",
+        "dci_puiss_annoncee": 5,
+        "dci_nomville": "Shawinigan",
+        "dci_adresse": "4155 Rue Burrill Shawinigan G9N 0C4",
+        "dci_an_mise_service": "2021",
+        "dci_hebergeur": "Nordik",
+        "dci_siegesocial_loc": "Québec, CA",
+        "dc_hebwebsite": "https://nordikdatacenters.com/",
+        "dci_shareholder_majoritaire": "Innventure Inc. (Private ownership) (Peu dinfo)",
+        "dci_shareholder_majo_nationalite": "USA",
+        "date_collecte": "2026-08-07"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -72.7763135,
+          46.5634925
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "dci_id": "NRDKSHW02",
+        "dci_nomsite": "Nordik NDC2",
+        "dci_type": "Retail",
+        "dci_statut": "en projet",
+        "dci_iaready": "",
+        "dci_puiss_annoncee": 5,
+        "dci_nomville": "Shawinigan",
+        "dci_adresse": "4156 Rue Burrill Shawinigan G9N 0C4",
+        "dci_an_mise_service": "NC",
+        "dci_hebergeur": "Nordik",
+        "dci_siegesocial_loc": "Québec, CA",
+        "dc_hebwebsite": "https://nordikdatacenters.com/",
+        "dci_shareholder_majoritaire": "Innventure Inc. (Private ownership) (Peu dinfo)",
+        "dci_shareholder_majo_nationalite": "USA",
+        "date_collecte": "2026-08-07"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -72.7767617,
+          46.56484849999998
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "dci_id": "NRDKSHW03",
+        "dci_nomsite": "Nordik NDC3",
+        "dci_type": "Retail",
+        "dci_statut": "en projet",
+        "dci_iaready": "",
+        "dci_puiss_annoncee": 5,
+        "dci_nomville": "Shawinigan",
+        "dci_adresse": "4157 Rue Burrill Shawinigan G9N 0C4",
+        "dci_an_mise_service": "NC",
+        "dci_hebergeur": "Nordik",
+        "dci_siegesocial_loc": "Québec, CA",
+        "dc_hebwebsite": "https://nordikdatacenters.com/",
+        "dci_shareholder_majoritaire": "Innventure Inc. (Private ownership) (Peu dinfo)",
+        "dci_shareholder_majo_nationalite": "USA",
+        "date_collecte": "2026-08-07"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -72.7763185,
+          46.5635075
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "dci_id": "NRDKSHW04",
+        "dci_nomsite": "Nordik NDC4",
+        "dci_type": "Retail",
+        "dci_statut": "en projet",
+        "dci_iaready": "",
+        "dci_puiss_annoncee": 5,
+        "dci_nomville": "Shawinigan",
+        "dci_adresse": "4158 Rue Burrill Shawinigan G9N 0C4",
+        "dci_an_mise_service": "NC",
+        "dci_hebergeur": "Nordik",
+        "dci_siegesocial_loc": "Québec, CA",
+        "dc_hebwebsite": "https://nordikdatacenters.com/",
+        "dci_shareholder_majoritaire": "Innventure Inc. (Private ownership) (Peu dinfo)",
+        "dci_shareholder_majo_nationalite": "USA",
+        "date_collecte": "2026-08-07"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -72.7767617,
+          46.56484849999998
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "dci_id": "NRDKSHW05",
+        "dci_nomsite": "Nordik NDC5",
+        "dci_type": "Retail",
+        "dci_statut": "en projet",
+        "dci_iaready": "",
+        "dci_puiss_annoncee": 5,
+        "dci_nomville": "Shawinigan",
+        "dci_adresse": "4159 Rue Burrill Shawinigan G9N 0C4",
+        "dci_an_mise_service": "NC",
+        "dci_hebergeur": "Nordik",
+        "dci_siegesocial_loc": "Québec, CA",
+        "dc_hebwebsite": "https://nordikdatacenters.com/",
+        "dci_shareholder_majoritaire": "Innventure Inc. (Private ownership) (Peu dinfo)",
+        "dci_shareholder_majo_nationalite": "USA",
+        "date_collecte": "2026-08-07"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -72.7763235,
+          46.5635225
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "dci_id": "NRDKSHW06",
+        "dci_nomsite": "Nordik NDC6",
+        "dci_type": "Retail",
+        "dci_statut": "en projet",
+        "dci_iaready": "",
+        "dci_puiss_annoncee": 5,
+        "dci_nomville": "Shawinigan",
+        "dci_adresse": "4160 Rue Burrill Shawinigan G9N 0C4",
+        "dci_an_mise_service": "NC",
+        "dci_hebergeur": "Nordik",
+        "dci_siegesocial_loc": "Québec, CA",
+        "dc_hebwebsite": "https://nordikdatacenters.com/",
+        "dci_shareholder_majoritaire": "Innventure Inc. (Private ownership) (Peu dinfo)",
+        "dci_shareholder_majo_nationalite": "USA",
+        "date_collecte": "2026-08-07"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -72.7767617,
+          46.56484849999998
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "dci_id": "EVNMSJM01",
+        "dci_nomsite": "Enovum Data Centers - MTL03",
+        "dci_type": "Retail",
+        "dci_statut": "en opération",
+        "dci_iaready": "IA",
+        "dci_puiss_annoncee": null,
+        "dci_nomville": "Saint-Jerome",
+        "dci_adresse": "500 Boulevard Monseigneur-Dubois Saint-Jerome J7Y 3L8",
+        "dci_an_mise_service": "2025",
+        "dci_hebergeur": "Enovum",
+        "dci_siegesocial_loc": "Montréal, ",
+        "dc_hebwebsite": "https://www.enovumdc.com",
+        "dci_shareholder_majoritaire": "Bit Digital Inc. (owner since 2024)",
+        "dci_shareholder_majo_nationalite": "USA",
+        "date_collecte": "2026-08-07",
+        "SurfBatimentPI2": "56016",
+        "dcbat_areapi2": 56016
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.018411,
+          45.784104
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "dci_id": "RDDCVAC01",
+        "dci_nomsite": "RDDc - quantique",
+        "dci_type": "Quantique",
+        "dci_statut": "en opération",
+        "dci_iaready": "",
+        "dci_puiss_annoncee": null,
+        "dci_nomville": "Quebec",
+        "dci_adresse": "2459 Route de la Bravoure Quebec G3J 1X5",
+        "dci_an_mise_service": "2026",
+        "dci_hebergeur": "Recherche et développement pour la défense Canada",
+        "dci_siegesocial_loc": "Sherbrooke , CA",
+        "dc_hebwebsite": "https://www.canada.ca/fr/recherche-developpement-defense/services/centres-de-recherches-de-recherche-et-developpement-pour-la-defense-canada.html",
+        "dci_shareholder_majoritaire": "Québec public research ecosystem / institutional partnerships",
+        "dci_shareholder_majo_nationalite": "Canadian",
+        "date_collecte": "2026-08-07"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.45724869999998,
+          46.8783141
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "dci_id": "IBMQBRO01",
+        "dci_nomsite": "IBM Quantum System One",
+        "dci_type": "Quantique",
+        "dci_statut": "en opération",
+        "dci_iaready": "",
+        "dci_puiss_annoncee": null,
+        "dci_nomville": "Bromont",
+        "dci_adresse": "23 Boulevard de l'Aeroport  Bromont J2L 1A3",
+        "dci_an_mise_service": "2023",
+        "dci_hebergeur": "IBM",
+        "dci_siegesocial_loc": "Armonk, USA",
+        "dc_hebwebsite": "https://www.ibm.com/ca-fr",
+        "dci_shareholder_majoritaire": "Vanguard and BlackRock (largest institutional shareholders)",
+        "dci_shareholder_majo_nationalite": "USA and U.K.",
+        "date_collecte": "2026-08-07"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -72.71985989999999,
+          45.2961787
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "dci_id": "KEELBCO01",
+        "dci_nomsite": "Keel Infrastructure Baie-Comeau",
+        "dci_type": "Crypto",
+        "dci_statut": "en opération",
+        "dci_iaready": "IA",
+        "dci_puiss_annoncee": 15,
+        "dci_nomville": "Baie-Comeau",
+        "dci_adresse": "25 Avenue Babin Baie-Comeau G4Z 3A5",
+        "dci_an_mise_service": "2024",
+        "dci_hebergeur": "Bitfarms / Keel Infrastructure",
+        "dci_siegesocial_loc": "NY, USA",
+        "dc_hebwebsite": "https://www.keelinfra.com/",
+        "dci_shareholder_majoritaire": "Jane Street Group LLC- Jane Street Capital LLC-Jane Street Global Trading LLC",
+        "dci_shareholder_majo_nationalite": "United States (largest holder)",
+        "date_collecte": "2026-08-07",
+        "SurfBatimentPI2": "37575",
+        "dcbat_areapi2": 37575
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.19039734740356,
+          49.2216804538227
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "dci_id": "GGLEBHS01",
+        "dci_nomsite": "Google Beauharnois",
+        "dci_type": "Hyperscale",
+        "dci_statut": "en projet",
+        "dci_iaready": "",
+        "dci_puiss_annoncee": 380,
+        "dci_nomville": "Beauharnois",
+        "dci_adresse": "Rue Urgel Charette Beauharnois J6N 0S2",
+        "dci_an_mise_service": "NC",
+        "dci_hebergeur": "Google",
+        "dci_siegesocial_loc": ", ",
+        "dc_hebwebsite": "https://datacenters.google/",
+        "dci_shareholder_majoritaire": "",
+        "dci_shareholder_majo_nationalite": "",
+        "date_collecte": "2026-08-07",
+        "SurfBatimentPI2": "15087405",
+        "dcbat_areapi2": 15087405
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.90351885590198,
+          45.285434015611294
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "dci_id": "CLGXMTL12",
+        "dci_nomsite": "Cologix MTL12",
+        "dci_type": "Retail",
+        "dci_statut": "en opération",
+        "dci_iaready": "",
+        "dci_puiss_annoncee": 0.225,
+        "dci_nomville": "Montreal",
+        "dci_adresse": "3000 Boulevard Rene-Levesque Montreal H3E 1T9",
+        "dci_an_mise_service": "2023",
+        "dci_hebergeur": "Cologix",
+        "dci_siegesocial_loc": "Denver, USA",
+        "dc_hebwebsite": "https://www.cologix.com",
+        "dci_shareholder_majoritaire": "Stonepeak (majority owner)",
+        "dci_shareholder_majo_nationalite": "USA",
+        "date_collecte": "2026-08-07",
+        "SurfBatimentPI2": "1094",
+        "dcbat_areapi2": 1094
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.54139393388404,
+          45.46694894388344
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "dci_id": "KEELSHB04",
+        "dci_nomsite": "Keel Infrastructure Sherbrooke HPC",
+        "dci_type": "Hyperscale",
+        "dci_statut": "en projet",
+        "dci_iaready": "",
+        "dci_puiss_annoncee": 96,
+        "dci_nomville": "Sherbrooke",
+        "dci_adresse": "3885 Bd Industriel, Sherbrooke J1L 2S7",
+        "dci_an_mise_service": null,
+        "dci_hebergeur": "Bitfarms / Keel Infrastructure",
+        "dci_siegesocial_loc": "NY, USA",
+        "dc_hebwebsite": "https://www.keelinfra.com/",
+        "dci_shareholder_majoritaire": "Jane Street Group LLC- Jane Street Capital LLC-Jane Street Global Trading LLC",
+        "dci_shareholder_majo_nationalite": "United States (largest holder)",
+        "date_collecte": "2026-08-07",
+        "SurfBatimentPI2": "315890",
+        "dcbat_areapi2": 315890
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.96806598254146,
+          45.397297964876586
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "dci_id": "AWSDVAR01",
+        "dci_nomsite": "AWS YUL",
+        "dci_type": "Hyperscale",
+        "dci_statut": "en opération",
+        "dci_iaready": "",
+        "dci_puiss_annoncee": null,
+        "dci_nomville": "Varennes",
+        "dci_adresse": "1660 Boulevard Lionel-Boulet Varennes J3X 1S1",
+        "dci_an_mise_service": "2019",
+        "dci_hebergeur": "Amazon",
+        "dci_siegesocial_loc": "Seattle, USA",
+        "dc_hebwebsite": "https://aws.amazon.com/fr/trust-center/data-center/",
+        "dci_shareholder_majoritaire": "Jeff Bezos (largest individual shareholder of Amazon)",
+        "dci_shareholder_majo_nationalite": "USA",
+        "date_collecte": "2026-08-07",
+        "SurfBatimentPI2": "631955",
+        "dcbat_areapi2": 631955
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.3812757481441,
+          45.623513131328906
+        ]
+      }
+    }
+  ],
+  "metadata": {
+    "date": "2026-08-07",
+    "source": "Centres de données du Québec"
+  }
+}

@@ -1,0 +1,41 @@
+Nom hebergeur,code pour ID,Site web,Nom du shareholders majoritaire,Nationalité des shareholders,Localisation du siège social,Nombre de datacenter ressencés,Type Retail,Type Wholesale,Type Hyperscale,Type Carrier Hotel,Type Crypto,Type Quantique
+Amazon,AWSD,,Jeff Bezos (largest individual shareholder of Amazon),United States,"Seattle, USA",1,,,1,,,
+Argo Blockchain,ARGO,,,,,1,,,,,1,
+Beanfield ,BNFD,https://www.beanfield.com/,DigitalBridge (major investor/acquirer) and OMERS infrastructure,U.K. and Netherlands,"Toronto, Canada",1,1,,,,,
+Bitfarms / Keel Infrastructure,KEEL,https://www.journaldemontreal.com/2026/02/16/nous-ne-sommes-plus-une-entreprise-bitcoin-bitfarms-demenage-aux-etats-unis,Jane Street Group LLC; Jane Street Capital LLC;Jane Street Global Trading LLC,United States (largest holder),"NY, USA",8,,,,,8,
+BSF,BSFD,"46° 49' 0.8594"" N 71° 12' 58.0414"" W",,,,,,,,,,
+Calcul Québec,CLCQ,https://www.calculquebec.ca/,Government of Québec (primary funder),Canadian (Québec),"Montréal, Québec, Canada",2,,,1,,,1
+Cologix,CLGX,https://www.cologix.com/data-centers/montreal/mtl7/,Stonepeak (majority owner),United States,"Denver, USA",12,3,3,,6,,
+Compass Datacenters,"CMPS
+",https://www.compassdatacenters.com/,Ontario Teachers' Pension Plan and Brookfield Infrastructure Partners,Canada and USA (mixed PE ownership) / Canada (Brookfield listed Canada; OTPP Canada),"Dallas, USA",2,,1,1,,,
+Cronomagic ,CRNM,https://www.cronomagic.com/,,,,,,,,,,
+DigiHub,DIGH,https://digihub.ca/,Public / regional innovation ecosystem (Sherbrooke),Canadian,"Sherbrooke, Québec, Canada",1,,,,,,1
+Distriq,DSTQ,https://www.distriq.com/,Government of Québec + public‑private consortium,Canadian,"Sherbrooke, Québec, Canada",1,,,,,,1
+Enovum,EVNM,https://www.enovumdc.com,"Bit Digital, Inc. (owner since 2024)",United States,"Montréal, Canada",3,3,,,,,
+Equinix,EQNX,https://www.equinix.com/,BlackRock Advisers LLC (largest shareholder among institutions) or Vanguard Capital Management LLC,U.K. or USA,"Redwood City, USA",3,3,,,,,
+Estruxture,ESTR,https://www.estruxture.com/fr/,Fengate Asset Management,Canada,"Montréal, Canada",5,3,2,,,,
+Exaion ,EXIN,https://exaion.com/,MARA France,France,"Neuilly-sur-seine, France",1,,1,,,,
+Firstblock,FBLK,https://www.firstblock.com/centre-de-donnees#sites,,,,10,,,,,10,
+Flumen energie,FLUM,"La Régie de l'énergie force Hydro-Québec à fournir 17,5 mégawatts à une firme de cryptomonnaie | JDM",,,,1,,,,,1,
+Google,GGLE,En cours,,,,1,,,1,,,
+Hive,HIVD,https://hivedatacenter.com/,Invesco Capital Management LLC and Invesco Capital Management Japan,USA and Japan,"Vancouver, Canada",2,,2,,,,
+Hyper Bit,HYBT,https://hyperbit.ca/,Private ownership (not clearly disclosed),Undisclosed,"Vancouver, Canada",1,,1,,,,
+Hypertec ,HPTC,https://hypertec.com/,,,,,,,,,,
+IBM,IBM,https://www.ibm.com/ca-fr,Vanguard and BlackRock (largest institutional shareholders),United States and U.K.,"Armonk, USA",1,,,,,,1
+Leaseweb,LSWB,https://www.leaseweb.com/,Ocom Group (parent company),Netherlands,"Amsterdam, Netherlands",3,3,,,,,
+Micrologits,MICR,,,,Québec,,,,,,,
+Microsoft,MSFT,En cours,,,,1,,1,,,,
+MWC MegaWatt Canada,MWCM,https://www.megawattcanada.com/,,,,1,,,,,1,
+Nordik,NRDK,https://nordikdatacenters.com/,Innventure Inc. (Private ownership) (Peu d'info),USA,"Québec, Canada",1,1,,,,,
+Oricom ,ORIC,,,,Québec,,,,,,,
+OVHCloud,OVHC,https://www.ovhcloud.com/fr-ca/,Klaba family,France / Poland origin family (European),"Roubaix, France",1,,,1,,,
+QITX ,QITX,https://www.qitx.com/,,,,,,,,,,
+QScale,QSCL,https://fr.qscale.com/q01-campus,Goldman Sachs Alternatives (majority owner since 2026),United States,"Lévis, Canada",1,,,1,,,
+Recherche et développement pour la défense Canada,RDDC,https://www.canada.ca/fr/recherche-developpement-defense/services/centres-de-recherches-de-recherche-et-developpement-pour-la-defense-canada.html,Québec public research ecosystem / institutional partnerships,Canadian,"Québec / Sherbrooke region, Canada",1,,,,,,1
+SmartDC,SMRT,https://www.smartdc.net/,i3D.net (Private ownership),Netherlands,"Capelle aan den IJssel, Netherlands",1,,1,,,,
+Telus,TLUS,https://group.skanska.com/projects/57626/TELUS-Super-Internet-Data-Center,No controlling shareholder; major canadian institutional investors (ex: Royal Bank Canada),Canada,"Vancouver, Canada",1,,1,,,,
+Ubarcon,UBCN,https://udcsdatacentres.com/,Urbacon Group (private construction/services firm) Fonds FTQ,Canada,"Toronto, Canada",1,,1,,,,
+Vantage Datacenters,VNTG,https://vantage-dc.com/,"Consortium incl. DigitalBridge group, Silver Lake, AustralianSuper, PSP Investments, Howard Hugues Holdings",USA / Canada / UAE / Singapore (mixed sovereign & PE)??,"Denver, USA",4,,4,,,,
+SATO Technologies Corp,SATO,https://www.bysato.com/mining,,,,1,,,,,1,
+D-Central,DCEN,https://d-central.tech/mining-hosting/,,,,1,,,,,1,
+,,,,,,75,17,18,6,6,23,5

@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Carte des data centers — Québec &amp; Canada</title>
+  <title>Carte des centres de données — Québec &amp; Canada</title>
 
   <!-- Leaflet -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
@@ -14,15 +15,70 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
   <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
 
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
   <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
 </head>
-<body>
+
+<body class="theme-sombre">
 
   <div id="map"></div>
 
-  <!-- Panneau de filtres (overlay) -->
-  <div id="filters">
-    <button id="btn-theme" onclick="basculerFond()">🌙 Carte sombre</button>
+  <!-- Titre mobile flottant -->
+  <h1 id="mobile-title">Centres de données du Québec</h1>
+
+  <!-- Panneau d'informations (gauche) -->
+  <div id="info-panel" class="panel">
+    <button class="panel-close-btn" id="btn-close-info" aria-label="Fermer le panneau">&times;</button>
+    <h1>Centres de données du Québec</h1>
+    <p class="panel-desc">Visualisation et estimation de la puissance installée des infrastructures de calcul au Québec.
+    </p>
+
+    <h2>Infos</h2>
+
+    <div class="info-card info-card-dc">
+      <span class="info-card-label">CENTRES DE DONNÉES</span>
+      <span id="stats-count" class="info-card-value">—</span>
+      <span id="stats-count-details" class="info-card-subtext">—</span>
+    </div>
+
+    <div class="info-cards-row">
+      <div class="info-card info-card-power">
+        <span class="info-card-label">PUISSANCE ESTIMÉE</span>
+        <span id="stats-power" class="info-card-value">—</span>
+        <span id="stats-power-details" class="info-card-subtext">Calculée sur —</span>
+      </div>
+
+      <div class="info-card info-card-project-power">
+        <span class="info-card-label">PUISSANCE PROJETS</span>
+        <span id="stats-project-power" class="info-card-value">—</span>
+        <span id="stats-project-power-details" class="info-card-subtext">Cumulée sur —</span>
+      </div>
+    </div>
+
+    <div class="info-card info-card-surface">
+      <span class="info-card-label">SURFACE AU SOL</span>
+      <span id="stats-surface" class="info-card-value">—</span>
+      <span id="stats-surface-details" class="info-card-subtext">Calculée sur —</span>
+    </div>
+
+    <div class="info-section">
+      <h3>Hébergeurs</h3>
+      <div id="host-breakdown">
+        <!-- Généré dynamiquement par app.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Panneau de filtres (droite) -->
+  <div id="filters" class="panel">
+    <button class="panel-close-btn" id="btn-close-filters" aria-label="Fermer le panneau">&times;</button>
+    <button id="btn-theme" onclick="basculerFond()">☀️ Carte claire</button>
     <h2>Filtres</h2>
 
     <section id="filters-type">
@@ -30,17 +86,191 @@
       <!-- Cases générées dynamiquement par app.js -->
     </section>
 
-    <section id="filters-hebergeur">
-      <h3>Hébergeur</h3>
-      <!-- Cases générées dynamiquement par app.js -->
+    <section id="filters-ia">
+      <h3>Intelligence Artificielle</h3>
+      <div id="btn-filter-ia" class="filter-item"><span class="filter-dot" style="background: #9c27b0;"></span>Équipé
+        pour l'IA</div>
+    </section>
+
+    <section id="filters-actionnaire">
+      <h3>Souveraineté</h3>
+      <div id="btn-filter-canadien" class="filter-item"><span class="filter-dot"
+          style="background: #e31837;"></span>Gouvernance canadienne</div>
     </section>
 
     <section id="filters-polygones">
       <h3>Bâtiments</h3>
       <!-- Case générée dynamiquement par app.js -->
     </section>
+
+    <section id="filters-electricite">
+      <h3>Réseau Électrique</h3>
+      <div id="btn-hq-all" class="filter-item active">Réseau Hydro-Québec</div>
+      <div class="hq-legend">
+        <div class="hq-legend-title">Tension (kV)</div>
+        <div class="hq-legend-item" data-voltage="735">
+          <span class="hq-legend-color color-735"></span>
+          <span>735 kV</span>
+        </div>
+        <div class="hq-legend-item" data-voltage="315">
+          <span class="hq-legend-color color-315"></span>
+          <span>315 - 450 kV</span>
+        </div>
+        <div class="hq-legend-item" data-voltage="230">
+          <span class="hq-legend-color color-230"></span>
+          <span>230 kV</span>
+        </div>
+        <div class="hq-legend-item" data-voltage="120">
+          <span class="hq-legend-color color-120"></span>
+          <span>120 - 161 kV</span>
+        </div>
+      </div>
+    </section>
   </div>
 
-  <script src="app.js"></script>
+  <!-- Barre de navigation mobile -->
+  <div id="mobile-nav">
+    <button id="btn-mobile-info" class="mobile-nav-btn">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" style="vertical-align: middle;">
+        <path
+          d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10H7v-2h10v2zm0-4H7V7h10v2zm0 8H7v-2h10v2z" />
+      </svg>
+      <span>Infos</span>
+    </button>
+    <button id="btn-mobile-filters" class="mobile-nav-btn">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" style="vertical-align: middle;">
+        <path d="M10 18h4v-2h-4v2zM3 6v2h18V6H3zm3 7h12v-2H6v2z" />
+      </svg>
+      <span>Filtres</span>
+    </button>
+  </div>
+
+  <!-- Pied de page (crédits) -->
+  <div id="map-footer">
+    <span><a href="https://github.com/Tekateyy/nrs-map">Carte des Centres de données au Québec</a> | <a
+        href="https://www.numerique-responsable.ca/">Collectif Numérique Responsable et Soutenable</a> | licence CC
+      BY-NC-SA 4.0</span>
+  </div>
+
+  <!-- Modal À Propos -->
+  <div id="about-modal" class="modal-overlay">
+    <div class="modal-content">
+      <button class="modal-close" id="btn-close-about">&times;</button>
+      <h2>À propos du projet</h2>
+      <p class="modal-desc">
+        Cette plateforme permet de visualiser géographiquement les infrastructures des centres de données au Québec et
+        le réseau de ditribution électrique d'Hydro-Québec duquel ils dependent pour fonctionner. La carte permet
+        d'explorer la localisation des sites, l'empreinte au sol des bâtiments, la puissance électrique installée, ainsi
+        que le réseau de transport d'électricité d'Hydro-Québec alimentant ces infrastructures.
+      </p>
+
+      <h3>Sources de données</h3>
+      <div class="table-container">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Source</th>
+              <th>Date de collecte</th>
+              <th>Description</th>
+              <th>Téléchargement</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="source-cell"><a
+                  href="https://docs.google.com/spreadsheets/d/14LnRHKVt2F_BiKIOY6n-rVMXTIabJaoE72PZ00F4CF4/edit?usp=sharing">Centres
+                  de données du Québec</a></td>
+              <td id="date-datacenters" class="date-cell">—</td>
+              <td>Données géographiques et caractéristiques des centres de données identifiés et catégorisés
+                (Hyperscale, Retail, Crypto, etc.).
+                <br />
+                Collecté par l'équipe projet du Collectif Numérique Responsable et Soutenable
+              </td>
+              <td>
+                <a href="/datacenters.geojson" download="datacenters.geojson" class="btn-download">
+                  <svg viewBox="0 0 24 24" width="12" height="12" fill="currentColor">
+                    <path d="M5 20h14v-2H5v2zM19 9h-4V3H9v6H5l7 7 7-7z" />
+                  </svg>
+                  GeoJSON
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td class="source-cell">Empreinte bâtiments</td>
+              <td id="date-bati" class="date-cell">—</td>
+              <td>Polygones d'emprise au sol des bâtiments abritant les infrastructures de calcul.
+                <br />
+                Dessinés manuellement dans QGIS par l'équipe projet du Collectif Numérique Responsable et Soutenable
+              </td>
+              <td>
+                <a href="/DCbati_poly.geojson" download="DCbati_poly.geojson" class="btn-download">
+                  <svg viewBox="0 0 24 24" width="12" height="12" fill="currentColor">
+                    <path d="M5 20h14v-2H5v2zM19 9h-4V3H9v6H5l7 7 7-7z" />
+                  </svg>
+                  GeoJSON
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td class="source-cell">Réseau Hydro-Québec</td>
+              <td id="date-hq" class="date-cell">—</td>
+              <td>Tracés des lignes de transport haute tension (120 kV à 735 kV) et localisation des postes électriques
+                du réseau électrique québécois.
+                <br />
+                Source principale : <a href="https://coders.cme-emh.ca/dashboard/transmission_lines" target="_blank"
+                  rel="noopener">Carrefour de la
+                  Modélisation Énergétique - Transmission Lines Dashboard</a>
+              </td>
+              <td>
+                <a href="/Hydro-Quebec.geojson" download="Hydro-Quebec.geojson" class="btn-download">
+                  <svg viewBox="0 0 24 24" width="12" height="12" fill="currentColor">
+                    <path d="M5 20h14v-2H5v2zM19 9h-4V3H9v6H5l7 7 7-7z" />
+                  </svg>
+                  GeoJSON
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <details class="modal-details">
+        <summary>Pourquoi nous avons choisi de developper ce site avec une IA ? </summary>
+        <div class="modal-details-content">
+          <p>
+            En tant que collectif pronant la responsabilité et la soutenabilité du numérique, le choix d'utiliser une
+            Intelligence Artificielle pour developper ce site n'est pas anodin.
+            Nous sommes pleinement conscient de l'empreinte environnementale de l'IA, et de la disonnance que represente
+            son usage pour un projet de cartographie des centres de données.
+            Notre équipe de recherche est exclusivement constituée de benevoles et nous avons souhaité employer notre
+            temps à la recherche et à la collecte de données, plutôt qu'au développement du site.
+            Dans une logique de presenter l'information collectée de la manière la plus pertinente possible, nous avons
+            fait le choix d'utiliser les outils à notre disposition pour developper ce site.
+          </p>
+        </div>
+      </details>
+
+      <h3>Crédits &amp; Licence</h3>
+      <p class="modal-credits">
+        Projet créé par le <a href="https://www.numerique-responsable.ca/" target="_blank" rel="noopener">Collectif
+          Numérique Responsable et Soutenable</a> sous licence <a
+          href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr" target="_blank" rel="noopener">CC BY-NC-SA
+          4.0</a>.
+      </p>
+
+      <div class="modal-actions">
+        <a href="https://github.com/Tekateyy/nrs-map" target="_blank" rel="noopener" class="btn-github">
+          <svg class="github-icon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+            <path
+              d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+          </svg>
+          Dépôt GitHub du Projet
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js?v=1.1"></script>
 </body>
+
 </html>
