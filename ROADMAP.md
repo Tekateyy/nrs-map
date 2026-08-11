@@ -41,8 +41,8 @@ de session.
 - [x] Infos sur la nationalité des entreprises et de leurs actionnaires
 - [x] Suprimmer la catégorie "Carrier Hotel"
 - [ ] Internationnaliser (i18n)
-- [ ] Barre de recherche par nom de site et ville - Plus très sur de la pertinence pour celui là
 - [ ] Ajouter date installation
+- [ ] Afficher la puissance calculée (autre valeur que la puissance prise en compte dans le calcul final)
 
 ---
 

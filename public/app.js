@@ -136,23 +136,17 @@ function parseSurfaceSqFt(surfValue) {
   return isNaN(surf) ? null : surf;
 }
 
-// ---- Puissance estimée : puissance annoncée prioritaire, sinon calcul depuis la surface (en opération uniquement) ----
-function estimerPuissance(p, densityMap, dcSurfaceMap = {}) {
-  const puissAnn = p.dci_puiss_annoncee !== undefined ? p.dci_puiss_annoncee : p.PuissanceAnnMW;
+// ---- Puissance estimée depuis la surface au sol (surface / 2 * densité énergétique du type de DC / 1 000 000) ----
+// Ne calcule pas la puissance estimée pour les datacenters en projet ou en construction.
+function estimerPuissanceSurface(p, densityMap, dcSurfaceMap = {}) {
   const status = (p.dci_statut || p.Status || '').toLowerCase();
-  const isOperation = status.includes('opération') || status.includes('operation') || (!status.includes('projet') && !status.includes('construction'));
+  const isProjetOrConst = status.includes('projet') || status.includes('construction');
 
-  // 1. Si une puissance annoncée existe et n'est pas nulle, on l'utilise en priorité
-  if (puissAnn !== null && puissAnn !== undefined && puissAnn !== '' && !isNaN(Number(puissAnn))) {
-    return Number(puissAnn);
-  }
-
-  // 2. Pour les sites en projet ou en construction sans puissance annoncée, on n'estime pas la puissance depuis la surface
-  if (!isOperation) {
+  // Pour les sites en projet ou en construction, on ne calcule pas la puissance estimée depuis la surface
+  if (isProjetOrConst) {
     return null;
   }
 
-  // 3. Pour les sites en opération sans puissance annoncée, calcul depuis la surface au sol × 50% × densité / 1 000 000
   const dcId = p.dci_id || p.UNIQID;
   const surfFromMap = dcSurfaceMap[dcId];
   const surf = (surfFromMap !== undefined && surfFromMap !== null)
@@ -168,6 +162,15 @@ function estimerPuissance(p, densityMap, dcSurfaceMap = {}) {
   }
 
   return null;
+}
+
+// ---- Puissance effective : puissance annoncée en priorité, sinon puissance estimée depuis la surface en second ressort ----
+function obtenirPuissanceEffective(p, densityMap, dcSurfaceMap = {}) {
+  const puissAnn = p.dci_puiss_annoncee !== undefined ? p.dci_puiss_annoncee : p.PuissanceAnnMW;
+  if (puissAnn !== null && puissAnn !== undefined && puissAnn !== '' && !isNaN(Number(puissAnn))) {
+    return Number(puissAnn);
+  }
+  return estimerPuissanceSurface(p, densityMap, dcSurfaceMap);
 }
 
 // ---- Config couleurs réseau électrique par niveau de tension (kV) ----
@@ -303,8 +306,8 @@ function buildPopup(p, densityMap, dcSurfaceMap = {}) {
     ? `<a class="popup-link" href="${siteWeb.startsWith('http') ? siteWeb : 'https://' + siteWeb}" target="_blank" rel="noopener">Voir le site</a>`
     : '—';
 
-  const puissEst = estimerPuissance(p, densityMap, dcSurfaceMap);
-  const puissEstStr = puissEst !== null ? puissEst.toFixed(2) + ' MW' : '—';
+  const puissEstSurface = estimerPuissanceSurface(p, densityMap, dcSurfaceMap);
+  const puissEstStr = puissEstSurface !== null ? puissEstSurface.toFixed(2) + ' MW' : '—';
 
   const nationalite = p.dci_shareholder_majo_nationalite || p.NationaliteShareholder;
   const drapeaux = obtenirDrapeaux(nationalite);
@@ -367,11 +370,12 @@ function buildClickFilters(containerId, values, isTypeCategory) {
       if (isTypeCategory) {
         selectedType = selectedType === v ? null : v;
         updateFilterUI('filters-type', selectedType);
+        applyFilters();
       } else {
         selectedHebergeur = selectedHebergeur === v ? null : v;
         updateFilterUI('filters-hebergeur', selectedHebergeur);
+        applyFilters(true);
       }
-      applyFilters();
     });
 
     container.appendChild(el);
@@ -486,7 +490,7 @@ function updateHostBreakdownUI(hostCounts) {
 
     row.addEventListener('click', () => {
       selectedHebergeur = selectedHebergeur === hostName ? null : hostName;
-      applyFilters();
+      applyFilters(true);
     });
 
     container.appendChild(row);
@@ -494,7 +498,7 @@ function updateHostBreakdownUI(hostCounts) {
 }
 
 // ---- Application des filtres ----
-function applyFilters() {
+function applyFilters(zoomToFit = false) {
   clusterGroup.clearLayers();
   let countVisible = 0;
   let countOperation = 0;
@@ -510,8 +514,9 @@ function applyFilters() {
 
   const hostCounts = {};
   const visibleDatacenterIds = new Set();
+  const visibleBounds = [];
 
-  for (const { marker, type, hebergeur, estimatedPower, surfaceSqFt, equipIA, uniqid, nationaliteShareholder, status, announcedPower } of allMarkers) {
+  for (const { marker, type, hebergeur, effectivePower, surfaceSqFt, equipIA, uniqid, nationaliteShareholder, status, announcedPower } of allMarkers) {
     const matchType = !selectedType || type === selectedType;
     const matchHebergeur = !selectedHebergeur || hebergeur === selectedHebergeur;
     const matchAI = !filterAI || equipIA === 'IA';
@@ -525,14 +530,15 @@ function applyFilters() {
     // Affichage sur la carte (tient compte de tous les filtres)
     if (matchType && matchHebergeur && matchAI && matchCanadian) {
       clusterGroup.addLayer(marker);
+      visibleBounds.push(marker.getLatLng());
       countVisible++;
 
       const statusLower = (status || '').toLowerCase();
       const isOperation = statusLower.includes('opération') || statusLower.includes('operation') || (!statusLower.includes('projet') && !statusLower.includes('construction'));
       if (isOperation) {
         countOperation++;
-        if (estimatedPower !== null && estimatedPower !== undefined) {
-          totalPower += estimatedPower;
+        if (effectivePower !== null && effectivePower !== undefined) {
+          totalPower += effectivePower;
           countWithPower++;
         }
         if (surfaceSqFt !== null && surfaceSqFt !== undefined) {
@@ -541,8 +547,8 @@ function applyFilters() {
         }
       } else {
         countProjet++;
-        if (estimatedPower !== null && estimatedPower !== undefined) {
-          totalProjectPower += estimatedPower;
+        if (effectivePower !== null && effectivePower !== undefined) {
+          totalProjectPower += effectivePower;
           countWithProjectPower++;
         }
       }
@@ -572,6 +578,10 @@ function applyFilters() {
   updateHostBreakdownUI(hostCounts);
   updateConnections(visibleDatacenterIds);
   updatePolygons(visibleDatacenterIds);
+
+  if (zoomToFit && visibleBounds.length > 0) {
+    map.fitBounds(visibleBounds, { padding: [50, 50], maxZoom: 15 });
+  }
 }
 
 let polyLayer = null;
@@ -995,7 +1005,8 @@ Promise.all([
       const marker = L.marker([lat, lng], { icon: creerIcone(type, status) });
       marker.bindPopup(buildPopup(p, densityMap, dcSurfaceMap), { maxWidth: 280 });
 
-      const puissEst = estimerPuissance(p, densityMap, dcSurfaceMap);
+      const puissEstSurface = estimerPuissanceSurface(p, densityMap, dcSurfaceMap);
+      const effectivePower = obtenirPuissanceEffective(p, densityMap, dcSurfaceMap);
       const surfFromMap = dcSurfaceMap[uniqid];
       const surfaceSqFt = (surfFromMap !== undefined && surfFromMap !== null)
         ? surfFromMap
@@ -1005,7 +1016,8 @@ Promise.all([
         marker,
         type,
         hebergeur,
-        estimatedPower: puissEst,
+        estimatedPowerSurface: puissEstSurface,
+        effectivePower,
         surfaceSqFt,
         equipIA,
         uniqid,

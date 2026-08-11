@@ -105,8 +105,9 @@ Champs `properties` utiles (structure révisée 2026-08-07) :
 
 > Les coordonnées GeoJSON sont exprimées en WGS84 `[longitude, latitude]`. Le script `process-working-data.js` assure la conversion depuis EPSG:3857 (Web Mercator) vers WGS84 si les données sources sont en mètres.
 
-**Champ calculé (non stocké)** : `PuissanceEstiméeMW = SurfBatimentPI2 × 50 % × PowerDensity / 1 000 000`.
-Affiché dans le popup si la surface et le Type sont connus, sinon fallback sur `dci_puiss_annoncee` ou `"—"`.
+**Champs calculés** : 
+- **Puissance estimée (popup)** = `Surface batiment / 2 × densité énergétique du Type / 1 000 000`. Calculée uniquement pour les sites en opération (affichera `"—"` pour les sites en projet ou en construction).
+- **Puissance totale (statistiques)** = cumul de la puissance effective par datacenter (prend la puissance annoncée en priorité, et la puissance estimée depuis la surface en second ressort).
 
 ## Règles de Développement Impératives
 Respecter impérativement les règles suivantes :
