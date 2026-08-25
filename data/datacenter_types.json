@@ -1,14 +1,18 @@
 {
     "Retail": {
-        "description": "Retail (< 10 MW, 5k - 21k pi2)",
+        "description": "Retail",
         "power_density_w_pi2": 186
     },
     "Wholesale": {
-        "description": "Wholesale (>10MW, 21k - 100k pi2)",
+        "description": "Wholesale",
         "power_density_w_pi2": 186
     },
     "Hyperscale": {
-        "description": "Hyperscale / HPC (>40MW - 100k pi2)",
+        "description": "Hyperscale",
+        "power_density_w_pi2": 557
+    },
+    "HPC": {
+        "description": "HPC",
         "power_density_w_pi2": 557
     },
     "Crypto": {

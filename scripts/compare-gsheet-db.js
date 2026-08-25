@@ -418,12 +418,123 @@ async function runComparison() {
   console.log(`  └─ Points avec divergences: ${colors.magenta}${dcptDiffs.length}${colors.reset}\n`);
 
   // ---------------------------------------------------------
+  // 5. Comparaison INTERNE DB: v0.datacenter vs v0.dcpt
+  // ---------------------------------------------------------
+  console.log(`${colors.bold}${colors.yellow}🔍 5. Comparaison INTERNE DB: v0.datacenter vs v0.dcpt${colors.reset}`);
+  const internalRes = await client.query(`
+    SELECT 
+      dc.dc_id,
+      dc.dc_nom,
+      dc.dc_hebid,
+      dc.dc_status,
+      dc.dc_ville AS dc_ville_code,
+      v.ville_name AS dc_ville_nom,
+      dcpt.dcpt_dcid,
+      dcpt.dcpt_villecode,
+      dcpt.dcpt_ville,
+      dcpt.dcpt_adresse,
+      dcpt.dcpt_adressefull,
+      dcpt.dcpt_pays
+    FROM v0.datacenter dc
+    FULL OUTER JOIN v0.dcpt dcpt ON TRIM(dc.dc_id) = TRIM(dcpt.dcpt_dcid)
+    LEFT JOIN v0.ville v ON TRIM(dc.dc_ville) = TRIM(v.ville_nomcourt)
+    ORDER BY dc.dc_id, dcpt.dcpt_dcid
+  `);
+
+  const norm = (s) => cleanStr(s).normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/['’\- ]/g, '');
+
+  const dcMissingInDcpt = [];
+  const dcptMissingInDC = [];
+  const dcDcptDiffs = [];
+
+  internalRes.rows.forEach(r => {
+    const dcId = cleanStr(r.dc_id);
+    const dcptId = cleanStr(r.dcpt_dcid);
+
+    if (dcId && !dcptId) {
+      dcMissingInDcpt.push({
+        id: dcId,
+        nom: cleanStr(r.dc_nom),
+        hebid: cleanStr(r.dc_hebid),
+        villeCode: cleanStr(r.dc_ville_code),
+        villeNom: cleanStr(r.dc_ville_nom)
+      });
+      return;
+    }
+
+    if (!dcId && dcptId) {
+      dcptMissingInDC.push({
+        id: dcptId,
+        adresse: cleanStr(r.dcpt_adresse),
+        ville: cleanStr(r.dcpt_ville)
+      });
+      return;
+    }
+
+    // Present in both -> Compare data
+    const diffs = [];
+    const dcVCode = cleanStr(r.dc_ville_code);
+    const ptVCode = cleanStr(r.dcpt_villecode);
+    const dcVNom = cleanStr(r.dc_ville_nom);
+    const ptVNom = cleanStr(r.dcpt_ville);
+
+    if (ptVCode && dcVCode.toLowerCase() !== ptVCode.toLowerCase()) {
+      diffs.push({
+        field: 'Code Ville (dc_ville vs dcpt_villecode)',
+        dcVal: dcVCode,
+        dcptVal: ptVCode
+      });
+    }
+
+    if (dcVNom && ptVNom && norm(dcVNom) !== norm(ptVNom)) {
+      diffs.push({
+        field: 'Nom Ville (v0.ville vs dcpt_ville)',
+        dcVal: dcVNom,
+        dcptVal: ptVNom
+      });
+    }
+
+    if (diffs.length > 0) {
+      dcDcptDiffs.push({
+        dc_id: dcId,
+        dc_nom: cleanStr(r.dc_nom),
+        diffs
+      });
+    }
+  });
+
+  console.log(`  └─ Total Datacenters en DB: ${dbDCMap.size} | Points Géoloc en DB: ${dbDcptMap.size}`);
+  console.log(`  └─ Présents dans datacenter mais ABSENTS de dcpt: ${colors.red}${dcMissingInDcpt.length}${colors.reset}`);
+  console.log(`  └─ Présents dans dcpt mais ABSENTS de datacenter: ${colors.yellow}${dcptMissingInDC.length}${colors.reset}`);
+  console.log(`  └─ Datacenters avec divergences de données (datacenter vs dcpt): ${colors.magenta}${dcDcptDiffs.length}${colors.reset}\n`);
+
+  if (dcMissingInDcpt.length > 0) {
+    console.log(`  ${colors.red}❌ Datacenters dans v0.datacenter mais ABSENTS de v0.dcpt:${colors.reset}`);
+    dcMissingInDcpt.forEach(item => {
+      console.log(`     • ${colors.bold}${item.id}${colors.reset} - ${item.nom} (${item.villeNom || item.villeCode})`);
+    });
+    console.log('');
+  }
+
+  if (dcDcptDiffs.length > 0) {
+    console.log(`  ${colors.yellow}⚠️ Divergences de données entre v0.datacenter et v0.dcpt:${colors.reset}`);
+    dcDcptDiffs.forEach(item => {
+      console.log(`     [${colors.cyan}${item.dc_id}${colors.reset}] ${item.dc_nom}`);
+      item.diffs.forEach(d => {
+        console.log(`       - ${colors.bold}${d.field}${colors.reset}: datacenter = "${colors.green}${d.dcVal}${colors.reset}" vs dcpt = "${colors.red}${d.dcptVal}${colors.reset}"`);
+      });
+    });
+    console.log('');
+  }
+
+  // ---------------------------------------------------------
   // WRITE MARKDOWN REPORT
   // ---------------------------------------------------------
   reportSections.push(`## Synthèse Globale\n`);
-  reportSections.push(`- **Total des divergences de champs détectées** : \`${totalDiffCount}\``);
-  reportSections.push(`- **Éléments manquants en Base de données** : \`${totalMissingDBCount}\``);
-  reportSections.push(`- **Éléments manquants dans le Google Sheet** : \`${totalMissingGSCount}\`\n`);
+  reportSections.push(`- **Total des divergences de champs détectées (GS vs DB)** : \`${totalDiffCount}\``);
+  reportSections.push(`- **Éléments manquants en Base de données (GS vs DB)** : \`${totalMissingDBCount}\``);
+  reportSections.push(`- **Éléments manquants dans le Google Sheet** : \`${totalMissingGSCount}\``);
+  reportSections.push(`- **Datacenters sans point géocodé (v0.datacenter sans v0.dcpt)** : \`${dcMissingInDcpt.length}\`\n`);
 
   reportSections.push(`### 1. Table \`v0.datacenter\` vs Onglet \`Datacenters - colocation & Hype\``);
   if (dcMissingInDB.length > 0) {
@@ -500,6 +611,39 @@ async function runComparison() {
     reportSections.push(``);
   } else {
     reportSections.push(`✓ Aucune divergence détectée sur \`v0.dcpt\`.\n`);
+  }
+
+  reportSections.push(`### 5. Cohérence interne Base de données : \`v0.datacenter\` vs \`v0.dcpt\``);
+  if (dcMissingInDcpt.length > 0) {
+    reportSections.push(`#### 🔴 Datacenters présents dans \`v0.datacenter\` mais ABSENTS de \`v0.dcpt\` (non géolocalisés en DB) (${dcMissingInDcpt.length}):`);
+    reportSections.push(`| DC ID | Nom du Datacenter | Hébergeur | Ville |`);
+    reportSections.push(`|---|---|---|---|`);
+    dcMissingInDcpt.forEach(item => {
+      reportSections.push(`| \`${item.id}\` | ${item.nom} | \`${item.hebid}\` | ${item.villeNom || item.villeCode} (\`${item.villeCode}\`) |`);
+    });
+    reportSections.push(``);
+  }
+
+  if (dcptMissingInDC.length > 0) {
+    reportSections.push(`#### 🟡 Points dans \`v0.dcpt\` sans datacenter parent dans \`v0.datacenter\` (${dcptMissingInDC.length}):`);
+    dcptMissingInDC.forEach(item => {
+      reportSections.push(`- \`${item.id}\` (${item.adresse}, ${item.ville})`);
+    });
+    reportSections.push(``);
+  }
+
+  if (dcDcptDiffs.length > 0) {
+    reportSections.push(`#### ⚠️ Divergences de données entre \`v0.datacenter\` et \`v0.dcpt\` (${dcDcptDiffs.length} sites impactés):`);
+    reportSections.push(`| DC ID | Nom du Datacenter | Type de divergence | Valeur liée à \`v0.datacenter\` | Valeur dans \`v0.dcpt\` |`);
+    reportSections.push(`|---|---|---|---|---|`);
+    dcDcptDiffs.forEach(item => {
+      item.diffs.forEach(d => {
+        reportSections.push(`| \`${item.dc_id}\` | ${item.dc_nom} | ${d.field} | \`${d.dcVal}\` | \`${d.dcptVal}\` |`);
+      });
+    });
+    reportSections.push(``);
+  } else if (dcMissingInDcpt.length === 0 && dcptMissingInDC.length === 0) {
+    reportSections.push(`✓ Parfaite concordance entre \`v0.datacenter\` et \`v0.dcpt\`.\n`);
   }
 
   fs.writeFileSync(REPORT_PATH, reportSections.join('\n'), 'utf-8');

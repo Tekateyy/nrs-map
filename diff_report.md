@@ -1,19 +1,17 @@
 # Rapport de Comparaison : Google Sheet vs PostgreSQL (v0)
-*Généré le : 2026-08-07 13 h 52 min 47 s*
+*Généré le : 2026-08-25 12 h 17 min 52 s*
 
 > [!NOTE]
 > Ce rapport récapitule les divergences d'information entre le Google Sheet (source de vérité) et les tables du schéma `v0` de la base de données PostgreSQL.
 
 ## Synthèse Globale
 
-- **Total des divergences de champs détectées** : `34`
-- **Éléments manquants en Base de données** : `0`
-- **Éléments manquants dans le Google Sheet** : `1`
+- **Total des divergences de champs détectées (GS vs DB)** : `44`
+- **Éléments manquants en Base de données (GS vs DB)** : `0`
+- **Éléments manquants dans le Google Sheet** : `0`
+- **Datacenters sans point géocodé (v0.datacenter sans v0.dcpt)** : `0`
 
 ### 1. Table `v0.datacenter` vs Onglet `Datacenters - colocation & Hype`
-#### 🟡 Data centers présents en DB mais ABSENTS du Google Sheet (1):
-- `VNTGQBC02`
-
 ✓ Aucune divergence de champ détectée sur `v0.datacenter`.
 
 ### 2. Table `v0.hebergeur` vs Onglet `Hebergeurs`
@@ -58,4 +56,32 @@
 ✓ Aucune divergence détectée sur `v0.ville`.
 
 ### 4. Table `v0.dcpt` vs Onglet `expCSV-pt_geocod`
-✓ Aucune divergence détectée sur `v0.dcpt`.
+| DC ID | Champ | Valeur Google Sheet | Valeur DB PostgreSQL |
+|---|---|---|---|
+| `FBLKMTL01` | `dcpt_adresse` | `xxx-onsaispasou Montreal QQQ QQQ` | `Non divulgée` |
+| `FBLKMTL02` | `dcpt_adresse` | `xxx-onsaispasou Montreal QQQ QQQ` | `Non divulgée` |
+| `FBLKMTL03` | `dcpt_adresse` | `secteur Louvain Est / rue Laverdure, Ahuntsic-Cartierville, Montreal, QC` | `Non dilvugée` |
+| `FBLKMTL04` | `dcpt_adresse` | `adresse non publiee, Dollard-des-Ormeaux, QC` | `Non divulgée` |
+| `FBLKQBC01` | `dcpt_adresse` | `adresse non publiee, Charlesbourg, Quebec, QC` | `Non divulgée` |
+| `FBLKQBC02` | `dcpt_adresse` | `zzz-onsaispasvraimentou Duberger Queebec QQQ QQQ` | `Non divulgée` |
+| `FBLKQBC03` | `dcpt_adresse` | `adresse non publiee, Sainte-Foy, Quebec, QC` | `Non divulgée` |
+| `FBLKSHB01` | `dcpt_adresse` | `adresse non confirmee, Sherbrooke, QC` | `Non divulgée` |
+| `FBLKTRV01` | `dcpt_adresse` | `adresse non confirmee,  700 rue Notre-Dame Est, Trois-Rivières, QC G8T 4H9, Canada` | `Non divulgée` |
+| `FBLKXXX01` | `dcpt_adresse` | `adresse non publiee, region de l’Estrie, QC` | `Non divulgée` |
+
+### 5. Cohérence interne Base de données : `v0.datacenter` vs `v0.dcpt`
+#### ⚠️ Divergences de données entre `v0.datacenter` et `v0.dcpt` (12 sites impactés):
+| DC ID | Nom du Datacenter | Type de divergence | Valeur liée à `v0.datacenter` | Valeur dans `v0.dcpt` |
+|---|---|---|---|---|
+| `CMPSMTL01` | Compass Montreal II | Nom Ville (v0.ville vs dcpt_ville) | `Montréal` | `Baie-D'Urfe` |
+| `CMPSMTL02` | Compass Montreal I | Nom Ville (v0.ville vs dcpt_ville) | `Montréal` | `LaSalle` |
+| `EQNXMTL01` | Equinix MTL 1 | Nom Ville (v0.ville vs dcpt_ville) | `Montréal` | `Saint-Laurent` |
+| `ESTRMTL04` | Estruxture MTL4 | Nom Ville (v0.ville vs dcpt_ville) | `Montréal` | `Kirkland` |
+| `HIVDMTL02` | Hive MTL-2 | Nom Ville (v0.ville vs dcpt_ville) | `Montréal` | `Saint-Laurent` |
+| `LSWBMTL01` | LeaseWeb MTL-01 | Nom Ville (v0.ville vs dcpt_ville) | `Montréal` | `Verdun` |
+| `LSWBMTL02` | LeaseWeb MTL-02 | Nom Ville (v0.ville vs dcpt_ville) | `Montréal` | `LaSalle` |
+| `LSWBMTL03` | LeaseWeb MTL-03 | Nom Ville (v0.ville vs dcpt_ville) | `Montréal` | `Saint-Leonard` |
+| `RDDCVAC01` | RDDc - quantique | Nom Ville (v0.ville vs dcpt_ville) | `Saint-Gabriel-de-Valcartier` | `Quebec` |
+| `VNTGMTL01` | Vantage Data Centers Canada Montreal I QC1 | Nom Ville (v0.ville vs dcpt_ville) | `Montréal` | `Saint-Laurent` |
+| `VNTGMTL02` | Vantage Data Centers Canada Montreal II QC4 | Nom Ville (v0.ville vs dcpt_ville) | `Montréal` | `Pointe-Claire` |
+| `VNTGMTL03` | Vantage Data Centers Canada Montreal III QC6 | Nom Ville (v0.ville vs dcpt_ville) | `Montréal` | `Pointe-Claire` |

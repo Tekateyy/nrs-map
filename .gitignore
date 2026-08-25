@@ -4,3 +4,6 @@ node_modules/
 *.log
 .DS_Store
 Thumbs.db
+diff_report.md
+compare-gsheet-db.js
+scripts/update-datacenters.js

@@ -60,6 +60,7 @@ let connectionsGeojson = null;
 // ---- Config icônes par type ----
 const ICON_CONFIG = {
   'Hyperscale': { couleur: '#FF6B35', lettre: 'H', texte: '#fff' },
+  'HPC': { couleur: '#E056FD', lettre: 'C', texte: '#fff' },
   'Wholesale': { couleur: '#4ECDC4', lettre: 'W', texte: '#fff' },
   'Retail': { couleur: '#45B7D1', lettre: 'R', texte: '#fff' },
   'Crypto': { couleur: '#FFD93D', lettre: '₿', texte: '#333' },

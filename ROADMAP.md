@@ -41,8 +41,9 @@ de session.
 - [x] Infos sur la nationalité des entreprises et de leurs actionnaires
 - [x] Suprimmer la catégorie "Carrier Hotel"
 - [ ] Internationnaliser (i18n)
-- [ ] Ajouter date installation
-- [ ] Afficher la puissance calculée (autre valeur que la puissance prise en compte dans le calcul final)
+- [x] Ajouter date installation
+- [x] Afficher la puissance calculée (autre valeur que la puissance prise en compte dans le calcul final)
+- [] Tester lun système qui sert les geojson via une api https://levelup.gitconnected.com/combining-fastapi-postgresql-and-leaflet-gis-tutorial-597e6a8ed028
 
 ---
 
