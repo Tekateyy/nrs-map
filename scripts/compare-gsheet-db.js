@@ -314,10 +314,6 @@ async function runComparison() {
     const dbShNat = cleanStr(dbRow.heb_majsh_nat);
     if (gsShNat && dbShNat && gsShNat !== dbShNat) fieldDiffs.push({ field: 'heb_majsh_nat', gs: gsShNat, db: dbShNat });
 
-    const gsLoc = cleanStr(gsRow['Localisation du siège social']);
-    const dbLoc = cleanStr(dbRow.heb_siegesoc_loc);
-    if (gsLoc && dbLoc && gsLoc !== dbLoc) fieldDiffs.push({ field: 'heb_siegesoc_loc', gs: gsLoc, db: dbLoc });
-
     if (fieldDiffs.length > 0) {
       hebDiffs.push({ code, fieldDiffs });
       totalDiffCount += fieldDiffs.length;

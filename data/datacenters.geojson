@@ -5,39 +5,6 @@
     {
       "type": "Feature",
       "properties": {
-        "dci_id": "MSFTALO01",
-        "dci_nomsite": "Microsoft Ancienne Lorette",
-        "dci_type": "Hyperscale",
-        "dci_puidensity": "Haute densité",
-        "dci_statut": "en projet",
-        "dci_iaready": "",
-        "dci_puiss_annoncee": 9.8,
-        "dci_nomville": "L'Ancienne-Lorette",
-        "dci_adresse": "6505 Rue Yvon-Dolbec  L'Ancienne-Lorette G2E 0A3",
-        "dci_an_mise_service": "2027",
-        "dci_an_mise_serv": "2027",
-        "dci_surfpi2_ann": null,
-        "dci_surfpi2_calc": 2734458,
-        "dci_hebergeur": "Microsoft",
-        "dci_siegesocial_loc": ", USA",
-        "dci_hebwebsite": "En cours",
-        "dci_shareholder_majoritaire": "",
-        "dci_shareholder_majo_nationalite": "",
-        "date_collecte": "2026-08-25",
-        "SurfBatimentPI2": "2734458",
-        "dcbat_areapi2": 2734458
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -71.3481367,
-          46.790558100000005
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "dci_id": "CLGXDMD01",
         "dci_nomsite": "Cologix MTL9",
         "dci_type": "Wholesale",
@@ -71,37 +38,6 @@
     {
       "type": "Feature",
       "properties": {
-        "dci_id": "KEELFHM01",
-        "dci_nomsite": "Keel Infrastructure Farnham",
-        "dci_type": "Crypto",
-        "dci_puidensity": "Crypto",
-        "dci_statut": "en opération",
-        "dci_iaready": "",
-        "dci_puiss_annoncee": 10,
-        "dci_nomville": "Farnham",
-        "dci_adresse": "1146  boulevard Magenta Est Farnham J2N 2S7",
-        "dci_an_mise_service": "2020",
-        "dci_an_mise_serv": "2020",
-        "dci_surfpi2_ann": null,
-        "dci_surfpi2_calc": null,
-        "dci_hebergeur": "Bitfarms / Keel Infrastructure",
-        "dci_siegesocial_loc": "NY, USA",
-        "dci_hebwebsite": "https://www.keelinfra.com/",
-        "dci_shareholder_majoritaire": "Jane Street Group LLC- Jane Street Capital LLC-Jane Street Global Trading LLC",
-        "dci_shareholder_majo_nationalite": "United States (largest holder)",
-        "date_collecte": "2026-08-25"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -72.9744864,
-          45.29055000000002
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "dci_id": "EQNXGAT01",
         "dci_nomsite": "Equinix OT1",
         "dci_type": "Retail",
@@ -129,99 +65,6 @@
         "coordinates": [
           -75.3983961,
           45.57454440000001
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "dci_id": "KEELHYA01",
-        "dci_nomsite": "Keel Infrastructure Saint-Hyacinthe",
-        "dci_type": "Crypto",
-        "dci_puidensity": "Crypto",
-        "dci_statut": "en opération",
-        "dci_iaready": "",
-        "dci_puiss_annoncee": 15,
-        "dci_nomville": "Saint-Hyacinthe",
-        "dci_adresse": "2805 Avenue Vanier Saint-Hyacinthe J2S 8P3",
-        "dci_an_mise_service": "2018",
-        "dci_an_mise_serv": "2018",
-        "dci_surfpi2_ann": null,
-        "dci_surfpi2_calc": null,
-        "dci_hebergeur": "Bitfarms / Keel Infrastructure",
-        "dci_siegesocial_loc": "NY, USA",
-        "dci_hebwebsite": "https://www.keelinfra.com/",
-        "dci_shareholder_majoritaire": "Jane Street Group LLC- Jane Street Capital LLC-Jane Street Global Trading LLC",
-        "dci_shareholder_majo_nationalite": "United States (largest holder)",
-        "date_collecte": "2026-08-25"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -72.970526,
-          45.628789400000024
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "dci_id": "SATOJOL01",
-        "dci_nomsite": "SATO Quebec",
-        "dci_type": "Crypto",
-        "dci_puidensity": "Crypto",
-        "dci_statut": "en opération",
-        "dci_iaready": "",
-        "dci_puiss_annoncee": 20,
-        "dci_nomville": "Joliette",
-        "dci_adresse": "289 Rue Dugas Joliette J6E 4H1",
-        "dci_an_mise_service": "2022",
-        "dci_an_mise_serv": "2022",
-        "dci_surfpi2_ann": null,
-        "dci_surfpi2_calc": null,
-        "dci_hebergeur": "SATO Technologies Corp",
-        "dci_siegesocial_loc": "",
-        "dci_hebwebsite": "https://www.bysato.com/mining",
-        "dci_shareholder_majoritaire": null,
-        "dci_shareholder_majo_nationalite": null,
-        "date_collecte": "2026-08-25"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -73.4306333,
-          46.0185868
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "dci_id": "DCENLAV01",
-        "dci_nomsite": "D-Central Laval",
-        "dci_type": "Crypto",
-        "dci_puidensity": "Crypto",
-        "dci_statut": "en opération",
-        "dci_iaready": "",
-        "dci_puiss_annoncee": null,
-        "dci_nomville": "Laval",
-        "dci_adresse": "1325 Rue Bergar Laval H7L 4Z7",
-        "dci_an_mise_service": "2016",
-        "dci_an_mise_serv": "2016",
-        "dci_surfpi2_ann": null,
-        "dci_surfpi2_calc": null,
-        "dci_hebergeur": "D-Central",
-        "dci_siegesocial_loc": "",
-        "dci_hebwebsite": null,
-        "dci_shareholder_majoritaire": null,
-        "dci_shareholder_majo_nationalite": null,
-        "date_collecte": "2026-08-25"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -73.7479609,
-          45.5926218
         ]
       }
     },
@@ -319,68 +162,6 @@
         "coordinates": [
           -71.32510870000002,
           46.6761377
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "dci_id": "FLUMMAT01",
-        "dci_nomsite": "Flumen Matane",
-        "dci_type": "Wholesale",
-        "dci_puidensity": "Haute densité",
-        "dci_statut": "en projet",
-        "dci_iaready": "IA",
-        "dci_puiss_annoncee": 17.5,
-        "dci_nomville": "Matane",
-        "dci_adresse": "90 Rue du Parc-Industriel Matane G4W 3M9",
-        "dci_an_mise_service": "NC",
-        "dci_an_mise_serv": "NC",
-        "dci_surfpi2_ann": null,
-        "dci_surfpi2_calc": null,
-        "dci_hebergeur": "Flumen energie",
-        "dci_siegesocial_loc": ", ",
-        "dci_hebwebsite": "-",
-        "dci_shareholder_majoritaire": "",
-        "dci_shareholder_majo_nationalite": "",
-        "date_collecte": "2026-08-25"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -67.547759,
-          48.834417
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "dci_id": "KEELMGG01",
-        "dci_nomsite": "Keel Infrastructure Magog",
-        "dci_type": "Crypto",
-        "dci_puidensity": "Crypto",
-        "dci_statut": "en opération",
-        "dci_iaready": "",
-        "dci_puiss_annoncee": 10,
-        "dci_nomville": "Magog",
-        "dci_adresse": "1350 Boulevard Industriel  Magog J1X 4V9",
-        "dci_an_mise_service": "2018",
-        "dci_an_mise_serv": "2018",
-        "dci_surfpi2_ann": null,
-        "dci_surfpi2_calc": null,
-        "dci_hebergeur": "Bitfarms / Keel Infrastructure",
-        "dci_siegesocial_loc": "NY, USA",
-        "dci_hebwebsite": "https://www.keelinfra.com/",
-        "dci_shareholder_majoritaire": "Jane Street Group LLC- Jane Street Capital LLC-Jane Street Global Trading LLC",
-        "dci_shareholder_majo_nationalite": "United States (largest holder)",
-        "date_collecte": "2026-08-25"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -72.1333915,
-          45.27254169999999
         ]
       }
     },
@@ -579,39 +360,6 @@
     {
       "type": "Feature",
       "properties": {
-        "dci_id": "KEELCWV01",
-        "dci_nomsite": "Keel Infrastructure Cowansville",
-        "dci_type": "Crypto",
-        "dci_puidensity": "Crypto",
-        "dci_statut": "en opération",
-        "dci_iaready": "",
-        "dci_puiss_annoncee": 17,
-        "dci_nomville": "Cowansville",
-        "dci_adresse": "135 rue Dean Cowansville J2K 3Y2",
-        "dci_an_mise_service": "2017",
-        "dci_an_mise_serv": "2017",
-        "dci_surfpi2_ann": null,
-        "dci_surfpi2_calc": 382881,
-        "dci_hebergeur": "Bitfarms / Keel Infrastructure",
-        "dci_siegesocial_loc": "NY, USA",
-        "dci_hebwebsite": "https://www.keelinfra.com/",
-        "dci_shareholder_majoritaire": "Jane Street Group LLC- Jane Street Capital LLC-Jane Street Global Trading LLC",
-        "dci_shareholder_majo_nationalite": "United States (largest holder)",
-        "date_collecte": "2026-08-25",
-        "SurfBatimentPI2": "382881",
-        "dcbat_areapi2": 382881
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -72.76358159369057,
-          45.20157691323764
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "dci_id": "CLGXMTL02",
         "dci_nomsite": "Cologix MTL2",
         "dci_type": "Retail",
@@ -645,138 +393,6 @@
     {
       "type": "Feature",
       "properties": {
-        "dci_id": "MSFTAUG01",
-        "dci_nomsite": "Microsoft Donnaconna",
-        "dci_type": "Hyperscale",
-        "dci_puidensity": "Haute densité",
-        "dci_statut": "en construction",
-        "dci_iaready": "",
-        "dci_puiss_annoncee": null,
-        "dci_nomville": "Saint-Augustin-de-Desmaures",
-        "dci_adresse": "250 Rue de Singapour Saint-Augustin-de-Desmaures G3A 0P8",
-        "dci_an_mise_service": "2027",
-        "dci_an_mise_serv": "2027",
-        "dci_surfpi2_ann": null,
-        "dci_surfpi2_calc": 756914,
-        "dci_hebergeur": "Microsoft",
-        "dci_siegesocial_loc": ", USA",
-        "dci_hebwebsite": "En cours",
-        "dci_shareholder_majoritaire": "",
-        "dci_shareholder_majo_nationalite": "",
-        "date_collecte": "2026-08-25",
-        "SurfBatimentPI2": "756914",
-        "dcbat_areapi2": 756914
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -71.4338430040757,
-          46.76035550859097
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "dci_id": "MWCAESC01",
-        "dci_nomsite": "MWC MegaWatt Canada Escoumins",
-        "dci_type": "Crypto",
-        "dci_puidensity": "Crypto",
-        "dci_statut": "en opération",
-        "dci_iaready": "",
-        "dci_puiss_annoncee": 10,
-        "dci_nomville": "Les-Escoumins",
-        "dci_adresse": "281 Rte Forestiere Les-Escoumins G0T 1K0",
-        "dci_an_mise_service": "2022",
-        "dci_an_mise_serv": "2022",
-        "dci_surfpi2_ann": null,
-        "dci_surfpi2_calc": 140497,
-        "dci_hebergeur": "MWC MegaWatt Canada",
-        "dci_siegesocial_loc": ", CA",
-        "dci_hebwebsite": "https://www.megawattcanada.com/",
-        "dci_shareholder_majoritaire": "",
-        "dci_shareholder_majo_nationalite": "",
-        "date_collecte": "2026-08-25",
-        "SurfBatimentPI2": "140497",
-        "dcbat_areapi2": 140497
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -69.4519583264045,
-          48.344161552532206
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "dci_id": "MSFTLVS01",
-        "dci_nomsite": "Microsoft Lévis",
-        "dci_type": "Hyperscale",
-        "dci_puidensity": "Haute densité",
-        "dci_statut": "en construction",
-        "dci_iaready": "",
-        "dci_puiss_annoncee": null,
-        "dci_nomville": "Levis",
-        "dci_adresse": "2411 Av. de la Rotonde Levis G6Z 2L1",
-        "dci_an_mise_service": "2027",
-        "dci_an_mise_serv": "2027",
-        "dci_surfpi2_ann": null,
-        "dci_surfpi2_calc": 4478514,
-        "dci_hebergeur": "Microsoft",
-        "dci_siegesocial_loc": ", USA",
-        "dci_hebwebsite": "En cours",
-        "dci_shareholder_majoritaire": "",
-        "dci_shareholder_majo_nationalite": "",
-        "date_collecte": "2026-08-25",
-        "SurfBatimentPI2": "4478514",
-        "dcbat_areapi2": 4478514
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -71.26169289409326,
-          46.71033430197982
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "dci_id": "MSFTDNA01",
-        "dci_nomsite": "Microsoft St Augustin De Desmaures",
-        "dci_type": "Hyperscale",
-        "dci_puidensity": "Haute densité",
-        "dci_statut": "en construction",
-        "dci_iaready": "",
-        "dci_puiss_annoncee": null,
-        "dci_nomville": "Donnacona",
-        "dci_adresse": "129 Rue Piche Donnacona G3M 1V4",
-        "dci_an_mise_service": "2027",
-        "dci_an_mise_serv": "2027",
-        "dci_surfpi2_ann": null,
-        "dci_surfpi2_calc": 324319,
-        "dci_hebergeur": "Microsoft",
-        "dci_siegesocial_loc": ", USA",
-        "dci_hebwebsite": "En cours",
-        "dci_shareholder_majoritaire": "",
-        "dci_shareholder_majo_nationalite": "",
-        "date_collecte": "2026-08-25",
-        "SurfBatimentPI2": "324319",
-        "dcbat_areapi2": 324319
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -71.71526687676888,
-          46.683345110009604
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "dci_id": "ESTRBOU03",
         "dci_nomsite": "Estruxture MTL3",
         "dci_type": "Retail",
@@ -802,39 +418,6 @@
         "coordinates": [
           -73.42709706816562,
           45.5673459511401
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "dci_id": "ARGOBCO01",
-        "dci_nomsite": "Argo Blockchain",
-        "dci_type": "Crypto",
-        "dci_puidensity": "Crypto",
-        "dci_statut": "en opération",
-        "dci_iaready": "",
-        "dci_puiss_annoncee": 15,
-        "dci_nomville": "Baie-Comeau",
-        "dci_adresse": "8 Avenue William-Dobell Baie-Comeau G4Z 1T7",
-        "dci_an_mise_service": "2019",
-        "dci_an_mise_serv": "2019",
-        "dci_surfpi2_ann": null,
-        "dci_surfpi2_calc": 94234,
-        "dci_hebergeur": "Argo Blockchain",
-        "dci_siegesocial_loc": ", ",
-        "dci_hebwebsite": "https://www.argoblockchain.com",
-        "dci_shareholder_majoritaire": "",
-        "dci_shareholder_majo_nationalite": "",
-        "date_collecte": "2026-08-25",
-        "SurfBatimentPI2": "94234",
-        "dcbat_areapi2": 94234
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -68.18611444485087,
-          49.21545815848701
         ]
       }
     },
@@ -1204,37 +787,6 @@
     {
       "type": "Feature",
       "properties": {
-        "dci_id": "EVNMMTL01",
-        "dci_nomsite": "Enovum Data Centers - MTL01",
-        "dci_type": "Retail",
-        "dci_puidensity": "Faible densité",
-        "dci_statut": "en opération",
-        "dci_iaready": "",
-        "dci_puiss_annoncee": 4,
-        "dci_nomville": "Montreal",
-        "dci_adresse": "3195 Chemin de Bedford Montreal H3S 1G3",
-        "dci_an_mise_service": "2021",
-        "dci_an_mise_serv": "2021",
-        "dci_surfpi2_ann": null,
-        "dci_surfpi2_calc": null,
-        "dci_hebergeur": "Enovum",
-        "dci_siegesocial_loc": "Montréal, ",
-        "dci_hebwebsite": "https://www.enovumdc.com",
-        "dci_shareholder_majoritaire": "Bit Digital Inc. (owner since 2024)",
-        "dci_shareholder_majo_nationalite": "USA",
-        "date_collecte": "2026-08-25"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -73.6323569,
-          45.50935870000001
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "dci_id": "HIVDMTL02",
         "dci_nomsite": "Hive MTL-2",
         "dci_type": "Crypto",
@@ -1532,39 +1084,6 @@
     {
       "type": "Feature",
       "properties": {
-        "dci_id": "EVNMPCL01",
-        "dci_nomsite": "Enovum Data Centers - MTL02",
-        "dci_type": "Retail",
-        "dci_puidensity": "Faible densité",
-        "dci_statut": "en opération",
-        "dci_iaready": "",
-        "dci_puiss_annoncee": null,
-        "dci_nomville": "Pointe-Claire",
-        "dci_adresse": "7300 Route Transcanadienne Pointe-Claire H9R 1C7",
-        "dci_an_mise_service": "NC",
-        "dci_an_mise_serv": "NC",
-        "dci_surfpi2_ann": null,
-        "dci_surfpi2_calc": 157150,
-        "dci_hebergeur": "Enovum",
-        "dci_siegesocial_loc": "Montréal, ",
-        "dci_hebwebsite": "https://www.enovumdc.com",
-        "dci_shareholder_majoritaire": "Bit Digital Inc. (owner since 2024)",
-        "dci_shareholder_majo_nationalite": "USA",
-        "date_collecte": "2026-08-25",
-        "SurfBatimentPI2": "157150",
-        "dcbat_areapi2": 157150
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -73.8376767,
-          45.458314500000014
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "dci_id": "VNTGQBC01",
         "dci_nomsite": "Vantage Data Centers Canada Québec QC2",
         "dci_type": "Wholesale",
@@ -1660,39 +1179,6 @@
     {
       "type": "Feature",
       "properties": {
-        "dci_id": "KEELSHB02",
-        "dci_nomsite": "Keel Infrastructure Sherbrooke 2 Garlock",
-        "dci_type": "Crypto",
-        "dci_puidensity": "Crypto",
-        "dci_statut": "en opération",
-        "dci_iaready": "",
-        "dci_puiss_annoncee": 18,
-        "dci_nomville": "Sherbrooke",
-        "dci_adresse": "4220 rue de la Garlock Sherbrooke J1L 2P4",
-        "dci_an_mise_service": "2022",
-        "dci_an_mise_serv": "2022",
-        "dci_surfpi2_ann": null,
-        "dci_surfpi2_calc": 31190,
-        "dci_hebergeur": "Bitfarms / Keel Infrastructure",
-        "dci_siegesocial_loc": "NY, USA",
-        "dci_hebwebsite": "https://www.keelinfra.com/",
-        "dci_shareholder_majoritaire": "Jane Street Group LLC- Jane Street Capital LLC-Jane Street Global Trading LLC",
-        "dci_shareholder_majo_nationalite": "United States (largest holder)",
-        "date_collecte": "2026-08-25",
-        "SurfBatimentPI2": "31190",
-        "dcbat_areapi2": 31190
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -71.9694672,
-          45.40726419999999
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "dci_id": "TLUSRKI01",
         "dci_nomsite": "Telus - Super Internet Data Center (SIDC)",
         "dci_type": "Wholesale",
@@ -1751,72 +1237,6 @@
         "coordinates": [
           -73.56204527598287,
           45.5003149871292
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "dci_id": "KEELSHB03",
-        "dci_nomsite": "Keel Infrastructure Sherbrooke 3 Bunker",
-        "dci_type": "Crypto",
-        "dci_puidensity": "Crypto",
-        "dci_statut": "en opération",
-        "dci_iaready": "",
-        "dci_puiss_annoncee": 48,
-        "dci_nomville": "Sherbrooke",
-        "dci_adresse": "839 Rue Joseph-Louis-Mathieu Sherbrooke J1R 0X3",
-        "dci_an_mise_service": "2022",
-        "dci_an_mise_serv": "2022",
-        "dci_surfpi2_ann": null,
-        "dci_surfpi2_calc": 174574,
-        "dci_hebergeur": "Bitfarms / Keel Infrastructure",
-        "dci_siegesocial_loc": "NY, USA",
-        "dci_hebwebsite": "https://www.keelinfra.com/",
-        "dci_shareholder_majoritaire": "Jane Street Group LLC- Jane Street Capital LLC-Jane Street Global Trading LLC",
-        "dci_shareholder_majo_nationalite": "United States (largest holder)",
-        "date_collecte": "2026-08-25",
-        "SurfBatimentPI2": "174574",
-        "dcbat_areapi2": 174574
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -71.9836085,
-          45.40446130000002
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "dci_id": "KEELSHB01",
-        "dci_nomsite": "Keel Infrastructure Sherbrooke 1 Leger",
-        "dci_type": "Crypto",
-        "dci_puidensity": "Crypto",
-        "dci_statut": "en opération",
-        "dci_iaready": "",
-        "dci_puiss_annoncee": 30,
-        "dci_nomville": "Sherbrooke",
-        "dci_adresse": "290 Rue Leger Sherbrooke J1L 1Y5",
-        "dci_an_mise_service": "2022",
-        "dci_an_mise_serv": "2022",
-        "dci_surfpi2_ann": null,
-        "dci_surfpi2_calc": 133854,
-        "dci_hebergeur": "Bitfarms / Keel Infrastructure",
-        "dci_siegesocial_loc": "NY, USA",
-        "dci_hebwebsite": "https://www.keelinfra.com/",
-        "dci_shareholder_majoritaire": "Jane Street Group LLC- Jane Street Capital LLC-Jane Street Global Trading LLC",
-        "dci_shareholder_majo_nationalite": "United States (largest holder)",
-        "date_collecte": "2026-08-25",
-        "SurfBatimentPI2": "133854",
-        "dcbat_areapi2": 133854
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -71.9711744,
-          45.3981896
         ]
       }
     },
@@ -2102,134 +1522,6 @@
     {
       "type": "Feature",
       "properties": {
-        "dci_id": "FBLKXXX01",
-        "dci_nomsite": "FirstBlock Estrie DC1",
-        "dci_type": "Crypto",
-        "dci_puidensity": "Crypto",
-        "dci_statut": "en opération",
-        "dci_iaready": "",
-        "dci_puiss_annoncee": 40,
-        "dci_nomville": "Inconnu",
-        "dci_adresse": "Non divulgée",
-        "dci_an_mise_service": "2026",
-        "dci_an_mise_serv": "2026",
-        "dci_surfpi2_ann": null,
-        "dci_surfpi2_calc": null,
-        "dci_hebergeur": "Firstblock",
-        "dci_siegesocial_loc": ", ",
-        "dci_hebwebsite": "https://www.firstblock.com/centre-de-donnees#sites",
-        "dci_shareholder_majoritaire": "",
-        "dci_shareholder_majo_nationalite": "",
-        "date_collecte": "2026-08-25"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -72.14495656725813,
-          45.4249361421341
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "dci_id": "FBLKMTL01",
-        "dci_nomsite": "FirstBlock Montréal DC1",
-        "dci_type": "Crypto",
-        "dci_puidensity": "Crypto",
-        "dci_statut": "en opération",
-        "dci_iaready": "",
-        "dci_puiss_annoncee": 5,
-        "dci_nomville": "Montréal",
-        "dci_adresse": "Non divulgée",
-        "dci_an_mise_service": "2025",
-        "dci_an_mise_serv": "2025",
-        "dci_surfpi2_ann": null,
-        "dci_surfpi2_calc": null,
-        "dci_hebergeur": "Firstblock",
-        "dci_siegesocial_loc": ", ",
-        "dci_hebwebsite": "https://www.firstblock.com/centre-de-donnees#sites",
-        "dci_shareholder_majoritaire": "",
-        "dci_shareholder_majo_nationalite": "",
-        "date_collecte": "2026-08-25"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -73.56184852137334,
-          45.51245906484787
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "dci_id": "KEELBCO01",
-        "dci_nomsite": "Keel Infrastructure Baie-Comeau",
-        "dci_type": "Crypto",
-        "dci_puidensity": "Crypto",
-        "dci_statut": "en opération",
-        "dci_iaready": "IA",
-        "dci_puiss_annoncee": 22,
-        "dci_nomville": "Baie-Comeau",
-        "dci_adresse": "25 Avenue Babin Baie-Comeau G4Z 3A5",
-        "dci_an_mise_service": "2023",
-        "dci_an_mise_serv": "2023",
-        "dci_surfpi2_ann": null,
-        "dci_surfpi2_calc": 40645,
-        "dci_hebergeur": "Bitfarms / Keel Infrastructure",
-        "dci_siegesocial_loc": "NY, USA",
-        "dci_hebwebsite": "https://www.keelinfra.com/",
-        "dci_shareholder_majoritaire": "Jane Street Group LLC- Jane Street Capital LLC-Jane Street Global Trading LLC",
-        "dci_shareholder_majo_nationalite": "United States (largest holder)",
-        "date_collecte": "2026-08-25",
-        "SurfBatimentPI2": "40645",
-        "dcbat_areapi2": 40645
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -68.19039734740356,
-          49.22168045382271
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "dci_id": "GGLEBHS01",
-        "dci_nomsite": "Google Beauharnois",
-        "dci_type": "Hyperscale",
-        "dci_puidensity": "Haute densité",
-        "dci_statut": "en projet",
-        "dci_iaready": "",
-        "dci_puiss_annoncee": 380,
-        "dci_nomville": "Beauharnois",
-        "dci_adresse": "Rue Urgel Charette Beauharnois J6N 0S2",
-        "dci_an_mise_service": "NC",
-        "dci_an_mise_serv": "NC",
-        "dci_surfpi2_ann": null,
-        "dci_surfpi2_calc": 15087405,
-        "dci_hebergeur": "Google",
-        "dci_siegesocial_loc": ", ",
-        "dci_hebwebsite": "https://datacenters.google/",
-        "dci_shareholder_majoritaire": "",
-        "dci_shareholder_majo_nationalite": "",
-        "date_collecte": "2026-08-25",
-        "SurfBatimentPI2": "15087405",
-        "dcbat_areapi2": 15087405
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -73.90351885590198,
-          45.2854340156113
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "dci_id": "CLGXMTL12",
         "dci_nomsite": "Cologix MTL12",
         "dci_type": "Retail",
@@ -2263,39 +1555,6 @@
     {
       "type": "Feature",
       "properties": {
-        "dci_id": "KEELSHB04",
-        "dci_nomsite": "Keel Infrastructure Sherbrooke HPC",
-        "dci_type": "Hyperscale",
-        "dci_puidensity": "Haute densité",
-        "dci_statut": "en projet",
-        "dci_iaready": "",
-        "dci_puiss_annoncee": 96,
-        "dci_nomville": "Sherbrooke",
-        "dci_adresse": "3885 Bd Industriel, Sherbrooke J1L 2S7",
-        "dci_an_mise_service": "NC",
-        "dci_an_mise_serv": "NC",
-        "dci_surfpi2_ann": null,
-        "dci_surfpi2_calc": 315890,
-        "dci_hebergeur": "Bitfarms / Keel Infrastructure",
-        "dci_siegesocial_loc": "NY, USA",
-        "dci_hebwebsite": "https://www.keelinfra.com/",
-        "dci_shareholder_majoritaire": "Jane Street Group LLC- Jane Street Capital LLC-Jane Street Global Trading LLC",
-        "dci_shareholder_majo_nationalite": "United States (largest holder)",
-        "date_collecte": "2026-08-25",
-        "SurfBatimentPI2": "315890",
-        "dcbat_areapi2": 315890
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -71.96806598254146,
-          45.39729796487658
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "dci_id": "AWSDVAR01",
         "dci_nomsite": "AWS YUL",
         "dci_type": "Hyperscale",
@@ -2323,39 +1582,6 @@
         "coordinates": [
           -73.3812757481441,
           45.623513131328906
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "dci_id": "EVNMSJM01",
-        "dci_nomsite": "Enovum Data Centers - MTL03",
-        "dci_type": "Retail",
-        "dci_puidensity": "Faible densité",
-        "dci_statut": "en opération",
-        "dci_iaready": "IA",
-        "dci_puiss_annoncee": null,
-        "dci_nomville": "Saint-Jerome",
-        "dci_adresse": "500 Boulevard Monseigneur-Dubois Saint-Jerome J7Y 3L8",
-        "dci_an_mise_service": "2025",
-        "dci_an_mise_serv": "2025",
-        "dci_surfpi2_ann": null,
-        "dci_surfpi2_calc": 56016,
-        "dci_hebergeur": "Enovum",
-        "dci_siegesocial_loc": "Montréal, ",
-        "dci_hebwebsite": "https://www.enovumdc.com",
-        "dci_shareholder_majoritaire": "Bit Digital Inc. (owner since 2024)",
-        "dci_shareholder_majo_nationalite": "USA",
-        "date_collecte": "2026-08-25",
-        "SurfBatimentPI2": "56016",
-        "dcbat_areapi2": 56016
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -74.01932289502693,
-          45.78380907852899
         ]
       }
     },
@@ -2428,31 +1654,64 @@
     {
       "type": "Feature",
       "properties": {
-        "dci_id": "FBLKQBC01",
-        "dci_nomsite": "FirstBlock Québec DC1",
-        "dci_type": "Crypto",
-        "dci_puidensity": "Crypto",
+        "dci_id": "CLCQMTL02",
+        "dci_nomsite": "Calcul Quebec - Quantique",
+        "dci_type": "Quantique",
+        "dci_puidensity": "Quantique",
         "dci_statut": "en opération",
         "dci_iaready": "",
-        "dci_puiss_annoncee": 30,
-        "dci_nomville": "Québec",
-        "dci_adresse": "Non divulgée",
-        "dci_an_mise_service": "2025",
-        "dci_an_mise_serv": "2025",
+        "dci_puiss_annoncee": 0.025,
+        "dci_nomville": "Montreal",
+        "dci_adresse": "1101 Rue Notre Dame Ouest Montreal H3C 1K3",
+        "dci_an_mise_service": "2024",
+        "dci_an_mise_serv": "2024",
         "dci_surfpi2_ann": null,
         "dci_surfpi2_calc": null,
-        "dci_hebergeur": "Firstblock",
-        "dci_siegesocial_loc": ", ",
-        "dci_hebwebsite": "https://www.firstblock.com/centre-de-donnees#sites",
-        "dci_shareholder_majoritaire": "",
-        "dci_shareholder_majo_nationalite": "",
+        "dci_hebergeur": "Calcul Québec",
+        "dci_siegesocial_loc": "Montréal, CA",
+        "dci_hebwebsite": "https://www.calculquebec.ca/",
+        "dci_shareholder_majoritaire": "Government of Québec (primary funder)",
+        "dci_shareholder_majo_nationalite": "Canadian (Québec)",
         "date_collecte": "2026-08-25"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -71.20905335592107,
-          46.81279560175906
+          -73.56261059367856,
+          45.49438066950509
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "dci_id": "MSFTALO01",
+        "dci_nomsite": "Microsoft Ancienne Lorette",
+        "dci_type": "Hyperscale",
+        "dci_puidensity": "Haute densité",
+        "dci_statut": "en projet",
+        "dci_iaready": "",
+        "dci_puiss_annoncee": 9.8,
+        "dci_nomville": "L'Ancienne-Lorette",
+        "dci_adresse": "6505 Rue Yvon-Dolbec  L'Ancienne-Lorette G2E 0A3",
+        "dci_an_mise_service": "2027",
+        "dci_an_mise_serv": "2027",
+        "dci_surfpi2_ann": null,
+        "dci_surfpi2_calc": 2734458,
+        "dci_hebergeur": "Microsoft",
+        "dci_siegesocial_loc": "Washington, USA",
+        "dci_hebwebsite": "En cours",
+        "dci_shareholder_majoritaire": "The Vanguard Group, Inc. (largest declared shareholder; no controlling shareholder)",
+        "dci_shareholder_majo_nationalite": "USA",
+        "date_collecte": "2026-08-25",
+        "SurfBatimentPI2": "2734458",
+        "dcbat_areapi2": 2734458
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.3481367,
+          46.790558100000005
         ]
       }
     },
@@ -2473,10 +1732,10 @@
         "dci_surfpi2_ann": null,
         "dci_surfpi2_calc": null,
         "dci_hebergeur": "Firstblock",
-        "dci_siegesocial_loc": ", ",
+        "dci_siegesocial_loc": "Québec, CA",
         "dci_hebwebsite": "https://www.firstblock.com/centre-de-donnees#sites",
-        "dci_shareholder_majoritaire": "",
-        "dci_shareholder_majo_nationalite": "",
+        "dci_shareholder_majoritaire": "Vincent Paquet and Gabriel Angeli (sole shareholders; joint control)",
+        "dci_shareholder_majo_nationalite": "Canada",
         "date_collecte": "2026-08-25"
       },
       "geometry": {
@@ -2484,6 +1743,747 @@
         "coordinates": [
           -71.20896957036118,
           46.81273826020741
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "dci_id": "FBLKQBC01",
+        "dci_nomsite": "FirstBlock Québec DC1",
+        "dci_type": "Crypto",
+        "dci_puidensity": "Crypto",
+        "dci_statut": "en opération",
+        "dci_iaready": "",
+        "dci_puiss_annoncee": 30,
+        "dci_nomville": "Québec",
+        "dci_adresse": "Non divulgée",
+        "dci_an_mise_service": "2025",
+        "dci_an_mise_serv": "2025",
+        "dci_surfpi2_ann": null,
+        "dci_surfpi2_calc": null,
+        "dci_hebergeur": "Firstblock",
+        "dci_siegesocial_loc": "Québec, CA",
+        "dci_hebwebsite": "https://www.firstblock.com/centre-de-donnees#sites",
+        "dci_shareholder_majoritaire": "Vincent Paquet and Gabriel Angeli (sole shareholders; joint control)",
+        "dci_shareholder_majo_nationalite": "Canada",
+        "date_collecte": "2026-08-25"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.20905335592107,
+          46.81279560175906
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "dci_id": "EVNMSJM01",
+        "dci_nomsite": "Enovum Data Centers - MTL03",
+        "dci_type": "Retail",
+        "dci_puidensity": "Faible densité",
+        "dci_statut": "en opération",
+        "dci_iaready": "IA",
+        "dci_puiss_annoncee": null,
+        "dci_nomville": "Saint-Jerome",
+        "dci_adresse": "500 Boulevard Monseigneur-Dubois Saint-Jerome J7Y 3L8",
+        "dci_an_mise_service": "2025",
+        "dci_an_mise_serv": "2025",
+        "dci_surfpi2_ann": null,
+        "dci_surfpi2_calc": 56016,
+        "dci_hebergeur": "Enovum",
+        "dci_siegesocial_loc": "Montréal, CA",
+        "dci_hebwebsite": "https://www.enovumdc.com",
+        "dci_shareholder_majoritaire": "Bit Digital Inc. (owner since 2024)",
+        "dci_shareholder_majo_nationalite": "USA",
+        "date_collecte": "2026-08-25",
+        "SurfBatimentPI2": "56016",
+        "dcbat_areapi2": 56016
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.01932289502693,
+          45.78380907852899
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "dci_id": "KEELSHB04",
+        "dci_nomsite": "Keel Infrastructure Sherbrooke HPC",
+        "dci_type": "Hyperscale",
+        "dci_puidensity": "Haute densité",
+        "dci_statut": "en projet",
+        "dci_iaready": "",
+        "dci_puiss_annoncee": 96,
+        "dci_nomville": "Sherbrooke",
+        "dci_adresse": "3885 Bd Industriel, Sherbrooke J1L 2S7",
+        "dci_an_mise_service": "NC",
+        "dci_an_mise_serv": "NC",
+        "dci_surfpi2_ann": null,
+        "dci_surfpi2_calc": 315890,
+        "dci_hebergeur": "Bitfarms / Keel Infrastructure",
+        "dci_siegesocial_loc": "NY, USA",
+        "dci_hebwebsite": "https://www.keelinfra.com/",
+        "dci_shareholder_majoritaire": "Jane Street Group LLC - Jane Street Capital LLC -Jane Street Global Trading LLC",
+        "dci_shareholder_majo_nationalite": "United States (largest holder)",
+        "date_collecte": "2026-08-25",
+        "SurfBatimentPI2": "315890",
+        "dcbat_areapi2": 315890
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.96806598254146,
+          45.39729796487658
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "dci_id": "GGLEBHS01",
+        "dci_nomsite": "Google Beauharnois",
+        "dci_type": "Hyperscale",
+        "dci_puidensity": "Haute densité",
+        "dci_statut": "en projet",
+        "dci_iaready": "",
+        "dci_puiss_annoncee": 380,
+        "dci_nomville": "Beauharnois",
+        "dci_adresse": "Rue Urgel Charette Beauharnois J6N 0S2",
+        "dci_an_mise_service": "NC",
+        "dci_an_mise_serv": "NC",
+        "dci_surfpi2_ann": null,
+        "dci_surfpi2_calc": 15087405,
+        "dci_hebergeur": "Google",
+        "dci_siegesocial_loc": "California, USA",
+        "dci_hebwebsite": "https://datacenters.google/",
+        "dci_shareholder_majoritaire": "Larry Page and Sergey Brin (joint voting control of Alphabet)",
+        "dci_shareholder_majo_nationalite": "USA",
+        "date_collecte": "2026-08-25",
+        "SurfBatimentPI2": "15087405",
+        "dcbat_areapi2": 15087405
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.90351885590198,
+          45.2854340156113
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "dci_id": "KEELBCO01",
+        "dci_nomsite": "Keel Infrastructure Baie-Comeau",
+        "dci_type": "Crypto",
+        "dci_puidensity": "Crypto",
+        "dci_statut": "en opération",
+        "dci_iaready": "IA",
+        "dci_puiss_annoncee": 22,
+        "dci_nomville": "Baie-Comeau",
+        "dci_adresse": "25 Avenue Babin Baie-Comeau G4Z 3A5",
+        "dci_an_mise_service": "2023",
+        "dci_an_mise_serv": "2023",
+        "dci_surfpi2_ann": null,
+        "dci_surfpi2_calc": 40645,
+        "dci_hebergeur": "Bitfarms / Keel Infrastructure",
+        "dci_siegesocial_loc": "NY, USA",
+        "dci_hebwebsite": "https://www.keelinfra.com/",
+        "dci_shareholder_majoritaire": "Jane Street Group LLC - Jane Street Capital LLC -Jane Street Global Trading LLC",
+        "dci_shareholder_majo_nationalite": "United States (largest holder)",
+        "date_collecte": "2026-08-25",
+        "SurfBatimentPI2": "40645",
+        "dcbat_areapi2": 40645
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.19039734740356,
+          49.22168045382271
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "dci_id": "FBLKMTL01",
+        "dci_nomsite": "FirstBlock Montréal DC1",
+        "dci_type": "Crypto",
+        "dci_puidensity": "Crypto",
+        "dci_statut": "en opération",
+        "dci_iaready": "",
+        "dci_puiss_annoncee": 5,
+        "dci_nomville": "Montréal",
+        "dci_adresse": "Non divulgée",
+        "dci_an_mise_service": "2025",
+        "dci_an_mise_serv": "2025",
+        "dci_surfpi2_ann": null,
+        "dci_surfpi2_calc": null,
+        "dci_hebergeur": "Firstblock",
+        "dci_siegesocial_loc": "Québec, CA",
+        "dci_hebwebsite": "https://www.firstblock.com/centre-de-donnees#sites",
+        "dci_shareholder_majoritaire": "Vincent Paquet and Gabriel Angeli (sole shareholders; joint control)",
+        "dci_shareholder_majo_nationalite": "Canada",
+        "date_collecte": "2026-08-25"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.56184852137334,
+          45.51245906484787
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "dci_id": "FBLKXXX01",
+        "dci_nomsite": "FirstBlock Estrie DC1",
+        "dci_type": "Crypto",
+        "dci_puidensity": "Crypto",
+        "dci_statut": "en opération",
+        "dci_iaready": "",
+        "dci_puiss_annoncee": 40,
+        "dci_nomville": "Inconnu",
+        "dci_adresse": "Non divulgée",
+        "dci_an_mise_service": "2026",
+        "dci_an_mise_serv": "2026",
+        "dci_surfpi2_ann": null,
+        "dci_surfpi2_calc": null,
+        "dci_hebergeur": "Firstblock",
+        "dci_siegesocial_loc": "Québec, CA",
+        "dci_hebwebsite": "https://www.firstblock.com/centre-de-donnees#sites",
+        "dci_shareholder_majoritaire": "Vincent Paquet and Gabriel Angeli (sole shareholders; joint control)",
+        "dci_shareholder_majo_nationalite": "Canada",
+        "date_collecte": "2026-08-25"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -72.14495656725813,
+          45.4249361421341
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "dci_id": "KEELSHB01",
+        "dci_nomsite": "Keel Infrastructure Sherbrooke 1 Leger",
+        "dci_type": "Crypto",
+        "dci_puidensity": "Crypto",
+        "dci_statut": "en opération",
+        "dci_iaready": "",
+        "dci_puiss_annoncee": 30,
+        "dci_nomville": "Sherbrooke",
+        "dci_adresse": "290 Rue Leger Sherbrooke J1L 1Y5",
+        "dci_an_mise_service": "2022",
+        "dci_an_mise_serv": "2022",
+        "dci_surfpi2_ann": null,
+        "dci_surfpi2_calc": 133854,
+        "dci_hebergeur": "Bitfarms / Keel Infrastructure",
+        "dci_siegesocial_loc": "NY, USA",
+        "dci_hebwebsite": "https://www.keelinfra.com/",
+        "dci_shareholder_majoritaire": "Jane Street Group LLC - Jane Street Capital LLC -Jane Street Global Trading LLC",
+        "dci_shareholder_majo_nationalite": "United States (largest holder)",
+        "date_collecte": "2026-08-25",
+        "SurfBatimentPI2": "133854",
+        "dcbat_areapi2": 133854
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.9711744,
+          45.3981896
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "dci_id": "KEELSHB03",
+        "dci_nomsite": "Keel Infrastructure Sherbrooke 3 Bunker",
+        "dci_type": "Crypto",
+        "dci_puidensity": "Crypto",
+        "dci_statut": "en opération",
+        "dci_iaready": "",
+        "dci_puiss_annoncee": 48,
+        "dci_nomville": "Sherbrooke",
+        "dci_adresse": "839 Rue Joseph-Louis-Mathieu Sherbrooke J1R 0X3",
+        "dci_an_mise_service": "2022",
+        "dci_an_mise_serv": "2022",
+        "dci_surfpi2_ann": null,
+        "dci_surfpi2_calc": 174574,
+        "dci_hebergeur": "Bitfarms / Keel Infrastructure",
+        "dci_siegesocial_loc": "NY, USA",
+        "dci_hebwebsite": "https://www.keelinfra.com/",
+        "dci_shareholder_majoritaire": "Jane Street Group LLC - Jane Street Capital LLC -Jane Street Global Trading LLC",
+        "dci_shareholder_majo_nationalite": "United States (largest holder)",
+        "date_collecte": "2026-08-25",
+        "SurfBatimentPI2": "174574",
+        "dcbat_areapi2": 174574
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.9836085,
+          45.40446130000002
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "dci_id": "KEELSHB02",
+        "dci_nomsite": "Keel Infrastructure Sherbrooke 2 Garlock",
+        "dci_type": "Crypto",
+        "dci_puidensity": "Crypto",
+        "dci_statut": "en opération",
+        "dci_iaready": "",
+        "dci_puiss_annoncee": 18,
+        "dci_nomville": "Sherbrooke",
+        "dci_adresse": "4220 rue de la Garlock Sherbrooke J1L 2P4",
+        "dci_an_mise_service": "2022",
+        "dci_an_mise_serv": "2022",
+        "dci_surfpi2_ann": null,
+        "dci_surfpi2_calc": 31190,
+        "dci_hebergeur": "Bitfarms / Keel Infrastructure",
+        "dci_siegesocial_loc": "NY, USA",
+        "dci_hebwebsite": "https://www.keelinfra.com/",
+        "dci_shareholder_majoritaire": "Jane Street Group LLC - Jane Street Capital LLC -Jane Street Global Trading LLC",
+        "dci_shareholder_majo_nationalite": "United States (largest holder)",
+        "date_collecte": "2026-08-25",
+        "SurfBatimentPI2": "31190",
+        "dcbat_areapi2": 31190
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.9694672,
+          45.40726419999999
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "dci_id": "EVNMPCL01",
+        "dci_nomsite": "Enovum Data Centers - MTL02",
+        "dci_type": "Retail",
+        "dci_puidensity": "Faible densité",
+        "dci_statut": "en opération",
+        "dci_iaready": "",
+        "dci_puiss_annoncee": null,
+        "dci_nomville": "Pointe-Claire",
+        "dci_adresse": "7300 Route Transcanadienne Pointe-Claire H9R 1C7",
+        "dci_an_mise_service": "NC",
+        "dci_an_mise_serv": "NC",
+        "dci_surfpi2_ann": null,
+        "dci_surfpi2_calc": 157150,
+        "dci_hebergeur": "Enovum",
+        "dci_siegesocial_loc": "Montréal, CA",
+        "dci_hebwebsite": "https://www.enovumdc.com",
+        "dci_shareholder_majoritaire": "Bit Digital Inc. (owner since 2024)",
+        "dci_shareholder_majo_nationalite": "USA",
+        "date_collecte": "2026-08-25",
+        "SurfBatimentPI2": "157150",
+        "dcbat_areapi2": 157150
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.8376767,
+          45.458314500000014
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "dci_id": "EVNMMTL01",
+        "dci_nomsite": "Enovum Data Centers - MTL01",
+        "dci_type": "Retail",
+        "dci_puidensity": "Faible densité",
+        "dci_statut": "en opération",
+        "dci_iaready": "",
+        "dci_puiss_annoncee": 4,
+        "dci_nomville": "Montreal",
+        "dci_adresse": "3195 Chemin de Bedford Montreal H3S 1G3",
+        "dci_an_mise_service": "2021",
+        "dci_an_mise_serv": "2021",
+        "dci_surfpi2_ann": null,
+        "dci_surfpi2_calc": null,
+        "dci_hebergeur": "Enovum",
+        "dci_siegesocial_loc": "Montréal, CA",
+        "dci_hebwebsite": "https://www.enovumdc.com",
+        "dci_shareholder_majoritaire": "Bit Digital Inc. (owner since 2024)",
+        "dci_shareholder_majo_nationalite": "USA",
+        "date_collecte": "2026-08-25"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.6323569,
+          45.50935870000001
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "dci_id": "ARGOBCO01",
+        "dci_nomsite": "Argo Blockchain",
+        "dci_type": "Crypto",
+        "dci_puidensity": "Crypto",
+        "dci_statut": "en opération",
+        "dci_iaready": "",
+        "dci_puiss_annoncee": 15,
+        "dci_nomville": "Baie-Comeau",
+        "dci_adresse": "8 Avenue William-Dobell Baie-Comeau G4Z 1T7",
+        "dci_an_mise_service": "2019",
+        "dci_an_mise_serv": "2019",
+        "dci_surfpi2_ann": null,
+        "dci_surfpi2_calc": 94234,
+        "dci_hebergeur": "Argo Blockchain",
+        "dci_siegesocial_loc": "Seattle, USA",
+        "dci_hebwebsite": "https://www.argoblockchain.com",
+        "dci_shareholder_majoritaire": "Growler Mining Tuscaloosa, LLC (controlling shareholder)",
+        "dci_shareholder_majo_nationalite": "USA",
+        "date_collecte": "2026-08-25",
+        "SurfBatimentPI2": "94234",
+        "dcbat_areapi2": 94234
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.18611444485087,
+          49.21545815848701
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "dci_id": "MSFTDNA01",
+        "dci_nomsite": "Microsoft St Augustin De Desmaures",
+        "dci_type": "Hyperscale",
+        "dci_puidensity": "Haute densité",
+        "dci_statut": "en construction",
+        "dci_iaready": "",
+        "dci_puiss_annoncee": null,
+        "dci_nomville": "Donnacona",
+        "dci_adresse": "129 Rue Piche Donnacona G3M 1V4",
+        "dci_an_mise_service": "2027",
+        "dci_an_mise_serv": "2027",
+        "dci_surfpi2_ann": null,
+        "dci_surfpi2_calc": 324319,
+        "dci_hebergeur": "Microsoft",
+        "dci_siegesocial_loc": "Washington, USA",
+        "dci_hebwebsite": "En cours",
+        "dci_shareholder_majoritaire": "The Vanguard Group, Inc. (largest declared shareholder; no controlling shareholder)",
+        "dci_shareholder_majo_nationalite": "USA",
+        "date_collecte": "2026-08-25",
+        "SurfBatimentPI2": "324319",
+        "dcbat_areapi2": 324319
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.71526687676888,
+          46.683345110009604
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "dci_id": "MSFTLVS01",
+        "dci_nomsite": "Microsoft Lévis",
+        "dci_type": "Hyperscale",
+        "dci_puidensity": "Haute densité",
+        "dci_statut": "en construction",
+        "dci_iaready": "",
+        "dci_puiss_annoncee": null,
+        "dci_nomville": "Levis",
+        "dci_adresse": "2411 Av. de la Rotonde Levis G6Z 2L1",
+        "dci_an_mise_service": "2027",
+        "dci_an_mise_serv": "2027",
+        "dci_surfpi2_ann": null,
+        "dci_surfpi2_calc": 4478514,
+        "dci_hebergeur": "Microsoft",
+        "dci_siegesocial_loc": "Washington, USA",
+        "dci_hebwebsite": "En cours",
+        "dci_shareholder_majoritaire": "The Vanguard Group, Inc. (largest declared shareholder; no controlling shareholder)",
+        "dci_shareholder_majo_nationalite": "USA",
+        "date_collecte": "2026-08-25",
+        "SurfBatimentPI2": "4478514",
+        "dcbat_areapi2": 4478514
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.26169289409326,
+          46.71033430197982
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "dci_id": "MWCAESC01",
+        "dci_nomsite": "MWC MegaWatt Canada Escoumins",
+        "dci_type": "Crypto",
+        "dci_puidensity": "Crypto",
+        "dci_statut": "en opération",
+        "dci_iaready": "",
+        "dci_puiss_annoncee": 10,
+        "dci_nomville": "Les-Escoumins",
+        "dci_adresse": "281 Rte Forestiere Les-Escoumins G0T 1K0",
+        "dci_an_mise_service": "2022",
+        "dci_an_mise_serv": "2022",
+        "dci_surfpi2_ann": null,
+        "dci_surfpi2_calc": 140497,
+        "dci_hebergeur": "MWC MegaWatt Canada",
+        "dci_siegesocial_loc": "Chicoutimi, CA",
+        "dci_hebwebsite": "https://www.megawattcanada.com/",
+        "dci_shareholder_majoritaire": "",
+        "dci_shareholder_majo_nationalite": "",
+        "date_collecte": "2026-08-25",
+        "SurfBatimentPI2": "140497",
+        "dcbat_areapi2": 140497
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.4519583264045,
+          48.344161552532206
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "dci_id": "MSFTAUG01",
+        "dci_nomsite": "Microsoft Donnaconna",
+        "dci_type": "Hyperscale",
+        "dci_puidensity": "Haute densité",
+        "dci_statut": "en construction",
+        "dci_iaready": "",
+        "dci_puiss_annoncee": null,
+        "dci_nomville": "Saint-Augustin-de-Desmaures",
+        "dci_adresse": "250 Rue de Singapour Saint-Augustin-de-Desmaures G3A 0P8",
+        "dci_an_mise_service": "2027",
+        "dci_an_mise_serv": "2027",
+        "dci_surfpi2_ann": null,
+        "dci_surfpi2_calc": 756914,
+        "dci_hebergeur": "Microsoft",
+        "dci_siegesocial_loc": "Washington, USA",
+        "dci_hebwebsite": "En cours",
+        "dci_shareholder_majoritaire": "The Vanguard Group, Inc. (largest declared shareholder; no controlling shareholder)",
+        "dci_shareholder_majo_nationalite": "USA",
+        "date_collecte": "2026-08-25",
+        "SurfBatimentPI2": "756914",
+        "dcbat_areapi2": 756914
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.4338430040757,
+          46.76035550859097
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "dci_id": "KEELCWV01",
+        "dci_nomsite": "Keel Infrastructure Cowansville",
+        "dci_type": "Crypto",
+        "dci_puidensity": "Crypto",
+        "dci_statut": "en opération",
+        "dci_iaready": "",
+        "dci_puiss_annoncee": 17,
+        "dci_nomville": "Cowansville",
+        "dci_adresse": "135 rue Dean Cowansville J2K 3Y2",
+        "dci_an_mise_service": "2017",
+        "dci_an_mise_serv": "2017",
+        "dci_surfpi2_ann": null,
+        "dci_surfpi2_calc": 382881,
+        "dci_hebergeur": "Bitfarms / Keel Infrastructure",
+        "dci_siegesocial_loc": "NY, USA",
+        "dci_hebwebsite": "https://www.keelinfra.com/",
+        "dci_shareholder_majoritaire": "Jane Street Group LLC - Jane Street Capital LLC -Jane Street Global Trading LLC",
+        "dci_shareholder_majo_nationalite": "United States (largest holder)",
+        "date_collecte": "2026-08-25",
+        "SurfBatimentPI2": "382881",
+        "dcbat_areapi2": 382881
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -72.76358159369057,
+          45.20157691323764
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "dci_id": "KEELMGG01",
+        "dci_nomsite": "Keel Infrastructure Magog",
+        "dci_type": "Crypto",
+        "dci_puidensity": "Crypto",
+        "dci_statut": "en opération",
+        "dci_iaready": "",
+        "dci_puiss_annoncee": 10,
+        "dci_nomville": "Magog",
+        "dci_adresse": "1350 Boulevard Industriel  Magog J1X 4V9",
+        "dci_an_mise_service": "2018",
+        "dci_an_mise_serv": "2018",
+        "dci_surfpi2_ann": null,
+        "dci_surfpi2_calc": null,
+        "dci_hebergeur": "Bitfarms / Keel Infrastructure",
+        "dci_siegesocial_loc": "NY, USA",
+        "dci_hebwebsite": "https://www.keelinfra.com/",
+        "dci_shareholder_majoritaire": "Jane Street Group LLC - Jane Street Capital LLC -Jane Street Global Trading LLC",
+        "dci_shareholder_majo_nationalite": "United States (largest holder)",
+        "date_collecte": "2026-08-25"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -72.1333915,
+          45.27254169999999
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "dci_id": "FLUMMAT01",
+        "dci_nomsite": "Flumen Matane",
+        "dci_type": "Wholesale",
+        "dci_puidensity": "Haute densité",
+        "dci_statut": "en projet",
+        "dci_iaready": "IA",
+        "dci_puiss_annoncee": 17.5,
+        "dci_nomville": "Matane",
+        "dci_adresse": "90 Rue du Parc-Industriel Matane G4W 3M9",
+        "dci_an_mise_service": "NC",
+        "dci_an_mise_serv": "NC",
+        "dci_surfpi2_ann": null,
+        "dci_surfpi2_calc": null,
+        "dci_hebergeur": "Flumen energie",
+        "dci_siegesocial_loc": "Saint-Antonin, CA",
+        "dci_hebwebsite": "https://assets.lumen.com/is/content/Lumen/colocation-location-data-sheet",
+        "dci_shareholder_majoritaire": "Brian McDougall (actionnaire principal et majoritaire)",
+        "dci_shareholder_majo_nationalite": "Nationalité non publiquement vérifiable",
+        "date_collecte": "2026-08-25"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.547759,
+          48.834417
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "dci_id": "DCENLAV01",
+        "dci_nomsite": "D-Central Laval",
+        "dci_type": "Crypto",
+        "dci_puidensity": "Crypto",
+        "dci_statut": "en opération",
+        "dci_iaready": "",
+        "dci_puiss_annoncee": null,
+        "dci_nomville": "Laval",
+        "dci_adresse": "1325 Rue Bergar Laval H7L 4Z7",
+        "dci_an_mise_service": "2016",
+        "dci_an_mise_serv": "2016",
+        "dci_surfpi2_ann": null,
+        "dci_surfpi2_calc": null,
+        "dci_hebergeur": "D-Central",
+        "dci_siegesocial_loc": "Laval, CA",
+        "dci_hebwebsite": "https://d-central.tech/mining-hosting",
+        "dci_shareholder_majoritaire": "Jonathan Bertrand (fondateur et chef de la direction); actionnariat non publié",
+        "dci_shareholder_majo_nationalite": "Nationalité non vérifiée; société canadienne",
+        "date_collecte": "2026-08-25"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.7479609,
+          45.5926218
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "dci_id": "SATOJOL01",
+        "dci_nomsite": "SATO Quebec",
+        "dci_type": "Crypto",
+        "dci_puidensity": "Crypto",
+        "dci_statut": "en opération",
+        "dci_iaready": "",
+        "dci_puiss_annoncee": 20,
+        "dci_nomville": "Joliette",
+        "dci_adresse": "289 Rue Dugas Joliette J6E 4H1",
+        "dci_an_mise_service": "2022",
+        "dci_an_mise_serv": "2022",
+        "dci_surfpi2_ann": null,
+        "dci_surfpi2_calc": null,
+        "dci_hebergeur": "SATO Technologies Corp",
+        "dci_siegesocial_loc": "",
+        "dci_hebwebsite": "https://www.bysato.com/mining",
+        "dci_shareholder_majoritaire": "Mathieu Nouzareth and Romain Nouzareth (joint-largest known shareholders; neither controls SATO alone)",
+        "dci_shareholder_majo_nationalite": "USA",
+        "date_collecte": "2026-08-25"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.4306333,
+          46.0185868
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "dci_id": "KEELHYA01",
+        "dci_nomsite": "Keel Infrastructure Saint-Hyacinthe",
+        "dci_type": "Crypto",
+        "dci_puidensity": "Crypto",
+        "dci_statut": "en opération",
+        "dci_iaready": "",
+        "dci_puiss_annoncee": 15,
+        "dci_nomville": "Saint-Hyacinthe",
+        "dci_adresse": "2805 Avenue Vanier Saint-Hyacinthe J2S 8P3",
+        "dci_an_mise_service": "2018",
+        "dci_an_mise_serv": "2018",
+        "dci_surfpi2_ann": null,
+        "dci_surfpi2_calc": null,
+        "dci_hebergeur": "Bitfarms / Keel Infrastructure",
+        "dci_siegesocial_loc": "NY, USA",
+        "dci_hebwebsite": "https://www.keelinfra.com/",
+        "dci_shareholder_majoritaire": "Jane Street Group LLC - Jane Street Capital LLC -Jane Street Global Trading LLC",
+        "dci_shareholder_majo_nationalite": "United States (largest holder)",
+        "date_collecte": "2026-08-25"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -72.970526,
+          45.628789400000024
         ]
       }
     },
@@ -2504,10 +2504,10 @@
         "dci_surfpi2_ann": null,
         "dci_surfpi2_calc": null,
         "dci_hebergeur": "Firstblock",
-        "dci_siegesocial_loc": ", ",
+        "dci_siegesocial_loc": "Québec, CA",
         "dci_hebwebsite": "https://www.firstblock.com/centre-de-donnees#sites",
-        "dci_shareholder_majoritaire": "",
-        "dci_shareholder_majo_nationalite": "",
+        "dci_shareholder_majoritaire": "Vincent Paquet and Gabriel Angeli (sole shareholders; joint control)",
+        "dci_shareholder_majo_nationalite": "Canada",
         "date_collecte": "2026-08-25"
       },
       "geometry": {
@@ -2515,6 +2515,37 @@
         "coordinates": [
           -71.20888578480128,
           46.81273826020741
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "dci_id": "KEELFHM01",
+        "dci_nomsite": "Keel Infrastructure Farnham",
+        "dci_type": "Crypto",
+        "dci_puidensity": "Crypto",
+        "dci_statut": "en opération",
+        "dci_iaready": "",
+        "dci_puiss_annoncee": 10,
+        "dci_nomville": "Farnham",
+        "dci_adresse": "1146  boulevard Magenta Est Farnham J2N 2S7",
+        "dci_an_mise_service": "2020",
+        "dci_an_mise_serv": "2020",
+        "dci_surfpi2_ann": null,
+        "dci_surfpi2_calc": null,
+        "dci_hebergeur": "Bitfarms / Keel Infrastructure",
+        "dci_siegesocial_loc": "NY, USA",
+        "dci_hebwebsite": "https://www.keelinfra.com/",
+        "dci_shareholder_majoritaire": "Jane Street Group LLC - Jane Street Capital LLC -Jane Street Global Trading LLC",
+        "dci_shareholder_majo_nationalite": "United States (largest holder)",
+        "date_collecte": "2026-08-25"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -72.9744864,
+          45.29055000000002
         ]
       }
     },
@@ -2535,10 +2566,10 @@
         "dci_surfpi2_ann": null,
         "dci_surfpi2_calc": null,
         "dci_hebergeur": "Firstblock",
-        "dci_siegesocial_loc": ", ",
+        "dci_siegesocial_loc": "Québec, CA",
         "dci_hebwebsite": "https://www.firstblock.com/centre-de-donnees#sites",
-        "dci_shareholder_majoritaire": "",
-        "dci_shareholder_majo_nationalite": "",
+        "dci_shareholder_majoritaire": "Vincent Paquet and Gabriel Angeli (sole shareholders; joint control)",
+        "dci_shareholder_majo_nationalite": "Canada",
         "date_collecte": "2026-08-25"
       },
       "geometry": {
@@ -2566,10 +2597,10 @@
         "dci_surfpi2_ann": null,
         "dci_surfpi2_calc": null,
         "dci_hebergeur": "Firstblock",
-        "dci_siegesocial_loc": ", ",
+        "dci_siegesocial_loc": "Québec, CA",
         "dci_hebwebsite": "https://www.firstblock.com/centre-de-donnees#sites",
-        "dci_shareholder_majoritaire": "",
-        "dci_shareholder_majo_nationalite": "",
+        "dci_shareholder_majoritaire": "Vincent Paquet and Gabriel Angeli (sole shareholders; joint control)",
+        "dci_shareholder_majo_nationalite": "Canada",
         "date_collecte": "2026-08-25"
       },
       "geometry": {
@@ -2597,10 +2628,10 @@
         "dci_surfpi2_ann": null,
         "dci_surfpi2_calc": null,
         "dci_hebergeur": "Firstblock",
-        "dci_siegesocial_loc": ", ",
+        "dci_siegesocial_loc": "Québec, CA",
         "dci_hebwebsite": "https://www.firstblock.com/centre-de-donnees#sites",
-        "dci_shareholder_majoritaire": "",
-        "dci_shareholder_majo_nationalite": "",
+        "dci_shareholder_majoritaire": "Vincent Paquet and Gabriel Angeli (sole shareholders; joint control)",
+        "dci_shareholder_majo_nationalite": "Canada",
         "date_collecte": "2026-08-25"
       },
       "geometry": {
@@ -2628,10 +2659,10 @@
         "dci_surfpi2_ann": null,
         "dci_surfpi2_calc": null,
         "dci_hebergeur": "Firstblock",
-        "dci_siegesocial_loc": ", ",
+        "dci_siegesocial_loc": "Québec, CA",
         "dci_hebwebsite": "https://www.firstblock.com/centre-de-donnees#sites",
-        "dci_shareholder_majoritaire": "",
-        "dci_shareholder_majo_nationalite": "",
+        "dci_shareholder_majoritaire": "Vincent Paquet and Gabriel Angeli (sole shareholders; joint control)",
+        "dci_shareholder_majo_nationalite": "Canada",
         "date_collecte": "2026-08-25"
       },
       "geometry": {
@@ -2659,10 +2690,10 @@
         "dci_surfpi2_ann": null,
         "dci_surfpi2_calc": null,
         "dci_hebergeur": "Firstblock",
-        "dci_siegesocial_loc": ", ",
+        "dci_siegesocial_loc": "Québec, CA",
         "dci_hebwebsite": "https://www.firstblock.com/centre-de-donnees#sites",
-        "dci_shareholder_majoritaire": "",
-        "dci_shareholder_majo_nationalite": "",
+        "dci_shareholder_majoritaire": "Vincent Paquet and Gabriel Angeli (sole shareholders; joint control)",
+        "dci_shareholder_majo_nationalite": "Canada",
         "date_collecte": "2026-08-25"
       },
       "geometry": {
@@ -2670,37 +2701,6 @@
         "coordinates": [
           -73.56032754474211,
           45.510491343028576
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "dci_id": "CLCQMTL02",
-        "dci_nomsite": "Calcul Quebec - Quantique",
-        "dci_type": "Quantique",
-        "dci_puidensity": "Quantique",
-        "dci_statut": "en opération",
-        "dci_iaready": "",
-        "dci_puiss_annoncee": 0.025,
-        "dci_nomville": "Montreal",
-        "dci_adresse": "1101 Rue Notre Dame Ouest Montreal H3C 1K3",
-        "dci_an_mise_service": "2024",
-        "dci_an_mise_serv": "2024",
-        "dci_surfpi2_ann": null,
-        "dci_surfpi2_calc": null,
-        "dci_hebergeur": "Calcul Québec",
-        "dci_siegesocial_loc": "Montréal, CA",
-        "dci_hebwebsite": "https://www.calculquebec.ca/",
-        "dci_shareholder_majoritaire": "Government of Québec (primary funder)",
-        "dci_shareholder_majo_nationalite": "Canadian (Québec)",
-        "date_collecte": "2026-08-25"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -73.56261059367856,
-          45.49438066950509
         ]
       }
     }
