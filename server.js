@@ -12,6 +12,7 @@ app.use(express.static(join(__dirname, 'public')));
 // Exposer les fichiers de données à la racine du domaine depuis le dossier data
 app.use('/datacenters.geojson', express.static(join(__dirname, 'data', 'datacenters.geojson')));
 app.use('/datacenter_types.json', express.static(join(__dirname, 'data', 'datacenter_types.json')));
+app.use('/datacenter_power_density.json', express.static(join(__dirname, 'data', 'datacenter_power_density.json')));
 app.use('/DCbati_poly.geojson', express.static(join(__dirname, 'data', 'DCbati_poly.geojson')));
 app.use('/Hydro-Quebec.geojson', express.static(join(__dirname, 'data', 'Hydro-Quebec.geojson')));
 app.use('/connections.geojson', express.static(join(__dirname, 'data', 'connections.geojson')));

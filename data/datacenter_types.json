@@ -1,30 +1,23 @@
 {
     "Retail": {
-        "description": "Retail",
-        "power_density_w_pi2": 186
+        "description": "Infrastructures d'hébergement mutualisées d'une capacité électrique inférieure à 10 MW et d'une superficie de 5 000 à 21 000 pi², caractérisées par une allocation fragmentée des baies serveurs (1 à 10 racks par client). En raison de la forte hétérogénéité des charges de calcul et d'une densité de puissance moyenne relativement faible (environ 3 à 5 kW par baie), leur indicateur d'efficacité énergétique (PUE) se situe généralement dans une fourchette sous-optimale de 1,6 à 2,0."
     },
     "Wholesale": {
-        "description": "Wholesale",
-        "power_density_w_pi2": 186
+        "description": "Installations de grande capacité, opérant au-delà de 10 MW sur des surfaces allant de 21 000 à 100 000 pi², dédiées à la location d'espaces de type « salle blanche » de grande envergure. L'homogénéisation partielle des équipements informatiques et les économies d'échelle réalisées sur les systèmes de refroidissement mécaniques permettent d'abaisser le PUE moyen entre 1,3 et 1,5."
     },
     "Hyperscale": {
-        "description": "Hyperscale",
-        "power_density_w_pi2": 557
+        "description": "Complexes de calcul massif dépassant généralement les 40 MW de puissance et les 100 000 pi² de superficie, conçus sur mesure avec des densités thermiques extrêmes allant de 15 kW à plus de 40 kW par baie. Une ingénierie thermique hautement optimisée, exploitant des techniques de refroidissement liquide (direct-to-chip) ou de refroidissement par air extérieur (free cooling), permet d'atteindre de bons rendements thermodynamiques, avec un PUE oscillant entre 1,10 et 1,20."
     },
     "HPC": {
-        "description": "HPC",
-        "power_density_w_pi2": 557
+        "description": "Infrastructures spécialisées conçues pour l'exécution de calculs intensifs, caractérisées par une très haute densité de puissance (généralement > 15 kW par baie) et des architectures de refroidissement avancées, incluant souvent le refroidissement liquide direct. Leur PUE peut varier considérablement selon les technologies de refroidissement utilisées et les optimisations mises en œuvre, se situant typiquement dans une fourchette allant de 1,10 à 1,50."
     },
     "Crypto": {
-        "description": "Minage de cryptomonaies",
-        "power_density_w_pi2": 743
+        "description": "Infrastructures de calcul distribué à haute intensité énergétique, affichant de fortes densités de puissance, mais typiquement dépourvues des redondances électromécaniques (onduleurs, génératrices) propres aux architectures résilientes de niveaux Tier III ou IV. "
     },
     "Quantique": {
-        "description": "Contient un ordinateur quantique",
-        "power_density_w_pi2": 93
+        "description": "Installations hébergeant des processeurs quantiques à qubits, nécessitant des infrastructures de refroidissement capables de maintenir des états thermiques de l'ordre de 10 à 25 millikelvins (-273,14 °C). "
     },
-    "Unkown": {
-        "description": "",
-        "power_density_w_pi2": 0
+    "Unknown": {
+        "description": ""
     }
 }

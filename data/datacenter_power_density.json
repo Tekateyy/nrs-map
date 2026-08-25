@@ -1,0 +1,14 @@
+{
+    "Haute densité": {
+        "power_density_w_pi2": 186
+    },
+    "Faible densité": {
+        "power_density_w_pi2": 557
+    },
+    "Crypto": {
+        "power_density_w_pi2": 743
+    },
+    "Quantique": {
+        "power_density_w_pi2": 93
+    }
+}

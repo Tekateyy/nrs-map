@@ -137,7 +137,7 @@ function parseSurfaceSqFt(surfValue) {
   return isNaN(surf) ? null : surf;
 }
 
-// ---- Puissance estimée depuis la surface au sol (surface / 2 * densité énergétique du type de DC / 1 000 000) ----
+// ---- Puissance estimée depuis la surface au sol (surface / 2 * densité énergétique selon dci_puidensity / 1 000 000) ----
 // Ne calcule pas la puissance estimée pour les datacenters en projet ou en construction.
 function estimerPuissanceSurface(p, densityMap, dcSurfaceMap = {}) {
   const status = (p.dci_statut || p.Status || '').toLowerCase();
@@ -154,9 +154,10 @@ function estimerPuissanceSurface(p, densityMap, dcSurfaceMap = {}) {
     ? surfFromMap
     : parseSurfaceSqFt(p.dcbat_areapi2 !== undefined ? p.dcbat_areapi2 : p.SurfBatimentPI2);
 
-  const rawType = p.dci_type || p.Type || '';
-  const type = rawType.toLowerCase().trim();
-  const entry = Object.entries(densityMap).find(([k]) => k.toLowerCase().trim() === type);
+  // Recherche du facteur de densité de puissance par dci_puidensity (ou fallback sur le type si absent)
+  const rawDensity = p.dci_puidensity || p.dci_type || p.Type || '';
+  const densityKey = rawDensity.toLowerCase().trim();
+  const entry = Object.entries(densityMap || {}).find(([k]) => k.toLowerCase().trim() === densityKey);
 
   if (surf !== null && surf !== undefined && entry && entry[1].power_density_w_pi2 > 0) {
     return (surf * 0.5 * entry[1].power_density_w_pi2) / 1_000_000;
@@ -633,7 +634,7 @@ const fetchJSON = url => fetch(url).then(r => {
 
 Promise.all([
   fetchJSON('/datacenters.geojson'),
-  fetchJSON('/datacenter_types.json'),
+  fetchJSON('/datacenter_power_density.json'),
   fetchJSON('/DCbati_poly.geojson'),
   fetchJSON('/Hydro-Quebec.geojson'),
   fetchJSON('/connections.geojson')
