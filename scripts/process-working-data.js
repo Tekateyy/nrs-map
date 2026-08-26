@@ -93,7 +93,6 @@ function processAndCopyGeojson(srcName, destName, date, sourceName) {
       if (!feature.properties) {
         feature.properties = {};
       }
-      feature.properties.date_collecte = date;
 
       if (is3857 && feature.geometry && feature.geometry.coordinates) {
         feature.geometry.coordinates = convert3857To4326(feature.geometry.coordinates);
@@ -106,7 +105,7 @@ function processAndCopyGeojson(srcName, destName, date, sourceName) {
     delete geojson.crs;
   }
 
-  // Ajouter les métadonnées
+  // Ajouter les métadonnées globales
   geojson.metadata = {
     date: date,
     source: sourceName
@@ -157,7 +156,7 @@ function main() {
     const match = recentDatacenters.match(datacentersPattern);
     const date = match[1].replace(/_/g, '-');
 
-    // Charger et injecter la surface calculée dans datacenters.geojson
+    // Charger et traiter datacenters.geojson
     const srcPath = path.join(WORKING_DIR, recentDatacenters);
     const destPath = path.join(DEST_DIR, 'datacenters.geojson');
     const rawData = fs.readFileSync(srcPath, 'utf8');
@@ -167,12 +166,11 @@ function main() {
     if (geojson.features && Array.isArray(geojson.features)) {
       geojson.features.forEach(feature => {
         if (!feature.properties) feature.properties = {};
-        feature.properties.date_collecte = date;
 
         const dcId = feature.properties.dci_id || feature.properties.UNIQID;
-        if (dcId && dcSurfaceMap[dcId]) {
-          feature.properties.SurfBatimentPI2 = String(dcSurfaceMap[dcId]);
-          feature.properties.dcbat_areapi2 = dcSurfaceMap[dcId];
+        // Si dci_surfpi2_calc n'est pas déjà présent et qu'on a la surface calculée depuis les polygones
+        if (dcId && dcSurfaceMap[dcId] && feature.properties.dci_surfpi2_calc === undefined) {
+          feature.properties.dci_surfpi2_calc = dcSurfaceMap[dcId];
         }
 
         if (is3857 && feature.geometry && feature.geometry.coordinates) {

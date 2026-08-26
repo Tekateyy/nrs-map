@@ -1,3 +1,4 @@
+import 'dotenv/config';
 import express from 'express';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
@@ -5,6 +6,13 @@ import { dirname, join } from 'path';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const app = express();
 const PORT = process.env.PORT || 3000;
+
+// Configuration publique (clés API publiques requises côté client)
+app.get('/api/config', (req, res) => {
+  res.json({
+    basemapsApiKey: process.env.BASEMAPS_API_KEY || ''
+  });
+});
 
 // Servir les fichiers statiques du dossier public/
 app.use(express.static(join(__dirname, 'public')));
@@ -20,3 +28,4 @@ app.use('/connections.geojson', express.static(join(__dirname, 'data', 'connecti
 app.listen(PORT, () => {
   console.log(`✅  nrs-map — http://localhost:${PORT}`);
 });
+

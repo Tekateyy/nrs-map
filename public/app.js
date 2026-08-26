@@ -22,19 +22,39 @@ map.addControl(new InfoControl());
 
 L.control.zoom({ position: 'bottomright' }).addTo(map);
 
-const tiles = {
-  clair: L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-    maxZoom: 19,
-    attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors © <a href="https://carto.com/attributions">CARTO</a>',
-  }),
-  sombre: L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
-    maxZoom: 19,
-    attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors © <a href="https://carto.com/attributions">CARTO</a>',
-  }),
-};
+// Initialisation des couches de tuiles (mise à jour si une clé API est fournie)
+function creerTileLayers(apiKey = '') {
+  const queryParam = apiKey ? `?key=${encodeURIComponent(apiKey)}` : '';
+  return {
+    clair: L.tileLayer(`https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png${queryParam}`, {
+      maxZoom: 19,
+      attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors © <a href="https://carto.com/attributions">CARTO</a>',
+    }),
+    sombre: L.tileLayer(`https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png${queryParam}`, {
+      maxZoom: 19,
+      attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors © <a href="https://carto.com/attributions">CARTO</a>',
+    }),
+  };
+}
 
+let tiles = creerTileLayers();
 let modeActuel = 'sombre';
 tiles.sombre.addTo(map);
+
+// Récupérer la clé API depuis le serveur et reconfigurer les fonds de carte
+fetch('/api/config')
+  .then(r => r.ok ? r.json() : {})
+  .then(config => {
+    if (config?.basemapsApiKey) {
+      const etaitActif = modeActuel;
+      map.removeLayer(tiles[etaitActif]);
+      tiles = creerTileLayers(config.basemapsApiKey);
+      tiles[etaitActif].addTo(map);
+    }
+  })
+  .catch(err => {
+    console.warn('Impossible de charger la clé API basemaps:', err);
+  });
 
 function basculerFond() {
   const ancien = modeActuel;
@@ -152,7 +172,7 @@ function estimerPuissanceSurface(p, densityMap, dcSurfaceMap = {}) {
   const surfFromMap = dcSurfaceMap[dcId];
   const surf = (surfFromMap !== undefined && surfFromMap !== null)
     ? surfFromMap
-    : parseSurfaceSqFt(p.dcbat_areapi2 !== undefined ? p.dcbat_areapi2 : p.SurfBatimentPI2);
+    : parseSurfaceSqFt(p.dci_surfpi2_calc !== undefined ? p.dci_surfpi2_calc : (p.dcbat_areapi2 !== undefined ? p.dcbat_areapi2 : p.SurfBatimentPI2));
 
   // Recherche du facteur de densité de puissance par dci_puidensity (ou fallback sur le type si absent)
   const rawDensity = p.dci_puidensity || p.dci_type || p.Type || '';
@@ -331,7 +351,7 @@ function buildPopup(p, densityMap, dcSurfaceMap = {}) {
   const surfFromMap = dcSurfaceMap[uniqid];
   const surfaceSqFt = (surfFromMap !== undefined && surfFromMap !== null)
     ? surfFromMap
-    : parseSurfaceSqFt(p.dcbat_areapi2 !== undefined ? p.dcbat_areapi2 : p.SurfBatimentPI2);
+    : parseSurfaceSqFt(p.dci_surfpi2_calc !== undefined ? p.dci_surfpi2_calc : (p.dcbat_areapi2 !== undefined ? p.dcbat_areapi2 : p.SurfBatimentPI2));
   const surfaceStr = surfaceSqFt !== null && surfaceSqFt !== undefined ? numberFormatter.format(surfaceSqFt) + ' pi²' : '—';
 
   return `
@@ -1012,7 +1032,7 @@ Promise.all([
       const surfFromMap = dcSurfaceMap[uniqid];
       const surfaceSqFt = (surfFromMap !== undefined && surfFromMap !== null)
         ? surfFromMap
-        : parseSurfaceSqFt(p.dcbat_areapi2 !== undefined ? p.dcbat_areapi2 : p.SurfBatimentPI2);
+        : parseSurfaceSqFt(p.dci_surfpi2_calc !== undefined ? p.dci_surfpi2_calc : (p.dcbat_areapi2 !== undefined ? p.dcbat_areapi2 : p.SurfBatimentPI2));
 
       allMarkers.push({
         marker,

@@ -22,10 +22,7 @@
         "dci_siegesocial_loc": "Denver, USA",
         "dci_hebwebsite": "https://www.cologix.com",
         "dci_shareholder_majoritaire": "Stonepeak (majority owner)",
-        "dci_shareholder_majo_nationalite": "USA",
-        "date_collecte": "2026-08-25",
-        "SurfBatimentPI2": "141763",
-        "dcbat_areapi2": 141763
+        "dci_shareholder_majo_nationalite": "USA"
       },
       "geometry": {
         "type": "Point",
@@ -55,10 +52,7 @@
         "dci_siegesocial_loc": "Redwood City, USA",
         "dci_hebwebsite": "https://www.equinix.com/",
         "dci_shareholder_majoritaire": "BlackRock Advisers LLC (largest shareholder among institutions) or Vanguard Capital Management LLC",
-        "dci_shareholder_majo_nationalite": "U.K. or USA",
-        "date_collecte": "2026-08-25",
-        "SurfBatimentPI2": "95494",
-        "dcbat_areapi2": 95494
+        "dci_shareholder_majo_nationalite": "U.K. or USA"
       },
       "geometry": {
         "type": "Point",
@@ -88,8 +82,7 @@
         "dci_siegesocial_loc": "Vancouver, CA",
         "dci_hebwebsite": "https://hivedatacenter.com/",
         "dci_shareholder_majoritaire": "Invesco Capital Management LLC and Invesco Capital Management Japan",
-        "dci_shareholder_majo_nationalite": "USA and Japan",
-        "date_collecte": "2026-08-25"
+        "dci_shareholder_majo_nationalite": "USA and Japan"
       },
       "geometry": {
         "type": "Point",
@@ -119,10 +112,7 @@
         "dci_siegesocial_loc": "Denver, USA",
         "dci_hebwebsite": "https://www.cologix.com",
         "dci_shareholder_majoritaire": "Stonepeak (majority owner)",
-        "dci_shareholder_majo_nationalite": "USA",
-        "date_collecte": "2026-08-25",
-        "SurfBatimentPI2": "344757",
-        "dcbat_areapi2": 344757
+        "dci_shareholder_majo_nationalite": "USA"
       },
       "geometry": {
         "type": "Point",
@@ -152,10 +142,7 @@
         "dci_siegesocial_loc": "Lévis, CA",
         "dci_hebwebsite": "https://fr.qscale.com/q01-campus",
         "dci_shareholder_majoritaire": "Goldman Sachs Alternatives (majority owner since 2026)",
-        "dci_shareholder_majo_nationalite": "USA",
-        "date_collecte": "2026-08-25",
-        "SurfBatimentPI2": "260566",
-        "dcbat_areapi2": 260566
+        "dci_shareholder_majo_nationalite": "USA"
       },
       "geometry": {
         "type": "Point",
@@ -185,8 +172,7 @@
         "dci_siegesocial_loc": "Montréal, CA",
         "dci_hebwebsite": "https://www.calculquebec.ca/",
         "dci_shareholder_majoritaire": "Government of Québec (primary funder)",
-        "dci_shareholder_majo_nationalite": "Canadian (Québec)",
-        "date_collecte": "2026-08-25"
+        "dci_shareholder_majo_nationalite": "Canadian (Québec)"
       },
       "geometry": {
         "type": "Point",
@@ -216,8 +202,7 @@
         "dci_siegesocial_loc": "Denver, USA",
         "dci_hebwebsite": "https://www.cologix.com",
         "dci_shareholder_majoritaire": "Stonepeak (majority owner)",
-        "dci_shareholder_majo_nationalite": "USA",
-        "date_collecte": "2026-08-25"
+        "dci_shareholder_majo_nationalite": "USA"
       },
       "geometry": {
         "type": "Point",
@@ -247,8 +232,7 @@
         "dci_siegesocial_loc": "Denver, USA",
         "dci_hebwebsite": "https://www.cologix.com",
         "dci_shareholder_majoritaire": "Stonepeak (majority owner)",
-        "dci_shareholder_majo_nationalite": "USA",
-        "date_collecte": "2026-08-25"
+        "dci_shareholder_majo_nationalite": "USA"
       },
       "geometry": {
         "type": "Point",
@@ -278,10 +262,7 @@
         "dci_siegesocial_loc": "Denver, USA",
         "dci_hebwebsite": "https://www.cologix.com",
         "dci_shareholder_majoritaire": "Stonepeak (majority owner)",
-        "dci_shareholder_majo_nationalite": "USA",
-        "date_collecte": "2026-08-25",
-        "SurfBatimentPI2": "31139",
-        "dcbat_areapi2": 31139
+        "dci_shareholder_majo_nationalite": "USA"
       },
       "geometry": {
         "type": "Point",
@@ -311,10 +292,7 @@
         "dci_siegesocial_loc": "Denver, USA",
         "dci_hebwebsite": "https://www.cologix.com",
         "dci_shareholder_majoritaire": "Stonepeak (majority owner)",
-        "dci_shareholder_majo_nationalite": "USA",
-        "date_collecte": "2026-08-25",
-        "SurfBatimentPI2": "16276",
-        "dcbat_areapi2": 16276
+        "dci_shareholder_majo_nationalite": "USA"
       },
       "geometry": {
         "type": "Point",
@@ -344,10 +322,7 @@
         "dci_siegesocial_loc": "Denver, USA",
         "dci_hebwebsite": "https://www.cologix.com",
         "dci_shareholder_majoritaire": "Stonepeak (majority owner)",
-        "dci_shareholder_majo_nationalite": "USA",
-        "date_collecte": "2026-08-25",
-        "SurfBatimentPI2": "13490",
-        "dcbat_areapi2": 13490
+        "dci_shareholder_majo_nationalite": "USA"
       },
       "geometry": {
         "type": "Point",
@@ -377,10 +352,7 @@
         "dci_siegesocial_loc": "Denver, USA",
         "dci_hebwebsite": "https://www.cologix.com",
         "dci_shareholder_majoritaire": "Stonepeak (majority owner)",
-        "dci_shareholder_majo_nationalite": "USA",
-        "date_collecte": "2026-08-25",
-        "SurfBatimentPI2": "918",
-        "dcbat_areapi2": 918
+        "dci_shareholder_majo_nationalite": "USA"
       },
       "geometry": {
         "type": "Point",
@@ -410,8 +382,7 @@
         "dci_siegesocial_loc": "Montréal, CA",
         "dci_hebwebsite": "https://www.estruxture.com/fr/",
         "dci_shareholder_majoritaire": "Fengate Asset Management",
-        "dci_shareholder_majo_nationalite": "Canada",
-        "date_collecte": "2026-08-25"
+        "dci_shareholder_majo_nationalite": "Canada"
       },
       "geometry": {
         "type": "Point",
@@ -441,10 +412,7 @@
         "dci_siegesocial_loc": "Roubaix, FR",
         "dci_hebwebsite": "https://www.ovhcloud.com/fr-ca/",
         "dci_shareholder_majoritaire": "Klaba family",
-        "dci_shareholder_majo_nationalite": "France / Poland origin family (European)",
-        "date_collecte": "2026-08-25",
-        "SurfBatimentPI2": "895563",
-        "dcbat_areapi2": 895563
+        "dci_shareholder_majo_nationalite": "France / Poland origin family (European)"
       },
       "geometry": {
         "type": "Point",
@@ -474,10 +442,7 @@
         "dci_siegesocial_loc": "Toronto, CA",
         "dci_hebwebsite": "https://www.beanfield.com/",
         "dci_shareholder_majoritaire": "DigitalBridge (major investor/acquirer) and OMERS infrastructure",
-        "dci_shareholder_majo_nationalite": "U.K. and Netherlands",
-        "date_collecte": "2026-08-25",
-        "SurfBatimentPI2": "28506",
-        "dcbat_areapi2": 28506
+        "dci_shareholder_majo_nationalite": "U.K. and Netherlands"
       },
       "geometry": {
         "type": "Point",
@@ -507,10 +472,7 @@
         "dci_siegesocial_loc": "Denver, USA",
         "dci_hebwebsite": "https://www.cologix.com",
         "dci_shareholder_majoritaire": "Stonepeak (majority owner)",
-        "dci_shareholder_majo_nationalite": "USA",
-        "date_collecte": "2026-08-25",
-        "SurfBatimentPI2": "31340",
-        "dcbat_areapi2": 31340
+        "dci_shareholder_majo_nationalite": "USA"
       },
       "geometry": {
         "type": "Point",
@@ -540,10 +502,7 @@
         "dci_siegesocial_loc": "Denver, USA",
         "dci_hebwebsite": "https://www.cologix.com",
         "dci_shareholder_majoritaire": "Stonepeak (majority owner)",
-        "dci_shareholder_majo_nationalite": "USA",
-        "date_collecte": "2026-08-25",
-        "SurfBatimentPI2": "186429",
-        "dcbat_areapi2": 186429
+        "dci_shareholder_majo_nationalite": "USA"
       },
       "geometry": {
         "type": "Point",
@@ -573,10 +532,7 @@
         "dci_siegesocial_loc": "Denver, USA",
         "dci_hebwebsite": "https://www.cologix.com",
         "dci_shareholder_majoritaire": "Stonepeak (majority owner)",
-        "dci_shareholder_majo_nationalite": "USA",
-        "date_collecte": "2026-08-25",
-        "SurfBatimentPI2": "18127",
-        "dcbat_areapi2": 18127
+        "dci_shareholder_majo_nationalite": "USA"
       },
       "geometry": {
         "type": "Point",
@@ -606,10 +562,7 @@
         "dci_siegesocial_loc": "Dallas, USA",
         "dci_hebwebsite": "https://www.compassdatacenters.com/",
         "dci_shareholder_majoritaire": "Ontario Teachers Pension Plan and Brookfield Infrastructure Partners",
-        "dci_shareholder_majo_nationalite": " Canada and USA (mixed PE ownership) / Canada (Brookfield listed Canada - OTPP Canada)",
-        "date_collecte": "2026-08-25",
-        "SurfBatimentPI2": "66893",
-        "dcbat_areapi2": 66893
+        "dci_shareholder_majo_nationalite": " Canada and USA (mixed PE ownership) / Canada (Brookfield listed Canada - OTPP Canada)"
       },
       "geometry": {
         "type": "Point",
@@ -639,10 +592,7 @@
         "dci_siegesocial_loc": "Dallas, USA",
         "dci_hebwebsite": "https://www.compassdatacenters.com/",
         "dci_shareholder_majoritaire": "Ontario Teachers Pension Plan and Brookfield Infrastructure Partners",
-        "dci_shareholder_majo_nationalite": " Canada and USA (mixed PE ownership) / Canada (Brookfield listed Canada - OTPP Canada)",
-        "date_collecte": "2026-08-25",
-        "SurfBatimentPI2": "301821",
-        "dcbat_areapi2": 301821
+        "dci_shareholder_majo_nationalite": " Canada and USA (mixed PE ownership) / Canada (Brookfield listed Canada - OTPP Canada)"
       },
       "geometry": {
         "type": "Point",
@@ -672,10 +622,7 @@
         "dci_siegesocial_loc": "Redwood City, USA",
         "dci_hebwebsite": "https://www.equinix.com/",
         "dci_shareholder_majoritaire": "BlackRock Advisers LLC (largest shareholder among institutions) or Vanguard Capital Management LLC",
-        "dci_shareholder_majo_nationalite": "U.K. or USA",
-        "date_collecte": "2026-08-25",
-        "SurfBatimentPI2": "727956",
-        "dcbat_areapi2": 727956
+        "dci_shareholder_majo_nationalite": "U.K. or USA"
       },
       "geometry": {
         "type": "Point",
@@ -705,10 +652,7 @@
         "dci_siegesocial_loc": "Montréal, CA",
         "dci_hebwebsite": "https://www.estruxture.com/fr/",
         "dci_shareholder_majoritaire": "Fengate Asset Management",
-        "dci_shareholder_majo_nationalite": "Canada",
-        "date_collecte": "2026-08-25",
-        "SurfBatimentPI2": "203916",
-        "dcbat_areapi2": 203916
+        "dci_shareholder_majo_nationalite": "Canada"
       },
       "geometry": {
         "type": "Point",
@@ -738,10 +682,7 @@
         "dci_siegesocial_loc": "Montréal, CA",
         "dci_hebwebsite": "https://www.estruxture.com/fr/",
         "dci_shareholder_majoritaire": "Fengate Asset Management",
-        "dci_shareholder_majo_nationalite": "Canada",
-        "date_collecte": "2026-08-25",
-        "SurfBatimentPI2": "209716",
-        "dcbat_areapi2": 209716
+        "dci_shareholder_majo_nationalite": "Canada"
       },
       "geometry": {
         "type": "Point",
@@ -771,10 +712,7 @@
         "dci_siegesocial_loc": "Montréal, CA",
         "dci_hebwebsite": "https://www.estruxture.com/fr/",
         "dci_shareholder_majoritaire": "Fengate Asset Management",
-        "dci_shareholder_majo_nationalite": "Canada",
-        "date_collecte": "2026-08-25",
-        "SurfBatimentPI2": "453",
-        "dcbat_areapi2": 453
+        "dci_shareholder_majo_nationalite": "Canada"
       },
       "geometry": {
         "type": "Point",
@@ -804,10 +742,7 @@
         "dci_siegesocial_loc": "Vancouver, CA",
         "dci_hebwebsite": "https://hivedatacenter.com/",
         "dci_shareholder_majoritaire": "Invesco Capital Management LLC and Invesco Capital Management Japan",
-        "dci_shareholder_majo_nationalite": "USA and Japan",
-        "date_collecte": "2026-08-25",
-        "SurfBatimentPI2": "191474",
-        "dcbat_areapi2": 191474
+        "dci_shareholder_majo_nationalite": "USA and Japan"
       },
       "geometry": {
         "type": "Point",
@@ -837,10 +772,7 @@
         "dci_siegesocial_loc": "Amsterdam, NL",
         "dci_hebwebsite": "https://www.leaseweb.com/",
         "dci_shareholder_majoritaire": "Ocom Group (parent company)",
-        "dci_shareholder_majo_nationalite": "Netherlands",
-        "date_collecte": "2026-08-25",
-        "SurfBatimentPI2": "31735",
-        "dcbat_areapi2": 31735
+        "dci_shareholder_majo_nationalite": "Netherlands"
       },
       "geometry": {
         "type": "Point",
@@ -870,10 +802,7 @@
         "dci_siegesocial_loc": "Amsterdam, NL",
         "dci_hebwebsite": "https://www.leaseweb.com/",
         "dci_shareholder_majoritaire": "Ocom Group (parent company)",
-        "dci_shareholder_majo_nationalite": "Netherlands",
-        "date_collecte": "2026-08-25",
-        "SurfBatimentPI2": "54968",
-        "dcbat_areapi2": 54968
+        "dci_shareholder_majo_nationalite": "Netherlands"
       },
       "geometry": {
         "type": "Point",
@@ -903,10 +832,7 @@
         "dci_siegesocial_loc": "Amsterdam, NL",
         "dci_hebwebsite": "https://www.leaseweb.com/",
         "dci_shareholder_majoritaire": "Ocom Group (parent company)",
-        "dci_shareholder_majo_nationalite": "Netherlands",
-        "date_collecte": "2026-08-25",
-        "SurfBatimentPI2": "39599",
-        "dcbat_areapi2": 39599
+        "dci_shareholder_majo_nationalite": "Netherlands"
       },
       "geometry": {
         "type": "Point",
@@ -936,10 +862,7 @@
         "dci_siegesocial_loc": "Capelle aan den Ijssel, NL",
         "dci_hebwebsite": "https://www.smartdc.net/",
         "dci_shareholder_majoritaire": "i3D.net (Private ownership)",
-        "dci_shareholder_majo_nationalite": "Netherlands",
-        "date_collecte": "2026-08-25",
-        "SurfBatimentPI2": "44103",
-        "dcbat_areapi2": 44103
+        "dci_shareholder_majo_nationalite": "Netherlands"
       },
       "geometry": {
         "type": "Point",
@@ -969,10 +892,7 @@
         "dci_siegesocial_loc": "Toronto, CA",
         "dci_hebwebsite": "https://udcsdatacentres.com/",
         "dci_shareholder_majoritaire": "Urbacon Group (private construction/services firm) Fonds FTQ",
-        "dci_shareholder_majo_nationalite": "Canada",
-        "date_collecte": "2026-08-25",
-        "SurfBatimentPI2": "6222",
-        "dcbat_areapi2": 6222
+        "dci_shareholder_majo_nationalite": "Canada"
       },
       "geometry": {
         "type": "Point",
@@ -1002,10 +922,7 @@
         "dci_siegesocial_loc": "Denver, USA",
         "dci_hebwebsite": "https://vantage-dc.com",
         "dci_shareholder_majoritaire": "Consortium incl DigitalBridge group Silver Lake -AustralianSuper- PSP Investments- Howard Hugues Holdings",
-        "dci_shareholder_majo_nationalite": "USA / Canada / UAE / Singapore (mixed sovereign & PE)??",
-        "date_collecte": "2026-08-25",
-        "SurfBatimentPI2": "131916",
-        "dcbat_areapi2": 131916
+        "dci_shareholder_majo_nationalite": "USA / Canada / UAE / Singapore (mixed sovereign & PE)??"
       },
       "geometry": {
         "type": "Point",
@@ -1035,10 +952,7 @@
         "dci_siegesocial_loc": "Denver, USA",
         "dci_hebwebsite": "https://vantage-dc.com",
         "dci_shareholder_majoritaire": "Consortium incl DigitalBridge group Silver Lake -AustralianSuper- PSP Investments- Howard Hugues Holdings",
-        "dci_shareholder_majo_nationalite": "USA / Canada / UAE / Singapore (mixed sovereign & PE)??",
-        "date_collecte": "2026-08-25",
-        "SurfBatimentPI2": "160933",
-        "dcbat_areapi2": 160933
+        "dci_shareholder_majo_nationalite": "USA / Canada / UAE / Singapore (mixed sovereign & PE)??"
       },
       "geometry": {
         "type": "Point",
@@ -1068,10 +982,7 @@
         "dci_siegesocial_loc": "Denver, USA",
         "dci_hebwebsite": "https://vantage-dc.com",
         "dci_shareholder_majoritaire": "Consortium incl DigitalBridge group Silver Lake -AustralianSuper- PSP Investments- Howard Hugues Holdings",
-        "dci_shareholder_majo_nationalite": "USA / Canada / UAE / Singapore (mixed sovereign & PE)??",
-        "date_collecte": "2026-08-25",
-        "SurfBatimentPI2": "321589",
-        "dcbat_areapi2": 321589
+        "dci_shareholder_majo_nationalite": "USA / Canada / UAE / Singapore (mixed sovereign & PE)??"
       },
       "geometry": {
         "type": "Point",
@@ -1101,10 +1012,7 @@
         "dci_siegesocial_loc": "Denver, USA",
         "dci_hebwebsite": "https://vantage-dc.com",
         "dci_shareholder_majoritaire": "Consortium incl DigitalBridge group Silver Lake -AustralianSuper- PSP Investments- Howard Hugues Holdings",
-        "dci_shareholder_majo_nationalite": "USA / Canada / UAE / Singapore (mixed sovereign & PE)??",
-        "date_collecte": "2026-08-25",
-        "SurfBatimentPI2": "447413",
-        "dcbat_areapi2": 447413
+        "dci_shareholder_majo_nationalite": "USA / Canada / UAE / Singapore (mixed sovereign & PE)??"
       },
       "geometry": {
         "type": "Point",
@@ -1134,8 +1042,7 @@
         "dci_siegesocial_loc": "Sherbrooke, CA",
         "dci_hebwebsite": "https://www.distriq.com/",
         "dci_shareholder_majoritaire": "Government of Québec + public‑private consortium",
-        "dci_shareholder_majo_nationalite": "Canadian",
-        "date_collecte": "2026-08-25"
+        "dci_shareholder_majo_nationalite": "Canadian"
       },
       "geometry": {
         "type": "Point",
@@ -1165,8 +1072,7 @@
         "dci_siegesocial_loc": "Neuilly-sur-seine, FR",
         "dci_hebwebsite": "https://exaion.com/",
         "dci_shareholder_majoritaire": "MARA France",
-        "dci_shareholder_majo_nationalite": "France",
-        "date_collecte": "2026-08-25"
+        "dci_shareholder_majo_nationalite": "France"
       },
       "geometry": {
         "type": "Point",
@@ -1196,8 +1102,7 @@
         "dci_siegesocial_loc": "Vancouver, CA",
         "dci_hebwebsite": "https://group.skanska.com/projects/57626/TELUS-Super-Internet-Data-Center",
         "dci_shareholder_majoritaire": "No controlling shareholder: major canadian institutional investors (ex: Royal Bank Canada)",
-        "dci_shareholder_majo_nationalite": "Canada",
-        "date_collecte": "2026-08-25"
+        "dci_shareholder_majo_nationalite": "Canada"
       },
       "geometry": {
         "type": "Point",
@@ -1227,10 +1132,7 @@
         "dci_siegesocial_loc": "Montréal, CA",
         "dci_hebwebsite": "https://www.estruxture.com/fr/",
         "dci_shareholder_majoritaire": "Fengate Asset Management",
-        "dci_shareholder_majo_nationalite": "Canada",
-        "date_collecte": "2026-08-25",
-        "SurfBatimentPI2": "340330",
-        "dcbat_areapi2": 340330
+        "dci_shareholder_majo_nationalite": "Canada"
       },
       "geometry": {
         "type": "Point",
@@ -1260,8 +1162,7 @@
         "dci_siegesocial_loc": "Sherbrooke, CA",
         "dci_hebwebsite": "https://digihub.ca/",
         "dci_shareholder_majoritaire": "Public / regional innovation ecosystem (Sherbrooke)",
-        "dci_shareholder_majo_nationalite": "Canadian",
-        "date_collecte": "2026-08-25"
+        "dci_shareholder_majo_nationalite": "Canadian"
       },
       "geometry": {
         "type": "Point",
@@ -1291,8 +1192,7 @@
         "dci_siegesocial_loc": "Québec, CA",
         "dci_hebwebsite": "https://nordikdatacenters.com/",
         "dci_shareholder_majoritaire": "Innventure Inc. (Private ownership) (Peu dinfo)",
-        "dci_shareholder_majo_nationalite": "USA",
-        "date_collecte": "2026-08-25"
+        "dci_shareholder_majo_nationalite": "USA"
       },
       "geometry": {
         "type": "Point",
@@ -1322,8 +1222,7 @@
         "dci_siegesocial_loc": "Québec, CA",
         "dci_hebwebsite": "https://nordikdatacenters.com/",
         "dci_shareholder_majoritaire": "Innventure Inc. (Private ownership) (Peu dinfo)",
-        "dci_shareholder_majo_nationalite": "USA",
-        "date_collecte": "2026-08-25"
+        "dci_shareholder_majo_nationalite": "USA"
       },
       "geometry": {
         "type": "Point",
@@ -1353,8 +1252,7 @@
         "dci_siegesocial_loc": "Québec, CA",
         "dci_hebwebsite": "https://nordikdatacenters.com/",
         "dci_shareholder_majoritaire": "Innventure Inc. (Private ownership) (Peu dinfo)",
-        "dci_shareholder_majo_nationalite": "USA",
-        "date_collecte": "2026-08-25"
+        "dci_shareholder_majo_nationalite": "USA"
       },
       "geometry": {
         "type": "Point",
@@ -1384,8 +1282,7 @@
         "dci_siegesocial_loc": "Québec, CA",
         "dci_hebwebsite": "https://nordikdatacenters.com/",
         "dci_shareholder_majoritaire": "Innventure Inc. (Private ownership) (Peu dinfo)",
-        "dci_shareholder_majo_nationalite": "USA",
-        "date_collecte": "2026-08-25"
+        "dci_shareholder_majo_nationalite": "USA"
       },
       "geometry": {
         "type": "Point",
@@ -1415,8 +1312,7 @@
         "dci_siegesocial_loc": "Québec, CA",
         "dci_hebwebsite": "https://nordikdatacenters.com/",
         "dci_shareholder_majoritaire": "Innventure Inc. (Private ownership) (Peu dinfo)",
-        "dci_shareholder_majo_nationalite": "USA",
-        "date_collecte": "2026-08-25"
+        "dci_shareholder_majo_nationalite": "USA"
       },
       "geometry": {
         "type": "Point",
@@ -1446,8 +1342,7 @@
         "dci_siegesocial_loc": "Québec, CA",
         "dci_hebwebsite": "https://nordikdatacenters.com/",
         "dci_shareholder_majoritaire": "Innventure Inc. (Private ownership) (Peu dinfo)",
-        "dci_shareholder_majo_nationalite": "USA",
-        "date_collecte": "2026-08-25"
+        "dci_shareholder_majo_nationalite": "USA"
       },
       "geometry": {
         "type": "Point",
@@ -1477,8 +1372,7 @@
         "dci_siegesocial_loc": "Sherbrooke , CA",
         "dci_hebwebsite": "https://www.canada.ca/fr/recherche-developpement-defense/services/centres-de-recherches-de-recherche-et-developpement-pour-la-defense-canada.html",
         "dci_shareholder_majoritaire": "Québec public research ecosystem / institutional partnerships",
-        "dci_shareholder_majo_nationalite": "Canadian",
-        "date_collecte": "2026-08-25"
+        "dci_shareholder_majo_nationalite": "Canadian"
       },
       "geometry": {
         "type": "Point",
@@ -1508,8 +1402,7 @@
         "dci_siegesocial_loc": "Armonk, USA",
         "dci_hebwebsite": "https://www.ibm.com/ca-fr",
         "dci_shareholder_majoritaire": "Vanguard and BlackRock (largest institutional shareholders)",
-        "dci_shareholder_majo_nationalite": "USA and U.K.",
-        "date_collecte": "2026-08-25"
+        "dci_shareholder_majo_nationalite": "USA and U.K."
       },
       "geometry": {
         "type": "Point",
@@ -1539,10 +1432,7 @@
         "dci_siegesocial_loc": "Denver, USA",
         "dci_hebwebsite": "https://www.cologix.com",
         "dci_shareholder_majoritaire": "Stonepeak (majority owner)",
-        "dci_shareholder_majo_nationalite": "USA",
-        "date_collecte": "2026-08-25",
-        "SurfBatimentPI2": "1094",
-        "dcbat_areapi2": 1094
+        "dci_shareholder_majo_nationalite": "USA"
       },
       "geometry": {
         "type": "Point",
@@ -1572,10 +1462,7 @@
         "dci_siegesocial_loc": "Seattle, USA",
         "dci_hebwebsite": "https://aws.amazon.com/fr/trust-center/data-center/",
         "dci_shareholder_majoritaire": "Jeff Bezos (largest individual shareholder of Amazon)",
-        "dci_shareholder_majo_nationalite": "USA",
-        "date_collecte": "2026-08-25",
-        "SurfBatimentPI2": "631955",
-        "dcbat_areapi2": 631955
+        "dci_shareholder_majo_nationalite": "USA"
       },
       "geometry": {
         "type": "Point",
@@ -1605,10 +1492,7 @@
         "dci_siegesocial_loc": "Redwood City, USA",
         "dci_hebwebsite": "https://www.equinix.com/",
         "dci_shareholder_majoritaire": "BlackRock Advisers LLC (largest shareholder among institutions) or Vanguard Capital Management LLC",
-        "dci_shareholder_majo_nationalite": "U.K. or USA",
-        "date_collecte": "2026-08-25",
-        "SurfBatimentPI2": "374671",
-        "dcbat_areapi2": 374671
+        "dci_shareholder_majo_nationalite": "U.K. or USA"
       },
       "geometry": {
         "type": "Point",
@@ -1638,10 +1522,7 @@
         "dci_siegesocial_loc": "Denver, USA",
         "dci_hebwebsite": "https://vantage-dc.com",
         "dci_shareholder_majoritaire": "Consortium incl DigitalBridge group Silver Lake -AustralianSuper- PSP Investments- Howard Hugues Holdings",
-        "dci_shareholder_majo_nationalite": "USA / Canada / UAE / Singapore (mixed sovereign & PE)??",
-        "date_collecte": "2026-08-25",
-        "SurfBatimentPI2": "276066",
-        "dcbat_areapi2": 276066
+        "dci_shareholder_majo_nationalite": "USA / Canada / UAE / Singapore (mixed sovereign & PE)??"
       },
       "geometry": {
         "type": "Point",
@@ -1671,8 +1552,7 @@
         "dci_siegesocial_loc": "Montréal, CA",
         "dci_hebwebsite": "https://www.calculquebec.ca/",
         "dci_shareholder_majoritaire": "Government of Québec (primary funder)",
-        "dci_shareholder_majo_nationalite": "Canadian (Québec)",
-        "date_collecte": "2026-08-25"
+        "dci_shareholder_majo_nationalite": "Canadian (Québec)"
       },
       "geometry": {
         "type": "Point",
@@ -1702,10 +1582,7 @@
         "dci_siegesocial_loc": "Washington, USA",
         "dci_hebwebsite": "En cours",
         "dci_shareholder_majoritaire": "The Vanguard Group, Inc. (largest declared shareholder; no controlling shareholder)",
-        "dci_shareholder_majo_nationalite": "USA",
-        "date_collecte": "2026-08-25",
-        "SurfBatimentPI2": "2734458",
-        "dcbat_areapi2": 2734458
+        "dci_shareholder_majo_nationalite": "USA"
       },
       "geometry": {
         "type": "Point",
@@ -1735,8 +1612,7 @@
         "dci_siegesocial_loc": "Québec, CA",
         "dci_hebwebsite": "https://www.firstblock.com/centre-de-donnees#sites",
         "dci_shareholder_majoritaire": "Vincent Paquet and Gabriel Angeli (sole shareholders; joint control)",
-        "dci_shareholder_majo_nationalite": "Canada",
-        "date_collecte": "2026-08-25"
+        "dci_shareholder_majo_nationalite": "Canada"
       },
       "geometry": {
         "type": "Point",
@@ -1766,8 +1642,7 @@
         "dci_siegesocial_loc": "Québec, CA",
         "dci_hebwebsite": "https://www.firstblock.com/centre-de-donnees#sites",
         "dci_shareholder_majoritaire": "Vincent Paquet and Gabriel Angeli (sole shareholders; joint control)",
-        "dci_shareholder_majo_nationalite": "Canada",
-        "date_collecte": "2026-08-25"
+        "dci_shareholder_majo_nationalite": "Canada"
       },
       "geometry": {
         "type": "Point",
@@ -1797,10 +1672,7 @@
         "dci_siegesocial_loc": "Montréal, CA",
         "dci_hebwebsite": "https://www.enovumdc.com",
         "dci_shareholder_majoritaire": "Bit Digital Inc. (owner since 2024)",
-        "dci_shareholder_majo_nationalite": "USA",
-        "date_collecte": "2026-08-25",
-        "SurfBatimentPI2": "56016",
-        "dcbat_areapi2": 56016
+        "dci_shareholder_majo_nationalite": "USA"
       },
       "geometry": {
         "type": "Point",
@@ -1830,10 +1702,7 @@
         "dci_siegesocial_loc": "NY, USA",
         "dci_hebwebsite": "https://www.keelinfra.com/",
         "dci_shareholder_majoritaire": "Jane Street Group LLC - Jane Street Capital LLC -Jane Street Global Trading LLC",
-        "dci_shareholder_majo_nationalite": "United States (largest holder)",
-        "date_collecte": "2026-08-25",
-        "SurfBatimentPI2": "315890",
-        "dcbat_areapi2": 315890
+        "dci_shareholder_majo_nationalite": "United States (largest holder)"
       },
       "geometry": {
         "type": "Point",
@@ -1863,10 +1732,7 @@
         "dci_siegesocial_loc": "California, USA",
         "dci_hebwebsite": "https://datacenters.google/",
         "dci_shareholder_majoritaire": "Larry Page and Sergey Brin (joint voting control of Alphabet)",
-        "dci_shareholder_majo_nationalite": "USA",
-        "date_collecte": "2026-08-25",
-        "SurfBatimentPI2": "15087405",
-        "dcbat_areapi2": 15087405
+        "dci_shareholder_majo_nationalite": "USA"
       },
       "geometry": {
         "type": "Point",
@@ -1896,10 +1762,7 @@
         "dci_siegesocial_loc": "NY, USA",
         "dci_hebwebsite": "https://www.keelinfra.com/",
         "dci_shareholder_majoritaire": "Jane Street Group LLC - Jane Street Capital LLC -Jane Street Global Trading LLC",
-        "dci_shareholder_majo_nationalite": "United States (largest holder)",
-        "date_collecte": "2026-08-25",
-        "SurfBatimentPI2": "40645",
-        "dcbat_areapi2": 40645
+        "dci_shareholder_majo_nationalite": "United States (largest holder)"
       },
       "geometry": {
         "type": "Point",
@@ -1929,8 +1792,7 @@
         "dci_siegesocial_loc": "Québec, CA",
         "dci_hebwebsite": "https://www.firstblock.com/centre-de-donnees#sites",
         "dci_shareholder_majoritaire": "Vincent Paquet and Gabriel Angeli (sole shareholders; joint control)",
-        "dci_shareholder_majo_nationalite": "Canada",
-        "date_collecte": "2026-08-25"
+        "dci_shareholder_majo_nationalite": "Canada"
       },
       "geometry": {
         "type": "Point",
@@ -1960,8 +1822,7 @@
         "dci_siegesocial_loc": "Québec, CA",
         "dci_hebwebsite": "https://www.firstblock.com/centre-de-donnees#sites",
         "dci_shareholder_majoritaire": "Vincent Paquet and Gabriel Angeli (sole shareholders; joint control)",
-        "dci_shareholder_majo_nationalite": "Canada",
-        "date_collecte": "2026-08-25"
+        "dci_shareholder_majo_nationalite": "Canada"
       },
       "geometry": {
         "type": "Point",
@@ -1991,10 +1852,7 @@
         "dci_siegesocial_loc": "NY, USA",
         "dci_hebwebsite": "https://www.keelinfra.com/",
         "dci_shareholder_majoritaire": "Jane Street Group LLC - Jane Street Capital LLC -Jane Street Global Trading LLC",
-        "dci_shareholder_majo_nationalite": "United States (largest holder)",
-        "date_collecte": "2026-08-25",
-        "SurfBatimentPI2": "133854",
-        "dcbat_areapi2": 133854
+        "dci_shareholder_majo_nationalite": "United States (largest holder)"
       },
       "geometry": {
         "type": "Point",
@@ -2024,10 +1882,7 @@
         "dci_siegesocial_loc": "NY, USA",
         "dci_hebwebsite": "https://www.keelinfra.com/",
         "dci_shareholder_majoritaire": "Jane Street Group LLC - Jane Street Capital LLC -Jane Street Global Trading LLC",
-        "dci_shareholder_majo_nationalite": "United States (largest holder)",
-        "date_collecte": "2026-08-25",
-        "SurfBatimentPI2": "174574",
-        "dcbat_areapi2": 174574
+        "dci_shareholder_majo_nationalite": "United States (largest holder)"
       },
       "geometry": {
         "type": "Point",
@@ -2057,10 +1912,7 @@
         "dci_siegesocial_loc": "NY, USA",
         "dci_hebwebsite": "https://www.keelinfra.com/",
         "dci_shareholder_majoritaire": "Jane Street Group LLC - Jane Street Capital LLC -Jane Street Global Trading LLC",
-        "dci_shareholder_majo_nationalite": "United States (largest holder)",
-        "date_collecte": "2026-08-25",
-        "SurfBatimentPI2": "31190",
-        "dcbat_areapi2": 31190
+        "dci_shareholder_majo_nationalite": "United States (largest holder)"
       },
       "geometry": {
         "type": "Point",
@@ -2090,10 +1942,7 @@
         "dci_siegesocial_loc": "Montréal, CA",
         "dci_hebwebsite": "https://www.enovumdc.com",
         "dci_shareholder_majoritaire": "Bit Digital Inc. (owner since 2024)",
-        "dci_shareholder_majo_nationalite": "USA",
-        "date_collecte": "2026-08-25",
-        "SurfBatimentPI2": "157150",
-        "dcbat_areapi2": 157150
+        "dci_shareholder_majo_nationalite": "USA"
       },
       "geometry": {
         "type": "Point",
@@ -2123,8 +1972,7 @@
         "dci_siegesocial_loc": "Montréal, CA",
         "dci_hebwebsite": "https://www.enovumdc.com",
         "dci_shareholder_majoritaire": "Bit Digital Inc. (owner since 2024)",
-        "dci_shareholder_majo_nationalite": "USA",
-        "date_collecte": "2026-08-25"
+        "dci_shareholder_majo_nationalite": "USA"
       },
       "geometry": {
         "type": "Point",
@@ -2154,10 +2002,7 @@
         "dci_siegesocial_loc": "Seattle, USA",
         "dci_hebwebsite": "https://www.argoblockchain.com",
         "dci_shareholder_majoritaire": "Growler Mining Tuscaloosa, LLC (controlling shareholder)",
-        "dci_shareholder_majo_nationalite": "USA",
-        "date_collecte": "2026-08-25",
-        "SurfBatimentPI2": "94234",
-        "dcbat_areapi2": 94234
+        "dci_shareholder_majo_nationalite": "USA"
       },
       "geometry": {
         "type": "Point",
@@ -2187,10 +2032,7 @@
         "dci_siegesocial_loc": "Washington, USA",
         "dci_hebwebsite": "En cours",
         "dci_shareholder_majoritaire": "The Vanguard Group, Inc. (largest declared shareholder; no controlling shareholder)",
-        "dci_shareholder_majo_nationalite": "USA",
-        "date_collecte": "2026-08-25",
-        "SurfBatimentPI2": "324319",
-        "dcbat_areapi2": 324319
+        "dci_shareholder_majo_nationalite": "USA"
       },
       "geometry": {
         "type": "Point",
@@ -2220,10 +2062,7 @@
         "dci_siegesocial_loc": "Washington, USA",
         "dci_hebwebsite": "En cours",
         "dci_shareholder_majoritaire": "The Vanguard Group, Inc. (largest declared shareholder; no controlling shareholder)",
-        "dci_shareholder_majo_nationalite": "USA",
-        "date_collecte": "2026-08-25",
-        "SurfBatimentPI2": "4478514",
-        "dcbat_areapi2": 4478514
+        "dci_shareholder_majo_nationalite": "USA"
       },
       "geometry": {
         "type": "Point",
@@ -2253,10 +2092,7 @@
         "dci_siegesocial_loc": "Chicoutimi, CA",
         "dci_hebwebsite": "https://www.megawattcanada.com/",
         "dci_shareholder_majoritaire": "",
-        "dci_shareholder_majo_nationalite": "",
-        "date_collecte": "2026-08-25",
-        "SurfBatimentPI2": "140497",
-        "dcbat_areapi2": 140497
+        "dci_shareholder_majo_nationalite": ""
       },
       "geometry": {
         "type": "Point",
@@ -2286,10 +2122,7 @@
         "dci_siegesocial_loc": "Washington, USA",
         "dci_hebwebsite": "En cours",
         "dci_shareholder_majoritaire": "The Vanguard Group, Inc. (largest declared shareholder; no controlling shareholder)",
-        "dci_shareholder_majo_nationalite": "USA",
-        "date_collecte": "2026-08-25",
-        "SurfBatimentPI2": "756914",
-        "dcbat_areapi2": 756914
+        "dci_shareholder_majo_nationalite": "USA"
       },
       "geometry": {
         "type": "Point",
@@ -2319,10 +2152,7 @@
         "dci_siegesocial_loc": "NY, USA",
         "dci_hebwebsite": "https://www.keelinfra.com/",
         "dci_shareholder_majoritaire": "Jane Street Group LLC - Jane Street Capital LLC -Jane Street Global Trading LLC",
-        "dci_shareholder_majo_nationalite": "United States (largest holder)",
-        "date_collecte": "2026-08-25",
-        "SurfBatimentPI2": "382881",
-        "dcbat_areapi2": 382881
+        "dci_shareholder_majo_nationalite": "United States (largest holder)"
       },
       "geometry": {
         "type": "Point",
@@ -2352,8 +2182,7 @@
         "dci_siegesocial_loc": "NY, USA",
         "dci_hebwebsite": "https://www.keelinfra.com/",
         "dci_shareholder_majoritaire": "Jane Street Group LLC - Jane Street Capital LLC -Jane Street Global Trading LLC",
-        "dci_shareholder_majo_nationalite": "United States (largest holder)",
-        "date_collecte": "2026-08-25"
+        "dci_shareholder_majo_nationalite": "United States (largest holder)"
       },
       "geometry": {
         "type": "Point",
@@ -2383,8 +2212,7 @@
         "dci_siegesocial_loc": "Saint-Antonin, CA",
         "dci_hebwebsite": "https://assets.lumen.com/is/content/Lumen/colocation-location-data-sheet",
         "dci_shareholder_majoritaire": "Brian McDougall (actionnaire principal et majoritaire)",
-        "dci_shareholder_majo_nationalite": "Nationalité non publiquement vérifiable",
-        "date_collecte": "2026-08-25"
+        "dci_shareholder_majo_nationalite": "Nationalité non publiquement vérifiable"
       },
       "geometry": {
         "type": "Point",
@@ -2414,8 +2242,7 @@
         "dci_siegesocial_loc": "Laval, CA",
         "dci_hebwebsite": "https://d-central.tech/mining-hosting",
         "dci_shareholder_majoritaire": "Jonathan Bertrand (fondateur et chef de la direction); actionnariat non publié",
-        "dci_shareholder_majo_nationalite": "Nationalité non vérifiée; société canadienne",
-        "date_collecte": "2026-08-25"
+        "dci_shareholder_majo_nationalite": "Nationalité non vérifiée; société canadienne"
       },
       "geometry": {
         "type": "Point",
@@ -2445,8 +2272,7 @@
         "dci_siegesocial_loc": "",
         "dci_hebwebsite": "https://www.bysato.com/mining",
         "dci_shareholder_majoritaire": "Mathieu Nouzareth and Romain Nouzareth (joint-largest known shareholders; neither controls SATO alone)",
-        "dci_shareholder_majo_nationalite": "USA",
-        "date_collecte": "2026-08-25"
+        "dci_shareholder_majo_nationalite": "USA"
       },
       "geometry": {
         "type": "Point",
@@ -2476,8 +2302,7 @@
         "dci_siegesocial_loc": "NY, USA",
         "dci_hebwebsite": "https://www.keelinfra.com/",
         "dci_shareholder_majoritaire": "Jane Street Group LLC - Jane Street Capital LLC -Jane Street Global Trading LLC",
-        "dci_shareholder_majo_nationalite": "United States (largest holder)",
-        "date_collecte": "2026-08-25"
+        "dci_shareholder_majo_nationalite": "United States (largest holder)"
       },
       "geometry": {
         "type": "Point",
@@ -2507,8 +2332,7 @@
         "dci_siegesocial_loc": "Québec, CA",
         "dci_hebwebsite": "https://www.firstblock.com/centre-de-donnees#sites",
         "dci_shareholder_majoritaire": "Vincent Paquet and Gabriel Angeli (sole shareholders; joint control)",
-        "dci_shareholder_majo_nationalite": "Canada",
-        "date_collecte": "2026-08-25"
+        "dci_shareholder_majo_nationalite": "Canada"
       },
       "geometry": {
         "type": "Point",
@@ -2538,8 +2362,7 @@
         "dci_siegesocial_loc": "NY, USA",
         "dci_hebwebsite": "https://www.keelinfra.com/",
         "dci_shareholder_majoritaire": "Jane Street Group LLC - Jane Street Capital LLC -Jane Street Global Trading LLC",
-        "dci_shareholder_majo_nationalite": "United States (largest holder)",
-        "date_collecte": "2026-08-25"
+        "dci_shareholder_majo_nationalite": "United States (largest holder)"
       },
       "geometry": {
         "type": "Point",
@@ -2569,8 +2392,7 @@
         "dci_siegesocial_loc": "Québec, CA",
         "dci_hebwebsite": "https://www.firstblock.com/centre-de-donnees#sites",
         "dci_shareholder_majoritaire": "Vincent Paquet and Gabriel Angeli (sole shareholders; joint control)",
-        "dci_shareholder_majo_nationalite": "Canada",
-        "date_collecte": "2026-08-25"
+        "dci_shareholder_majo_nationalite": "Canada"
       },
       "geometry": {
         "type": "Point",
@@ -2600,8 +2422,7 @@
         "dci_siegesocial_loc": "Québec, CA",
         "dci_hebwebsite": "https://www.firstblock.com/centre-de-donnees#sites",
         "dci_shareholder_majoritaire": "Vincent Paquet and Gabriel Angeli (sole shareholders; joint control)",
-        "dci_shareholder_majo_nationalite": "Canada",
-        "date_collecte": "2026-08-25"
+        "dci_shareholder_majo_nationalite": "Canada"
       },
       "geometry": {
         "type": "Point",
@@ -2631,8 +2452,7 @@
         "dci_siegesocial_loc": "Québec, CA",
         "dci_hebwebsite": "https://www.firstblock.com/centre-de-donnees#sites",
         "dci_shareholder_majoritaire": "Vincent Paquet and Gabriel Angeli (sole shareholders; joint control)",
-        "dci_shareholder_majo_nationalite": "Canada",
-        "date_collecte": "2026-08-25"
+        "dci_shareholder_majo_nationalite": "Canada"
       },
       "geometry": {
         "type": "Point",
@@ -2662,8 +2482,7 @@
         "dci_siegesocial_loc": "Québec, CA",
         "dci_hebwebsite": "https://www.firstblock.com/centre-de-donnees#sites",
         "dci_shareholder_majoritaire": "Vincent Paquet and Gabriel Angeli (sole shareholders; joint control)",
-        "dci_shareholder_majo_nationalite": "Canada",
-        "date_collecte": "2026-08-25"
+        "dci_shareholder_majo_nationalite": "Canada"
       },
       "geometry": {
         "type": "Point",
@@ -2693,8 +2512,7 @@
         "dci_siegesocial_loc": "Québec, CA",
         "dci_hebwebsite": "https://www.firstblock.com/centre-de-donnees#sites",
         "dci_shareholder_majoritaire": "Vincent Paquet and Gabriel Angeli (sole shareholders; joint control)",
-        "dci_shareholder_majo_nationalite": "Canada",
-        "date_collecte": "2026-08-25"
+        "dci_shareholder_majo_nationalite": "Canada"
       },
       "geometry": {
         "type": "Point",
